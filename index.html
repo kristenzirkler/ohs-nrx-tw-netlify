@@ -1,82 +1,91 @@
 ---
 layout: default
+nav-style: admin
+title: "Page List"
 ---
-<div class="relative bg-skin-body font-sans">
-  &nbsp;1: Base
-  <div class="p-6 rounded-md bg-skin-body">body</div>
-  <div class="p-6 rounded-md bg-skin-accent-primary text-white">accent-primary</div>
-  <div class="p-6 rounded-md bg-skin-button-primary text-white">button-primary</div>
-  <div class="p-6 rounded-md bg-skin-button-primary-hover text-white">button-primary-hover</div>
-</div>
-<div class="theme-ohs relative bg-skin-body font-sans">
-  &nbsp;2: OHS
-  <div class="p-6 rounded-md bg-skin-body">body</div>
-  <div class="p-6 rounded-md bg-skin-accent-primary text-white">accent-primary</div>
-  <div class="p-6 rounded-md bg-skin-button-primary text-white">button-primary</div>
-  <div class="p-6 rounded-md bg-skin-button-primary-hover text-white">button-primary-hover</div>
-</div>
-<div class="theme-fakeco relative bg-skin-body font-sans">
-  &nbsp;3: Sample Company
-  <div class="p-6 rounded-md bg-skin-body">body</div>
-  <div class="p-6 rounded-md bg-skin-accent-primary text-white">accent-primary</div>
-  <div class="p-6 rounded-md bg-skin-button-primary text-white">button-primary</div>
-  <div class="p-6 rounded-md bg-skin-button-primary-hover text-white">button-primary-hover</div>
-</div>
 
+{% include page-header.html navname="Directory" title=page.title desc="" %}
 
-<div class="sm:m-6 space-y-6">
-  <!-- Call to action -->
-  <div class="theme-ohs relative bg-skin-fill max-w-4xl mx-auto overflow-hidden sm:rounded-2xl">
-    <img class="absolute inset-0 h-full w-full object-cover opacity-30" src="https://images.unsplash.com/photo-1613217784112-e0e197be6a0b?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1600&q=80&sat=-100" alt="People working on laptops" />
-    <div class="absolute inset-0 bg-gradient-to-br from-skin-hue via-skin-hue to-transparent opacity-90"></div>
-    <div class="relative max-w-2xl mx-auto text-center py-16 px-4 sm:py-20 sm:px-6 lg:px-8">
-      <h2 class="text-3xl font-extrabold text-skin-base sm:text-4xl">
-        <span class="block">Focus on your content.</span>
-        <span class="block">We handle the distribution.</span>
-      </h2>
-      <p class="mt-4 text-lg leading-6 text-skin-muted">Ac euismod vel sit maecenas id pellentesque eu sed consectetur. Malesuada adipiscing sagittis vel nulla nec.</p>
-      <div class="mt-10 max-w-sm mx-auto sm:max-w-none sm:flex sm:justify-center">
-        <div class="space-y-4 sm:space-y-0 sm:mx-auto sm:inline-grid sm:grid-cols-2 sm:gap-5">
-          <a href="#" class="text-skin-inverted bg-skin-button-accent hover:bg-skin-button-accent-hover flex items-center justify-center px-4 py-3 border border-transparent text-base font-medium rounded-md shadow-sm sm:px-8"> Get started </a>
-          <a href="#" class="text-skin-base bg-skin-button-muted flex items-center justify-center px-4 py-3 border border-transparent text-base font-medium rounded-md shadow-sm bg-opacity-60 hover:bg-opacity-70 sm:px-8"> Live demo </a>
-        </div>
-      </div>
-    </div>
+<div class="bg-white shadow rounded-lg mt-5 mb-5">
+  <div class="px-4 py-3">
+    <div class="text-xl font-bold text-gray-900 mr-2">Possible Views</div>
   </div>
-  <!-- Call to action -->
-  <div class="relative bg-skin-fill max-w-4xl mx-auto overflow-hidden sm:rounded-2xl">
-    <img class="absolute inset-0 h-full w-full object-cover opacity-30" src="https://images.unsplash.com/photo-1613217784112-e0e197be6a0b?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1600&q=80&sat=-100" alt="People working on laptops" />
-    <div class="absolute inset-0 bg-gradient-to-br from-skin-hue via-skin-hue to-transparent opacity-90"></div>
-    <div class="relative max-w-2xl mx-auto text-center py-16 px-4 sm:py-20 sm:px-6 lg:px-8">
-      <h2 class="text-3xl font-extrabold text-skin-base sm:text-4xl">
-        <span class="block">Focus on your content.</span>
-        <span class="block">We handle the distribution.</span>
-      </h2>
-      <p class="mt-4 text-lg leading-6 text-skin-muted">Ac euismod vel sit maecenas id pellentesque eu sed consectetur. Malesuada adipiscing sagittis vel nulla nec.</p>
-      <div class="mt-10 max-w-sm mx-auto sm:max-w-none sm:flex sm:justify-center">
-        <div class="space-y-4 sm:space-y-0 sm:mx-auto sm:inline-grid sm:grid-cols-2 sm:gap-5">
-          <a href="#" class="text-skin-inverted bg-skin-button-accent hover:bg-skin-button-accent-hover flex items-center justify-center px-4 py-3 border border-transparent text-base font-medium rounded-md shadow-sm sm:px-8"> Get started </a>
-          <a href="#" class="text-skin-base bg-skin-button-muted flex items-center justify-center px-4 py-3 border border-transparent text-base font-medium rounded-md shadow-sm bg-opacity-60 hover:bg-opacity-70 sm:px-8"> Live demo </a>
-        </div>
+  <nav class="h-full overflow-y-auto" aria-label="Directory">
+    <div class="relative">
+      <div class="z-10 sticky top-0 border-t border-b border-gray-200 bg-gray-50 px-3 py-1 text-sm font-medium text-gray-500">
+        <h3>Misc</h3>
       </div>
+      <ul role="list" class="relative z-0 divide-y divide-gray-200">
+        <li class="bg-white">
+          <a href="{{ site.baseurl }}/login" class="text-green-600 block hover:bg-gray-50 focus:outline-none font-medium text-gray-900 px-3 py-2">
+            Login
+          </a>
+        </li>
+        <li class="bg-white">
+          <a href="{{ site.baseurl }}/sign-up" class="text-green-600 block hover:bg-gray-50 focus:outline-none font-medium text-gray-900 px-3 py-2">
+            Register
+          </a>
+        </li>
+        <li class="bg-white">
+          <a href="{{ site.baseurl }}/account" class="text-red-600 block hover:bg-gray-50 focus:outline-none font-medium text-gray-900 px-3 py-2">
+            Account Information View / Edit
+          </a>
+        </li>
+      </ul>
     </div>
-  </div>
-  <!-- Call to action -->
-  <div class="theme-neon relative bg-skin-fill max-w-4xl mx-auto overflow-hidden sm:rounded-2xl">
-    <img class="absolute inset-0 h-full w-full object-cover opacity-30" src="https://images.unsplash.com/photo-1613217784112-e0e197be6a0b?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1600&q=80&sat=-100" alt="People working on laptops" />
-    <div class="absolute inset-0 bg-gradient-to-br from-skin-hue via-skin-hue to-transparent opacity-90"></div>
-    <div class="relative max-w-2xl mx-auto text-center py-16 px-4 sm:py-20 sm:px-6 lg:px-8">
-      <h2 class="text-3xl font-extrabold text-skin-base sm:text-4xl">
-        <span class="block">Focus on your content.</span>
-        <span class="block">We handle the distribution.</span>
-      </h2>
-      <p class="mt-4 text-lg leading-6 text-skin-muted">Ac euismod vel sit maecenas id pellentesque eu sed consectetur. Malesuada adipiscing sagittis vel nulla nec.</p>
-      <div class="mt-10 max-w-sm mx-auto sm:max-w-none sm:flex sm:justify-center">
-        <div class="space-y-4 sm:space-y-0 sm:mx-auto sm:inline-grid sm:grid-cols-2 sm:gap-5">
-          <a href="#" class="text-skin-inverted bg-skin-button-accent hover:bg-skin-button-accent-hover flex items-center justify-center px-4 py-3 border border-transparent text-base font-medium rounded-md shadow-sm sm:px-8"> Get started </a>
-          <a href="#" class="text-skin-base bg-skin-button-muted flex items-center justify-center px-4 py-3 border border-transparent text-base font-medium rounded-md shadow-sm bg-opacity-60 hover:bg-opacity-70 sm:px-8"> Live demo </a>
-        </div>
+    <div class="relative">
+      <div class="z-10 sticky top-0 border-t border-b border-gray-200 bg-gray-50 px-3 py-1 text-sm font-medium text-gray-500">
+        <h3>Dashboards</h3>
       </div>
+      <ul role="list" class="relative z-0 divide-y divide-gray-200">
+        <li class="bg-white">
+          <a href="{{ site.baseurl }}/dashboard-new" class="text-red-600 block hover:bg-gray-50 focus:outline-none font-medium text-gray-900 px-3 py-2">
+            No History - Questionnaire is Incomplete
+          </a>
+        </li>
+        <li class="bg-white">
+          <a href="{{ site.baseurl }}/dashboard-questionnaire-complete" class="text-red-600 block hover:bg-gray-50 focus:outline-none font-medium text-gray-900 px-3 py-2">
+            No History - Questionnaire is complete, Blood work is not yet received
+          </a>
+        </li>
+        <li class="bg-white">
+          <a href="{{ site.baseurl }}/dashboard-new-results-no-history" class="text-red-600 block hover:bg-gray-50 focus:outline-none font-medium text-gray-900 px-3 py-2">
+            No History - Results Received & HP Approved
+          </a>
+        </li>
+        <li class="bg-white">
+          <a href="{{ site.baseurl }}/dashboard-bloodwork-requested" class="text-red-600 block hover:bg-gray-50 focus:outline-none font-medium text-gray-900 px-3 py-2">
+            Has History - Time for new bloodwork
+          </a>
+        </li>
+        <li class="bg-white">
+          <a href="{{ site.baseurl }}/dashboard-new-results" class="text-red-600 block hover:bg-gray-50 focus:outline-none font-medium text-gray-900 px-3 py-2">
+            Has History - Results Received & HP Approved
+          </a>
+        </li>
+      </ul>
     </div>
-  </div>
+    <div class="relative">
+      <div class="z-10 sticky top-0 border-t border-b border-gray-200 bg-gray-50 px-3 py-1 text-sm font-medium text-gray-500">
+        <h3>Questionnaire</h3>
+      </div>
+      <ul role="list" class="relative z-0 divide-y divide-gray-200">
+        <li class="bg-white">
+          <a href="{{ site.baseurl }}/questionnaire-new" class="text-red-600 block hover:bg-gray-50 focus:outline-none font-medium text-gray-900 px-3 py-2">
+            New
+          </a>
+        </li>
+        <li class="bg-white">
+          <a href="{{ site.baseurl }}/questionnaire-incomplete" class="text-red-600 block hover:bg-gray-50 focus:outline-none font-medium text-gray-900 px-3 py-2">
+            Incomplete
+          </a>
+        </li>
+        <li class="bg-white">
+          <a href="{{ site.baseurl }}/" class="block hover:bg-gray-50 focus:outline-none font-medium text-gray-900 px-3 py-2">
+            View (or edit?)
+          </a>
+        </li>
+      </ul>
+    </div>
+  </nav>
 </div>

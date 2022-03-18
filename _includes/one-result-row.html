@@ -1,0 +1,41 @@
+          <tr>
+            <td colspan="5" class="border-t-2 md:hidden px-4 py-2 whitespace-nowrap text-sm font-medium text-gray-900">
+              <div class="flex justify-between">
+                <div>{{ include.name }}</div>
+                <div class="flex justify-center">
+                  <div class="text-lg text-center text-gray-600 font-bold">
+                    {{ include.count }}
+                  </div>
+                  {% if include.change %}
+                  <div class="inline-flex items-baseline text-sm font-medium text-red-600 ml-2">
+                    <svg class="-ml-1 mr-0.5 flex-shrink-0 self-center h-4 w-4 text-red-600" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                      <path fill-rule="evenodd" d="M5.293 9.707a1 1 0 010-1.414l4-4a1 1 0 011.414 0l4 4a1 1 0 01-1.414 1.414L11 7.414V15a1 1 0 11-2 0V7.414L6.707 9.707a1 1 0 01-1.414 0z" clip-rule="evenodd" />
+                    </svg>
+                    <span class="sr-only"> Increased by </span>
+                    {{ include.change }}
+                  </div>
+                  {% endif %}
+                </div>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td class="hidden md:table-cell px-4 py-2 whitespace-nowrap text-sm font-medium text-gray-900">{{ include.name }}</td>
+            <td class="hidden md:table-cell pl-4 py-2 whitespace-nowrap text-lg text-center text-gray-600 font-bold bg-yellow-100">
+              {{ include.count }}
+            </td>
+            <td class="hidden md:table-cell pr-4 py-2 whitespace-nowrap text-right border-r-2 border-gray-200 bg-yellow-100">
+              <div class="inline-flex items-baseline text-sm font-medium text-red-600 ml-2">
+                <svg class="-ml-1 mr-0.5 flex-shrink-0 self-center h-4 w-4 text-red-600" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                  <path fill-rule="evenodd" d="M5.293 9.707a1 1 0 010-1.414l4-4a1 1 0 011.414 0l4 4a1 1 0 01-1.414 1.414L11 7.414V15a1 1 0 11-2 0V7.414L6.707 9.707a1 1 0 01-1.414 0z" clip-rule="evenodd" />
+                </svg>
+                <span class="sr-only"> Increased by </span>
+                {{ include.change }}
+              </div>
+            </td>
+            <td class="px-2 md:px-4 py-2 whitespace-nowrap text-xs md:text-sm text-center text-gray-600 {% if include.selected == 1 %}bg-red-100{% endif %}">{{ include.r1 }}</td>
+            <td class="px-2 md:px-4 py-2 whitespace-nowrap text-xs md:text-sm text-center text-gray-600 {% if include.selected == 2 %}bg-yellow-100{% endif %}">{{ include.r2 }}</td>
+            <td class="px-2 md:px-4 py-2 whitespace-nowrap text-xs md:text-sm text-center text-gray-600 {% if include.selected == 3 %}bg-green-100{% endif %}">{{ include.r3 }}</td>
+            <td class="px-2 md:px-4 py-2 whitespace-nowrap text-xs md:text-sm text-center text-gray-600 {% if include.selected == 4 %}bg-yellow-100{% endif %}">{{ include.r4 }}</td>
+            <td class="px-2 md:px-4 py-2 whitespace-nowrap text-xs md:text-sm text-center text-gray-600 {% if include.selected == 5 %}bg-red-100{% endif %}">{{ include.r5 }}</td>
+          </tr>

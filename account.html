@@ -1,0 +1,22 @@
+---
+layout: default
+nav: account
+title: "Account & Profile Information"
+---
+{% include page-header.html navname="Account" title=page.title desc="" %}
+
+<div class="mt-5 bg-white shadow rounded-lg mb-5">
+  <div class="px-4 py-5 sm:p-6">
+    <div class="space-y-4 sm:space-y-3">
+      {% include field-text.html name="Full Name" value="First Lastenamerson" %}
+      {% include field-text.html name="Email Address" value="firstlastenamerson@gmail.com" %}
+      {% include field-text.html name="Password" type="password" %}
+      {% include field-special.html name="Gender" type="gender" %}
+      {% include field-special.html name="Birthdate" type="birthdate" %}
+      {% include field-special.html name="Address" type="address" %}
+    </div>
+    <div class="mt-6">
+      {% include button.html text="Save" classes="w-full" %}
+    </div>
+  </div>
+</div>

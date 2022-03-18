@@ -18,9 +18,6 @@ module.exports = {
       },
       textColor: {
         skin: {
-          base: withOpacity('--color-text-base'),
-          muted: withOpacity('--color-text-muted'),
-          inverted: withOpacity('--color-text-inverted'),
           'accent-primary': withOpacity('--color-accent-primary'),
           'button-primary': withOpacity('--color-button-primary'),
           'button-primary-hover': withOpacity('--color-button-primary-hover'),
@@ -28,20 +25,24 @@ module.exports = {
       },
       backgroundColor: {
         skin: {
-          fill: withOpacity('--color-fill'),
-          'button-accent': withOpacity('--color-button-accent'),
-          'button-accent-hover': withOpacity('--color-button-accent-hover'),
-          'button-muted': withOpacity('--color-button-muted'),
-
           'body': withOpacity('--color-body'),
           'accent-primary': withOpacity('--color-accent-primary'),
           'button-primary': withOpacity('--color-button-primary'),
           'button-primary-hover': withOpacity('--color-button-primary-hover'),
         },
       },
-      gradientColorStops: {
+      borderColor: {
         skin: {
-          hue: withOpacity('--color-fill'),
+          'accent-primary': withOpacity('--color-accent-primary'),
+          'button-primary': withOpacity('--color-button-primary'),
+          'button-primary-hover': withOpacity('--color-button-primary-hover'),
+        },
+      },
+      ringColor: {
+        skin: {
+          'accent-primary': withOpacity('--color-accent-primary'),
+          'button-primary': withOpacity('--color-button-primary'),
+          'button-primary-hover': withOpacity('--color-button-primary-hover'),
         },
       },
       fontSize: {
@@ -61,5 +62,8 @@ module.exports = {
     },
   },
   variants: {},
-  plugins: [],
+  plugins: [
+    require('@tailwindcss/typography'),
+    require('@tailwindcss/forms'),
+  ],
 };

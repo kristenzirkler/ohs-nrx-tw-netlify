@@ -1,0 +1,32 @@
+---
+layout: loggedout
+nav: dashboard
+title: "Welcome, Firstname!"
+---
+<div class="min-h-full flex flex-col justify-center py-12 sm:px-6 lg:px-8">
+  <div class="sm:mx-auto sm:w-full sm:max-w-md">
+    <img class="mx-auto w-36" src="{{ site.baseurl }}/assets/images/logo-nutrientsrx.png" alt="Nutrients Rx" />
+  </div>
+  <div class="mt-6 sm:mx-auto sm:w-full sm:max-w-xl">
+    <div class="bg-white py-6 px-4 shadow sm:rounded-lg sm:px-10">
+      
+      <h2 class="mb-2 text-center text-3xl font-extrabold text-gray-900">Complete your account</h2>
+
+      <div class="text-center text-skin-button-primary mb-6 text-lg"><a href="{{ site.baseurl }}/login">Already a member? <span class="font-bold">Login</span></a></div>
+
+      <div class="space-y-4 sm:space-y-3">
+        {% include field-text.html name="Full Name" value="First Lastenamerson" %}
+        {% include field-text.html name="Email Address" value="firstlastenamerson@gmail.com" %}
+        {% include field-text.html name="Password" type="password" %}
+        {% include field-special.html name="Gender" type="gender" %}
+        {% include field-special.html name="Birthdate" type="birthdate" %}
+        {% include field-special.html name="Address" type="address" %}
+      </div>
+
+      <div class="mt-6 mb-4">
+        {% include button.html text="Register" classes="w-full" link="questionnaire-new" %}
+      </div>
+
+    </div>
+  </div>
+</div>

@@ -1,0 +1,339 @@
+---
+layout: default
+nav: history
+title: "Functional Health Lab Test History"
+---
+{% include page-header.html navname="History" title=page.title desc="The Blood Test History Report lists the results of your Chemistry Screen and CBC tests side by side with the latest test listed on the left hand side. This report allows you to compare results over time and see where improvement has been made and allows you to track progress." %}
+
+<div class="mt-5 bg-white shadow rounded-lg mb-5">
+  <div class="p-4 flex items-center text-sm text-gray-500">
+    <svg class="flex-shrink-0 mr-1.5 h-5 w-5 text-gray-400" x-description="Heroicon name: solid/calendar" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+    <path fill-rule="evenodd" d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z" clip-rule="evenodd"></path>
+    </svg>
+    Last Report Date: March 7, 2022
+  </div>
+
+  <div class="flex flex-col">
+    <div class="">
+      <div class="inline-block min-w-full align-middle">
+        <div class="">
+          <table class="min-w-full border-separate" style="border-spacing: 0">
+            <thead class="bg-white">
+              <tr>
+                <th colspan="5" class="sticky top-10 md:top-0 z-10 h-10 bg-white border-t">
+                <!-- search -->
+                <div class="flex h-full bg-white">
+                  <div class="flex-1 px-4 flex justify-between">
+                    <div class="flex-1 flex">
+                      <form class="w-full flex md:ml-0" action="#" method="GET">
+                        <label for="search-field" class="sr-only">Search</label>
+                        <div class="relative w-full text-gray-400 focus-within:text-gray-600">
+                          <div class="absolute inset-y-0 left-0 flex items-center pointer-events-none">
+                            <!-- Heroicon name: solid/search -->
+                            <svg class="h-5 w-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                              <path fill-rule="evenodd" d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z" clip-rule="evenodd" />
+                            </svg>
+                          </div>
+                          <input id="search-field" class="block w-full h-full pl-8 pr-3 py-2 border-transparent text-gray-900 placeholder-gray-500 focus:outline-none focus:placeholder-gray-400 focus:ring-0 focus:border-transparent sm:text-sm" placeholder="Filter tests.." type="search" name="search">
+                        </div>
+                      </form>
+                    </div>
+                  </div>
+                </div>
+                <!-- end search -->
+              </th>
+              </tr>
+              <tr>
+                <th scope="col" class="hidden md:table-cell sticky top-20 md:top-10 z-10 bg-gray-50 py-2 px-3 border-t border-b text-left text-sm font-normal text-gray-500 leading-none border-r-2 border-gray-200">Test</th>
+                <th scope="col" class="sticky top-20 md:top-10 z-10 bg-gray-50 py-2 px-3 border-t border-b text-center text-sm font-normal text-gray-500 leading-none" colspan="2">Current</th>
+                <th scope="col" class="sticky top-20 md:top-10 z-10 bg-gray-50 py-2 px-3 border-t border-b text-center text-sm font-normal text-gray-500 leading-none">2021/12</th>
+                <th scope="col" class="sticky top-20 md:top-10 z-10 bg-gray-50 py-2 px-3 border-t border-b text-center text-sm font-normal text-gray-500 leading-none">2021/06</th>
+              </tr>
+            </thead>
+            <tbody class="bg-white">
+              <tr>
+                <td colspan="4" class="md:hidden border-t-2 border-gray-200 px-4 py-2 whitespace-nowrap text-sm font-medium text-gray-900">Cholesterol, Total</td>
+              </tr>
+              <tr>
+                <td class="hidden md:table-cell border-b px-4 py-2 whitespace-nowrap text-sm font-medium text-gray-900 border-r-2 border-gray-200">Cholesterol, Total</td>
+                <td class="border-b pl-4 py-2 whitespace-nowrap text-lg text-center text-gray-600 font-bold bg-yellow-200">
+                  182
+                </td>
+                <td class="border-b pr-4 py-2 whitespace-nowrap text-right bg-yellow-200 border-r">
+                  <div class="inline-flex items-baseline text-sm font-medium text-red-600 ml-2">
+                    <svg class="-ml-1 mr-0.5 flex-shrink-0 self-center h-4 w-4 text-red-600" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                      <path fill-rule="evenodd" d="M5.293 9.707a1 1 0 010-1.414l4-4a1 1 0 011.414 0l4 4a1 1 0 01-1.414 1.414L11 7.414V15a1 1 0 11-2 0V7.414L6.707 9.707a1 1 0 01-1.414 0z" clip-rule="evenodd" />
+                    </svg>
+                    <span class="sr-only"> Increased by </span>
+                    1
+                  </div>
+                </td>
+                <td class="border-b px-4 py-2 whitespace-nowrap text-sm text-center text-gray-600 border-r bg-yellow-100">181</td>
+                <td class="border-b px-4 py-2 whitespace-nowrap text-sm text-center text-gray-600 border-r bg-green-100">168</td>
+              </tr>
+
+              <tr>
+                <td colspan="4" class="md:hidden border-t-2 border-gray-200 px-4 py-2 whitespace-nowrap text-sm font-medium text-gray-900">HDL Cholesterol</td>
+              </tr>
+              <tr>
+                <td class="hidden md:table-cell border-b px-4 py-2 whitespace-nowrap text-sm font-medium text-gray-900 border-r-2 border-gray-200">HDL Cholesterol</td>
+                <td class="border-b pl-4 py-2 whitespace-nowrap text-lg text-center text-gray-600 font-bold bg-red-200">
+                  34
+                </td>
+                <td class="border-b pr-4 py-2 whitespace-nowrap text-right bg-red-200 border-r">
+                  <div class="inline-flex items-baseline text-sm font-medium text-red-600 ml-2">
+                    <svg class="-ml-1 mr-0.5 flex-shrink-0 self-center h-4 w-4 text-red-600" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                      <path fill-rule="evenodd" d="M5.293 9.707a1 1 0 010-1.414l4-4a1 1 0 011.414 0l4 4a1 1 0 01-1.414 1.414L11 7.414V15a1 1 0 11-2 0V7.414L6.707 9.707a1 1 0 01-1.414 0z" clip-rule="evenodd" />
+                    </svg>
+                    <span class="sr-only"> Increased by </span>
+                    1
+                  </div>
+                </td>
+                <td class="border-b px-4 py-2 whitespace-nowrap text-sm text-center text-gray-600 border-r bg-red-100">33</td>
+                <td class="border-b px-4 py-2 whitespace-nowrap text-sm text-center text-gray-600 border-r bg-red-100">31</td>
+              </tr>
+
+              <tr>
+                <td colspan="4" class="md:hidden border-t-2 border-gray-200 px-4 py-2 whitespace-nowrap text-sm font-medium text-gray-900">Triglycerides</td>
+              </tr>
+              <tr>
+                <td class="hidden md:table-cell border-b px-4 py-2 whitespace-nowrap text-sm font-medium text-gray-900 border-r-2 border-gray-200">Triglycerides</td>
+                <td class="border-b pl-4 py-2 whitespace-nowrap text-lg text-center text-gray-600 font-bold bg-yellow-200">
+                  111
+                </td>
+                <td class="border-b pr-4 py-2 whitespace-nowrap text-right bg-yellow-200 border-r">
+                  <div class="inline-flex items-baseline text-sm font-medium text-green-600 ml-2">
+                    <svg class="-ml-1 mr-0.5 flex-shrink-0 self-center h-4 w-4 text-green-600" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                      <path fill-rule="evenodd" d="M14.707 10.293a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 111.414-1.414L9 12.586V5a1 1 0 012 0v7.586l2.293-2.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+                    </svg>
+                    <span class="sr-only"> Decreased by </span>
+                    4
+                  </div>
+                </td>
+                <td class="border-b px-4 py-2 whitespace-nowrap text-sm text-center text-gray-600 border-r bg-yellow-100">115</td>
+                <td class="border-b px-4 py-2 whitespace-nowrap text-sm text-center text-gray-600 border-r bg-yellow-100">120</td>
+              </tr>
+
+              <tr>
+                <td colspan="4" class="md:hidden border-t-2 border-gray-200 px-4 py-2 whitespace-nowrap text-sm font-medium text-gray-900">LDL-Cholesterol</td>
+              </tr>
+              <tr>
+                <td class="hidden md:table-cell border-b px-4 py-2 whitespace-nowrap text-sm font-medium text-gray-900 border-r-2 border-gray-200">LDL-Cholesterol</td>
+                <td class="border-b px-4 py-2 whitespace-nowrap text-lg text-center text-gray-600 font-bold bg-red-200">126</td>
+                <td class="border-b pr-4 py-2 whitespace-nowrap text-right bg-red-200 border-r">-</td>
+                <td class="border-b px-4 py-2 whitespace-nowrap text-sm text-center text-gray-600 border-r bg-red-100">126</td>
+                <td class="border-b px-4 py-2 whitespace-nowrap text-sm text-center text-gray-600 border-r bg-red-100">126</td>
+              </tr>
+
+              <tr>
+                <td colspan="4" class="md:hidden border-t-2 border-gray-200 px-4 py-2 whitespace-nowrap text-sm font-medium text-gray-900">Non-HDL Cholesterol</td>
+              </tr>
+              <tr>
+                <td class="hidden md:table-cell border-b px-4 py-2 whitespace-nowrap text-sm font-medium text-gray-900 border-r border-r-2 border-gray-200">Non-HDL Cholesterol</td>
+                <td class="border-b px-4 py-2 whitespace-nowrap text-lg text-center text-gray-600 font-bold bg-red-200">148</td>
+                <td class="border-b pr-4 py-2 whitespace-nowrap text-right bg-red-200 border-r">-</td>
+                <td class="border-b px-4 py-2 whitespace-nowrap text-sm text-center text-gray-600 border-r bg-red-100">148</td>
+                <td class="border-b px-4 py-2 whitespace-nowrap text-sm text-center text-gray-600 border-r bg-green-100">108</td>
+              </tr>
+
+              <tr>
+                <td colspan="4" class="md:hidden border-t-2 border-gray-200 px-4 py-2 whitespace-nowrap text-sm font-medium text-gray-900">Urine, Gluclose</td>
+              </tr>
+              <tr>
+                <td class="hidden md:table-cell border-b px-4 py-2 whitespace-nowrap text-sm font-medium text-gray-900 border-r-2 border-gray-200">Urine, Gluclose</td>
+                <td class="border-b pl-4 py-2 whitespace-nowrap text-lg text-center text-gray-600 font-bold bg-green-200">
+                  5.3
+                </td>
+                <td class="border-b pr-4 py-2 whitespace-nowrap text-right border-r bg-green-200">
+                  <div class="inline-flex items-baseline text-sm font-medium text-green-600 ml-2">
+                    <svg class="-ml-1 mr-0.5 flex-shrink-0 self-center h-4 w-4 text-green-600" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                      <path fill-rule="evenodd" d="M14.707 10.293a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 111.414-1.414L9 12.586V5a1 1 0 012 0v7.586l2.293-2.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+                    </svg>
+                    <span class="sr-only"> Decreased by </span>
+                    .5
+                  </div>
+                </td>
+                <td class="border-b px-4 py-2 whitespace-nowrap text-sm text-center text-gray-600 border-r bg-yellow-100">5.8</td>
+                <td class="border-b px-4 py-2 whitespace-nowrap text-sm text-center text-gray-600 border-r bg-green-100">5.6</td>
+              </tr>
+
+              <tr>
+                <td colspan="4" class="md:hidden border-t-2 border-gray-200 px-4 py-2 whitespace-nowrap text-sm font-medium text-gray-900">Urine, Gluclose</td>
+              </tr>
+              <tr>
+                <td class="hidden md:table-cell border-b px-4 py-2 whitespace-nowrap text-sm font-medium text-gray-900 border-r-2 border-gray-200">Urine, Gluclose</td>
+                <td class="border-b px-4 py-2 whitespace-nowrap text-lg text-center text-gray-600 border-r font-bold bg-green-200" colspan="2">Negative</td>
+                <td class="border-b px-4 py-2 whitespace-nowrap text-sm text-center text-gray-600 border-r bg-green-100">Negative</td>
+                <td class="border-b px-4 py-2 whitespace-nowrap text-sm text-center text-gray-600 border-r bg-green-100">Negative</td>
+              </tr>
+
+              <tr>
+                <td colspan="4" class="md:hidden border-t-2 border-gray-200 px-4 py-2 whitespace-nowrap text-sm font-medium text-gray-900">Urine, Ketones</td>
+              </tr>
+              <tr>
+                <td class="hidden md:table-cell border-b px-4 py-2 whitespace-nowrap text-sm font-medium text-gray-900 border-r-2 border-gray-200">Urine, Ketones</td>
+                <td class="border-b px-4 py-2 whitespace-nowrap text-lg text-center text-gray-600 border-r font-bold bg-green-200" colspan="2">
+                  Negative
+                </td>
+                <td class="border-b px-4 py-2 whitespace-nowrap text-sm text-center text-gray-600 border-r bg-green-100">Negative</td>
+                <td class="border-b px-4 py-2 whitespace-nowrap text-sm text-center text-gray-600 border-r bg-red-100">Positive</td>
+              </tr>
+
+              <tr>
+                <td colspan="4" class="md:hidden border-t-2 border-gray-200 px-4 py-2 whitespace-nowrap text-sm font-medium text-gray-900">Bilirubin</td>
+              </tr>
+              <tr>
+                <td class="hidden md:table-cell border-b px-4 py-2 whitespace-nowrap text-sm font-medium text-gray-900 border-r-2 border-gray-200">Bilirubin</td>
+                <td class="border-b px-4 py-2 whitespace-nowrap text-lg text-center text-gray-600 border-r font-bold bg-green-200" colspan="2">Negative</td>
+                <td class="border-b px-4 py-2 whitespace-nowrap text-sm text-center text-gray-600 border-r bg-green-100">Negative</td>
+                <td class="border-b px-4 py-2 whitespace-nowrap text-sm text-center text-gray-600 border-r bg-yellow-100">Trace</td>
+              </tr>
+              <tr>
+                <td colspan="4" class="md:hidden border-t-2 border-gray-200 px-4 py-2 whitespace-nowrap text-sm font-medium text-gray-900">Cholesterol, Total</td>
+              </tr>
+              <tr>
+                <td class="hidden md:table-cell border-b px-4 py-2 whitespace-nowrap text-sm font-medium text-gray-900 border-r-2 border-gray-200">Cholesterol, Total</td>
+                <td class="border-b pl-4 py-2 whitespace-nowrap text-lg text-center text-gray-600 font-bold bg-yellow-200">
+                  182
+                </td>
+                <td class="border-b pr-4 py-2 whitespace-nowrap text-right bg-yellow-200 border-r">
+                  <div class="inline-flex items-baseline text-sm font-medium text-red-600 ml-2">
+                    <svg class="-ml-1 mr-0.5 flex-shrink-0 self-center h-4 w-4 text-red-600" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                      <path fill-rule="evenodd" d="M5.293 9.707a1 1 0 010-1.414l4-4a1 1 0 011.414 0l4 4a1 1 0 01-1.414 1.414L11 7.414V15a1 1 0 11-2 0V7.414L6.707 9.707a1 1 0 01-1.414 0z" clip-rule="evenodd" />
+                    </svg>
+                    <span class="sr-only"> Increased by </span>
+                    1
+                  </div>
+                </td>
+                <td class="border-b px-4 py-2 whitespace-nowrap text-sm text-center text-gray-600 border-r bg-yellow-100">181</td>
+                <td class="border-b px-4 py-2 whitespace-nowrap text-sm text-center text-gray-600 border-r bg-green-100">168</td>
+              </tr>
+
+              <tr>
+                <td colspan="4" class="md:hidden border-t-2 border-gray-200 px-4 py-2 whitespace-nowrap text-sm font-medium text-gray-900">HDL Cholesterol</td>
+              </tr>
+              <tr>
+                <td class="hidden md:table-cell border-b px-4 py-2 whitespace-nowrap text-sm font-medium text-gray-900 border-r-2 border-gray-200">HDL Cholesterol</td>
+                <td class="border-b pl-4 py-2 whitespace-nowrap text-lg text-center text-gray-600 font-bold bg-red-200">
+                  34
+                </td>
+                <td class="border-b pr-4 py-2 whitespace-nowrap text-right bg-red-200 border-r">
+                  <div class="inline-flex items-baseline text-sm font-medium text-red-600 ml-2">
+                    <svg class="-ml-1 mr-0.5 flex-shrink-0 self-center h-4 w-4 text-red-600" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                      <path fill-rule="evenodd" d="M5.293 9.707a1 1 0 010-1.414l4-4a1 1 0 011.414 0l4 4a1 1 0 01-1.414 1.414L11 7.414V15a1 1 0 11-2 0V7.414L6.707 9.707a1 1 0 01-1.414 0z" clip-rule="evenodd" />
+                    </svg>
+                    <span class="sr-only"> Increased by </span>
+                    1
+                  </div>
+                </td>
+                <td class="border-b px-4 py-2 whitespace-nowrap text-sm text-center text-gray-600 border-r bg-red-100">33</td>
+                <td class="border-b px-4 py-2 whitespace-nowrap text-sm text-center text-gray-600 border-r bg-red-100">31</td>
+              </tr>
+
+              <tr>
+                <td colspan="4" class="md:hidden border-t-2 border-gray-200 px-4 py-2 whitespace-nowrap text-sm font-medium text-gray-900">Triglycerides</td>
+              </tr>
+              <tr>
+                <td class="hidden md:table-cell border-b px-4 py-2 whitespace-nowrap text-sm font-medium text-gray-900 border-r-2 border-gray-200">Triglycerides</td>
+                <td class="border-b pl-4 py-2 whitespace-nowrap text-lg text-center text-gray-600 font-bold bg-yellow-200">
+                  111
+                </td>
+                <td class="border-b pr-4 py-2 whitespace-nowrap text-right bg-yellow-200 border-r">
+                  <div class="inline-flex items-baseline text-sm font-medium text-green-600 ml-2">
+                    <svg class="-ml-1 mr-0.5 flex-shrink-0 self-center h-4 w-4 text-green-600" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                      <path fill-rule="evenodd" d="M14.707 10.293a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 111.414-1.414L9 12.586V5a1 1 0 012 0v7.586l2.293-2.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+                    </svg>
+                    <span class="sr-only"> Decreased by </span>
+                    4
+                  </div>
+                </td>
+                <td class="border-b px-4 py-2 whitespace-nowrap text-sm text-center text-gray-600 border-r bg-yellow-100">115</td>
+                <td class="border-b px-4 py-2 whitespace-nowrap text-sm text-center text-gray-600 border-r bg-yellow-100">120</td>
+              </tr>
+
+              <tr>
+                <td colspan="4" class="md:hidden border-t-2 border-gray-200 px-4 py-2 whitespace-nowrap text-sm font-medium text-gray-900">LDL-Cholesterol</td>
+              </tr>
+              <tr>
+                <td class="hidden md:table-cell border-b px-4 py-2 whitespace-nowrap text-sm font-medium text-gray-900 border-r-2 border-gray-200">LDL-Cholesterol</td>
+                <td class="border-b px-4 py-2 whitespace-nowrap text-lg text-center text-gray-600 font-bold bg-red-200">126</td>
+                <td class="border-b pr-4 py-2 whitespace-nowrap text-right bg-red-200 border-r">-</td>
+                <td class="border-b px-4 py-2 whitespace-nowrap text-sm text-center text-gray-600 border-r bg-red-100">126</td>
+                <td class="border-b px-4 py-2 whitespace-nowrap text-sm text-center text-gray-600 border-r bg-red-100">126</td>
+              </tr>
+
+              <tr>
+                <td colspan="4" class="md:hidden border-t-2 border-gray-200 px-4 py-2 whitespace-nowrap text-sm font-medium text-gray-900">Non-HDL Cholesterol</td>
+              </tr>
+              <tr>
+                <td class="hidden md:table-cell border-b px-4 py-2 whitespace-nowrap text-sm font-medium text-gray-900 border-r border-r-2 border-gray-200">Non-HDL Cholesterol</td>
+                <td class="border-b px-4 py-2 whitespace-nowrap text-lg text-center text-gray-600 font-bold bg-red-200">148</td>
+                <td class="border-b pr-4 py-2 whitespace-nowrap text-right bg-red-200 border-r">-</td>
+                <td class="border-b px-4 py-2 whitespace-nowrap text-sm text-center text-gray-600 border-r bg-red-100">148</td>
+                <td class="border-b px-4 py-2 whitespace-nowrap text-sm text-center text-gray-600 border-r bg-green-100">108</td>
+              </tr>
+
+              <tr>
+                <td colspan="4" class="md:hidden border-t-2 border-gray-200 px-4 py-2 whitespace-nowrap text-sm font-medium text-gray-900">Urine, Gluclose</td>
+              </tr>
+              <tr>
+                <td class="hidden md:table-cell border-b px-4 py-2 whitespace-nowrap text-sm font-medium text-gray-900 border-r-2 border-gray-200">Urine, Gluclose</td>
+                <td class="border-b pl-4 py-2 whitespace-nowrap text-lg text-center text-gray-600 font-bold bg-green-200">
+                  5.3
+                </td>
+                <td class="border-b pr-4 py-2 whitespace-nowrap text-right border-r bg-green-200">
+                  <div class="inline-flex items-baseline text-sm font-medium text-green-600 ml-2">
+                    <svg class="-ml-1 mr-0.5 flex-shrink-0 self-center h-4 w-4 text-green-600" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                      <path fill-rule="evenodd" d="M14.707 10.293a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 111.414-1.414L9 12.586V5a1 1 0 012 0v7.586l2.293-2.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+                    </svg>
+                    <span class="sr-only"> Decreased by </span>
+                    .5
+                  </div>
+                </td>
+                <td class="border-b px-4 py-2 whitespace-nowrap text-sm text-center text-gray-600 border-r bg-yellow-100">5.8</td>
+                <td class="border-b px-4 py-2 whitespace-nowrap text-sm text-center text-gray-600 border-r bg-green-100">5.6</td>
+              </tr>
+
+              <tr>
+                <td colspan="4" class="md:hidden border-t-2 border-gray-200 px-4 py-2 whitespace-nowrap text-sm font-medium text-gray-900">Urine, Gluclose</td>
+              </tr>
+              <tr>
+                <td class="hidden md:table-cell border-b px-4 py-2 whitespace-nowrap text-sm font-medium text-gray-900 border-r-2 border-gray-200">Urine, Gluclose</td>
+                <td class="border-b px-4 py-2 whitespace-nowrap text-lg text-center text-gray-600 border-r font-bold bg-green-200" colspan="2">Negative</td>
+                <td class="border-b px-4 py-2 whitespace-nowrap text-sm text-center text-gray-600 border-r bg-green-100">Negative</td>
+                <td class="border-b px-4 py-2 whitespace-nowrap text-sm text-center text-gray-600 border-r bg-green-100">Negative</td>
+              </tr>
+
+              <tr>
+                <td colspan="4" class="md:hidden border-t-2 border-gray-200 px-4 py-2 whitespace-nowrap text-sm font-medium text-gray-900">Urine, Ketones</td>
+              </tr>
+              <tr>
+                <td class="hidden md:table-cell border-b px-4 py-2 whitespace-nowrap text-sm font-medium text-gray-900 border-r-2 border-gray-200">Urine, Ketones</td>
+                <td class="border-b px-4 py-2 whitespace-nowrap text-lg text-center text-gray-600 border-r font-bold bg-green-200" colspan="2">
+                  Negative
+                </td>
+                <td class="border-b px-4 py-2 whitespace-nowrap text-sm text-center text-gray-600 border-r bg-green-100">Negative</td>
+                <td class="border-b px-4 py-2 whitespace-nowrap text-sm text-center text-gray-600 border-r bg-red-100">Positive</td>
+              </tr>
+
+              <tr>
+                <td colspan="4" class="md:hidden border-t-2 border-gray-200 px-4 py-2 whitespace-nowrap text-sm font-medium text-gray-900">Bilirubin</td>
+              </tr>
+              <tr>
+                <td class="hidden md:table-cell border-b px-4 py-2 whitespace-nowrap text-sm font-medium text-gray-900 border-r-2 border-gray-200">Bilirubin</td>
+                <td class="border-b px-4 py-2 whitespace-nowrap text-lg text-center text-gray-600 border-r font-bold bg-green-200" colspan="2">Negative</td>
+                <td class="border-b px-4 py-2 whitespace-nowrap text-sm text-center text-gray-600 border-r bg-green-100">Negative</td>
+                <td class="border-b px-4 py-2 whitespace-nowrap text-sm text-center text-gray-600 border-r bg-yellow-100">Trace</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+<div class="py-6 max-w-xs">
+  <div class="text-lg mb-2">Next:</div>
+  {% include button.html icon="right" text="View Custom Pak" %}
+</div>

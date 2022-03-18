@@ -1,0 +1,49 @@
+---
+layout: default
+nav-style: no-results
+nav: dashboard
+title: "Welcome, Firstname!"
+---
+{% include page-header.html navname="Dashboard" title=page.title desc="Your personalized portal for optimal health based on your body's unique needs." %}
+
+<div class="bg-white shadow rounded-lg mt-5 mb-5">
+  <div class="px-4 py-5 sm:p-6">
+
+    <div class="text-xl font-bold text-gray-900 mr-2">Complete Setup</div>
+
+    <div class="py-2 sm:py-4">
+      <a class="flex justify-between items-start w-full" href="{{ site.baseurl }}/questionnaire">
+        <span class="mr-4 inline-flex items-center justify-center h-12 w-12 rounded-full bg-skin-accent-primary shrink-0">
+          <span class="text-2xl font-bold leading-none text-white">
+            1
+          </span>
+        </span>
+        <span class="grow text-xl font-normal text-gray-900">
+          <span class="">Finish Questionnaire</span>
+          <span class="block rounded-xl overflow-hidden">
+            <span class="flex">
+              <span class="text-xs bg-green-600 text-white px-2" style="width: 65%;">65% Complete</span>
+              <span class="text-xs bg-gray-200" style="width: 35%;">&nbsp;</span>
+            </span>
+          </span>
+        </span>
+      </a>
+    </div>
+
+    <div class="py-2 sm:py-4">
+      <div class="flex justify-between items-start w-full">
+        <div class="mr-4 inline-flex items-center justify-center h-12 w-12 rounded-full bg-gray-300 shrink-0">
+          <span class="text-2xl font-bold leading-none text-white">
+            2
+          </span>
+        </div>
+        <div class="grow">
+          <div class="text-xl font-normal text-gray-400">Schedule Bloodwork Appointment</div>
+          <p class="text-sm font-normal leading-snug text-gray-400 mb-4">PSC Hold is the form needed to process your bloodwork. Save this document and bring it to your appointment.</p>
+          {% include button.html text="Download PSC Hold" classes="inline-block w-56" disabled=true %}
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>

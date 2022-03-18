@@ -1,0 +1,39 @@
+<div class="pt-3 pb-4">
+  <fieldset>
+    <label for="{{ include.name | slugify }}" class="{% if include.error %}text-red-600 {% endif %}block text-lg leading-tight font-bold text-gray-900">{{ include.name }}</label>
+    {% if include.subtext %}
+    <div class="text-sm text-gray-500">{{ include.subtext }}</div>
+    {% endif %}
+    <div class="flex space-x-4 mt-1{% if include.error %} border-l-2 border-red-600 pl-2{% endif %}">
+      <!--
+        Active: "ring-2 ring-offset-2 ring-indigo-500"
+        Checked: "bg-indigo-600 border-transparent text-white hover:bg-indigo-700", Not Checked: "bg-white border-gray-200 text-gray-900 hover:bg-gray-50"
+      -->
+      {% assign options = include.options | split: "," %}
+      {% for option in options %}
+      <label class="cursor-pointer border rounded-md py-3 px-3 flex items-center justify-center sm:flex-1 focus:outline-none hover:ring-1 hover:border-skin-button-primary ring-skin-button-primary {% if include.selected and forloop.index == 2 %} ring-1 border-skin-button-primary{% endif %}">
+        <input type="radio" name="{{ include.name | slugify }}" value="{{ option }}" class="sr-only" aria-labelledby="{{ option |slugify }}">
+        <p class="block text-sm text-center leading-tight font-medium text-gray-700" id="{{ option | slugify }}">{{ option }}</p>
+      </label>
+      {% endfor %}
+    </div>
+  </fieldset>
+</div>
+{% comment %}
+<div>
+  <label class="text-base font-bold text-gray-900">{{ include.name }}</label>
+  <fieldset class="mt-2">
+    <legend class="sr-only">{{ include.name }}</legend>
+    <div class="space-y-4 sm:flex sm:items-center sm:space-y-0 sm:space-x-10">
+      {% assign options = include.options | split: "," %}
+      {% for option in options %}
+      
+      <div class="flex items-center">
+        <input id="{{ option | slugify }}" name="{{ include.name | slugify }}" type="radio" class="focus:ring-skin-button-primary h-4 w-4 text-skin-button-primary border-gray-300">
+        <label for="{{ option | slugify }}" class="ml-3 block text-sm font-medium text-gray-700"> {{ option }} </label>
+      </div>
+      {% endfor %}
+    </div>
+  </fieldset>
+</div>
+{% endcomment %}

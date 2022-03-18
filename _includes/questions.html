@@ -1,0 +1,37 @@
+{% if include.status == "partial" %}{% assign isSelected = true %}{% else %}{% assign isSelected = false %}{% endif %}
+{% include field-checkboxes.html selected=isSelected name="Why are you interested in knowing your exact nutrient needs?" options="I want to improve my general health and wellness.,I’m concerned about my immune health.,I’m an athlete or competitor looking to improve my fitness.,I’ve had weight loss surgery.,I want to lose weight and feel energized.,I want to slow down the aging process.,I have a condition I’d like to improve." %}
+{% include field-checkboxes.html error=isSelected name="Do you follow any of the following eating plans?" options="High Protein,Gluten Free,Intermittent Fasting,Ketogenic,Plant Based,Vegetarian,Vegan,Count Macronutrients,None" columns="3"  %}
+{% include field-toggle.html name="Are you pregnant, trying, or currently breastfeeding?" offLabel="No" onLabel="Yes" %}
+{% include field-checkboxes.html selected=isSelected name="Do you have any allergies or do you try to avoid any of the following?" options="Fish,Shellfish,Tree Nuts,Nightshades,Latex,Milk,Gluten,Mushrooms,Soy,Bee Products,Ragweed,Peanuts" columns="4" %}
+{% include field-radio.html selected=isSelected name="How’s your fruit and vegetable daily intake (fist-size servings)?" options="0-2 servings,3-6 servings,More than 7 servings" %}
+{% include field-radio.html error=isSelected name="How many (fist-size) servings of calcium-rich foods do you typically eat in a day?" subtext="eg. dairy products, beans, green leafy vegetables, broccoli, almonds, etc." options="0-2 servings,More than 3 servings" %}
+{% include field-radio.html selected=isSelected name="How many servings (approximately 3oz) of lean protein do you usually eat daily?" subtext="eg. fish, chicken, turkey, plant-based protein, etc." options="0-2 servings,More than 3 servings" %}
+
+{% include field-radio.html selected=isSelected name="On average, how many alcoholic beverages do you have in a week?" options="0-1 servings,2-5 servings,More than 6 servings" %}
+{% include field-toggle.html name="Do you smoke or encounter second-hand smoke weekly?" offLabel="No" onLabel="Yes" %}
+{% include field-toggle.html name="Do you get less than 20 minutes of daily sun exposure?" offLabel="No" onLabel="Yes" %}
+
+{% include field-radio.html selected=isSelected name="How are your hair, skin, and nails?" options="Could use some help,Great" %}
+{% include field-radio.html selected=isSelected name="How much time do you spend looking at screens?" options="Not often,A few hours a day,I’m always on the computer/phone" %}
+{% include field-checkboxes.html selected=isSelected name="Do you have any of the following skin issues?" options="None,Eczema,Acne,Psoriasis" %}
+{% include field-checkboxes.html selected=isSelected name="Do you experience any of the following?" options="None,Chronic aches and pains,Fluctuating energy levels throughout the day" multiselect=true %}
+{% include field-radio.html selected=isSelected name="On average, how are your energy levels?" options="I’m always exhausted,I usually have an energy slump,Pretty good,No complaints" %}
+{% include field-radio.html selected=isSelected name="How’s your mood?" options="I’m hardly ever happy,A bit down sometimes,Not too bad,Great" %}
+{% include field-toggle.html name="Are you experiencing a lot of stress?" offLabel="No" onLabel="Yes" %}
+{% include field-checkboxes.html selected=isSelected name="How do you sleep?" options="I sleep well,I don’t get enough sleep,My mind races when I’m trying to sleep,I have problems staying asleep,I don’t sleep well for another reason" %}
+{% include field-toggle.html name="Do you suffer from PMS?" subtext="eg. bloating, breast tenderness, irritability" offLabel="No" onLabel="Yes" %}
+{% include field-checkboxes.html selected=isSelected name="Has anyone in your immediate family had any of these conditions?" options="Colon Cancer,Prostate Cancer,Neither of these,Does not apply to my gender" %}
+{% include field-toggle.html name="Have you taken antibiotics within the last year?" offLabel="No" onLabel="Yes" %}
+{% include field-checkboxes.html selected=isSelected name="Do you have any digestive issues?" options="SIBO,Heartburn or Indigestion,Gas or Bloating,IBS,Diarrhea,I have other digestive problems,None" columns=2 %}
+{% include field-checkboxes.html selected=isSelected name="Do you struggle with any of these?" options="Asthma,Frequent Viral Infections,Seasonal Allergies,Migraines,Persistent Cold Sores,None" columns=3 %}
+{% include field-radio.html selected=isSelected name="Which best describes your fitness or activity level?" options="I rarely/never workout,I work out often,I sometimes workout,I’m an athlete or competitor" %}
+{% include field-radio.html selected=isSelected name="How often do you do cardio each week?" options="Less than 2 hours,2-3 hours,3-4 hours,More than 4 hours" %}
+{% include field-toggle.html name="Are you trying to increase strength & muscle size?" offLabel="No" onLabel="Yes" %}
+{% include field-radio.html selected=isSelected name="Do you experience joint or tendon pain?" options="I have tendonitis,Only after hard exercise,My joints hurt all the time,No complaints" %}
+{% include field-radio.html selected=isSelected name="Do you have uterine fibroids or endometriosis?" options="I have neither,I have endometriosis,I have uterine fibroids,I have both" %}
+{% include field-checkboxes.html selected=isSelected name="Do you have any of the following conditions related to your eye, nose, and gum health?" options="None,Gingivitis,Sinusitis" columns=3%}
+{% include field-radio.html selected=isSelected name="How often do you feel sick?" options="2-3 times per year,Hardly ever" %}
+{% include field-checkboxes.html selected=isSelected name="Do you have any of the following conditions related to heart health?" options="None,High Blood Pressure,Congestive Heart Failure,High Cholesterol and I am taking statins,High Cholesterol and I am not taking statins,Angina,Atherosclerosis,High Triglycerides" %}
+{% include field-checkboxes.html selected=isSelected name="Do you have any conditions related to your kidney and bladder health?" options="None,History of Kidney Stones,Frequent Bladder Infections" %}
+{% include field-checkboxes.html selected=isSelected name="Do you have any conditions related to blood sugar and endocrine health?" options="None,Diabetic Retinopathy,High HbA1c/Prediabetes,Hypothyroidism,Generally high blood sugar levels,Type I Diabetes,Type II Diabetes" %}
+{% include field-checkboxes.html selected=isSelected name="Do you have any of these conditions?" options="None,Celiac Disease,Hashimoto’s Thyroiditis,I have had or currently have cancer,Chronic Fatigue Syndrome,Lupus,Fibromyalgia" %}

@@ -1,0 +1,78 @@
+---
+layout: default
+nav: dashboard
+title: "Welcome, Firstname!"
+---
+{% include page-header.html navname="Dashboard" title=page.title desc="Your personalized portal for optimal health based on your body's unique needs." %}
+
+<div class="bg-white shadow rounded-lg mt-5 mb-5">
+  <div class="px-4 py-5 sm:p-6">
+    <div class="flex items-center text-sm text-gray-500">
+      <h2 class="text-xl font-bold text-gray-900 mr-2">Renewal Time</h2>
+    </div>
+    <p class="leading-6">Let's keep your program up to date. Update your questionnaire and receive PSC Hold document for your next bloodwork.</p>
+    <div class="pt-4">
+      {% include button.html icon="right" link="questionnaire" text="Update Questionnaire" %}
+    </div>
+  </div>
+</div>
+<div class="bg-white shadow rounded-lg mt-5 mb-5">
+  <div class="px-4 py-5 sm:p-6">
+    <div class="flex items-center text-sm text-gray-500">
+      <h2 class="text-xl font-bold text-gray-900 mr-2">Results</h2>
+      March 7, 2022
+    </div>
+    <p class="leading-6">The Optimal Range defines the most ideal values for blood/urine results. Results outside this range move into a warning range (functional) and can accelerate to clinical levels which can identify more serious health concerns. This program will help move your levels into the Optimal Range.</p>
+    <div class="pt-4">
+      {% include button.html icon="right" link="results" text="View Full Results" %}
+    </div>
+  </div>
+  {% include result-summary.html %}
+</div>
+<div class="bg-white shadow rounded-lg mt-5 mb-5">
+  <div class="px-4 py-5 sm:p-6">
+    <div class="flex items-center text-sm text-gray-500">
+      <h2 class="text-xl font-bold text-gray-900 mr-2">Previous Results</h2>
+    </div>
+  </div>
+  <div class="flex flex-col">
+    <div class="inline-block min-w-full align-middle">
+      <table class="min-w-full border-separate" style="border-spacing: 0">
+        <thead class="bg-white">
+          <tr>
+            <th scope="col" class="sticky top-20 md:top-10 z-10 bg-gray-50 py-2 px-3 border-t border-b text-left text-xs font-normal text-gray-500 leading-none border-r-2 border-gray-200">Date</th>
+            <th scope="col" class="sticky top-20 md:top-10 z-10 bg-gray-50 py-2 px-3 border-t border-b text-center text-xs font-normal text-gray-500 leading-none">Optimal</th>
+            <th scope="col" class="sticky top-20 md:top-10 z-10 bg-gray-50 py-2 px-3 border-t border-b text-center text-xs font-normal text-gray-500 leading-none">Functional</th>
+            <th scope="col" class="sticky top-20 md:top-10 z-10 bg-gray-50 py-2 px-3 border-t border-b text-center text-xs font-normal text-gray-500 leading-none">Critical</th>
+          </tr>
+        </thead>
+        <tbody class="bg-white">
+          <tr>
+            <td class="border-b px-2 sm:px-4 py-2 whitespace-nowrap text-lg text-gray-900 border-r-2 border-gray-200">2022/03/07</td>
+            <td class="border-b px-2 sm:px-4 py-2 whitespace-nowrap text-lg text-center text-gray-600 border-r">49</td>
+            <td class="border-b px-2 sm:px-4 py-2 whitespace-nowrap text-lg text-center text-gray-600 border-r">19</td>
+            <td class="border-b px-2 sm:px-4 py-2 whitespace-nowrap text-lg text-center text-gray-600">7</td>
+          </tr>
+          <tr>
+            <td class="border-b px-2 sm:px-4 py-2 whitespace-nowrap text-lg text-gray-900 border-r-2 border-gray-200">2021/10/07</td>
+            <td class="border-b px-2 sm:px-4 py-2 whitespace-nowrap text-lg text-center text-gray-600 border-r">39</td>
+            <td class="border-b px-2 sm:px-4 py-2 whitespace-nowrap text-lg text-center text-gray-600 border-r">17</td>
+            <td class="border-b px-2 sm:px-4 py-2 whitespace-nowrap text-lg text-center text-gray-600">19</td>
+          </tr>
+          <tr>
+            <td class="border-b px-2 sm:px-4 py-2 whitespace-nowrap text-lg text-gray-900 border-r-2 border-gray-200">2021/03/07</td>
+            <td class="border-b px-2 sm:px-4 py-2 whitespace-nowrap text-lg text-center text-gray-600 border-r">39</td>
+            <td class="border-b px-2 sm:px-4 py-2 whitespace-nowrap text-lg text-center text-gray-600 border-r">17</td>
+            <td class="border-b px-2 sm:px-4 py-2 whitespace-nowrap text-lg text-center text-gray-600">19</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  <!-- end table -->
+  <div class="px-4 py-5 sm:p-6">
+    {% include button.html link="history" icon="right" text="Compare" %}
+  </div>
+</div>
+
+

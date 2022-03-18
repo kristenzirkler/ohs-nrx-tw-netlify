@@ -1,0 +1,26 @@
+{% assign sharedClasses = "border border-transparent text-lg font-bold rounded-md text-white focus:outline-none focus:ring-2 focus:ring-offset-2" %}
+{% if include.disabled %}
+{% assign bgClasses = "bg-gray-200 hover:bg-gray-200 focus:ring-gray-200 cursor-not-allowed" %}
+{% else %}
+{% assign bgClasses = "bg-skin-button-primary hover:bg-skin-button-primary-hover focus:ring-skin-button-primary shadow-sm" %}
+{% endif %}
+{% if include.icon %}
+  {% if include.link %}<a href="{{ site.baseurl }}/{{ include.link }}"{% else %}<button{% endif %} type="button" class="flex justify-between items-center h-12 px-4 w-full {{ sharedClasses }} {{ bgClasses }}  {{ include.classes }}" >
+    {{ include.text }}
+
+    {% if include.icon == 'right' %}
+    <!-- Heroicon name: outline/chevron-right -->
+    <svg xmlns="http://www.w3.org/2000/svg" class="ml-3 -mr-1 h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+      <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
+    </svg>
+    {% endif %}
+  {% if include.link %}</a>{% else %}</button>{% endif %}
+{% else if include.link %}
+  <a class="flex items-center justify-evenly h-12 px-8 {{ sharedClasses }} {{ bgClasses }} {{ include.classes }}" href="{{ site.baseurl }}/{{ include.link }}">
+    {{ include.text }}
+  </a>
+{% else %}
+  <button type="button" class="h-12 px-8 {{ sharedClasses }} {{ bgClasses }} {{ include.classes }}" {% if include.link %}href="{{ site.baseurl }}/{{ include.link }}"{% endif %}>
+    {{ include.text }}
+  </button>
+{% endif %}

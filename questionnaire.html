@@ -1,0 +1,21 @@
+---
+layout: default
+nav: questionnaire
+title: "Questionnaire for Firstname"
+---
+{% include page-header.html navname="Questionnaire" title=page.title desc="Please complete the questionnaire to continue with the program." %}
+
+<div class="mt-5">
+  <div class="shadow rounded-md bg-white">
+    <div class="px-4 py-5 sm:p-6 divide-y divide-gray-200 max-w-3xl m-auto">
+      {% include questions.html %}
+    </div>
+  </div>
+</div>
+
+<div class="mb-10">&nbsp;</div>
+<div class="fixed bottom-0 left-0 md:left-48 right-0">
+  <div class="px-4 py-3 bg-white sm:px-6 border-t border-gray-200">
+    {% include button.html text="Save" link="dashboard-new" %}
+  </div>
+</div>
