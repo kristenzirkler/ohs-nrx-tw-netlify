@@ -12,17 +12,29 @@
     --color-button-accent: 255, 255, 255;
     --color-button-accent-hover: 238, 242, 255;
     --color-button-muted: 99, 102, 241;
+
+    --color-body: 238, 238, 238;
+    --color-accent-primary: 25, 178, 185;
+    --color-button-primary: 51, 51, 51;
+    --color-button-primary-hover: 102, 102, 102;
+    --font: arial;
   }
-  .theme-swiss {
+  .theme-ohs {
     --color-text-base: 255, 255, 255;
     --color-text-muted: 254, 202, 202;
     --color-text-inverted: 220, 38, 38;
-    --color-fill: 185, 28, 28;
+    --color-fill: 28, 28, 20;
     --color-button-accent: 255, 255, 255;
     --color-button-accent-hover: 254, 242, 242;
     --color-button-muted: 239, 68, 68;
+
+    --color-body: 236, 234, 230;
+    --color-accent-primary: 41, 126, 85;
+    --color-button-primary: 50, 71, 112;
+    --color-button-primary-hover: 49, 84, 154;
+    --font: mr-eaves-xl-sans;
   }
-  .theme-neon {
+  .theme-fakeco {
     --color-text-base: 17, 24, 2;
     --color-text-muted: 47, 67, 6;
     --color-text-inverted: 235, 250, 204;
@@ -30,5 +42,11 @@
     --color-button-accent: 36, 52, 3;
     --color-button-accent-hover: 55, 79, 5;
     --color-button-muted: 212, 255, 122;
+
+    --color-body: 153, 153, 153;
+    --color-accent-primary: 238, 196, 45;
+    --color-button-primary: 0, 0, 0;
+    --color-button-primary-hover: 51, 51, 51;
+    --font: 'Arial Black';
   }
 }
