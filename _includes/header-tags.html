@@ -1,7 +1,8 @@
 {% assign theme = 'fakeco1' %}
 {% assign theme = 'ohs' %}
-<link href="https://cdn.jsdelivr.net/npm/daisyui@2.6.4/dist/full.css" rel="stylesheet" type="text/css" />
 <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/style.css" />
+
+<script defer src="https://unpkg.com/@alpinejs/persist@3.x.x/dist/cdn.min.js"></script>
 <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
 
 {% if theme == 'ohs' %}
@@ -16,60 +17,43 @@ $color-brand-tan: #ECEAE6;
 
 -->
 <link rel="stylesheet" href="https://use.typekit.net/ato5yse.css">
-<script>
-tailwind.config = {
-  theme: {
-    extend: {
-      colors: {
-        'body': '#F5F4F2',
-        'accent-primary': '#324770',
-        'button-primary': '#324770',
-        'button-primary-hover': '#297E55',
-      },
-      fontFamily: {
-        sans: ['mr-eaves-xl-sans', 'sans-serif']
-      },
-      fontSize: {
-        'xs': '.875rem',
-        'sm': '1rem',
-        'tiny': '1rem',
-        'base': '1.00625rem',
-        'lg': '1.06rem',
-        'xl': '1.25rem',
-        '2xl': '1.75rem',
-        '3xl': '2rem',
-        '4xl': '2.5rem',
-        '5xl': '3.5rem',
-        '6xl': '4rem',
-        '7xl': '5rem',
-      }
-    },
-  }
-}
-</script>
 <!-- end OHS COMPANY THEME ------------------------------------------ -->
 {% endif %}
 {% if theme == 'fakeco1' %}
 <!-- FAKE COMPANY THEME --------------------------------------------- -->
-<script>
-tailwind.config = {
-  theme: {
-    extend: {
-      colors: {
-        'body': '#999999',
-        'accent-primary': '#eec42d',
-        'button-primary': '#000000',
-        'button-primary-hover': '#333333',
-      },
-      fontFamily: {
-        sans: ['Montserrat', 'sans-serif']
-      }
-    },
-  }
-}
-</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,500;1,900&display=swap" rel="stylesheet">
 <!-- end FAKE COMPANY THEME ------------------------------------------ -->
 {% endif %}
+
+<script type="text/javascript">
+function theme() {
+    return {
+        colorThemes: [
+            'theme-ohs',
+            'theme-fakeco'
+        ],
+        themeClass: {},
+        choiceClass(className) {
+            const classes = {'color-choice': true};
+            classes[className] = true;
+            return classes;
+        },
+        changeTheme(className) {
+            this.themeClass = this.colorThemes.reduce((allClasses, cn) => {
+                allClasses[cn] = className === cn;
+                localStorage.setItem('theme-class',className);
+                return allClasses;
+            }, {});
+        },
+        getTheme() {
+          var initClass = localStorage.getItem('theme-class');
+          if (!initClass) {
+            initClass = 'theme-root';
+          }
+          return this.themeClass = initClass;
+        }
+    }
+}
+</script>

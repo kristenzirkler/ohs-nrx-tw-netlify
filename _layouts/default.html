@@ -1,7 +1,7 @@
 ---
 ---
 <!DOCTYPE html>
-<html lang="{{ site.lang | default: "en-US" }}" class="theme-ohs h-full font-sans bg-skin-body">
+<html lang="{{ site.lang | default: "en-US" }}" class="h-full font-sans" x-data="theme()" :class="themeClass" x-init="getTheme()">
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta charset="utf-8">
@@ -9,8 +9,9 @@
 
 {% include header-tags.html %}
 </head>
-<body class="h-full text-gray-500">
-<div>
+<body class="h-full text-gray-500 bg-skin-body">
+<div class="bg-skin-body fixed top-0 bottom-0 left-0 right-0 -z-10">&nbsp;</div>
+<div class="relative">
   <!-- Off-canvas menu for mobile, show/hide based on off-canvas menu state. -->
   <div class="fixed inset-0 flex z-40 hidden md:hidden mobile-menu" role="dialog" aria-modal="true">
     <!--

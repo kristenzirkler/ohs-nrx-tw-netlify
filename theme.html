@@ -4,19 +4,20 @@ nav: theme
 nav-style: admin
 title: "Theme Examples"
 ---
+<link href="https://cdn.jsdelivr.net/npm/daisyui@2.6.4/dist/full.css" rel="stylesheet" type="text/css" />
 {% include page-header.html navname="Theme" title=page.title desc="Change the HTML tag's theme on default.html & loggedout.html to switch themes." %}
 
 <div class="bg-white shadow rounded-lg mt-5 mb-5">
   <div class="px-4 py-5 sm:p-6">
-    <h1 class="text-xl font-semibold text-gray-900">Theme Variables</h1>
-    <div class="theme-ohs font-sans mb-4">
-      <h1 class="text-xl font-semibold text-gray-900">OHS Theme (theme-ohs)</h1>
-      {% include theme-colors.html %}
+
+    <div class="text-3xl">
+      <div class="color-theme-container">
+        <template x-for="(ct, index) in colorThemes" :key="index">
+            <div class="text-base" x-bind:class="choiceClass(ct)" @click="changeTheme(ct)" x-text="ct"></div>
+        </template>
+      </div>
     </div>
-    <div class="theme-fakeco font-sans mb-4">
-      <h1 class="text-xl font-semibold text-gray-900">Sample Company (theme-fakeco)</h1>
-      {% include theme-colors.html %}
-    </div>
+
   </div>
 </div>
 
