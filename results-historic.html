@@ -1,18 +1,20 @@
 ---
 layout: default
 nav: results
-title: "Functional Health Lab Test Results"
+title: "Historic Lab Test Results"
 ---
 
 {% include page-header.html navname="Results" title=page.title desc="The Blood Test Results Report lists the results of your Chemistry Screen and CBC. This shows you whether or not an individual element is outside of the optimal range and/or outside of the clinical lab range." %}
-
 <div class="mt-5 bg-white shadow rounded-lg mb-4 overflow-hidden">
   <div class="p-4">
-    <div class="flex items-center text-sm text-gray-500 pb-4">
-      <svg class="flex-shrink-0 mr-1.5 h-5 w-5 text-gray-400" x-description="Heroicon name: solid/calendar" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
-        <path fill-rule="evenodd" d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z" clip-rule="evenodd"></path>
-      </svg>
-      Report Date: March 7, 2022
+    <div class="sm:flex items-center justify-between pb-4">
+      <div class="flex items-center text-sm text-gray-500 pb-4 sm:pb-0">
+        <svg class="flex-shrink-0 mr-1.5 h-5 w-5 text-gray-400" x-description="Heroicon name: solid/calendar" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+          <path fill-rule="evenodd" d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z" clip-rule="evenodd"></path>
+        </svg>
+        Report Date: October 7, 2021
+      </div>
+      <div class="">{% include button.html link="results" icon="right" text="Current Results" %}</div>
     </div>
     <p class="leading-6">The Optimal Range defines the most ideal values for blood/urine results. Results outside this range move into a warning range (functional) and can accelerate to clinical levels which can identify more serious health concerns. This program will help move your levels into the Optimal Range.</p>
   </div>
@@ -89,5 +91,5 @@ title: "Functional Health Lab Test Results"
 
 <div class="py-6 max-w-xs">
   <div class="text-lg mb-2">Next:</div>
-  {% include button.html link="history" icon="right" text="Compare History" %}
+  {% include button.html icon="right" text="Compare History" %}
 </div>
