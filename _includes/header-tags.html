@@ -1,38 +1,39 @@
 {% assign theme = 'fakeco1' %}
+{% assign theme = 'unfairadv' %}
 {% assign theme = 'ohs' %}
 <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/style.css" />
 
 <script defer src="https://unpkg.com/@alpinejs/persist@3.x.x/dist/cdn.min.js"></script>
 <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
 
-{% if theme == 'ohs' %}
-<!-- OHS COMPANY THEME ---------------------------------------------- 
-
-$color-brand-green: #297E55; //#008A5E;
-$color-brand-green-dark: #195036; //#005D3F;
-$color-brand-blue-dark: #324770;//#06488F;
-$color-brand-dark-gray: #27201f;
-$color-brand-yellow: #F7CD1B;//#FFD51C;
-$color-brand-tan: #ECEAE6;
-
--->
+<!-- OHS FONTS ---------------------------------------------- -->
 <link rel="stylesheet" href="https://use.typekit.net/ato5yse.css">
-<!-- end OHS COMPANY THEME ------------------------------------------ -->
-{% endif %}
-{% if theme == 'fakeco1' %}
-<!-- FAKE COMPANY THEME --------------------------------------------- -->
+<!-- end OHS FONTS ------------------------------------------ -->
+<!-- FAKE FONTS --------------------------------------------- -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,500;1,900&display=swap" rel="stylesheet">
-<!-- end FAKE COMPANY THEME ------------------------------------------ -->
-{% endif %}
+<!-- end FAKE FONTS ------------------------------------------ -->
+<!-- UNFAIR ADVANTAGE FONTS ------------------------------------------ -->
+<style id="custom-css">
+@font-face {
+  font-family: 'PlusBold';
+  src: url('https://tfl-fonts.s3.us-east-2.amazonaws.com/jakarta/PlusJakartaDisplay-Bold.otf');
+}
+@font-face {
+  font-family: 'PlusRegular';
+  src: url('https://tfl-fonts.s3.us-east-2.amazonaws.com/jakarta/PlusJakartaText-Light.otf');
+}
+</style>
+<!-- end UNFAIR ADVANTAGE FONTS -------------------------------------- -->
 
 <script type="text/javascript">
 function theme() {
     return {
         colorThemes: [
             'theme-ohs',
-            'theme-fakeco'
+            'theme-fakeco',
+            'theme-unfairadv'
         ],
         themeClass: {},
         choiceClass(className) {
