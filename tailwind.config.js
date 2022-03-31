@@ -17,9 +17,9 @@ module.exports = {
   darkMode: 'class',
   theme: {
     extend: {
-      backgroundImage: {
+      backgroundImage: theme => ({
         'logo': image('--image-logo')
-      },
+      }),
       fontFamily: {
         sans: fontFormat('--font-sans'),
         display: fontFormat('--font-display')

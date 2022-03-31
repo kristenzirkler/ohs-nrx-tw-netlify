@@ -15,7 +15,7 @@
     --color-border: 229, 231, 235;
     --font-sans: arial;
     --font-display: arial;
-    --image-logo: "url('/assets/images/logo-nutrientsrx.png')";
+    --image-logo: url(../images/logo-nutrientsrx.png);
   }
   .theme-ohs {
     --color-body: 236, 234, 230;
@@ -29,7 +29,7 @@
     --color-border: 229, 231, 235;
     --font-sans: mr-eaves-xl-sans;
     --font-display: mr-eaves-xl-sans;
-    --image-logo: "url('/assets/images/logo-nutrientsrx.png')";
+    --image-logo: url(../images/logo-nutrientsrx.png);
   }
   .theme-fakeco {
     --color-body: 153, 153, 153;
@@ -43,7 +43,7 @@
     --color-border: 229, 231, 235;
     --font-sans: 'Arial';
     --font-display: 'Arial Black';
-    --image-logo: "url('/assets/images/logo-nutrientsrx.png')";
+    --image-logo: url(../images/logo-nutrientsrx.png);
   }
   .theme-unfairadv {
     --color-body: 12, 12, 12;
@@ -57,6 +57,6 @@
     --color-border: 54, 70, 125;
     --font-sans: 'PlusRegular';
     --font-display: 'PlusBold';
-    --image-logo: "url('../assets/images/logo-unfairadvantage.png')";
+    --image-logo: url(../images/logo-unfairadvantage.png);
   }
 }
