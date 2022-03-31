@@ -5,6 +5,15 @@ title: "Functional Health Lab Test History"
 ---
 {% include page-header.html navname="History" title=page.title desc="The Blood Test History Report lists the results of your Chemistry Screen and CBC tests side by side with the latest test listed on the left hand side. This report allows you to compare results over time and see where improvement has been made and allows you to track progress." %}
 
+<div class="bg-skin-page shadow rounded-lg mt-5 mb-5">
+  <div class="px-4 py-5 sm:p-6">
+    <div class="flex items-center">
+      <h2 class="text-xl font-bold font-display text-skin-header mr-2">Previous Results</h2>
+    </div>
+  </div>
+  {% include result-history-overview.html %}
+</div>
+
 <div class="mt-5 bg-skin-page shadow rounded-lg mb-5">
   <div class="p-4 flex items-center text-sm text-skin-primary opacity-80">
     <svg class="flex-shrink-0 mr-1.5 h-5 w-5 text-gray-400" x-description="Heroicon name: solid/calendar" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
@@ -25,10 +34,10 @@ title: "Functional Health Lab Test History"
               </th>
               </tr>
               <tr>
-                <th scope="col" class="hidden md:table-cell sticky top-20 md:top-10 z-10 bg-skin-border/50 py-2 px-3 border-t border-b border-skin-primary text-left text-sm font-normal leading-none border-r-2 border-skin-primary">Test</th>
-                <th scope="col" class="sticky top-20 md:top-10 z-10 bg-skin-border/50 py-2 px-3 border-t border-b border-skin-primary text-center text-sm font-normal leading-none border-skin-primary" colspan="2"><a href="{{ site.baseurl }}/results" class="text-skin-link hover:text-skin-link/80 hover:underline">Current</a></th>
-                <th scope="col" class="sticky top-20 md:top-10 z-10 bg-skin-border/50 py-2 px-3 border-t border-b border-skin-primary text-center text-sm font-normal leading-none border-skin-primary"><a href="{{ site.baseurl }}/results-historic" class="text-skin-link hover:text-skin-link/80 hover:underline">2021/10</a></th>
-                <th scope="col" class="sticky top-20 md:top-10 z-10 bg-skin-border/50 py-2 px-3 border-t border-b border-skin-primary text-center text-sm font-normal leading-none border-skin-primary"><a href="{{ site.baseurl }}/results-historic" class="text-skin-link hover:text-skin-link/80 hover:underline">2021/03</a></th>
+                {% include table-head-th.html name="Test" classes="hidden md:table-cell justify-start text-left border-r-2" %}
+                {% include table-head-th.html name="Current" classes="" link="results" colspan="2" %}
+                {% include table-head-th.html name="2021/10" classes="" link="results-historic" %}
+                {% include table-head-th.html name="2021/03" classes="" link="results-historic" %}
               </tr>
             </thead>
             <tbody class="bg-skin-page">

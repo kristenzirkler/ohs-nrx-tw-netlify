@@ -10,13 +10,13 @@
             </th>
           </tr>
           <tr class="">
-            <th scope="col" class="hidden md:table-cell sticky border-skin-primary bg-skin-border/50 top-10 z-10 px-2 md:py-2 px-3 border-t border-b text-left text-xs font-normal text-skin-primary opacity-80 leading-none">Test</th>
-            <th scope="col" class="hidden md:table-cell sticky border-skin-primary bg-skin-border/50 top-10 z-10 px-2 md:py-2 px-3 border-t border-b text-center text-xs font-normal text-skin-primary opacity-80 leading-none border-r-2" colspan="2">Current</th>
-            <th scope="col" class="sticky border-skin-primary bg-skin-border/50 top-20 md:top-10 z-10 px-2 md:py-2 px-3 border-t border-b text-center text-xs font-normal text-skin-primary opacity-80 leading-none">C<span class="hidden md:inline">linical</span> Low</th>
-            <th scope="col" class="sticky border-skin-primary bg-skin-border/50 top-20 md:top-10 z-10 px-2 md:py-2 px-3 border-t border-b text-center text-xs font-normal text-skin-primary opacity-80 leading-none">F<span class="hidden md:inline">unctional</span> Low</th>
-            <th scope="col" class="sticky border-skin-primary bg-skin-border/50 top-20 md:top-10 z-10 px-2 md:py-2 px-3 border-t border-b text-center text-xs font-normal text-skin-primary opacity-80 leading-none">Optimal<span class="hidden md:inline"> Range</span></th>
-            <th scope="col" class="sticky border-skin-primary bg-skin-border/50 top-20 md:top-10 z-10 px-2 md:py-2 px-3 border-t border-b text-center text-xs font-normal text-skin-primary opacity-80 leading-none">F<span class="hidden md:inline">unctional</span> High</th>
-            <th scope="col" class="sticky border-skin-primary bg-skin-border/50 top-20 md:top-10 z-10 px-2 md:py-2 px-3 border-t border-b text-center text-xs font-normal text-skin-primary opacity-80 leading-none">C<span class="hidden md:inline">linical</span> High</th>
+            {% include table-head-th.html name="Test" classes="hidden md:table-cell justify-start" %}
+            {% include table-head-th.html name="Current" classes="hidden md:table-cell border-r-2" colspan="2" %}
+            {% include table-head-th.html name="C<span class='hidden md:inline'>linical </span> Low" %}
+            {% include table-head-th.html name="F<span class='hidden md:inline'>unctional </span> Low" %}
+            {% include table-head-th.html name="Optimal<span class='hidden md:inline'> Range</span>" %}
+            {% include table-head-th.html name="F<span class='hidden md:inline'>unctional </span> High" %}
+            {% include table-head-th.html name="C<span class='hidden md:inline'>linical </span> High" %}
           </tr>
         </thead>
         <tbody class="bg-skin-page divide-y divide-skin-primary">
