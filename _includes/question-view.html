@@ -2,10 +2,10 @@
   <div class="block text-lg leading-tight font-bold  mb-2">{{ include.name }}</div>
   {% if include.onLabel %}
   <div class="grid grid-cols-2">
-    <div class="rounded-md">
+    <div class="rounded-lg">
       <div class="text-gray-400 py-2 px-3 leading-tight text-center">{{ include.offLabel }}</div>
     </div>
-    <div class="rounded-md border-2 border-skin-button-primary">
+    <div class="rounded-lg border-2 border-skin-button-primary">
       <div class=" py-2 px-3 leading-tight text-center">{{ include.onLabel }}</div>
     </div>
   </div>
@@ -13,7 +13,7 @@
   <div class="{% if include.columns %}grid grid-cols-{{ include.columns}}{% else %}space-y-2 {% endif %}">
       {% assign options = include.options | split: "," %}
       {% for option in options %}
-      <div class="relative flex items-start rounded-md{% if forloop.index == 2 %} border-2 border-skin-button-primary{% endif %}">
+      <div class="relative flex items-start rounded-lg{% if forloop.index == 2 %} border-2 border-skin-button-primary{% endif %}">
         <div class="{% if forloop.index == 2 %}{% else %}text-gray-400{% endif %} py-2 px-3 leading-tight">{{ option }}</div>
       </div>
       {% endfor %}

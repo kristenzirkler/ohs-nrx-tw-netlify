@@ -14,13 +14,13 @@ title: "Questionnaire for Firstname"
         </svg>
         Questionnaire Date: October 7, 2021
       </div>
-      <div class="">{% include button.html icon="right" text="Current Questionnaire" %}</div>
+      <div class="print:hidden">{% include button.html icon="right" text="Current Questionnaire" %}</div>
     </div>
   </div>
 </div>
 
 <div class="mt-5">
-  <div class="shadow rounded-md bg-skin-page">
+  <div class="shadow rounded-lg bg-skin-page">
     <div class="px-4 py-5 sm:p-6 divide-y divide-skin-primary max-w-3xl m-auto">
 
 {% include question-view.html name="Why are you interested in knowing your exact nutrient needs?" options="I want to improve my general health and wellness.,I’m concerned about my immune health.,I’m an athlete or competitor looking to improve my fitness.,I’ve had weight loss surgery.,I want to lose weight and feel energized.,I want to slow down the aging process.,I have a condition I’d like to improve." %}

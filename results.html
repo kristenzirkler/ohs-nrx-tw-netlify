@@ -6,7 +6,7 @@ title: "Functional Health Lab Test Results"
 
 {% include page-header.html navname="Results" title=page.title desc="The Blood Test Results Report lists the results of your Chemistry Screen and CBC. This shows you whether or not an individual element is outside of the optimal range and/or outside of the clinical lab range." %}
 
-<div class="mt-5 bg-skin-page shadow rounded-lg mb-4 overflow-hidden">
+<div class="mt-5 bg-skin-page shadow rounded-lg mb-4 overflow-hidden print:shadow-none print:rounded-none">
   <div class="p-4">
     <div class="flex items-center text-sm text-skin-primary opacity-80 pb-4">
       <svg class="flex-shrink-0 mr-1.5 h-5 w-5 text-gray-400" x-description="Heroicon name: solid/calendar" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
@@ -22,7 +22,7 @@ title: "Functional Health Lab Test Results"
 
 {% include result-table.html %}
 
-<div class="py-6 max-w-xs">
+<div class="py-6 max-w-xs print:hidden">
   <div class="text-lg mb-2">Next:</div>
   {% include button.html link="history" icon="right" text="Compare History" %}
 </div>

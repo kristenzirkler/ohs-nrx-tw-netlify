@@ -1,12 +1,12 @@
 {% if page.nav-style == 'admin' %}
-<a href="{{ site.baseurl }}/" class="{% if page.nav == "" %}bg-skin-border/50{% else %} hover:bg-skin-border/50{% endif %} group flex items-center px-2 py-2 rounded-md">
+<a href="{{ site.baseurl }}/" class="{% if page.nav == "" %}bg-skin-border/50{% else %} hover:bg-skin-border/50{% endif %} group flex items-center px-2 py-2 rounded-lg">
   <!-- Heroicon name: outline/clipboard-list -->
   <svg class="{% if page.nav == "" %}text-skin-primary opacity-80{% else %}text-gray-400 group-hover:text-skin-primary opacity-80{% endif %} mr-4 flex-shrink-0 h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" aria-hidden="true">
   <path stroke-linecap="round" stroke-linejoin="round" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01" />
   </svg>
   Page List
 </a>
-<a href="{{ site.baseurl }}/theme" class="{% if page.nav == "theme" %}bg-skin-border/50{% else %} hover:bg-skin-border/50{% endif %} group flex items-center px-2 py-2 rounded-md">
+<a href="{{ site.baseurl }}/theme" class="{% if page.nav == "theme" %}bg-skin-border/50{% else %} hover:bg-skin-border/50{% endif %} group flex items-center px-2 py-2 rounded-lg">
   <!-- Heroicon name: outline/color-swatch -->
   <svg class="{% if page.nav == "theme" %}text-skin-primary opacity-80{% else %}text-gray-400 group-hover:text-skin-primary opacity-80{% endif %} mr-4 flex-shrink-0 h-6 w-6" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" aria-hidden="true">
   <path stroke-linecap="round" stroke-linejoin="round" d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485M7 17h.01" />
@@ -16,7 +16,7 @@
 {% else %}
 {% if page.nav-style != 'limited' %}
 <!-- Current: "bg-gray-100 text-skin-header", Default: " hover:bg-gray-50 hover:text-skin-header" -->
-<a href="{{ site.baseurl }}/{% if page.nav-style == 'no-results' %}dashboard-new{% else %}dashboard-new-results{% endif %}" class="{% if page.nav == "dashboard" %}bg-skin-border/50{% else %} hover:bg-skin-border/50{% endif %} group flex items-center px-2 py-2 rounded-md">
+<a href="{{ site.baseurl }}/{% if page.nav-style == 'no-results' %}dashboard-new{% else %}dashboard-new-results{% endif %}" class="{% if page.nav == "dashboard" %}bg-skin-border/50{% else %} hover:bg-skin-border/50{% endif %} group flex items-center px-2 py-2 rounded-lg">
   <!--
     Heroicon name: outline/home
 
@@ -28,7 +28,7 @@
   Dashboard
 </a>
 {% if page.nav-style != 'no-results' %}
-<a href="{{ site.baseurl }}/results" class="{% if page.nav == "results" %}bg-skin-border/50{% else %} hover:bg-skin-border/50{% endif %} group flex items-center px-2 py-2 rounded-md">
+<a href="{{ site.baseurl }}/results" class="{% if page.nav == "results" %}bg-skin-border/50{% else %} hover:bg-skin-border/50{% endif %} group flex items-center px-2 py-2 rounded-lg">
   <!-- Heroicon name: outline/chart-bar -->
   <svg class="{% if page.nav == "results" %}text-skin-primary opacity-80{% else %}text-gray-400 group-hover:text-skin-primary opacity-80{% endif %} mr-4 flex-shrink-0 h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
@@ -37,7 +37,7 @@
 </a>
 
 {% if page.nav-style != 'no-history' %}
-<a href="{{ site.baseurl }}/history" class="{% if page.nav == "history" %}bg-skin-border/50{% else %} hover:bg-skin-border/50{% endif %} group flex items-center px-2 py-2 rounded-md">
+<a href="{{ site.baseurl }}/history" class="{% if page.nav == "history" %}bg-skin-border/50{% else %} hover:bg-skin-border/50{% endif %} group flex items-center px-2 py-2 rounded-lg">
   <!-- Heroicon name: outline/archive -->
   <svg xmlns="http://www.w3.org/2000/svg" class="{% if page.nav == "history" %}text-skin-primary opacity-80{% else %}text-gray-400 group-hover:text-skin-primary opacity-80{% endif %} mr-4 flex-shrink-0 h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
   <path stroke-linecap="round" stroke-linejoin="round" d="M5 8h14M5 8a2 2 0 110-4h14a2 2 0 110 4M5 8v10a2 2 0 002 2h10a2 2 0 002-2V8m-9 4h4" />
@@ -46,7 +46,7 @@
 </a>
 {% endif %}
 
-<a href="{{ site.baseurl }}/custompak" class="{% if page.nav == "custompak" %}bg-skin-border/50{% else %} hover:bg-skin-border/50{% endif %} group flex items-center px-2 py-2 rounded-md">
+<a href="{{ site.baseurl }}/custompak" class="{% if page.nav == "custompak" %}bg-skin-border/50{% else %} hover:bg-skin-border/50{% endif %} group flex items-center px-2 py-2 rounded-lg">
   <!-- Heroicon name: outline/clipboard-check -->
   <svg xmlns="http://www.w3.org/2000/svg" class="{% if page.nav == "custompak" %}text-skin-primary opacity-80{% else %}text-gray-400 group-hover:text-skin-primary opacity-80{% endif %} mr-4 flex-shrink-0 h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
     <path stroke-linecap="round" stroke-linejoin="round" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4" />
@@ -55,7 +55,7 @@
 </a>
 {% endif %}
 {% endif %}
-<a href="{{ site.baseurl }}/questionnaire" class="{% if page.nav == "questionnaire" %}bg-skin-border/50{% else %} hover:bg-skin-border/50{% endif %} group flex items-center px-2 py-2 rounded-md">
+<a href="{{ site.baseurl }}/questionnaire" class="{% if page.nav == "questionnaire" %}bg-skin-border/50{% else %} hover:bg-skin-border/50{% endif %} group flex items-center px-2 py-2 rounded-lg">
   <!-- Heroicon name: outline/question-mark-circle -->
   <svg class="{% if page.nav == "questionnaire" %}text-skin-primary opacity-80{% else %}text-gray-400 group-hover:text-skin-primary opacity-80{% endif %} mr-4 flex-shrink-0 h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" aria-hidden="true">
     <path stroke-linecap="round" stroke-linejoin="round" d="M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
@@ -68,7 +68,7 @@
 <br><br>
 <hr>
 <br><br>
-<a href="{{ site.baseurl }}/theme" class="{% if page.nav == "theme" %}bg-skin-border/50{% else %} hover:bg-skin-border/50{% endif %} group flex items-center px-2 py-2 rounded-md">
+<a href="{{ site.baseurl }}/theme" class="{% if page.nav == "theme" %}bg-skin-border/50{% else %} hover:bg-skin-border/50{% endif %} group flex items-center px-2 py-2 rounded-lg">
   <!-- Heroicon name: outline/users -->
   <svg class="{% if page.nav == "theme" %}text-skin-primary opacity-80{% else %}text-gray-400 group-hover:text-skin-primary opacity-80{% endif %} mr-4 flex-shrink-0 h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z" />
@@ -76,7 +76,7 @@
   Theme
 </a>
 
-<a href="#" class=" hover:bg-gray-50 hover:text-skin-header group flex items-center px-2 py-2 rounded-md">
+<a href="#" class=" hover:bg-gray-50 hover:text-skin-header group flex items-center px-2 py-2 rounded-lg">
   <!-- Heroicon name: outline/folder -->
   <svg class="text-gray-400 group-hover:text-skin-primary opacity-80 mr-4 flex-shrink-0 h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 7v10a2 2 0 002 2h14a2 2 0 002-2V9a2 2 0 00-2-2h-6l-2-2H5a2 2 0 00-2 2z" />
@@ -84,7 +84,7 @@
   Projects
 </a>
 
-<a href="#" class=" hover:bg-gray-50 hover:text-skin-header group flex items-center px-2 py-2 rounded-md">
+<a href="#" class=" hover:bg-gray-50 hover:text-skin-header group flex items-center px-2 py-2 rounded-lg">
   <!-- Heroicon name: outline/calendar -->
   <svg class="text-gray-400 group-hover:text-skin-primary opacity-80 mr-4 flex-shrink-0 h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
@@ -92,7 +92,7 @@
   Calendar
 </a>
 
-<a href="#" class=" hover:bg-gray-50 hover:text-skin-header group flex items-center px-2 py-2 rounded-md">
+<a href="#" class=" hover:bg-gray-50 hover:text-skin-header group flex items-center px-2 py-2 rounded-lg">
   <!-- Heroicon name: outline/inbox -->
   <svg class="text-gray-400 group-hover:text-skin-primary opacity-80 mr-4 flex-shrink-0 h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 13V6a2 2 0 00-2-2H6a2 2 0 00-2 2v7m16 0v5a2 2 0 01-2 2H6a2 2 0 01-2-2v-5m16 0h-2.586a1 1 0 00-.707.293l-2.414 2.414a1 1 0 01-.707.293h-3.172a1 1 0 01-.707-.293l-2.414-2.414A1 1 0 006.586 13H4" />

@@ -11,7 +11,7 @@
       -->
       {% assign options = include.options | split: "," %}
       {% for option in options %}
-      <label class="cursor-pointer border rounded-md py-3 px-3 flex items-center justify-center sm:flex-1 focus:outline-none hover:ring-1 hover:border-skin-button-primary ring-skin-button-primary {% if include.selected and forloop.index == 2 %} ring-1 border-skin-button-primary{% endif %}">
+      <label class="cursor-pointer border rounded-lg py-3 px-3 flex items-center justify-center sm:flex-1 focus:outline-none hover:ring-1 hover:border-skin-button-primary ring-skin-button-primary {% if include.selected and forloop.index == 2 %} ring-1 border-skin-button-primary{% endif %}">
         <input type="radio" name="{{ include.name | slugify }}" value="{{ option }}" class="sr-only" aria-labelledby="{{ option |slugify }}">
         <p class="block text-sm text-center leading-tight font-medium " id="{{ option | slugify }}">{{ option }}</p>
       </label>

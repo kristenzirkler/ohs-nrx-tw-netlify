@@ -1,8 +1,11 @@
-<th scope="col" class="{{ include.classes }} relative sticky {% if include.filter == "no" %}top-20 md:top-0{% else %}top-20 md:top-10{% endif %} z-10 border-0 p-0 m-0 bg-skin-page/90 border-skin-primary" colspan="{{ include.colspan }}">
+<th scope="col" class="{{ include.classes }} sticky {% if include.hidemobile == "true" %}hidden md:table-cell {% endif %}{% if include.filter == "no" %}top-20 md:top-0{% else %}top-20 md:top-10{% endif %} z-10 border-0 p-0 m-0 bg-skin-page/90 border-skin-primary print:hidden" colspan="{{ include.colspan }}">
 	<div class="relative z-10 px-2 py-1 md:py-2 px-3 text-xs font-normal leading-none text-skin-primary opacity-80">
 		{% if include.link %}<a class="text-skin-link hover:text-skin-link/80 hover:underline" href="{{ site.baseurl }}/{{ include.link }}">{% endif %}
 		{{ include.name }}
 		{% if include.link %}</a>{% endif %}
 	</div>
 	<div class="absolute bottom-0 left-0 right-0 top-0 z-0 bg-skin-border/50 border-skin-primary border-t border-b">&nbsp;</div>
+</th>
+<th scope="col" class="{{ include.classes }} {% if include.hidemobile == "true" %}hidden{% else %}print:table-cell{% endif %}" colspan="{{ include.colspan }}">
+	{{ include.name }}
 </th>

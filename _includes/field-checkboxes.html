@@ -4,7 +4,7 @@
   <div class="{% if include.columns %}grid grid-cols-{{ include.columns}} gap-2{% else %}space-y-2 {% endif %}{% if include.error %} border-l-2 border-red-600 pl-2{% endif %}">
     {% assign options = include.options | split: "," %}
     {% for option in options %}
-    <div class="relative flex items-start cursor-pointer border rounded-md focus:outline-none hover:ring-1 hover:border-skin-button-primary ring-skin-button-primary{% if include.selected and forloop.index == 2 %} ring-1 border-skin-button-primary{% endif %}">
+    <div class="relative flex items-start cursor-pointer border rounded-lg focus:outline-none hover:ring-1 hover:border-skin-button-primary ring-skin-button-primary{% if include.selected and forloop.index == 2 %} ring-1 border-skin-button-primary{% endif %}">
       <div class="flex items-center h-5 my-3 ml-3">
         <input id="{{ option | slugify }}" name="{{ option | slugify }}" type="checkbox" class="focus:ring-skin-button-primary h-4 w-4 text-skin-button-primary border-gray-300 rounded" {% if include.selected and forloop.index == 2 %}checked{% endif %}>
       </div>

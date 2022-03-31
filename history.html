@@ -29,12 +29,12 @@ title: "Functional Health Lab Test History"
           <table class="min-w-full border-separate" style="border-spacing: 0">
             <thead class="bg-skin-page">
               <tr>
-                <th colspan="5" class="sticky top-10 md:top-0 z-10 h-10 bg-skin-page border-t border-skin-primary">
+                <th colspan="5" class="sticky top-10 md:top-0 z-10 h-10 bg-skin-page border-t border-skin-primary print:hidden">
                   {% include search.html placeholder = "Filter tests..." %}
               </th>
               </tr>
               <tr>
-                {% include table-head-th.html name="Test" classes="hidden md:table-cell justify-start text-left border-r-2" %}
+                {% include table-head-th.html name="Test" classes="text-left border-r-2" hidemobile="true" %}
                 {% include table-head-th.html name="Current" classes="" link="results" colspan="2" %}
                 {% include table-head-th.html name="2021/10" classes="" link="results-historic" %}
                 {% include table-head-th.html name="2021/03" classes="" link="results-historic" %}
@@ -323,7 +323,7 @@ title: "Functional Health Lab Test History"
   </div>
 
 </div>
-<div class="py-6 max-w-xs">
+<div class="py-6 max-w-xs print:hidden">
   <div class="text-lg mb-2">Next:</div>
   {% include button.html link="custompak" icon="right" text="View Custom Pak" %}
 </div>
