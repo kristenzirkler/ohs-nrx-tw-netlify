@@ -6,97 +6,102 @@ title: "Page List"
 
 {% include page-header.html navname="Directory" title=page.title desc="" %}
 
-<div class="bg-white shadow rounded-lg mt-5 mb-5">
+<div class="bg-skin-page shadow rounded-lg mt-5 mb-5">
   <div class="px-4 py-3">
-    <div class="text-xl font-bold text-gray-900 mr-2">Possible Views</div>
+    <div class="text-xl font-bold text-skin-header mr-2">Possible Views</div>
   </div>
   <nav class="h-full overflow-y-auto" aria-label="Directory">
     <div class="relative">
-      <div class="z-10 sticky top-0 border-t border-b border-gray-200 bg-gray-50 px-3 py-1 text-sm font-medium text-gray-500">
+      <div class="z-10 sticky top-0 border-t border-b border-skin-primary bg-skin-border/50 px-3 py-1">
         <h3>Misc</h3>
       </div>
-      <ul role="list" class="relative z-0 divide-y divide-gray-200">
-        <li class="bg-white">
-          <a href="{{ site.baseurl }}/login" class="text-green-600 block hover:bg-gray-50 focus:outline-none font-medium text-gray-900 px-3 py-2">
+      <ul role="list" class="relative z-0 divide-y divide-skin-primary">
+        <li>
+          <a href="{{ site.baseurl }}/login" class="text-green-600 block hover:bg-skin-border/50 focus:outline-none font-medium text-skin-header px-3 py-2">
             Login
           </a>
         </li>
-        <li class="bg-white">
-          <a href="{{ site.baseurl }}/sign-up" class="text-green-600 block hover:bg-gray-50 focus:outline-none font-medium text-gray-900 px-3 py-2">
+        <li>
+          <a href="{{ site.baseurl }}/sign-up" class="text-green-600 block hover:bg-skin-border/50 focus:outline-none font-medium text-skin-header px-3 py-2">
             Register
           </a>
         </li>
-        <li class="bg-white">
-          <a href="{{ site.baseurl }}/results" class="text-green-600 block hover:bg-gray-50 focus:outline-none font-medium text-gray-900 px-3 py-2">
+        <li>
+          <a href="{{ site.baseurl }}/results" class="text-green-600 block hover:bg-skin-border/50 focus:outline-none font-medium text-skin-header px-3 py-2">
             Results
           </a>
         </li>
-        <li class="bg-white">
-          <a href="{{ site.baseurl }}/results-historic" class="text-green-600 block hover:bg-gray-50 focus:outline-none font-medium text-gray-900 px-3 py-2">
+        <li>
+          <a href="{{ site.baseurl }}/results-historic" class="text-green-600 block hover:bg-skin-border/50 focus:outline-none font-medium text-skin-header px-3 py-2">
             Results (historic)
           </a>
         </li>
-        <li class="bg-white">
-          <a href="{{ site.baseurl }}/history" class="text-green-600 block hover:bg-gray-50 focus:outline-none font-medium text-gray-900 px-3 py-2">
+        <li>
+          <a href="{{ site.baseurl }}/history" class="text-green-600 block hover:bg-skin-border/50 focus:outline-none font-medium text-skin-header px-3 py-2">
             History
+          </a>
+        </li>
+        <li>
+          <a href="{{ site.baseurl }}/custompak" class="text-green-600 block hover:bg-skin-border/50 focus:outline-none font-medium text-skin-header px-3 py-2">
+            Custom Pak
           </a>
         </li>
       </ul>
     </div>
     <div class="relative">
-      <div class="z-10 sticky top-0 border-t border-b border-gray-200 bg-gray-50 px-3 py-1 text-sm font-medium text-gray-500">
+      <div class="z-10 sticky top-0 border-t border-b border-skin-primary bg-skin-border/50 px-3 py-1">
         <h3>Dashboards</h3>
       </div>
-      <ul role="list" class="relative z-0 divide-y divide-gray-200">
-        <li class="bg-white">
-          <a href="{{ site.baseurl }}/dashboard-new" class="text-red-600 block hover:bg-gray-50 focus:outline-none font-medium text-gray-900 px-3 py-2">
+      <ul role="list" class="relative z-0 divide-y divide-skin-primary">
+        <li>
+          <a href="{{ site.baseurl }}/dashboard-new" class="text-red-600 block hover:bg-skin-border/50 focus:outline-none font-medium text-skin-header px-3 py-2">
             No History - Questionnaire is Incomplete
           </a>
         </li>
-        <li class="bg-white">
-          <a href="{{ site.baseurl }}/dashboard-questionnaire-complete" class="text-red-600 block hover:bg-gray-50 focus:outline-none font-medium text-gray-900 px-3 py-2">
+        <li>
+          <a href="{{ site.baseurl }}/dashboard-questionnaire-complete" class="text-red-600 block hover:bg-skin-border/50 focus:outline-none font-medium text-skin-header px-3 py-2">
             No History - Questionnaire is complete, Blood work is not yet received
           </a>
         </li>
-        <li class="bg-white">
-          <a href="{{ site.baseurl }}/dashboard-new-results-no-history" class="text-red-600 block hover:bg-gray-50 focus:outline-none font-medium text-gray-900 px-3 py-2">
+        <li>
+          <a href="{{ site.baseurl }}/dashboard-new-results-no-history" class="text-red-600 block hover:bg-skin-border/50 focus:outline-none font-medium text-skin-header px-3 py-2">
             No History - Results Received & HP Approved
           </a>
         </li>
-        <li class="bg-white">
-          <a href="{{ site.baseurl }}/dashboard-bloodwork-requested" class="text-red-600 block hover:bg-gray-50 focus:outline-none font-medium text-gray-900 px-3 py-2">
+        <li>
+          <a href="{{ site.baseurl }}/dashboard-bloodwork-requested" class="text-red-600 block hover:bg-skin-border/50 focus:outline-none font-medium text-skin-header px-3 py-2">
             Has History - Time for new bloodwork
           </a>
         </li>
-        <li class="bg-white">
-          <a href="{{ site.baseurl }}/dashboard-new-results" class="text-red-600 block hover:bg-gray-50 focus:outline-none font-medium text-gray-900 px-3 py-2">
+        <li>
+          <a href="{{ site.baseurl }}/dashboard-new-results" class="text-red-600 block hover:bg-skin-border/50 focus:outline-none font-medium text-skin-header px-3 py-2">
             Has History - Results Received & HP Approved
           </a>
         </li>
       </ul>
     </div>
     <div class="relative">
-      <div class="z-10 sticky top-0 border-t border-b border-gray-200 bg-gray-50 px-3 py-1 text-sm font-medium text-gray-500">
+      <div class="z-10 sticky top-0 border-t border-b border-skin-primary bg-skin-border/50 px-3 py-1">
         <h3>Questionnaire</h3>
       </div>
-      <ul role="list" class="relative z-0 divide-y divide-gray-200">
-        <li class="bg-white">
-          <a href="{{ site.baseurl }}/questionnaire-new" class="text-red-600 block hover:bg-gray-50 focus:outline-none font-medium text-gray-900 px-3 py-2">
+      <ul role="list" class="relative z-0 divide-y divide-skin-primary">
+        <li>
+          <a href="{{ site.baseurl }}/questionnaire-new" class="text-red-600 block hover:bg-skin-border/50 focus:outline-none font-medium text-skin-header px-3 py-2">
             New
           </a>
         </li>
-        <li class="bg-white">
-          <a href="{{ site.baseurl }}/questionnaire-incomplete" class="text-red-600 block hover:bg-gray-50 focus:outline-none font-medium text-gray-900 px-3 py-2">
+        <li>
+          <a href="{{ site.baseurl }}/questionnaire-incomplete" class="text-red-600 block hover:bg-skin-border/50 focus:outline-none font-medium text-skin-header px-3 py-2">
             Incomplete
           </a>
         </li>
-        <li class="bg-white">
-          <a href="{{ site.baseurl }}/questionnaire-view" class="text-red-600 block hover:bg-gray-50 focus:outline-none font-medium text-gray-900 px-3 py-2">
+        <li>
+          <a href="{{ site.baseurl }}/questionnaire-view" class="text-red-600 block hover:bg-skin-border/50 focus:outline-none font-medium text-skin-header px-3 py-2">
             View
           </a>
         </li>
-        <li class="bg-white">
-          <a href="{{ site.baseurl }}/" class="block hover:bg-gray-50 focus:outline-none font-medium text-gray-900 px-3 py-2">
+        <li>
+          <a href="{{ site.baseurl }}/" class="block hover:bg-skin-border/50 focus:outline-none font-medium text-skin-header px-3 py-2">
             Questionnaire History
           </a>
         </li>

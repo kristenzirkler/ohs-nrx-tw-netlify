@@ -6,10 +6,10 @@ title: "Welcome, Firstname!"
 ---
 {% include page-header.html navname="Dashboard" title=page.title desc="Your personalized portal for optimal health based on your body's unique needs." %}
 
-<div class="bg-white shadow rounded-lg mt-5 mb-5">
+<div class="bg-skin-page shadow rounded-lg mt-5 mb-5">
   <div class="px-4 py-5 sm:p-6">
 
-    <div class="text-xl font-bold text-gray-900 mr-2">Complete Setup</div>
+    <div class="text-xl font-bold font-display text-skin-header mr-2">Complete Setup</div>
 
     <div class="py-2 sm:py-4">
       <a class="flex justify-between items-start w-full" href="{{ site.baseurl }}/questionnaire">
@@ -18,7 +18,7 @@ title: "Welcome, Firstname!"
             1
           </span>
         </span>
-        <span class="grow text-xl font-normal text-gray-900">
+        <span class="grow text-xl font-normal text-skin-header">
           <span class="">Finish Questionnaire</span>
           <span class="block rounded-xl overflow-hidden">
             <span class="flex">
@@ -40,7 +40,7 @@ title: "Welcome, Firstname!"
         <div class="grow">
           <div class="text-xl font-normal text-gray-400">Schedule Bloodwork Appointment</div>
           <p class="text-sm font-normal leading-snug text-gray-400 mb-4">PSC Hold is the form needed to process your bloodwork. Save this document and bring it to your appointment.</p>
-          {% include button.html text="Download PSC Hold" classes="inline-block w-56" disabled=true %}
+          {% include button.html text="Download PSC Hold" classes="inline-block w-full md:w-1/2" disabled=true %}
         </div>
       </div>
     </div>

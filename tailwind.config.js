@@ -9,26 +9,40 @@ function withOpacity(variableName) {
 function fontFormat(variableName) {
   return `var(${variableName}), 'sans-serif'`
 }
+function image(variableName) {
+  return `var(${variableName})`
+}
 module.exports = {
   purge: [`_site/**/*.html`],
+  darkMode: 'class',
   theme: {
     extend: {
+      backgroundImage: {
+        'logo': image('--image-logo')
+      },
       fontFamily: {
-        sans: fontFormat('--font')
+        sans: fontFormat('--font-sans'),
+        display: fontFormat('--font-display')
       },
       textColor: {
         skin: {
+          'page': withOpacity('--color-page'),
           'accent-primary': withOpacity('--color-accent-primary'),
           'button-primary': withOpacity('--color-button-primary'),
           'button-primary-hover': withOpacity('--color-button-primary-hover'),
+          'primary': withOpacity('--color-text-primary'),
+          'header': withOpacity('--color-text-header'),
+          'link': withOpacity('--color-text-link'),
         },
       },
       backgroundColor: {
         skin: {
           'body': withOpacity('--color-body'),
+          'page': withOpacity('--color-page'),
           'accent-primary': withOpacity('--color-accent-primary'),
           'button-primary': withOpacity('--color-button-primary'),
           'button-primary-hover': withOpacity('--color-button-primary-hover'),
+          'border': withOpacity('--color-border'),
         },
       },
       borderColor: {
@@ -36,6 +50,15 @@ module.exports = {
           'accent-primary': withOpacity('--color-accent-primary'),
           'button-primary': withOpacity('--color-button-primary'),
           'button-primary-hover': withOpacity('--color-button-primary-hover'),
+          'primary': withOpacity('--color-border'),
+        },
+      },
+      divideColor: {
+        skin: {
+          'accent-primary': withOpacity('--color-accent-primary'),
+          'button-primary': withOpacity('--color-button-primary'),
+          'button-primary-hover': withOpacity('--color-button-primary-hover'),
+          'primary': withOpacity('--color-border'),
         },
       },
       ringColor: {

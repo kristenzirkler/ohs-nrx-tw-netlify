@@ -1,11 +1,11 @@
 {% assign slug = include.name | slugify | replace: "-", "" %}
 <div class="pt-3 pb-4 flex md:block justify-between cursor-pointer" x-data="{ {{ slug }}toggle: '0' }" @click="{{ slug }}toggle === '0' ? {{ slug }}toggle = '1' : {{ slug }}toggle = '0'">
-  <div class="text-lg leading-tight font-bold text-gray-900 mb-2">{{ include.name }} {% if include.subtext %}
-  <span class="text-sm text-gray-500 font-normal"> {{ include.subtext }}</span>
+  <div class="text-lg leading-tight font-bold text-skin-header mb-2">{{ include.name }} {% if include.subtext %}
+  <span class="text-sm text-skin-primary opacity-80 font-normal"> {{ include.subtext }}</span>
   {% endif %}</div>
 
   <div class="flex">
-    {% if include.offLabel %}<div class="text-gray-700 mr-2">{{ include.offLabel }}</div>{% endif %}
+    {% if include.offLabel %}<div class=" mr-2">{{ include.offLabel }}</div>{% endif %}
     <!-- Enabled: "bg-skin-button-primary", Not Enabled: "bg-gray-200" -->
     <button type="button" 
       class="relative inline-flex flex-shrink-0 h-6 w-11 border-2 border-transparent rounded-full cursor-pointer transition-colors ease-in-out duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-skin-button-primary" role="switch" aria-checked="false"
@@ -13,7 +13,7 @@
       >
       <span class="sr-only">Use setting</span>
       <!-- Enabled: "translate-x-5", Not Enabled: "translate-x-0" -->
-      <span class="pointer-events-none relative inline-block h-5 w-5 rounded-full bg-white shadow transform ring-0 transition ease-in-out duration-200"
+      <span class="pointer-events-none relative inline-block h-5 w-5 rounded-full bg-skin-page shadow transform ring-0 transition ease-in-out duration-200"
       :class="[{{ slug }}toggle === '1' ? 'translate-x-5' : 'translate-x-0']">
         <!-- Enabled: "opacity-0 ease-out duration-100", Not Enabled: "opacity-100 ease-in duration-200" -->
         <span class="absolute inset-0 h-full w-full flex items-center justify-center transition-opacity" aria-hidden="true"
@@ -31,16 +31,16 @@
         </span>
       </span>
     </button>
-    {% if include.onLabel %}<div class="text-gray-700 ml-2">{{ include.onLabel }}</div>{% endif %}
+    {% if include.onLabel %}<div class=" ml-2">{{ include.onLabel }}</div>{% endif %}
   </div>
 </div>
 
 
 {% comment %}
 <div class="flex justify-end items-center space-x-2">
-  <span class="text-sm text-gray-800 dark:text-gray-500">Light</span>
+  <span class="text-sm text-gray-800 dark:text-skin-primary opacity-80">Light</span>
   <label for="toggle" class="w-9 h-5 flex items-center bg-gray-300 rounded-full p-1 cursor-pointer duration-300 ease-in-out dark:bg-gray-600">
-     <div class="toggle-dot bg-white w-4 h-4 rounded-full shadow-md transform duration-300 ease-in-out dark:translate-x-3"></div>
+     <div class="toggle-dot bg-skin-page w-4 h-4 rounded-full shadow-md transform duration-300 ease-in-out dark:translate-x-3"></div>
   </label>
   <span class="text-sm text-gray-400 dark:text-white">Dark</span>
   <input id="toggle" type="checkbox" class="hidden" :value="toggle" @change="toggle = !toggle" />
@@ -49,7 +49,7 @@
 <div class="h-5" :class="[toggle ? 'bg-indigo-600' : 'bg-gray-200']">&nbsp;</div>
 <div class="flex justify-between" x-data="{toggle: false}">
 
-  <div class="font-bold text-gray-700">Toggle This On?</div>
+  <div class="font-bold ">Toggle This On?</div>
   <!-- Enabled: "bg-indigo-600", Not Enabled: "bg-gray-200" -->
   <button type="button" 
     class="bg-gray-200 relative inline-flex flex-shrink-0 h-6 w-11 border-2 border-transparent rounded-full cursor-pointer transition-colors ease-in-out duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-skin-button-primary" role="switch" aria-checked="false"
@@ -58,7 +58,7 @@
     >
     <span class="sr-only">Use setting</span>
     <!-- Enabled: "translate-x-5", Not Enabled: "translate-x-0" -->
-    <span class="translate-x-0 pointer-events-none relative inline-block h-5 w-5 rounded-full bg-white shadow transform ring-0 transition ease-in-out duration-200">
+    <span class="translate-x-0 pointer-events-none relative inline-block h-5 w-5 rounded-full bg-skin-page shadow transform ring-0 transition ease-in-out duration-200">
       <!-- Enabled: "opacity-0 ease-out duration-100", Not Enabled: "opacity-100 ease-in duration-200" -->
       <span class="opacity-100 ease-in duration-200 absolute inset-0 h-full w-full flex items-center justify-center transition-opacity" aria-hidden="true">
         <svg class="h-3 w-3 text-gray-400" fill="none" viewBox="0 0 12 12">
@@ -89,7 +89,7 @@
         <div class="relative rounded-full w-12 h-6 transition duration-200 ease-linear"
              :class="[toggle ? 'bg-black' : 'bg-black']">
             <label for="toggle"
-                   class="absolute drop-shadow-lg left-1 bg-white mt-[2px] w-5 h-5 rounded-full transition transform duration-100 ease-linear cursor-pointer"
+                   class="absolute drop-shadow-lg left-1 bg-skin-page mt-[2px] w-5 h-5 rounded-full transition transform duration-100 ease-linear cursor-pointer"
                    :class="[toggle ? 'translate-x-full border-black' : 'translate-x-0 border-gray-400']">
             </label>
 
@@ -129,12 +129,12 @@
 
 
 <div class="flex justify-between">
-  <div class="font-bold text-gray-700">Toggle This On?</div>
+  <div class="font-bold ">Toggle This On?</div>
   <!-- Enabled: "bg-indigo-600", Not Enabled: "bg-gray-200" -->
   <button type="button" class="bg-gray-200 relative inline-flex flex-shrink-0 h-6 w-11 border-2 border-transparent rounded-full cursor-pointer transition-colors ease-in-out duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-skin-button-primary" role="switch" aria-checked="false">
     <span class="sr-only">Use setting</span>
     <!-- Enabled: "translate-x-5", Not Enabled: "translate-x-0" -->
-    <span class="translate-x-0 pointer-events-none relative inline-block h-5 w-5 rounded-full bg-white shadow transform ring-0 transition ease-in-out duration-200">
+    <span class="translate-x-0 pointer-events-none relative inline-block h-5 w-5 rounded-full bg-skin-page shadow transform ring-0 transition ease-in-out duration-200">
       <!-- Enabled: "opacity-0 ease-out duration-100", Not Enabled: "opacity-100 ease-in duration-200" -->
       <span class="opacity-100 ease-in duration-200 absolute inset-0 h-full w-full flex items-center justify-center transition-opacity" aria-hidden="true">
         <svg class="h-3 w-3 text-gray-400" fill="none" viewBox="0 0 12 12">

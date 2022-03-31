@@ -1,0 +1,46 @@
+<div class="flex flex-col">
+  <div class="">
+    <div class="inline-block min-w-full align-middle">
+      <div class="">
+        <table class="min-w-full border-separate" style="border-spacing: 0">
+        <thead class="bg-skin-page">
+          <tr>
+            <th colspan="8" class="sticky top-10 md:top-0 z-10 h-10 bg-skin-page border-t border-skin-primary rounded-t-lg overflow-hidden">
+              {% include search.html placeholder = "Filter tests..." %}
+            </th>
+          </tr>
+          <tr class="">
+            <th scope="col" class="hidden md:table-cell sticky border-skin-primary bg-skin-border/50 top-10 z-10 px-2 md:py-2 px-3 border-t border-b text-left text-xs font-normal text-skin-primary opacity-80 leading-none">Test</th>
+            <th scope="col" class="hidden md:table-cell sticky border-skin-primary bg-skin-border/50 top-10 z-10 px-2 md:py-2 px-3 border-t border-b text-center text-xs font-normal text-skin-primary opacity-80 leading-none border-r-2" colspan="2">Current</th>
+            <th scope="col" class="sticky border-skin-primary bg-skin-border/50 top-20 md:top-10 z-10 px-2 md:py-2 px-3 border-t border-b text-center text-xs font-normal text-skin-primary opacity-80 leading-none">C<span class="hidden md:inline">linical</span> Low</th>
+            <th scope="col" class="sticky border-skin-primary bg-skin-border/50 top-20 md:top-10 z-10 px-2 md:py-2 px-3 border-t border-b text-center text-xs font-normal text-skin-primary opacity-80 leading-none">F<span class="hidden md:inline">unctional</span> Low</th>
+            <th scope="col" class="sticky border-skin-primary bg-skin-border/50 top-20 md:top-10 z-10 px-2 md:py-2 px-3 border-t border-b text-center text-xs font-normal text-skin-primary opacity-80 leading-none">Optimal<span class="hidden md:inline"> Range</span></th>
+            <th scope="col" class="sticky border-skin-primary bg-skin-border/50 top-20 md:top-10 z-10 px-2 md:py-2 px-3 border-t border-b text-center text-xs font-normal text-skin-primary opacity-80 leading-none">F<span class="hidden md:inline">unctional</span> High</th>
+            <th scope="col" class="sticky border-skin-primary bg-skin-border/50 top-20 md:top-10 z-10 px-2 md:py-2 px-3 border-t border-b text-center text-xs font-normal text-skin-primary opacity-80 leading-none">C<span class="hidden md:inline">linical</span> High</th>
+          </tr>
+        </thead>
+        <tbody class="bg-skin-page divide-y divide-skin-primary">
+          {% include one-result-row.html name="Cholesterol, Total" count="182" change="1" selected=4 r1="0 - 99" r2="100 - 154" r3="155 - 169" r4="170 - 199" r5="200 or higher" %}
+          {% include one-result-row.html name="HDL Cholesterol" count="34" change="2" selected=1 r1="0 - 39" r2="40 - 59" r3="60 - 80" r4="81 - 99" r5="100 or higher" %}
+          {% include one-result-row.html name="Triglycerides" count="111" change="-4" selected=4 r1="0 - 36" r2="37 - 74" r3="75 - 100" r4="101 - 149" r5="150 or higher" %}
+          {% include one-result-row.html name="LDL-Cholesterol" count="126" selected=5 r1="0 - 10" r2="11 - 34" r3="35 - 80" r4="81 - 100" r5="101 or higher" %}
+          {% include one-result-row.html name="Non-HDL Cholesterol" count="148" selected=5 r1="--" r2="--" r3="0 - 109" r4="110 - 129" r5="130 or higher" %}
+          {% include one-result-row.html name="Hemoglobin" count="5.3" change=".5" selected=3 r1="--" r2="--" r3="0 - 5.70" r4="5.71 - 6.40" r5="6.41 or higher" %}
+          {% include one-result-row.html name="Urine, Gluclose" count="Negative" selected=3 r1="--" r2="--" r3="Negative" r4="Trace" r5="Positive" %}
+          {% include one-result-row.html name="Urine, Ketones" count="Negative" selected=3 r1="--" r2="--" r3="Negative" r4="Trace" r5="Positive" %}
+          {% include one-result-row.html name="Bilirubin" count="Negative" selected=3 r1="Few" r2="Trace" r3="Negative" r4="Moderate" r5="Positive" %}
+          {% include one-result-row.html name="Cholesterol, Total" count="182" change="1" selected=4 r1="0 - 99" r2="100 - 154" r3="155 - 169" r4="170 - 199" r5="200 or higher" %}
+          {% include one-result-row.html name="HDL Cholesterol" count="34" change="2" selected=1 r1="0 - 39" r2="40 - 59" r3="60 - 80" r4="81 - 99" r5="100 or higher" %}
+          {% include one-result-row.html name="Triglycerides" count="111" change="-4" selected=4 r1="0 - 36" r2="37 - 74" r3="75 - 100" r4="101 - 149" r5="150 or higher" %}
+          {% include one-result-row.html name="LDL-Cholesterol" count="126" selected=5 r1="0 - 10" r2="11 - 34" r3="35 - 80" r4="81 - 100" r5="101 or higher" %}
+          {% include one-result-row.html name="Non-HDL Cholesterol" count="148" selected=5 r1="--" r2="--" r3="0 - 109" r4="110 - 129" r5="130 or higher" %}
+          {% include one-result-row.html name="Hemoglobin" count="5.3" change=".5" selected=3 r1="--" r2="--" r3="0 - 5.70" r4="5.71 - 6.40" r5="6.41 or higher" %}
+          {% include one-result-row.html name="Urine, Gluclose" count="Negative" selected=3 r1="--" r2="--" r3="Negative" r4="Trace" r5="Positive" %}
+          {% include one-result-row.html name="Urine, Ketones" count="Negative" selected=3 r1="--" r2="--" r3="Negative" r4="Trace" r5="Positive" %}
+          {% include one-result-row.html name="Bilirubin" count="Negative" selected=3 r1="Few" r2="Trace" r3="Negative" r4="Moderate" r5="Positive" %}
+        </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>

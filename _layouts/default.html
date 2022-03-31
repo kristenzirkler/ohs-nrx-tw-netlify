@@ -9,7 +9,7 @@
 
 {% include header-tags.html %}
 </head>
-<body class="h-full text-gray-500 bg-skin-body">
+<body class="h-full bg-skin-body text-skin-primary">
 <div class="bg-skin-body fixed top-0 bottom-0 left-0 right-0 -z-10">&nbsp;</div>
 <div class="relative">
   <!-- Off-canvas menu for mobile, show/hide based on off-canvas menu state. -->
@@ -25,7 +25,6 @@
         To: "opacity-0"
     -->
     <div class="fixed inset-0 bg-gray-600 bg-opacity-75" aria-hidden="true"></div>
-
     <!--
       Off-canvas menu, show/hide based on off-canvas menu state.
 
@@ -36,7 +35,7 @@
         From: "translate-x-0"
         To: "-translate-x-full"
     -->
-    <div class="relative flex-1 flex flex-col max-w-xs w-full bg-white">
+    <div class="relative flex-1 flex flex-col max-w-xs w-full bg-skin-page">
       <!--
         Close button, show/hide based on off-canvas menu state.
 
@@ -60,10 +59,9 @@
       <div class="flex-1 h-0 pt-5 pb-4 overflow-y-auto">
         <nav class="px-2 space-y-1">
           {% include navigation.html %}
-          }
         </nav>
       </div>
-      <div class="flex-shrink-0 flex border-t border-gray-200">
+      <div class="flex-shrink-0 flex border-t border-skin-primary">
         {% include account-card.html %}
       </div>
     </div>
@@ -76,23 +74,24 @@
   <!-- Static sidebar for desktop -->
   <div class="hidden md:flex md:w-48 md:flex-col md:fixed md:inset-y-0">
     <!-- Sidebar component, swap this element with another sidebar if you like -->
-    <div class="flex-1 flex flex-col min-h-0 border-r border-gray-200 bg-white">
+    <div class="flex-1 flex flex-col min-h-0 bg-skin-page">
       <div class="flex-1 flex flex-col pt-5 pb-4 overflow-y-auto">
+        <!--div class="bg-logo bg-contain w-full h-10 border">&nbsp;</div-->
         <div class="flex items-center flex-shrink-0 px-4">
           <img src="{{ site.baseurl }}/assets/images/logo-nutrientsrx.png" alt="Nutrients Rx" />
         </div>
-        <nav class="mt-5 flex-1 px-2 bg-white space-y-1">
+        <nav class="mt-5 flex-1 px-2 bg-skin-page space-y-1">
           {% include navigation.html %}
         </nav>
       </div>
-      <div class="flex-shrink-0 flex border-t border-gray-200">
+      <div class="flex-shrink-0 flex border-t border-skin-primary">
         {% include account-card.html %}
       </div>
     </div>
   </div>
   <div class="md:pl-48 flex flex-col flex-1">
-    <div class="sticky top-0 z-10 md:hidden pl-1 pt-1 bg-white flex align-center border-b h-10">
-      <button type="button" class="-ml-0.5 -mt-1 h-10 w-10 inline-flex items-center justify-center rounded-md text-gray-500 hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-skin-button-primary" rel="open-sidebar">
+    <div class="sticky top-0 z-10 md:hidden pl-1 pt-1 bg-skin-page flex align-center border-b h-10">
+      <button type="button" class="-ml-0.5 -mt-1 h-10 w-10 inline-flex items-center justify-center rounded-md text-skin-primary opacity-80 hover:text-skin-header focus:outline-none focus:ring-2 focus:ring-inset focus:ring-skin-button-primary" rel="open-sidebar">
         <span class="sr-only">Open sidebar</span>
         <!-- Heroicon name: outline/menu -->
         <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
@@ -104,7 +103,7 @@
     <main class="flex-1">
       <div class="py-6">
         <!--div class="max-w-7xl mx-auto px-4 sm:px-6 md:px-8">
-          <h1 class="text-2xl font-semibold text-gray-900">{{ page.title }}</h1>
+          <h1 class="text-2xl font-bold text-skin-header">{{ page.title }}</h1>
         </div-->
         <div class="max-w-7xl mx-auto px-4 sm:px-6 md:px-8">
 

@@ -7,18 +7,18 @@ title: "Questionnaire in Progress"
 {% include page-header.html navname="Questionnaire" title=page.title desc="Please complete the questionnaire to continue with the program." %}
 
 <div class="mt-5">
-  <div class="shadow rounded-md bg-white">
+  <div class="shadow rounded-md bg-skin-page">
 
-    <div class="px-4 py-5 sm:p-6 sticky top-0 z-20 bg-white border-b rounded-t-md">
+    <div class="px-4 py-5 sm:p-6 sticky top-0 z-20 bg-skin-page border-b border-skin-primary rounded-t-md">
       <div class="rounded-xl overflow-hidden">
         <div class="flex">
-          <div class="text-xs bg-gray-200 text-gray-700 px-2" style="width: 65%;">65% Complete</div>
+          <div class="text-xs bg-gray-200 text-gray-600 px-2" style="width: 65%;">65% Complete</div>
           <div class="text-xs bg-red-600" style="width: 35%;">&nbsp;</div>
         </div>
       </div>
     </div>
 
-    <div class="px-4 py-5 sm:p-6 divide-y divide-gray-200 max-w-3xl m-auto">
+    <div class="px-4 py-5 sm:p-6 divide-y divide-skin-primary max-w-3xl m-auto">
       {% include questions.html status="partial" %}
     </div>
   </div>
@@ -26,7 +26,7 @@ title: "Questionnaire in Progress"
 
 <div class="mb-10">&nbsp;</div>
 <div class="fixed bottom-0 left-0 md:left-48 right-0">
-  <div class="px-4 py-3 bg-white sm:px-6 border-t border-gray-200">
+  <div class="px-4 py-3 bg-skin-page sm:px-6 border-t border-skin-primary">
     {% include button.html text="Save" link="dashboard-new" %}
   </div>
 </div>

@@ -2,34 +2,61 @@
 @tailwind components;
 @tailwind utilities;
 
-
 @layer base {
   :root {
     --color-body: 238, 238, 238;
+    --color-page: 256, 256, 256;
     --color-accent-primary: 25, 178, 185;
     --color-button-primary: 51, 51, 51;
     --color-button-primary-hover: 102, 102, 102;
-    --font: arial;
+    --color-text-primary: 0, 0, 0;
+    --color-text-header: 0, 0, 0;
+    --color-text-link: 0, 0, 0;
+    --color-border: 229, 231, 235;
+    --font-sans: arial;
+    --font-display: arial;
+    --image-logo: "url('/assets/images/logo-nutrientsrx.png')";
   }
   .theme-ohs {
     --color-body: 236, 234, 230;
+    --color-page: 256, 256, 256;
     --color-accent-primary: 41, 126, 85;
     --color-button-primary: 50, 71, 112;
     --color-button-primary-hover: 49, 84, 154;
-    --font: mr-eaves-xl-sans;
+    --color-text-primary: 58, 58, 58;
+    --color-text-header: 0, 0, 0;
+    --color-text-link: 50, 71, 112;
+    --color-border: 229, 231, 235;
+    --font-sans: mr-eaves-xl-sans;
+    --font-display: mr-eaves-xl-sans;
+    --image-logo: "url('/assets/images/logo-nutrientsrx.png')";
   }
   .theme-fakeco {
     --color-body: 153, 153, 153;
+    --color-page: 256, 256, 256;
     --color-accent-primary: 238, 196, 45;
     --color-button-primary: 0, 0, 0;
     --color-button-primary-hover: 51, 51, 51;
-    --font: 'Arial Black';
+    --color-text-primary: 0, 0, 0;
+    --color-text-header: 0, 0, 0;
+    --color-text-link: 0, 0, 0;
+    --color-border: 229, 231, 235;
+    --font-sans: 'Arial';
+    --font-display: 'Arial Black';
+    --image-logo: "url('/assets/images/logo-nutrientsrx.png')";
   }
   .theme-unfairadv {
-    --color-body: 11, 13, 27;
-    --color-accent-primary: 40, 53, 96;
-    --color-button-primary: 40, 53, 96;
+    --color-body: 12, 12, 12;
+    --color-page: 21, 26, 42;
+    --color-accent-primary: 90, 107, 162;
+    --color-button-primary: 36, 56, 124;
     --color-button-primary-hover: 15, 15, 15;
-    --font: 'PlusRegular';
+    --color-text-primary: 240, 240, 240;
+    --color-text-header: 256, 256, 256;
+    --color-text-link: 105, 123, 184;
+    --color-border: 54, 70, 125;
+    --font-sans: 'PlusRegular';
+    --font-display: 'PlusBold';
+    --image-logo: "url('../assets/images/logo-unfairadvantage.png')";
   }
 }
