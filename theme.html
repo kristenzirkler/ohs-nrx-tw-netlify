@@ -25,19 +25,23 @@ title: "Theme Examples"
 
 <div class="bg-skin-page shadow rounded-lg mt-5 mb-5">
   <div class="px-4 py-5 sm:p-6">
-    <h1 class="text-xl font-bold font-display text-skin-header">Colors</h1>
     {% include theme-colors.html %}
   </div>
 </div>
 <div class="bg-skin-page shadow rounded-lg">
   <div class="px-4 py-5 sm:p-6">
     <h1 class="text-xl font-bold font-display text-skin-header">Typography</h1>
+
+    <div class="text-3xl font-sans">Primary Font</div>
+    <p class="text-skin-primary">Is it readable? <span class="text-bold">Lorem ipsum</span> dolor sit amet, consectetur adipiscing elit. Nunc massa ex, dapibus in eros bibendum, molestie dignissim orci. Etiam sollicitudin maximus orci vel dignissim. Donec molestie varius lectus aliquam egestas. Curabitur semper sem metus, vel maximus metus scelerisque nec.</p>
+
+    <div class="text-3xl font-display mt-2 mb-4">Display Font (used for Headers)</div>
+
+    <div class="text-xl font-display">Font Sizes</div>
     <p class="text-xs">text xs</p>
     <p class="text-sm">text sm</p>
     <p class="text-tiny">text tiny</p>
-    <hr>
-    <p class="text-base">text base. This is normal size. Is it readable?<br><br>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc massa ex, dapibus in eros bibendum, molestie dignissim orci. Etiam sollicitudin maximus orci vel dignissim. Donec molestie varius lectus aliquam egestas. Curabitur semper sem metus, vel maximus metus scelerisque nec.</p>
-    <hr>
+    <p class="text-base border-y border-skin-primary my-2 py-2">text base</p>
     <p class="text-lg">text lg</p>
     <p class="text-xl">text xl</p>
     <p class="text-2xl">text 2xl</p>
@@ -78,7 +82,7 @@ title: "Theme Examples"
         <br>
         <div>{% include button.html link="results" text="View Full Results" classes="m-auto inline-flex" %}</div>
         <br>
-        {% include button.html text="Download PSC Hold" classes="inline-block w-56" disabled=true %}
+        {% include button.html text="Download PSC Hold" classes="inline-block w-full md:w-1/2" disabled=true %}
       </div>
     </div>
 
