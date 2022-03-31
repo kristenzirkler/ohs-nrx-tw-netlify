@@ -8,7 +8,8 @@ title: "Page List"
 
 <div class="bg-skin-page shadow rounded-lg mt-5 mb-5">
   <div class="px-4 py-3">
-    <div class="text-xl font-bold text-skin-header mr-2">Possible Views</div>
+    <span class="inline-block rounded-full bg-green-600 w-4 h-4 mr-2"></span> Approved
+    <span class="inline-block rounded-full bg-red-600 w-4 h-4 ml-4 mr-2"></span> Needs Approval
   </div>
   <nav class="h-full overflow-y-auto" aria-label="Directory">
     <div class="relative">
@@ -17,33 +18,33 @@ title: "Page List"
       </div>
       <ul role="list" class="relative z-0 divide-y divide-skin-primary">
         <li>
-          <a href="{{ site.baseurl }}/login" class="text-green-600 block hover:bg-skin-border/50 focus:outline-none font-medium text-skin-header px-3 py-2">
-            Login
+          <a href="{{ site.baseurl }}/login" class="text-skin-link block hover:bg-skin-border/50 focus:outline-none px-3 py-2">
+            <span class="inline-block rounded-full bg-green-600 w-4 h-4 mr-2"></span> Login
           </a>
         </li>
         <li>
-          <a href="{{ site.baseurl }}/sign-up" class="text-green-600 block hover:bg-skin-border/50 focus:outline-none font-medium text-skin-header px-3 py-2">
-            Register
+          <a href="{{ site.baseurl }}/sign-up" class="text-skin-link block hover:bg-skin-border/50 focus:outline-none px-3 py-2">
+            <span class="inline-block rounded-full bg-green-600 w-4 h-4 mr-2"></span> Register
           </a>
         </li>
         <li>
-          <a href="{{ site.baseurl }}/results" class="text-green-600 block hover:bg-skin-border/50 focus:outline-none font-medium text-skin-header px-3 py-2">
-            Results
+          <a href="{{ site.baseurl }}/results" class="text-skin-link block hover:bg-skin-border/50 focus:outline-none px-3 py-2">
+            <span class="inline-block rounded-full bg-green-600 w-4 h-4 mr-2"></span> Results
           </a>
         </li>
         <li>
-          <a href="{{ site.baseurl }}/results-historic" class="text-green-600 block hover:bg-skin-border/50 focus:outline-none font-medium text-skin-header px-3 py-2">
-            Results (historic)
+          <a href="{{ site.baseurl }}/results-historic" class="text-skin-link block hover:bg-skin-border/50 focus:outline-none px-3 py-2">
+            <span class="inline-block rounded-full bg-green-600 w-4 h-4 mr-2"></span> Results (historic)
           </a>
         </li>
         <li>
-          <a href="{{ site.baseurl }}/history" class="text-green-600 block hover:bg-skin-border/50 focus:outline-none font-medium text-skin-header px-3 py-2">
-            History
+          <a href="{{ site.baseurl }}/history" class="text-skin-link block hover:bg-skin-border/50 focus:outline-none px-3 py-2">
+            <span class="inline-block rounded-full bg-green-600 w-4 h-4 mr-2"></span> History
           </a>
         </li>
         <li>
-          <a href="{{ site.baseurl }}/custompak" class="text-green-600 block hover:bg-skin-border/50 focus:outline-none font-medium text-skin-header px-3 py-2">
-            Custom Pak
+          <a href="{{ site.baseurl }}/custompak" class="text-skin-link block hover:bg-skin-border/50 focus:outline-none px-3 py-2">
+            <span class="inline-block rounded-full bg-green-600 w-4 h-4 mr-2"></span> Custom Pak
           </a>
         </li>
       </ul>
@@ -54,28 +55,28 @@ title: "Page List"
       </div>
       <ul role="list" class="relative z-0 divide-y divide-skin-primary">
         <li>
-          <a href="{{ site.baseurl }}/dashboard-new" class="text-red-600 block hover:bg-skin-border/50 focus:outline-none font-medium text-skin-header px-3 py-2">
-            No History - Questionnaire is Incomplete
+          <a href="{{ site.baseurl }}/dashboard-new" class="text-skin-link block hover:bg-skin-border/50 focus:outline-none px-3 py-2">
+            <span class="inline-block rounded-full bg-red-600 w-4 h-4 mr-2"></span> No History - Questionnaire is Incomplete
           </a>
         </li>
         <li>
-          <a href="{{ site.baseurl }}/dashboard-questionnaire-complete" class="text-red-600 block hover:bg-skin-border/50 focus:outline-none font-medium text-skin-header px-3 py-2">
-            No History - Questionnaire is complete, Blood work is not yet received
+          <a href="{{ site.baseurl }}/dashboard-questionnaire-complete" class="text-skin-link block hover:bg-skin-border/50 focus:outline-none px-3 py-2">
+            <span class="inline-block rounded-full bg-red-600 w-4 h-4 mr-2"></span> No History - Questionnaire is complete, Blood work is not yet received
           </a>
         </li>
         <li>
-          <a href="{{ site.baseurl }}/dashboard-new-results-no-history" class="text-red-600 block hover:bg-skin-border/50 focus:outline-none font-medium text-skin-header px-3 py-2">
-            No History - Results Received & HP Approved
+          <a href="{{ site.baseurl }}/dashboard-new-results-no-history" class="text-skin-link block hover:bg-skin-border/50 focus:outline-none px-3 py-2">
+            <span class="inline-block rounded-full bg-red-600 w-4 h-4 mr-2"></span> No History - Results Received & HP Approved
           </a>
         </li>
         <li>
-          <a href="{{ site.baseurl }}/dashboard-bloodwork-requested" class="text-red-600 block hover:bg-skin-border/50 focus:outline-none font-medium text-skin-header px-3 py-2">
-            Has History - Time for new bloodwork
+          <a href="{{ site.baseurl }}/dashboard-bloodwork-requested" class="text-skin-link block hover:bg-skin-border/50 focus:outline-none px-3 py-2">
+            <span class="inline-block rounded-full bg-red-600 w-4 h-4 mr-2"></span> Has History - Time for new bloodwork
           </a>
         </li>
         <li>
-          <a href="{{ site.baseurl }}/dashboard-new-results" class="text-red-600 block hover:bg-skin-border/50 focus:outline-none font-medium text-skin-header px-3 py-2">
-            Has History - Results Received & HP Approved
+          <a href="{{ site.baseurl }}/dashboard-new-results" class="text-skin-link block hover:bg-skin-border/50 focus:outline-none px-3 py-2">
+            <span class="inline-block rounded-full bg-red-600 w-4 h-4 mr-2"></span> Has History - Results Received & HP Approved
           </a>
         </li>
       </ul>
@@ -86,28 +87,28 @@ title: "Page List"
       </div>
       <ul role="list" class="relative z-0 divide-y divide-skin-primary">
         <li>
-          <a href="{{ site.baseurl }}/questionnaire-new" class="text-red-600 block hover:bg-skin-border/50 focus:outline-none font-medium text-skin-header px-3 py-2">
-            New User/Signup
+          <a href="{{ site.baseurl }}/questionnaire-new" class="text-skin-link block hover:bg-skin-border/50 focus:outline-none text-skin-header px-3 py-2">
+            <span class="inline-block rounded-full bg-red-600 w-4 h-4 mr-2"></span> New User/Signup
           </a>
         </li>
         <li>
-          <a href="{{ site.baseurl }}/questionnaire-new-bloodwork" class="text-red-600 block hover:bg-skin-border/50 focus:outline-none font-medium text-skin-header px-3 py-2">
-            New Bloodwork
+          <a href="{{ site.baseurl }}/questionnaire-new-bloodwork" class="text-skin-link block hover:bg-skin-border/50 focus:outline-none text-skin-header px-3 py-2">
+            <span class="inline-block rounded-full bg-red-600 w-4 h-4 mr-2"></span> New Bloodwork
           </a>
         </li>
         <li>
-          <a href="{{ site.baseurl }}/questionnaire-incomplete" class="text-red-600 block hover:bg-skin-border/50 focus:outline-none font-medium text-skin-header px-3 py-2">
-            Incomplete
+          <a href="{{ site.baseurl }}/questionnaire-incomplete" class="text-skin-link block hover:bg-skin-border/50 focus:outline-none text-skin-header px-3 py-2">
+            <span class="inline-block rounded-full bg-red-600 w-4 h-4 mr-2"></span> Incomplete
           </a>
         </li>
         <li>
-          <a href="{{ site.baseurl }}/questionnaire-view" class="text-red-600 block hover:bg-skin-border/50 focus:outline-none font-medium text-skin-header px-3 py-2">
-            View
+          <a href="{{ site.baseurl }}/questionnaire-view" class="text-skin-link block hover:bg-skin-border/50 focus:outline-none text-skin-header px-3 py-2">
+            <span class="inline-block rounded-full bg-red-600 w-4 h-4 mr-2"></span> View
           </a>
         </li>
         <li>
-          <a href="{{ site.baseurl }}/questionnaire" class="block hover:bg-skin-border/50 focus:outline-none font-medium text-skin-header px-3 py-2">
-            Questionnaire History
+          <a href="{{ site.baseurl }}/questionnaire" class="text-skin-link block hover:bg-skin-border/50 focus:outline-none px-3 py-2">
+            <span class="inline-block rounded-full bg-red-600 w-4 h-4 mr-2"></span> Questionnaire History
           </a>
         </li>
       </ul>
