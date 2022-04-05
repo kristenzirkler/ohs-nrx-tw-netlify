@@ -33,6 +33,8 @@
     </a>
   </td>
   <td class="hidden md:table-cell border-b px-2 sm:px-4 py-2 whitespace-nowrap border-skin-primary border-r">{{ statuspill }}</td>
+  {% if include.hpname != "" %}<td class="border-b px-2 sm:px-4 py-2 whitespace-nowrap text-sm border-skin-primary border-r">{{ include.hpname }}</td>{% endif %}
+  {% if include.source != "" %}<td class="border-b px-2 sm:px-4 py-2 whitespace-nowrap text-sm border-skin-primary border-r">{{ include.source }}</td>{% endif %}
   <td class="border-b px-2 sm:px-4 py-2 whitespace-nowrap text-lg text-center border-skin-primary border-r">{{ include.orderdate }}</td>
   <td class="border-b px-2 sm:px-4 py-2 whitespace-nowrap text-lg text-center border-skin-primary border-r {% if include.qdate contains "2021" %}text-gray-300{% endif %}">{{ include.qdate }}</td>
   <td class="border-b px-2 sm:px-4 py-2 whitespace-nowrap text-lg text-center border-skin-primary border-r {% if include.resultdate contains "2021" %}text-gray-300{% endif %}">{{ include.resultdate }}</td>

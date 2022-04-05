@@ -36,22 +36,38 @@
     <tr>
       {% include table-head-th.html name="Patient" classes="text-left border-r-2" hidemobile="true" sort="true" sort-active="true" %}
       {% include table-head-th.html name="Status" classes="text-left" hidemobile="true" sort="true" %}
+      {% if include.showhp == "true" %}
+      {% include table-head-th.html name="HP" classes="text-left" sort="true" %}
+      {% assign hpnameone = "Mesose Dastername" %}
+      {% assign hpnametwo = "Dr. First Lastername" %}
+      {% else %}
+      {% assign hpnameone = "" %}
+      {% assign hpnametwo = "" %}
+      {% endif %}
+      {% if include.showsource == "true" %}
+      {% include table-head-th.html name="Source" classes="text-left" sort="true" %}
+      {% assign sourceone = "nrx" %}
+      {% assign sourcetwo = "ua" %}
+      {% else %}
+      {% assign sourceone = "" %}
+      {% assign sourcetwo = "" %}
+      {% endif %}
       {% include table-head-th.html name="Order" classes="" sort="true" %}
       {% include table-head-th.html name="Questionnaire" classes="" sort="true" %}
       {% include table-head-th.html name="Result" classes="" sort="true" %}
     </tr>
   </thead>
   <tbody class="bg-skin-page">
-      {% include one-patient-row.html name="Abel Mac Alastair" status="3" orderdate="3/3/2022" qdate="3/3/2022" resultdate="3/11/2021" %}
-      {% include one-patient-row.html name="Danial Logan" status="5" qdate="3/1/2022" orderdate="2/27/2022" resultdate="3/11/2022" %}
-      {% include one-patient-row.html name="Fernanda McLean" status="3" orderdate="3/1/2022" qdate="3/2/2022" resultdate="2/21/2021" %}
-      {% include one-patient-row.html name="Lourdes Ferguson" status="4" orderdate="3/24/2022" qdate="3/30/2022" resultdate="4/3/2022" %}
-      {% include one-patient-row.html name="Loyd Matthews" status="4" qdate="3/1/2022" orderdate="2/38/2022" resultdate="3/21/2022" %}
-      {% include one-patient-row.html name="Milano Tullius" status="2" orderdate="4/1/2022" qdate="1/1/2021" resultdate="4/3/2021"  %}
-      {% include one-patient-row.html name="Nisa Guarneri" status="2" orderdate="4/5/2022" qdate="9/22/2021" resultdate="10/1/2021" %}
-      {% include one-patient-row.html name="Paula Vidal" status="2" orderdate="3/21/2022" qdate="2/2/2021" resultdate="3/21/2021" %}
-      {% include one-patient-row.html name="Sabrina Esparza" status="1" qdate="2/7/2022" orderdate="2/1/2022" resultdate="2/21/2022" %}
-      {% include one-patient-row.html name="Sylvester Washington" status="4" qdate="3/31/2022" orderdate="3/24/2022" resultdate="4/5/2022" %}
+      {% include one-patient-row.html name="Abel Mac Alastair" status="3" orderdate="3/3/2022" qdate="3/3/2022" resultdate="3/11/2021" hpname=hpnameone source=sourceone %}
+      {% include one-patient-row.html name="Danial Logan" status="5" qdate="3/1/2022" orderdate="2/27/2022" resultdate="3/11/2022" hpname=hpnametwo source=sourceone %}
+      {% include one-patient-row.html name="Fernanda McLean" status="3" orderdate="3/1/2022" qdate="3/2/2022" resultdate="2/21/2021" hpname=hpnameone source=sourcetwo %}
+      {% include one-patient-row.html name="Lourdes Ferguson" status="4" orderdate="3/24/2022" qdate="3/30/2022" resultdate="4/3/2022" hpname=hpnameone source=sourcetwo %}
+      {% include one-patient-row.html name="Loyd Matthews" status="4" qdate="3/1/2022" orderdate="2/38/2022" resultdate="3/21/2022" hpname=hpnameone source=sourceone %}
+      {% include one-patient-row.html name="Milano Tullius" status="2" orderdate="4/1/2022" qdate="1/1/2021" resultdate="4/3/2021" hpname=hpnametwo source=sourceone %}
+      {% include one-patient-row.html name="Nisa Guarneri" status="2" orderdate="4/5/2022" qdate="9/22/2021" resultdate="10/1/2021" hpname=hpnametwo source=sourcetwo %}
+      {% include one-patient-row.html name="Paula Vidal" status="2" orderdate="3/21/2022" qdate="2/2/2021" resultdate="3/21/2021" hpname=hpnameone source=sourcetwo %}
+      {% include one-patient-row.html name="Sabrina Esparza" status="1" qdate="2/7/2022" orderdate="2/1/2022" resultdate="2/21/2022" hpname=hpnameone source=sourceone %}
+      {% include one-patient-row.html name="Sylvester Washington" status="4" qdate="3/31/2022" orderdate="3/24/2022" resultdate="4/5/2022" hpname=hpnameone source=sourceone %}
   </tbody>
 </table>
 {% endif %}
