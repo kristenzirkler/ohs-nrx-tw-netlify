@@ -1,0 +1,25 @@
+---
+layout: default
+nav: hphome
+nav-style: hp
+title: "Provider Home"
+---
+<div class="bg-skin-page shadow rounded-lg mb-5">
+  <div class="px-4 py-5 sm:p-6">
+    <h2 class="text-xl font-bold font-display text-skin-header mr-2">Results</h2>
+  </div>
+  {% include patient-list.html layout ="results-short" %}
+  <div class="px-4 py-5 sm:p-6">
+    {% include button.html link="hp-patients" icon="right" text="All Patients" %}
+  </div>
+</div>
+<div class="bg-skin-page shadow rounded-lg mb-5">
+  <div class="px-4 py-5 sm:p-6">
+    <h2 class="text-xl font-bold font-display text-skin-header mr-2">Orders</h2>
+  </div>
+  {% include patient-list.html layout ="orders-short" %}
+  <div class="px-4 py-5 sm:p-6">
+    {% include button.html link="hp-patients" icon="right" text="All Patients" %}
+  </div>
+</div>
+

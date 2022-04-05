@@ -1,0 +1,36 @@
+---
+layout: default
+nav: questionnaire
+adminbar: true
+title: "Hey Bryan & Jesse Look Here!"
+---
+<div class="fixed top-0 left-0 right-0 bg-yellow-300 h-14 z-20">
+  <div class="flex justify-between">
+    <div class="flex items-center h-14 pl-2">
+      <div class="w-12 hidden sm:block">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 m-auto" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M7 7h.01M7 3h5c.512 0 1.024.195 1.414.586l7 7a2 2 0 010 2.828l-7 7a2 2 0 01-2.828 0l-7-7A1.994 1.994 0 013 12V7a4 4 0 014-4z" />
+        </svg>
+      </div>
+      <span class="text-sm">Viewing As: </span>
+      <div class="ml-2">
+        {% include field-single-select.html layout="patient-switch" name="patient" options=" 1: 'Sylvester Washington',2:'Lourdes Ferguson',3:'Loyd Matthews',4:'Danial Logan',5:'Sabrina Esparza'" %}
+      </div>
+    </div>
+    <div class="flex items-center">
+        <a href="/hp-home" class="block w-14 h-14 border-l border-yellow-400 text-yellow-600 hover:text-yellow-400 hover:bg-yellow-200" title="Back to HP Home">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-14 w-6 m-auto" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M10 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2m7-2a9 9 0 11-18 0 9 9 0 0118 0z" />
+        </svg>
+        </a>
+    </div>
+  </div>
+</div>
+
+{% include page-header.html navname="LOOK" title=page.title desc="The name of the patient should already be selected onload. Then they could switch views using the dropdown. I couldn't figure out how to get the placeholder to choose one as selected. 'Close' icon should link to HP Home." %}
+
+<div class="mt-5">
+  <div class="shadow rounded-lg bg-skin-page">
+    <div class="p-10"><div class="border-4 border-dashed h-36 p-10 text-center">Page Continues Here.</div></div>
+  </div>
+</div>

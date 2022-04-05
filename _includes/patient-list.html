@@ -1,0 +1,57 @@
+{% if include.layout != "full" %}
+<table class="min-w-full border-separate" style="border-spacing: 0">
+  <thead class="bg-skin-border/50">
+    <tr>
+      {% include table-head-th.html name="Patient" classes="text-left border-r-2" filter="no" hidemobile="true" %}
+      {% include table-head-th.html name="Status" classes="text-left" hidemobile="true" filter="no" %}
+      {% include table-head-th.html name="Order" filter="no" %}
+      {% include table-head-th.html name="Questionnaire" filter="no" %}
+      {% include table-head-th.html name="Result" filter="no" %}
+    </tr>
+  </thead>
+  <tbody class="bg-skin-page">
+    {% if include.layout == "results-short" %}
+      {% include one-patient-row.html name="Sylvester Washington" status="4" qdate="3/31/2022" orderdate="3/24/2022" resultdate="4/5/2022" %}
+      {% include one-patient-row.html name="Lourdes Ferguson" status="4" orderdate="3/24/2022" qdate="3/30/2022" resultdate="4/3/2022" %}
+      {% include one-patient-row.html name="Loyd Matthews" status="4" qdate="3/1/2022" orderdate="2/38/2022" resultdate="3/21/2022" %}
+      {% include one-patient-row.html name="Danial Logan" status="5" qdate="3/1/2022" orderdate="2/27/2022" resultdate="3/11/2022" %}
+      {% include one-patient-row.html name="Sabrina Esparza" status="1" qdate="2/7/2022" orderdate="2/1/2022" resultdate="2/21/2022" %}
+    {% elsif include.layout == "orders-short" %}
+      {% include one-patient-row.html name="Nisa Guarneri" status="2" orderdate="4/5/2022" qdate="9/22/2021" resultdate="10/1/2021" %}
+      {% include one-patient-row.html name="Milano Tullius" status="2" orderdate="4/1/2022" qdate="1/1/2021" resultdate="4/3/2021"  %}
+      {% include one-patient-row.html name="Paula Vidal" status="2" orderdate="3/21/2022" qdate="2/2/2021" resultdate="3/21/2021" %}
+      {% include one-patient-row.html name="Abel Mac Alastair" status="3" orderdate="3/3/2022" qdate="3/3/2022" resultdate="3/11/2021" %}
+      {% include one-patient-row.html name="Fernanda McLean" status="3" orderdate="3/1/2022" qdate="3/2/2022" resultdate="2/21/2021" %}
+    {% endif %}
+  </tbody>
+</table>
+{% else %}
+<table class="min-w-full border-separate" style="border-spacing: 0">
+  <thead class="bg-skin-border/50">
+    <tr>
+      <th colspan="8" class="sticky top-10 md:top-0 z-10 h-10 bg-skin-page border-t border-skin-primary rounded-t-lg overflow-hidden print:hidden">
+        {% include search.html placeholder = "Filter tests..." %}
+      </th>
+    </tr>
+    <tr>
+      {% include table-head-th.html name="Patient" classes="text-left border-r-2" hidemobile="true" sort="true" sort-active="true" %}
+      {% include table-head-th.html name="Status" classes="text-left" hidemobile="true" sort="true" %}
+      {% include table-head-th.html name="Order" classes="" sort="true" %}
+      {% include table-head-th.html name="Questionnaire" classes="" sort="true" %}
+      {% include table-head-th.html name="Result" classes="" sort="true" %}
+    </tr>
+  </thead>
+  <tbody class="bg-skin-page">
+      {% include one-patient-row.html name="Abel Mac Alastair" status="3" orderdate="3/3/2022" qdate="3/3/2022" resultdate="3/11/2021" %}
+      {% include one-patient-row.html name="Danial Logan" status="5" qdate="3/1/2022" orderdate="2/27/2022" resultdate="3/11/2022" %}
+      {% include one-patient-row.html name="Fernanda McLean" status="3" orderdate="3/1/2022" qdate="3/2/2022" resultdate="2/21/2021" %}
+      {% include one-patient-row.html name="Lourdes Ferguson" status="4" orderdate="3/24/2022" qdate="3/30/2022" resultdate="4/3/2022" %}
+      {% include one-patient-row.html name="Loyd Matthews" status="4" qdate="3/1/2022" orderdate="2/38/2022" resultdate="3/21/2022" %}
+      {% include one-patient-row.html name="Milano Tullius" status="2" orderdate="4/1/2022" qdate="1/1/2021" resultdate="4/3/2021"  %}
+      {% include one-patient-row.html name="Nisa Guarneri" status="2" orderdate="4/5/2022" qdate="9/22/2021" resultdate="10/1/2021" %}
+      {% include one-patient-row.html name="Paula Vidal" status="2" orderdate="3/21/2022" qdate="2/2/2021" resultdate="3/21/2021" %}
+      {% include one-patient-row.html name="Sabrina Esparza" status="1" qdate="2/7/2022" orderdate="2/1/2022" resultdate="2/21/2022" %}
+      {% include one-patient-row.html name="Sylvester Washington" status="4" qdate="3/31/2022" orderdate="3/24/2022" resultdate="4/5/2022" %}
+  </tbody>
+</table>
+{% endif %}
