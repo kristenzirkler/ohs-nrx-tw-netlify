@@ -10,7 +10,8 @@
 ## Get started
 * `bundle install` to install Ruby gems
 * `npm ci` to install npm packages listed in `package-lock.json`
-* `npm run start` or `npm run dev` to compile the site with development settings and run BrowserSync
+
+--> --> * `npm run start` or `npm run dev` to compile the site with development settings and run BrowserSync
 
 ## Build your site
 * `npm run build:dev` to compile the site with development settings

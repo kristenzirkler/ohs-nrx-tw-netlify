@@ -21,7 +21,16 @@
         </thead>
         <tbody class="bg-skin-page divide-y divide-skin-primary">
           {% include one-result-row.html name="Cholesterol, Total" count="182" change="1" selected=4 r1="0 - 99" r2="100 - 154" r3="155 - 169" r4="170 - 199" r5="200 or higher" %}
-          {% include one-result-row.html name="HDL Cholesterol" count="34" change="2" selected=1 r1="0 - 39" r2="40 - 59" r3="60 - 80" r4="81 - 99" r5="100 or higher" %}
+          {% include one-result-row.html name="HDL Cholesterol" count="34" change="2" selected=1 r1="0 - 39" r2="40 - 59" r3="60 - 80" r4="81 - 99" r5="100 or higher" labupdated=include.labupdated %}
+          {% if include.labupdated == 'true' %}
+          <!--tr>
+            <td colspan="8" class="px-4 py-2 text-skin-header border-l-4 border-pink-600">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M7 11l5-5m0 0l5 5m-5-5v12" />
+</svg>This result was updated after the initial report.
+            </td>
+          </tr-->
+          {% endif %}
           {% include one-result-row.html name="Triglycerides" count="111" change="-4" selected=4 r1="0 - 36" r2="37 - 74" r3="75 - 100" r4="101 - 149" r5="150 or higher" %}
           {% include one-result-row.html name="LDL-Cholesterol" count="126" selected=5 r1="0 - 10" r2="11 - 34" r3="35 - 80" r4="81 - 100" r5="101 or higher" %}
           {% include one-result-row.html name="Non-HDL Cholesterol" count="148" selected=5 r1="--" r2="--" r3="0 - 109" r4="110 - 129" r5="130 or higher" %}
