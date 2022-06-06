@@ -1,0 +1,47 @@
+---
+layout: default
+nav: location-lookup
+title: "Find a Lab"
+---
+{% comment %}{% include page-header.html navname="Locations" title=page.title desc="Find a location for your bloodwork." %}
+<div class="bg-skin-page shadow rounded-lg mt-5">
+  <div class="px-4 py-5 sm:p-0">
+    <div id="map"></div>
+  </div>
+</div>
+
+
+JAVASCRIPT IS IN header-tags.html
+
+{% endcomment %}
+
+<div class="map-container-ctr bg-skin-page shadow rounded-lg h-screen">
+    <div id="map-container" class="h-full relative">
+      <div id="locations-panel" class="absolute top-0 bottom-0 w-96 bg-skin-page">
+        <div id="locations-panel-list" class="p-4">
+          <header class="">
+            <h1 class="text-skin-accent-primary font-bold tracking-wide uppercase">
+              Find a location near you
+            </h1>
+            <div class="search-input flex">
+              <input id="location-search-input" placeholder="Enter your address or zip code" class="bg-skin-page text-skin-primary appearance-none block w-full px-3 py-2 border border-skin-primary rounded-lg placeholder-gray-400 focus:outline-none focus:ring-skin-button-primary focus:border-skin-button-primary sm:text-sm" />
+              <div id="search-overlay-search" class="search-input-overlay search">
+                <button id="location-search-button" class="px-2 text-center h-10">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" /></svg>
+                </button>
+              </div>
+            </div>
+          </header>
+          <div class="section-name mt-2 text-skin-accent-primary font-bold tracking-wide uppercase" id="location-results-section-name">
+            All locations
+          </div>
+          <div class="results">
+            <ul id="location-results-list"></ul>
+          </div>
+        </div>
+      </div>
+      <div id="gmp-map" class="absolute top-0 bottom-0 left-96 right-0 bg-gray-100"></div>
+    </div>
+</div>
+
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCjnIuOhhdZ9kn5BQSBZBc2W56OR-Qwby8&callback=initMap&libraries=places,geometry&solution_channel=GMP_QB_locatorplus_v4_cABD" async defer></script>
