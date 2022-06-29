@@ -23,12 +23,10 @@ fullheight: true
         const mapEl = document.getElementById('gmp-map');
         const panelEl = document.getElementById('locations-panel-list');
         locator.panelListEl = document.getElementById('locations-panel-list');
-        const sectionNameEl =
-            document.getElementById('location-results-section-name');
+        const sectionNameEl = document.getElementById('location-results-section-name');
         const resultsContainerEl = document.getElementById('location-results-list');
 
-        const itemsTemplate = Handlebars.compile(
-            document.getElementById('locator-result-items-tmpl').innerHTML);
+        const itemsTemplate = Handlebars.compile(document.getElementById('locator-result-items-tmpl').innerHTML);
 
         locator.searchLocation = null;
         locator.searchLocationMarker = null;
@@ -37,19 +35,27 @@ fullheight: true
 
         // Initialize the map -------------------------------------------------------
         locator.map = new google.maps.Map(mapEl, configuration.mapOptions);
-
+  
+        var cityCircle = new google.maps.Circle({ 
+            strokeColor: '#FF0000',    
+            strokeOpacity: 0.8,    
+            strokeWeight: 2,    
+            fillColor: '#FF0000',    
+            fillOpacity: 0.35,    
+            map: locator.map, 
+            radius: 1999,  
+            draggable:false,
+          });
         // Store selection.
         const selectResultItem = function(locationIdx, panToMarker, scrollToResult) {
           locator.selectedLocationIdx = locationIdx;
-            //console.log(locationIdx);
+          //console.log(locationIdx);
           
           for (let locationElem of resultsContainerEl.children) {
             locationElem.classList.remove('selected');
             // reset all markers
             if (getResultIndex(locationElem) === locator.selectedLocationIdx) {
               locationElem.classList.add('selected');
-              // Change map marker?
-              //markers[locationIdx].icon = selectedMarker;
               if (scrollToResult) {
                 panelEl.scrollTop = locationElem.offsetTop - 130;
               }
@@ -57,23 +63,21 @@ fullheight: true
           }
           if (panToMarker && (locationIdx != null)) {
             locator.map.panTo(locator.locations[locationIdx].coords);
-            //selectedMarker
-            //locator.map.markers[locationIdx].setIcon(selectedMarker);
-            //console.log(locator.locations[locationIdx]);
-            addCircle(locator.locations[locationIdx].coords);
           }
+          cityCircle.setMap(null);
+          addCircle(locator.locations[locationIdx].coords);
         };
         function addCircle(location) {    
           // Add the circle for this city to the map.    
-          var cityCircle = new google.maps.Circle({    
-            strokeColor: '#FF0000',    
-            strokeOpacity: 0.8,    
+          cityCircle = new google.maps.Circle({
+            strokeColor: '#ec431c',
+            strokeOpacity: 0.8,
             strokeWeight: 2,    
-            fillColor: '#FF0000',    
-            fillOpacity: 0.35,    
-            map: locator.map,    
-            center: location,    
-            radius: 1999,  
+            fillColor: '#ec431c',
+            fillOpacity: 0.35,
+            map: locator.map,
+            center: location,
+            radius: 1999,
             draggable:false,
           });
         }
@@ -339,42 +343,42 @@ fullheight: true
       }
 </script>
 <script>
-      const CONFIGURATION = {
-        "locations": [
-          {"title":"926 E McDowell Rd ste 123","address1":"926 E McDowell Rd ste 123","address2":"Phoenix, AZ 85006, USA","coords":{"lat":33.46650353415899,"lng":-112.06151103558197},"placeId":"EjE5MjYgRSBNY0Rvd2VsbCBSZCBzdGUgMTIzLCBQaG9lbml4LCBBWiA4NTAwNiwgVVNBIiMaIQoWChQKEgmrGJzBEhIrhxHmTCRsRg1T1RIHc3RlIDEyMw"},
-          {"title":"4350 N 19th Ave ste 5","address1":"4350 N 19th Ave ste 5","address2":"Phoenix, AZ 85015, USA","coords":{"lat":33.50026480733271,"lng":-112.10018590859833},"placeId":"Ei00MzUwIE4gMTl0aCBBdmUgc3RlIDUsIFBob2VuaXgsIEFaIDg1MDE1LCBVU0EiIRofChYKFAoSCXd2rSAfEyuHEWoikILFhAhzEgVzdGUgNQ"},
-          {"title":"2001 W Camelback Rd ste 150","address1":"2001 W Camelback Rd ste 150","address2":"Phoenix, AZ 85015, USA","coords":{"lat":33.509234345866496,"lng":-112.10267240674591},"placeId":"EjMyMDAxIFcgQ2FtZWxiYWNrIFJkIHN0ZSAxNTAsIFBob2VuaXgsIEFaIDg1MDE1LCBVU0EiIxohChYKFAoSCV_kxT8kEyuHEXObA19s_yLLEgdzdGUgMTUw"},
-          {"title":"2640 W Baseline Rd","address1":"2640 W Baseline Rd","address2":"Phoenix, AZ 85041, USA","coords":{"lat":33.378373990261316,"lng":-112.11568806441804},"placeId":"ChIJ8yDXc-kQK4cREeiRV__uuAo"},
-          {"title":"5111 N Scottsdale Rd ste 160","address1":"5111 N Scottsdale Rd ste 160","address2":"Scottsdale, AZ 85250, USA","coords":{"lat":33.51184706593145,"lng":-111.92547266441804},"placeId":"Ejc1MTExIE4gU2NvdHRzZGFsZSBSZCBzdGUgMTYwLCBTY290dHNkYWxlLCBBWiA4NTI1MCwgVVNBIiMaIQoWChQKEgm74un4oAsrhxE-aiCn3RfPthIHc3RlIDE2MA"},
-          {"title":"9321 W Thomas Rd ste 105","address1":"9321 W Thomas Rd ste 105","address2":"Phoenix, AZ 85037, USA","coords":{"lat":33.47831769425174,"lng":-112.26180566441803},"placeId":"EjA5MzIxIFcgVGhvbWFzIFJkIHN0ZSAxMDUsIFBob2VuaXgsIEFaIDg1MDM3LCBVU0EiIxohChYKFAoSCdfM5qXsPyuHEQI1K80UH__rEgdzdGUgMTA1"},
-          {"title":"15810 S 45th St ste 101","address1":"15810 S 45th St ste 101","address2":"Phoenix, AZ 85048, USA","coords":{"lat":33.30375444763831,"lng":-111.98732166441803},"placeId":"Ei8xNTgxMCBTIDQ1dGggU3Qgc3RlIDEwMSwgUGhvZW5peCwgQVogODUwNDgsIFVTQSIjGiEKFgoUChIJR8D6Z28EK4cR--gjpLavoZwSB3N0ZSAxMDE"},
-          {"title":"10450 E Riggs Rd ste 109","address1":"10450 E Riggs Rd ste 109","address2":"Chandler, AZ 85248, USA","coords":{"lat":33.21939085820057,"lng":-111.85662297790985},"placeId":"EjExMDQ1MCBFIFJpZ2dzIFJkIHN0ZSAxMDksIENoYW5kbGVyLCBBWiA4NTI0OCwgVVNBIiMaIQoWChQKEgmRAzjZV1UqhxE-zI-2jLAG6BIHc3RlIDEwOQ"},
-          {"title":"3624 W Anthem Way ste c114","address1":"3624 W Anthem Way ste c114","address2":"Anthem, AZ 85086, USA","coords":{"lat":33.86744828430751,"lng":-112.13621817790985},"placeId":"EjEzNjI0IFcgQW50aGVtIFdheSBzdGUgYzExNCwgQW50aGVtLCBBWiA4NTA4NiwgVVNBIiQaIgoWChQKEgkFG0ZF-50shxEsvTyZhhO9wBIIc3RlIGMxMTQ"},
-          {"title":"28455 N Vistancia Blvd","address1":"28455 N Vistancia Blvd","address2":"Peoria, AZ 85383, USA","coords":{"lat":33.74000739028031,"lng":-112.32161840674591},"placeId":"Ei0yODQ1NSBOIFZpc3RhbmNpYSBCbHZkLCBQZW9yaWEsIEFaIDg1MzgzLCBVU0EiUhJQCjQKMgk_oMbVp14rhxGWncWoIc5uaBoeCxDuwe6hARoUChIJX2z_zyVfK4cRJgpA_FL9hr8MEKfeASoUChIJiV1mjRZcK4cR3U8gkW0pU7g"}
-        ],
-        "mapOptions": {
-          "mapId": "7814438d65024927",
-          "center":{"lat":38.0,"lng":-100.0},
-          "fullscreenControl":true,
-          "mapTypeControl":false,
-          "streetViewControl":false,
-          "zoom":4,
-          "zoomControl":true,
-          "maxZoom":17
-        },
-        "mapsApiKey": "AIzaSyCjnIuOhhdZ9kn5BQSBZBc2W56OR-Qwby8",
-        "capabilities": {
-          "input":true,
-          "autocomplete":true,
-          "directions":false,
-          "distanceMatrix":true,
-          "details":false
-        }
-      };
+  const CONFIGURATION = {
+    "locations": [
+      {"title":"926 E McDowell Rd ste 123","address1":"926 E McDowell Rd ste 123","address2":"Phoenix, AZ 85006, USA","coords":{"lat":33.46650353415899,"lng":-112.06151103558197},"placeId":"EjE5MjYgRSBNY0Rvd2VsbCBSZCBzdGUgMTIzLCBQaG9lbml4LCBBWiA4NTAwNiwgVVNBIiMaIQoWChQKEgmrGJzBEhIrhxHmTCRsRg1T1RIHc3RlIDEyMw"},
+      {"title":"4350 N 19th Ave ste 5","address1":"4350 N 19th Ave ste 5","address2":"Phoenix, AZ 85015, USA","coords":{"lat":33.50026480733271,"lng":-112.10018590859833},"placeId":"Ei00MzUwIE4gMTl0aCBBdmUgc3RlIDUsIFBob2VuaXgsIEFaIDg1MDE1LCBVU0EiIRofChYKFAoSCXd2rSAfEyuHEWoikILFhAhzEgVzdGUgNQ"},
+      {"title":"2001 W Camelback Rd ste 150","address1":"2001 W Camelback Rd ste 150","address2":"Phoenix, AZ 85015, USA","coords":{"lat":33.509234345866496,"lng":-112.10267240674591},"placeId":"EjMyMDAxIFcgQ2FtZWxiYWNrIFJkIHN0ZSAxNTAsIFBob2VuaXgsIEFaIDg1MDE1LCBVU0EiIxohChYKFAoSCV_kxT8kEyuHEXObA19s_yLLEgdzdGUgMTUw"},
+      {"title":"2640 W Baseline Rd","address1":"2640 W Baseline Rd","address2":"Phoenix, AZ 85041, USA","coords":{"lat":33.378373990261316,"lng":-112.11568806441804},"placeId":"ChIJ8yDXc-kQK4cREeiRV__uuAo"},
+      {"title":"5111 N Scottsdale Rd ste 160","address1":"5111 N Scottsdale Rd ste 160","address2":"Scottsdale, AZ 85250, USA","coords":{"lat":33.51184706593145,"lng":-111.92547266441804},"placeId":"Ejc1MTExIE4gU2NvdHRzZGFsZSBSZCBzdGUgMTYwLCBTY290dHNkYWxlLCBBWiA4NTI1MCwgVVNBIiMaIQoWChQKEgm74un4oAsrhxE-aiCn3RfPthIHc3RlIDE2MA"},
+      {"title":"9321 W Thomas Rd ste 105","address1":"9321 W Thomas Rd ste 105","address2":"Phoenix, AZ 85037, USA","coords":{"lat":33.47831769425174,"lng":-112.26180566441803},"placeId":"EjA5MzIxIFcgVGhvbWFzIFJkIHN0ZSAxMDUsIFBob2VuaXgsIEFaIDg1MDM3LCBVU0EiIxohChYKFAoSCdfM5qXsPyuHEQI1K80UH__rEgdzdGUgMTA1"},
+      {"title":"15810 S 45th St ste 101","address1":"15810 S 45th St ste 101","address2":"Phoenix, AZ 85048, USA","coords":{"lat":33.30375444763831,"lng":-111.98732166441803},"placeId":"Ei8xNTgxMCBTIDQ1dGggU3Qgc3RlIDEwMSwgUGhvZW5peCwgQVogODUwNDgsIFVTQSIjGiEKFgoUChIJR8D6Z28EK4cR--gjpLavoZwSB3N0ZSAxMDE"},
+      {"title":"10450 E Riggs Rd ste 109","address1":"10450 E Riggs Rd ste 109","address2":"Chandler, AZ 85248, USA","coords":{"lat":33.21939085820057,"lng":-111.85662297790985},"placeId":"EjExMDQ1MCBFIFJpZ2dzIFJkIHN0ZSAxMDksIENoYW5kbGVyLCBBWiA4NTI0OCwgVVNBIiMaIQoWChQKEgmRAzjZV1UqhxE-zI-2jLAG6BIHc3RlIDEwOQ"},
+      {"title":"3624 W Anthem Way ste c114","address1":"3624 W Anthem Way ste c114","address2":"Anthem, AZ 85086, USA","coords":{"lat":33.86744828430751,"lng":-112.13621817790985},"placeId":"EjEzNjI0IFcgQW50aGVtIFdheSBzdGUgYzExNCwgQW50aGVtLCBBWiA4NTA4NiwgVVNBIiQaIgoWChQKEgkFG0ZF-50shxEsvTyZhhO9wBIIc3RlIGMxMTQ"},
+      {"title":"28455 N Vistancia Blvd","address1":"28455 N Vistancia Blvd","address2":"Peoria, AZ 85383, USA","coords":{"lat":33.74000739028031,"lng":-112.32161840674591},"placeId":"Ei0yODQ1NSBOIFZpc3RhbmNpYSBCbHZkLCBQZW9yaWEsIEFaIDg1MzgzLCBVU0EiUhJQCjQKMgk_oMbVp14rhxGWncWoIc5uaBoeCxDuwe6hARoUChIJX2z_zyVfK4cRJgpA_FL9hr8MEKfeASoUChIJiV1mjRZcK4cR3U8gkW0pU7g"}
+    ],
+    "mapOptions": {
+      "mapId": "7814438d65024927",
+      "center":{"lat":38.0,"lng":-100.0},
+      "fullscreenControl":true,
+      "mapTypeControl":false,
+      "streetViewControl":false,
+      "zoom":4,
+      "zoomControl":true,
+      "maxZoom":17
+    },
+    "mapsApiKey": "AIzaSyCjnIuOhhdZ9kn5BQSBZBc2W56OR-Qwby8",
+    "capabilities": {
+      "input":true,
+      "autocomplete":true,
+      "directions":false,
+      "distanceMatrix":true,
+      "details":false
+    }
+  };
 
-      function initMap() {
-        new LocatorPlus(CONFIGURATION);
-      }
+  function initMap() {
+    new LocatorPlus(CONFIGURATION);
+  }
 </script>
 <script id="locator-result-items-tmpl" type="text/x-handlebars-template">
 {% raw %}
@@ -396,7 +400,7 @@ fullheight: true
 
 <div class="map-container-ctr h-screen">
     <div id="map-container" class="h-full bg-skin-page shadow rounded-lg relative">
-      <div id="locations-panel" class="absolute top-0 bottom-0 w-96 bg-skin-page flex flex-col">
+      <div id="locations-panel" class="md:absolute top-0 bottom-0 md:w-72 lg:w-96 bg-skin-page flex flex-col h-full">
         <header class="flex-shrink-0 p-4">
           <h1 class="text-skin-accent-primary font-bold tracking-wide uppercase">
             Find a location near you
@@ -415,19 +419,23 @@ fullheight: true
         </header>
         <div id="locations-panel-list" class="overflow-y-auto">
           <div class="results h-screen">
-            <ul id="location-results-list" style="padding-bottom: 10000px;"></ul>
+            <ul id="location-results-list" style="padding-bottom: calc(100vh - 225px);background: #eee;"></ul>
           </div>
         </div>
       </div>
-      <div id="gmp-map" class="absolute top-0 bottom-0 left-96 right-0 bg-gray-100"></div>
+      <div id="gmp-map" class="absolute top-0 bottom-0 md:left-72 lg:left-96 right-0 bg-gray-100"></div>
     </div>
 </div>
 <style type="text/css">
 #locations-panel-list .location-result {
   border-left-color: transparent;
+  background: #fff;
 }
 #locations-panel-list .location-result.selected {
   border-left-color: black;
+}
+.max-w-7xl {
+  padding-right: 0!important;
 }
 </style>
 
