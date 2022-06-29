@@ -4,9 +4,10 @@ nav: location-lookup
 title: "Find a Lab"
 fullheight: true
 ---
-{% comment %}{% include page-header.html navname="Locations" title=page.title desc="Find a location for your bloodwork." %}{% endcomment %}
 <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/handlebars/4.7.7/handlebars.min.js"></script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCjnIuOhhdZ9kn5BQSBZBc2W56OR-Qwby8&callback=initMap&libraries=places,geometry&solution_channel=GMP_QB_locatorplus_v4_cABD" async defer></script>
+
 <script>
       'use strict';
 
@@ -383,7 +384,7 @@ fullheight: true
 <script id="locator-result-items-tmpl" type="text/x-handlebars-template">
 {% raw %}
       {{#each locations}}
-        <li class="location-result border-l-4 px-4 py-2 border-t flex justify-between align-items-top" data-location-index="{{index}}">
+        <li class="location-result border-l-4 px-4 py-2 border-t flex justify-between align-items-top bg-skin-page" data-location-index="{{index}}">
           <div class="">
             <button class="select-location">
               <h2 class="name font-bold">{{title}}</h2>
@@ -400,7 +401,7 @@ fullheight: true
 
 <div class="map-container-ctr h-screen">
     <div id="map-container" class="h-full bg-skin-page shadow rounded-lg relative">
-      <div id="locations-panel" class="md:absolute top-0 bottom-0 md:w-72 lg:w-96 bg-skin-page flex flex-col h-full">
+      <div id="locations-panel" class="h-3/6 sm:h-full flex flex-col sm:h-full sm:absolute sm:top-0 sm:bottom-0 md:w-72 lg:w-96 bg-skin-page ">
         <header class="flex-shrink-0 p-4">
           <h1 class="text-skin-accent-primary font-bold tracking-wide uppercase">
             Find a location near you
@@ -423,20 +424,18 @@ fullheight: true
           </div>
         </div>
       </div>
-      <div id="gmp-map" class="absolute top-0 bottom-0 md:left-72 lg:left-96 right-0 bg-gray-100"></div>
+      <div id="gmp-map" class="h-3/6 sm:h-full sm:absolute sm:top-0 sm:bottom-0 md:left-72 lg:left-96 sm:right-0 bg-gray-100"></div>
     </div>
 </div>
 <style type="text/css">
 #locations-panel-list .location-result {
   border-left-color: transparent;
-  background: #fff;
 }
 #locations-panel-list .location-result.selected {
   border-left-color: black;
 }
 .max-w-7xl {
+  padding-left: 0!important;
   padding-right: 0!important;
 }
 </style>
-
-<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCjnIuOhhdZ9kn5BQSBZBc2W56OR-Qwby8&callback=initMap&libraries=places,geometry&solution_channel=GMP_QB_locatorplus_v4_cABD" async defer></script>
