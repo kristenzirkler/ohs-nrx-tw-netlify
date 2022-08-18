@@ -115,6 +115,7 @@ img.g-img + div {
 <!-- CSS Reset : END -->
 <!-- Progressive Enhancements : BEGIN -->
 <style>
+a, a:visited { color: #359DED;}
 /*
 td, p {
   font-size: 16px;
@@ -272,160 +273,48 @@ a{
     <div style="display: none; font-size: 1px;max-height: 0px; max-width: 0px; opacity: 0; overflow: hidden; mso-hide: all; font-family: sans-serif;">{{ page.preheader }}
     </div>
     {% endif %}
-    <div style="max-width: 600px; margin: 0 auto;" class="email-container">
-      <!-- BEGIN BODY -->
-      <table align="center" role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%" style="margin: auto;">
-        <tbody><tr>
-          <td valign="top" style="padding: 20px 10px 10px;"><table role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
-              <tbody><tr>
-                <td width="40%" class="logo" style="text-align: left;">
-                  <a href="https://portal.nutrientsrx.com/" style="font-size:24px;font-family: Arial,Helvetica,sans-serif; line-height:1.3em;font-weight: bold;color:#000;">NOT FINISHED NutrientsRx</a>
-                </td>
-                <td width="60%" style="text-align: right;">
-                  <a href="https://portal.nutrientsrx.com/" style="color: #324770;text-decoration: none;font-size: 16px;font-weight: 700;padding: 0 15px;transition: all .3s ease;line-height: 70px;">Portal</a>
-                </td>
-              </tr>
-            </tbody></table></td>
+    <div style="max-width: 600px; margin: 0 auto;padding: 0 10px;" class="email-container">
+      <!-- BEGIN Email Head -->
+      <table align="center" role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%" style="margin: auto;"><tbody>
+        <tr>
+          <td valign="top" style="padding: 20px 0 10px;">
+            <table role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
+            <tbody><tr>
+              <td width="50%" class="logo" style="text-align: left;">
+                <a href="https://portal.nutrientsrx.com/" style="font-size:24px;font-family: Arial,Helvetica,sans-serif; line-height:1.3em;font-weight: bold;color:#000;">
+                  <img src="/assets/images/logo-nutrientsrx.png" alt="Nutrients Rx Portal" style="width: 160px; height: 29px;">
+                </a>
+              </td>
+              <td width="50%" style="text-align: right;">
+                <a href="https://portal.nutrientsrx.com/" style="color: #359DED;text-decoration: none;font-size: 16px;font-weight: 700;padding: 0 15px;transition: all .3s ease;line-height: 40px;">Portal</a>
+              </td>
+            </tr>
+            </tbody></table>
+          </td>
         </tr><!-- end tr -->
         <tr>
-          <td valign="middle" class="hero bg_green" style="margin-bottom: 10px"><table>
-              <tbody><tr>
-                <td>
-                  <div class="text" style="padding: 40px 3em; text-align: center;background: #297E55;color:#fff">
-                    <h2 style="color:#fff">ORDER RECEIVED</h2>
-                    <p style="color:#fff">Thank you for your order!</p>
-                    <p style="color:#fff">We have received your order and will contact you as soon as your package has shipped. You can find the initial details of your order below.</p>
-                  </div>
-                </td>
-              </tr>
-            </tbody></table></td>
+          <td style="height:1px;background-color:#eee;font-size:1px;padding:0;margin:0;">&nbsp;</td>
         </tr><!-- end tr -->
-              <tr>
-                <td class="bg_white email-section">
-<br>
-<h2>Order Details</h2>
-<table class="spaced-lines" role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%" style="border-bottom: 1px solid #d7d7d7;">
-  <tbody><tr>
-    <td width="150" class="label" style="color: #767676;padding: 4px 0;border-top: 1px solid #d7d7d7;">Order #</td>
-    <td style="padding: 4px 0;border-top: 1px solid #d7d7d7;">##ORDERID##</td>
-  </tr>
-  <tr>
-    <td width="150" class="label" style="color: #767676;padding: 4px 0;border-top: 1px solid #d7d7d7;">Email</td>
-    <td style="padding: 4px 0;border-top: 1px solid #d7d7d7;">##CUSTOMEREMAIL##</td>
-  </tr>
-  <tr>
-    <td width="150" class="label" style="color: #767676;padding: 4px 0;border-top: 1px solid #d7d7d7;">Order Date</td>
-    <td style="padding: 4px 0;border-top: 1px solid #d7d7d7;">##ORDERDATE##</td>
-  </tr>
-  <tr>
-    <td width="150" class="label" style="color: #767676;padding: 4px 0;border-top: 1px solid #d7d7d7;">Order Status</td>
-    <td style="padding: 4px 0;border-top: 1px solid #d7d7d7;">##ORDERSTATUS##</td>
-  </tr>
-  <tr>
-    <td width="150" class="label" style="color: #767676;padding: 4px 0;border-top: 1px solid #d7d7d7;">Payment Status</td>
-    <td style="padding: 4px 0;border-top: 1px solid #d7d7d7;">##PAYMENTSTATUS##<hr></td>
-  </tr>
-  <tr>
-    <td width="150" class="label" style="color: #767676;padding: 4px 0;border-top: 1px solid #d7d7d7;">Payment Method</td>
-    <td style="padding: 4px 0;border-top: 1px solid #d7d7d7;">##PAYMENTMETHOD##</td>
-  </tr>
-  <tr>
-    <td width="150" class="label" style="color: #767676;padding: 4px 0;border-top: 1px solid #d7d7d7;">Ship To</td>
-    <td style="padding: 4px 0;border-top: 1px solid #d7d7d7;">##SHIPNAME##<br>
-    ##SHIPLINE1##<br>
-    ##SHIPLINE2##<br>
-    ##SHIPCITYSTATEPOSTAL##<br>
-    ##SHIPCOMMENTS##</td>
-  </tr>
-</tbody></table>
-<br>
-<h2>Order Items</h2>
-<table class="order-items" role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
-  <tbody><tr>
-      <td style="color: #767676;font-size: 12px;border-bottom: 1px solid #d7d7d7;" class="label-small">Product</td>
-      <td style="color: #767676;font-size: 12px;border-bottom: 1px solid #d7d7d7;" class="label-small qty" width="70">Qty</td>
-      <td style="color: #767676;font-size: 12px;border-bottom: 1px solid #d7d7d7;" class="label-small amount" width="120">Total</td>
-  </tr>
-<!--ORDERITEMLAYOUTSTART-->
-  <tr>
-      <td style="padding:4px;" class="product">
-        <a href="##ITEMFULLURL##" style="color: #005D3F;font-weight: bold;">##ITEMNAME##</a>
-        <!-- $$ITEMSUBSCRIPTIONINFO$$ -->
-      </td>
-      <td style="padding:4px;text-align: center;" class="qty" width="70">##QTY##</td>
-      <td style="padding:4px;text-align: right;" class="amount" width="120"><!--##ITEMPRICE##-->##ITEMTOTAL##</td>
-  </tr>
-<!--ORDERITEMLAYOUTEND-->
-  <tr>
-    <td colspan="3">&nbsp;</td>
-  </tr>
-  <tr>
-    <td colspan="2" class="label" style="color: #767676;">Subtotal</td>
-    <td class="amount" width="200">##SUBTOTAL##</td>
-  </tr>
-  <tr>
-    <td colspan="2" class="label" style="color: #767676;">Shipping Method</td>
-    <td class="amount">##SHIPPINGMETHOD##</td>
-  </tr>
-  <tr>
-    <td colspan="2" class="label" style="color: #767676;">Shipping Amount</td>
-    <td class="amount">##SHIPPING##</td>
-  </tr>
-  <tr>
-    <td colspan="2" class="label" style="color: #767676;">Tax</td>
-    <td class="amount">##TAX##</td>
-  </tr>
-  <tr>
-    <td colspan="2" class="label" style="color: #767676;">##DISCOUNTSTRING##</td>
-    <td class="amount">##DISCOUNTTOTAL##</td>
-  </tr>
-  <tr>
-    <td colspan="3">&nbsp;</td>
-  </tr>
-  <tr>
-    <td colspan="2" class="label" style="color: #767676;">Total</td>
-    <td class="amount">##TOTAL##</td>
-  </tr>
-</tbody></table>
-<br>
-    </td>
-              </tr><!-- end: tr -->
-
-      </tbody></table><table align="center" role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%" style="margin: auto;">
-        <tbody><tr>
-          <td valign="middle" class="bg_green footer" style="background: #297E55; color:#fff;padding: 20px;margin-top:20px;"><table style="background: #297E55; color:#fff;">
-              <tbody><tr>
-                <td valign="top" width="50%">
-                  <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
-                    <tbody><tr>
-                      <td style="text-align: left; padding-right: 10px;color:#ffffff;">
-                        <p style="color:#ffffff;font-size: 14px;"><b>Optimal Health Systems</b><br>265 E Hwy 70<br>Pima, Arizona 85543</p>
-
-                      </td>
-                    </tr>
-                  </tbody></table>
-                </td>
-                <td valign="top" width="50%">
-<table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
-<tbody><tr>
-<td style="text-align: left; style="color:#ffffff;"">
-<p style="color:#ffffff;font-size: 14px;">
-(800) 890-4547<br>
-Phone Hours: Mon-Fri 9a-4p MST<br>
-<a style="color:#ffffff;" href="mailto:support@optimalhealthsystems.com">support@optimalhealthsystems.com</a>
-</p>
-</td>
-</tr>
-</tbody></table>
-                </td>
-              </tr>
-            </tbody></table></td>
+      </tbody></table>
+      <!-- END Email Head -->
+      <!-- BEGIN BODY -->
+      <table align="center" role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%" style="margin: auto;">
+        <tbody>
+        <tr>
+          <td class="bg_white email-section" style="-webkit-text-size-adjust: none;margin: 0;padding: 20px 0 0;background-color: #fff;width: 100%;font-size: 24px;font-weight: bold;font-family: Arial,Helvetica,sans-serif; line-height:1.4em;">
+{{ page.title }}
+          </td>
+        </tr><!-- end: tr -->
+        <tr>
+          <td class="bg_white email-section" style="-webkit-text-size-adjust: none;margin: 0;padding: 0;background-color: #fff;width: 100%;font-size: 16px;font-family: Arial,Helvetica,sans-serif; line-height:1.4em;">
+{{ content }}
+          </td>
         </tr><!-- end: tr -->
       </tbody></table>
     </div>
   </center>
 </div>
-<br>
-<table border="0" cellpadding="0" cellspacing="0" width="100%" style="background-color:#ECEAE6;font-size: 12px;font-family: Arial,Helvetica,sans-serif; line-height: 14px;max-width: 600px;margin: 0 auto;"><tbody><tr><td style="padding: 6px 10px;"><a href="https://www.optimalhealthsystems.com/" style="color:#999;font-size:12px;text-decoration:none;">© 2022 Nutrients Rx</a></td></tr></table>
+<br><br>
+<table border="0" cellpadding="0" cellspacing="0" width="100%" style="background-color:#eee;font-size: 12px;font-family: Arial,Helvetica,sans-serif; line-height: 14px;max-width: 600px;margin: 0 auto;"><tbody><tr><td style="padding: 6px 10px;"><a href="https://portal.nutrientsrx.com/" style="color:#999;font-size:12px;text-decoration:none;">© 2022 Nutrients Rx</a></td></tr></table>
 </body>
 </html>
