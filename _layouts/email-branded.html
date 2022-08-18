@@ -1,0 +1,431 @@
+---
+---
+<div style="line-height: 30px; background: #F9F397">Subject: {{ page.subject }}</div><style>body {margin-top:  30px}</style>
+
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+<!-- CSS Reset : BEGIN -->
+<style>
+html,
+body {
+    margin: 0 auto !important;
+    padding: 0 !important;
+    height: 100% !important;
+    width: 100% !important;
+    background: #f1f1f1;
+    font-family: sans-serif;
+}
+
+/* What it does: Stops email clients resizing small text. */
+* {
+    -ms-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+}
+
+/* What it does: Centers email on Android 4.4 */
+div[style*="margin: 16px 0"] {
+    margin: 0 !important;
+}
+
+/* What it does: Stops Outlook from adding extra spacing to tables. */
+table,
+td {
+    mso-table-lspace: 0pt !important;
+    mso-table-rspace: 0pt !important;
+}
+
+/* What it does: Fixes webkit padding issue. */
+table {
+    border-spacing: 0 !important;
+    border-collapse: collapse !important;
+    table-layout: fixed !important;
+    margin: 0 auto !important;
+}
+
+/* What it does: Uses a better rendering method when resizing images in IE. */
+img {
+    -ms-interpolation-mode:bicubic;
+}
+
+/* What it does: Prevents Windows 10 Mail from underlining links despite inline CSS. Styles for underlined links should be inline. */
+a {
+    text-decoration: none;
+}
+
+/* What it does: A work-around for email clients meddling in triggered links. */
+*[x-apple-data-detectors],  /* iOS */
+.unstyle-auto-detected-links *,
+.aBn {
+    border-bottom: 0 !important;
+    cursor: default !important;
+    color: inherit !important;
+    text-decoration: none !important;
+    font-size: inherit !important;
+    font-family: inherit !important;
+    font-weight: inherit !important;
+    line-height: inherit !important;
+}
+
+/* What it does: Prevents Gmail from displaying a download button on large, non-linked images. */
+.a6S {
+    display: none !important;
+    opacity: 0.01 !important;
+}
+
+/* What it does: Prevents Gmail from changing the text color in conversation threads. */
+.im {
+    color: inherit !important;
+}
+
+/* If the above doesn't work, add a .g-img class to any image in question. */
+img.g-img + div {
+    display: none !important;
+}
+
+/* What it does: Removes right gutter in Gmail iOS app: <a href="https://github.com/TedGoas/Cerberus/issues/89" class="redactor-autoparser-object">https://github.com/TedGoas/Cer...</a>  */
+/* Create one of these media queries for each additional viewport size you'd like to fix */
+
+/* iPhone 4, 4S, 5, 5S, 5C, and 5SE */
+@media only screen and (min-device-width: 320px) and (max-device-width: 374px) {
+    u ~ div .email-container {
+        min-width: 320px !important;
+    }
+}
+/* iPhone 6, 6S, 7, 8, and X */
+@media only screen and (min-device-width: 375px) and (max-device-width: 413px) {
+    u ~ div .email-container {
+        min-width: 375px !important;
+    }
+}
+/* iPhone 6+, 7+, and 8+ */
+@media only screen and (min-device-width: 414px) {
+    u ~ div .email-container {
+        min-width: 414px !important;
+    }
+}
+
+</style>
+<!-- CSS Reset : END -->
+<!-- Progressive Enhancements : BEGIN -->
+<style>
+/*
+td, p {
+  font-size: 16px;
+}
+.primary{
+  background: #0d0cb5;
+}
+.bg_white{
+  background: #ffffff;
+}
+.bg_light{
+  background: #fafafa;
+}
+.bg_black{
+  background: #000000;
+}
+.bg_gray{
+  background: #272727;
+}
+.bg_green{
+  background: #008A5E;
+}
+.bg_dark{
+  background: rgba(0,0,0,.8);
+}
+.email-section{
+  padding:2.5em;
+}
+
+.btn{
+  padding: 5px 15px;
+  display: inline-block;
+}
+.btn.btn-primary{
+  border-radius: 5px;
+  background: #0d0cb5;
+  color: #ffffff;
+}
+.btn.btn-white{
+  border-radius: 5px;
+  background: #ffffff;
+  color: #000000;
+}
+.btn.btn-white-outline{
+  border-radius: 5px;
+  background: transparent;
+  border: 1px solid #fff;
+  color: #fff;
+}
+
+h1,h2,h3,h4,h5,h6{
+  font-family: 'Usual', sans-serif;
+  color: #000000;
+  margin-top: 0;
+}
+
+body{
+  font-family: 'Usual', sans-serif;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 1.8;
+  color: #000;
+}
+
+a{
+  color: #0d0cb5;
+}
+.logo a {
+  color: #000000;
+  font-size: 20px;
+  font-weight: 700;
+  text-transform: uppercase;
+  font-family: 'Usual', sans-serif;
+  display: inline-block;
+  padding-top: 6px;
+}
+
+.navigation{
+  padding: 0 10px 0 0;
+  margin: 0;
+}
+.navigation li{
+  list-style: none;
+  display: inline-block;;
+  margin-left: 5px;
+  font-size: 14px;
+  font-weight: 700;
+  text-transform: uppercase;
+  font-family: 'Usual', sans-serif;
+}
+.navigation li a{
+  color: #008A5E;
+}
+.hero{
+  position: relative;
+  z-index: 0;
+}
+.hero .text{
+  color: rgba(255,255,255,.9);
+}
+.hero .text h2{
+  color: #ffffff;
+  font-size: 30px;
+  margin-bottom: 0;
+}
+.spaced-lines {
+  border-bottom: 1px solid #d7d7d7;
+}
+.spaced-lines td {
+  padding: 4px 0;
+  border-top: 1px solid #d7d7d7;
+}
+.label {
+  color: #767676;
+}
+.label-small {
+  color: #767676;
+  font-size: 12px;
+  border-bottom: 1px solid #d7d7d7;
+}
+.order-items td {
+  padding: 4px;
+}
+.product a {
+  color: #005D3F;
+  font-weight: bold;
+}
+.amount {
+  text-align: right;
+}
+.qty {
+  text-align: center;
+}
+
+.footer{
+  color: #fff;
+  padding: 20px;
+
+}
+.footer a{
+  color: #fff;
+}
+.footer p{
+  font-size: 14px;
+  margin: 0;
+}
+*/
+</style>
+</head>
+<body leftmargin="0" marginwidth="0" topmargin="0" marginheight="0" offset="0" style="-webkit-text-size-adjust: none;margin: 0;padding: 0;background-color: #fff;width: 100%;font-size: 14px;font-family: Arial,Helvetica,sans-serif; line-height:1.3em;" bgcolor="#fff" link="#297E55" vlink="#297E55" text="#363636">
+<br>
+<div style="margin: 0; padding: 0 !important; mso-line-height-rule: exactly; background-color: #ffffff;">
+  <center style="width: 100%; background-color: #ffffff;">
+    {% if page.preheader %}
+    <div style="display: none; font-size: 1px;max-height: 0px; max-width: 0px; opacity: 0; overflow: hidden; mso-hide: all; font-family: sans-serif;">{{ page.preheader }}
+    </div>
+    {% endif %}
+    <div style="max-width: 600px; margin: 0 auto;" class="email-container">
+      <!-- BEGIN BODY -->
+      <table align="center" role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%" style="margin: auto;">
+        <tbody><tr>
+          <td valign="top" style="padding: 20px 10px 10px;"><table role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
+              <tbody><tr>
+                <td width="40%" class="logo" style="text-align: left;">
+                  <a href="https://portal.nutrientsrx.com/" style="font-size:24px;font-family: Arial,Helvetica,sans-serif; line-height:1.3em;font-weight: bold;color:#000;">NOT FINISHED NutrientsRx</a>
+                </td>
+                <td width="60%" style="text-align: right;">
+                  <a href="https://portal.nutrientsrx.com/" style="color: #324770;text-decoration: none;font-size: 16px;font-weight: 700;padding: 0 15px;transition: all .3s ease;line-height: 70px;">Portal</a>
+                </td>
+              </tr>
+            </tbody></table></td>
+        </tr><!-- end tr -->
+        <tr>
+          <td valign="middle" class="hero bg_green" style="margin-bottom: 10px"><table>
+              <tbody><tr>
+                <td>
+                  <div class="text" style="padding: 40px 3em; text-align: center;background: #297E55;color:#fff">
+                    <h2 style="color:#fff">ORDER RECEIVED</h2>
+                    <p style="color:#fff">Thank you for your order!</p>
+                    <p style="color:#fff">We have received your order and will contact you as soon as your package has shipped. You can find the initial details of your order below.</p>
+                  </div>
+                </td>
+              </tr>
+            </tbody></table></td>
+        </tr><!-- end tr -->
+              <tr>
+                <td class="bg_white email-section">
+<br>
+<h2>Order Details</h2>
+<table class="spaced-lines" role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%" style="border-bottom: 1px solid #d7d7d7;">
+  <tbody><tr>
+    <td width="150" class="label" style="color: #767676;padding: 4px 0;border-top: 1px solid #d7d7d7;">Order #</td>
+    <td style="padding: 4px 0;border-top: 1px solid #d7d7d7;">##ORDERID##</td>
+  </tr>
+  <tr>
+    <td width="150" class="label" style="color: #767676;padding: 4px 0;border-top: 1px solid #d7d7d7;">Email</td>
+    <td style="padding: 4px 0;border-top: 1px solid #d7d7d7;">##CUSTOMEREMAIL##</td>
+  </tr>
+  <tr>
+    <td width="150" class="label" style="color: #767676;padding: 4px 0;border-top: 1px solid #d7d7d7;">Order Date</td>
+    <td style="padding: 4px 0;border-top: 1px solid #d7d7d7;">##ORDERDATE##</td>
+  </tr>
+  <tr>
+    <td width="150" class="label" style="color: #767676;padding: 4px 0;border-top: 1px solid #d7d7d7;">Order Status</td>
+    <td style="padding: 4px 0;border-top: 1px solid #d7d7d7;">##ORDERSTATUS##</td>
+  </tr>
+  <tr>
+    <td width="150" class="label" style="color: #767676;padding: 4px 0;border-top: 1px solid #d7d7d7;">Payment Status</td>
+    <td style="padding: 4px 0;border-top: 1px solid #d7d7d7;">##PAYMENTSTATUS##<hr></td>
+  </tr>
+  <tr>
+    <td width="150" class="label" style="color: #767676;padding: 4px 0;border-top: 1px solid #d7d7d7;">Payment Method</td>
+    <td style="padding: 4px 0;border-top: 1px solid #d7d7d7;">##PAYMENTMETHOD##</td>
+  </tr>
+  <tr>
+    <td width="150" class="label" style="color: #767676;padding: 4px 0;border-top: 1px solid #d7d7d7;">Ship To</td>
+    <td style="padding: 4px 0;border-top: 1px solid #d7d7d7;">##SHIPNAME##<br>
+    ##SHIPLINE1##<br>
+    ##SHIPLINE2##<br>
+    ##SHIPCITYSTATEPOSTAL##<br>
+    ##SHIPCOMMENTS##</td>
+  </tr>
+</tbody></table>
+<br>
+<h2>Order Items</h2>
+<table class="order-items" role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
+  <tbody><tr>
+      <td style="color: #767676;font-size: 12px;border-bottom: 1px solid #d7d7d7;" class="label-small">Product</td>
+      <td style="color: #767676;font-size: 12px;border-bottom: 1px solid #d7d7d7;" class="label-small qty" width="70">Qty</td>
+      <td style="color: #767676;font-size: 12px;border-bottom: 1px solid #d7d7d7;" class="label-small amount" width="120">Total</td>
+  </tr>
+<!--ORDERITEMLAYOUTSTART-->
+  <tr>
+      <td style="padding:4px;" class="product">
+        <a href="##ITEMFULLURL##" style="color: #005D3F;font-weight: bold;">##ITEMNAME##</a>
+        <!-- $$ITEMSUBSCRIPTIONINFO$$ -->
+      </td>
+      <td style="padding:4px;text-align: center;" class="qty" width="70">##QTY##</td>
+      <td style="padding:4px;text-align: right;" class="amount" width="120"><!--##ITEMPRICE##-->##ITEMTOTAL##</td>
+  </tr>
+<!--ORDERITEMLAYOUTEND-->
+  <tr>
+    <td colspan="3">&nbsp;</td>
+  </tr>
+  <tr>
+    <td colspan="2" class="label" style="color: #767676;">Subtotal</td>
+    <td class="amount" width="200">##SUBTOTAL##</td>
+  </tr>
+  <tr>
+    <td colspan="2" class="label" style="color: #767676;">Shipping Method</td>
+    <td class="amount">##SHIPPINGMETHOD##</td>
+  </tr>
+  <tr>
+    <td colspan="2" class="label" style="color: #767676;">Shipping Amount</td>
+    <td class="amount">##SHIPPING##</td>
+  </tr>
+  <tr>
+    <td colspan="2" class="label" style="color: #767676;">Tax</td>
+    <td class="amount">##TAX##</td>
+  </tr>
+  <tr>
+    <td colspan="2" class="label" style="color: #767676;">##DISCOUNTSTRING##</td>
+    <td class="amount">##DISCOUNTTOTAL##</td>
+  </tr>
+  <tr>
+    <td colspan="3">&nbsp;</td>
+  </tr>
+  <tr>
+    <td colspan="2" class="label" style="color: #767676;">Total</td>
+    <td class="amount">##TOTAL##</td>
+  </tr>
+</tbody></table>
+<br>
+    </td>
+              </tr><!-- end: tr -->
+
+      </tbody></table><table align="center" role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%" style="margin: auto;">
+        <tbody><tr>
+          <td valign="middle" class="bg_green footer" style="background: #297E55; color:#fff;padding: 20px;margin-top:20px;"><table style="background: #297E55; color:#fff;">
+              <tbody><tr>
+                <td valign="top" width="50%">
+                  <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
+                    <tbody><tr>
+                      <td style="text-align: left; padding-right: 10px;color:#ffffff;">
+                        <p style="color:#ffffff;font-size: 14px;"><b>Optimal Health Systems</b><br>265 E Hwy 70<br>Pima, Arizona 85543</p>
+
+                      </td>
+                    </tr>
+                  </tbody></table>
+                </td>
+                <td valign="top" width="50%">
+<table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
+<tbody><tr>
+<td style="text-align: left; style="color:#ffffff;"">
+<p style="color:#ffffff;font-size: 14px;">
+(800) 890-4547<br>
+Phone Hours: Mon-Fri 9a-4p MST<br>
+<a style="color:#ffffff;" href="mailto:support@optimalhealthsystems.com">support@optimalhealthsystems.com</a>
+</p>
+</td>
+</tr>
+</tbody></table>
+                </td>
+              </tr>
+            </tbody></table></td>
+        </tr><!-- end: tr -->
+      </tbody></table>
+    </div>
+  </center>
+</div>
+<br>
+<table border="0" cellpadding="0" cellspacing="0" width="100%" style="background-color:#ECEAE6;font-size: 12px;font-family: Arial,Helvetica,sans-serif; line-height: 14px;max-width: 600px;margin: 0 auto;"><tbody><tr><td style="padding: 6px 10px;"><a href="https://www.optimalhealthsystems.com/" style="color:#999;font-size:12px;text-decoration:none;">© 2022 Nutrients Rx</a></td></tr></table>
+</body>
+</html>
