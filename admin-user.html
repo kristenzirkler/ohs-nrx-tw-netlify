@@ -1,0 +1,26 @@
+---
+layout: default
+nav: admin
+nav-style: admin
+title: "User"
+---
+<div class="mb-2 flex justify-between">
+  <h1 class="mt-1 md:mt-2 text-2xl leading-8 font-display font-bold tracking-tight text-skin-header sm:text-3xl">Admin: Edit User</h1>
+</div>
+<div class="bg-skin-page shadow rounded-lg px-4 py-5">
+      <div class="space-y-4 sm:space-y-3">
+        {% include field-text.html name="Email Address" value="firstlastenamerson@gmail.com" disabled=true %}
+        {% include field-radio.html layout="sidebyside" selected=true name="Status" options="Inactive,Active" %}
+        {% include field-radio.html layout="sidebyside" selected=true name="Email Confirmed" options="No,Yes" %}
+        {% include field-radio.html layout="sidebyside" selected=true name="Patent?" options="No,Yes" %}
+        {% include field-radio.html layout="sidebyside" selected=true name="Practitioner?" options="No,Yes" %}
+        {% include field-radio.html layout="sidebyside" selected=true name="System Admin?" options="No,Yes" %}
+
+        {% include question-view.html layout="sidebyside" name="Created" value="3/4/2022 10:42am by Kristen Zirkler" %}
+        {% include question-view.html layout="sidebyside" name="Updated" value="3/5/2022 4:55pm by Kristen Zirkler" %}
+      </div>
+
+      <div class="mt-6 mb-4">
+        {% include button.html text="Save" classes="w-full" link="admin-patients" %}
+      </div>
+</div>

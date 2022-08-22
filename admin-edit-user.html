@@ -1,0 +1,47 @@
+---
+layout: default
+nav: admin
+nav-style: admin
+title: "User"
+---
+<div class="mb-2 flex justify-between">
+  <h1 class="mt-1 md:mt-2 text-2xl leading-8 font-display font-bold tracking-tight text-skin-header sm:text-3xl">Admin: Edit User</h1>
+</div>
+<div class="bg-skin-page shadow rounded-lg px-4 py-5">
+      <div class="space-y-4 sm:space-y-3">
+        {% include field-text.html name="Email Address" value="firstlastenamerson@gmail.com" disabled=true %}
+
+        {% include question-view.html layout="sidebyside" name="Created" value="3/4/2022 10:42am by Kristen Zirkler" %}
+        {% include question-view.html layout="sidebyside" name="Updated" value="3/5/2022 4:55pm by Kristen Zirkler" %}
+        <hr>
+        {% include field-radio.html layout="sidebyside" selected=true name="Status" options="Inactive,Active" %}
+        {% include field-radio.html layout="sidebyside" selected=true name="Email Confirmed" options="No,Yes" %}
+        {% include field-radio.html layout="sidebyside" selected=true name="System Admin?" options="No,Yes" selecteditem=1 %}
+        <hr>
+        <div class="text-xl font-bold text-skin-header mr-2">Patient Fields</div>
+        {% include field-radio.html layout="sidebyside" selected=true name="Patient Status" options="Inactive,Active" %}
+        {% include field-text.html name="First Name" value="" %}
+        {% include field-text.html name="Middle Name" value="" %}
+        {% include field-text.html name="Last Name" value="" %}
+        {% include field-special.html name="Gender" type="gender" %}
+        {% include field-special.html name="Birthdate" type="birthdate" %}
+        {% include field-special.html name="Address" type="address" %}
+        {% include field-special.html name="Referring Practitioner" type="practitioner" %}
+        {% include field-special.html name="State Director" type="practitioner" %}
+        {% include field-single-select.html name="State Director" layout="simple" options="Dr. Name Onerson,Sampleperson Namerson,Dr. Person Name" %}
+        <hr>
+        <div class="text-xl font-bold text-skin-header mr-2">Practitioner Fields</div>
+        {% include field-radio.html layout="sidebyside" selected=true name="Practitioner Status" options="Inactive,Active" %}
+        {% include field-text.html name="First Name" value="" %}
+        {% include field-text.html name="Last Name" value="" %}
+        {% include field-text.html name="Company Name" value="" %}
+        {% include field-text.html name="Referral Code" value="" %}
+        {% include field-text.html name="Phone" value="" placeholder="555-555-5555" %}
+        {% include field-single-select.html name="Type" layout="simple" options="Chiropractor,Trainer,Medical Doctor" %}
+
+      </div>
+
+      <div class="mt-6 mb-4">
+        {% include button.html text="Save" classes="w-full" link="admin-patients" %}
+      </div>
+</div>

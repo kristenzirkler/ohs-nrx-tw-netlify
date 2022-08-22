@@ -164,11 +164,29 @@
         }
     }
 </script>
+{% elsif include.layout == "simple" %}
+      <div class="mt-3 space-y-6 sm:space-y-5">
+        <div class="sm:grid sm:grid-cols-3 sm:gap-4 sm:items-start">
+          <label for="{{ include.name | slugify }}" class="block text-sm font-bold  sm:mt-px sm:pt-2">{{ include.name }}</label>
+          <div class="mt-1 sm:mt-0 sm:col-span-2">
+            <select id="{{ include.name | slugify }}" name="{{ include.name | slugify }}" class="mt-1 block w-full pl-3 pr-10 py-2 text-skin-primary focus:ring-skin-button-primary focus:border-skin-button-primary relative block w-full rounded-lg bg-transparent focus:z-10 sm:text-sm border-skin-primary placeholder-gray-500">
+              <option>Select...</option>
+      {% assign options = include.options | split: "," %}
+      {% for option in options %}
+      <option>{{ option }}</option>
+      {% endfor %}
+            </select>
+          </div>
+        </div>
+      </div>
 {% else %}
+{% capture selecttext %}
+select({ data: { {{ include.options }} }, emptyOptionsMessage: 'No matches.', name: 'country', placeholder: 'Select a {{ include.name }}' })
+{% endcapture %}
 <div>
-  <div class="font-bold ">Single Select</div>
+  <div class="font-bold ">{{ include.name }}</div>
   <div
-    x-data="select({ data: { au: 'Australia', be: 'Belgium', cn: 'China', fr: 'France', de: 'Germany', it: 'Italy', mx: 'Mexico', es: 'Spain', tr: 'Turkey', gb: 'United Kingdom', 'us': 'United States' }, emptyOptionsMessage: 'No countries match your search.', name: 'country', placeholder: 'Select a country' })"
+    x-data="{{ selecttext }}"
     x-init="init()"
     @click.away="closeListbox()"
     @keydown.escape="closeListbox()"

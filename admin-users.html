@@ -1,0 +1,14 @@
+---
+layout: default
+nav: admin
+nav-style: admin
+title: "Users"
+---
+<div class="mb-2 flex justify-between">
+  <h1 class="mt-1 md:mt-2 text-2xl leading-8 font-display font-bold tracking-tight text-skin-header sm:text-3xl">Admin: {{ page.title }}</h1>
+  {% include button.html link="admin-user" text="Add User" classes="inline-flex" %}
+</div>
+<div class="bg-skin-page shadow rounded-lg mb-5">
+  {% include user-list.html layout="full" showhp="true" %}
+  {% include pagination.html classes="" %}
+</div>

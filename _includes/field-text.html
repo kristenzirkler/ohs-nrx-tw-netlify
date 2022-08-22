@@ -1,3 +1,8 @@
+{% if include.disabled %}
+{% assign bgClasses = "text-gray-500 bg-gray-100 hover:bg-gray-100 focus:ring-gray-200 cursor-not-allowed" %}
+{% else %}
+{% assign bgClasses = "bg-skin-page text-skin-primary focus:ring-skin-button-primary focus:border-skin-button-primary" %}
+{% endif %}
 {% if include.layout == 'stacked' %}
 <div>
   <div class="flex justify-between">
@@ -5,7 +10,7 @@
     <span class="text-sm text-skin-primary opacity-80" id="email-optional">Optional</span>
   </div>
   <div class="mt-1">
-    <input type="email" name="email" id="email" class="shadow-sm focus:ring-skin-button-primary focus:border-skin-button-primary block w-full sm:text-sm border-skin-primary rounded-lg" placeholder="you@example.com" aria-describedby="email-optional">
+    <input type="email" name="email" id="email" class="shadow-sm focus:ring-skin-button-primary focus:border-skin-button-primary block w-full sm:text-sm border-skin-primary rounded-lg" placeholder="{% if include.placeholder %}{{ include.name }}{% else %}{{ include.name }}{% endif %}" aria-describedby="email-optional">
   </div>
 </div>
 {% else %}
@@ -13,7 +18,7 @@
   <div class="sm:grid sm:grid-cols-3 sm:gap-4 sm:items-start">
     <label for="{{ include.name | slugify }}" class="block text-sm font-bold sm:mt-px sm:pt-2">{{ include.name }}</label>
     <div class="mt-1 sm:mt-0 sm:col-span-2">
-      <input id="{{ include.name | slugify }}" name="{{ include.name | slugify }}" type="{% if include.type %}{{ include.type }}{% else %}text{% endif %}" required class="bg-skin-page text-skin-primary appearance-none block w-full px-3 py-2 border border-skin-primary rounded-lg placeholder-gray-400 focus:outline-none focus:ring-skin-button-primary focus:border-skin-button-primary sm:text-sm" value="{{ include.value }}" placeholder="{{ include.name }}">
+      <input id="{{ include.name | slugify }}" name="{{ include.name | slugify }}" type="{% if include.type %}{{ include.type }}{% else %}text{% endif %}" required class=" appearance-none block w-full px-3 py-2 border border-skin-primary rounded-lg placeholder-gray-400 focus:outline-none sm:text-sm {{ bgClasses }}" value="{{ include.value }}" placeholder="{% if include.placeholder %}{{ include.placeholder }}{% else %}{{ include.name }}{% endif %}">
     </div>
   </div>
 </div>

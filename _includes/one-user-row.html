@@ -1,0 +1,49 @@
+{% capture statuspill %}
+{% case include.status %}
+  {% when "1" %}
+     <div class="inline-block rounded-full bg-green-100 text-gray-600 px-3 text-sm">Active</div>
+  {% when "2" %}
+     <div class="inline-block rounded-full bg-gray-100 text-gray-400 px-3 text-sm">Inactive</div>
+  {% else %}
+     &nbsp;
+{% endcase %}
+{% endcapture %}
+<tr>
+  <td colspan="3" class="md:hidden border-b border-t-2 border-skin-primary px-2 sm:px-4 py-2 whitespace-nowrap text-lg">
+    <div class="flex justify-between">
+      <a href="{{ site.baseurl }}/edit-user" title="Edit User" class="flex justify-between font-bold text-skin-link hover:text-skin-link/80 hover:underline">{{ include.name }}</a>
+      {{ statuspill }}
+    </div>
+  </td>
+</tr>
+<tr>
+  <td class="hidden md:table-cell border-b border-skin-primary px-2 sm:px-4 py-2 whitespace-nowrap text-lg border-skin-primary border-r-2">
+    <a href="{{ site.baseurl }}/admin-edit-user" title="Edit User" class="font-bold text-skin-link hover:text-skin-link/80 hover:underline leading-tight">
+      <div>{{ include.name }}<span class="block font-normal text-xs opacity-60">namehere@yourlongdomainname.com</span></div>
+    </a>
+  </td>
+  <td class="hidden md:table-cell border-b px-2 sm:px-4 py-2 whitespace-nowrap border-skin-primary border-r">{{ statuspill }}</td>
+  <td class="hidden md:table-cell border-b px-2 sm:px-4 py-2 whitespace-nowrap text-center border-skin-primary border-r">
+  {% if include.patient != 0 %}
+    {% include icon.html name="check" classes="h-6 w-6 ml-1 hidden sm:inline text-green-600" %}
+  {% else %}
+    {% include icon.html name="times" classes="h-6 w-6 ml-1 hidden sm:inline text-gray-300" %}
+  {% endif %}
+  </td>
+  <td class="hidden md:table-cell border-b px-2 sm:px-4 py-2 whitespace-nowrap text-center border-skin-primary border-r">
+  {% if include.prac == 1 %}
+    {% include icon.html name="check" classes="h-6 w-6 ml-1 hidden sm:inline text-green-600" %}
+  {% else %}
+    {% include icon.html name="times" classes="h-6 w-6 ml-1 hidden sm:inline text-gray-300" %}
+  {% endif %}
+  </td>
+  <td class="hidden md:table-cell border-b px-2 sm:px-4 py-2 whitespace-nowrap text-center border-skin-primary border-r">
+  {% if include.admin == 1 %}
+    {% include icon.html name="check" classes="h-6 w-6 ml-1 hidden sm:inline text-green-600" %}
+  {% else %}
+    {% include icon.html name="times" classes="h-6 w-6 ml-1 hidden sm:inline text-gray-300" %}
+  {% endif %}
+  </td>
+  <td class="border-b px-2 sm:px-4 py-2 whitespace-nowrap text-xs text-center border-skin-primary border-r leading-tight"><span class="text-lg">{{ include.createddate }}</span><br><span class="opacity-60">Name Here</span></td>
+  <td class="border-b px-2 sm:px-4 py-2 whitespace-nowrap text-xs text-center border-skin-primary border-r leading-tight"><span class="text-lg">{{ include.updateddate }}</span><br><span class="opacity-60">Name Here</span></td>
+</tr>
