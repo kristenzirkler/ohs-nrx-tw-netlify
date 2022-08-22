@@ -26,9 +26,8 @@ title: "User"
         {% include field-special.html name="Gender" type="gender" %}
         {% include field-special.html name="Birthdate" type="birthdate" %}
         {% include field-special.html name="Address" type="address" %}
-        {% include field-special.html name="Referring Practitioner" type="practitioner" %}
-        {% include field-special.html name="State Director" type="practitioner" %}
-        {% include field-single-select.html name="State Director" layout="simple" options="Dr. Name Onerson,Sampleperson Namerson,Dr. Person Name" %}
+        {% include field-single-select.html name="Referring Practitioner" options="1: 'Brett Doctorson (OHSBRETT)',2: 'Doug Grant (OHSDGRANT)', 3: 'Hanson B. Doctor (GRTDOCB)'" %}
+        {% include field-single-select.html name="State Director" options="1: 'Dr. Name Onerson',2:'Sampleperson Namerson',3:'Dr. Person Name'" %}
         <hr>
         <div class="text-xl font-bold text-skin-header mr-2">Practitioner Fields</div>
         {% include field-radio.html layout="sidebyside" selected=true name="Practitioner Status" options="Inactive,Active" %}
