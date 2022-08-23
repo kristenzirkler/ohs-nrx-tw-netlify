@@ -84,12 +84,16 @@
 
 {% if page.nav-style == 'system-admin' %}
 <div class="mt-4 pt-4 border-t">System Admin</div>
-<a href="{{ site.baseurl }}/admin-users" class="hover:bg-skin-border/50 group flex items-center px-2 py-2 rounded-lg">
-  {% include icon.html name="adjustments" classes="text-gray-400 group-hover:text-skin-primary opacity-80 mr-4 flex-shrink-0 h-6 w-6" %}
-  Users
+<a href="{{ site.baseurl }}/admin-users" class="hover:bg-skin-border/50 group flex items-center px-2 rounded-lg">
+  - Users
 </a>
-<a href="{{ site.baseurl }}/" class="hover:bg-skin-border/50 group flex items-center px-2 py-2 rounded-lg">
-  {% include icon.html name="adjustments" classes="text-gray-400 group-hover:text-skin-primary opacity-80 mr-4 flex-shrink-0 h-6 w-6" %}
-  System Data
+<a href="{{ site.baseurl }}/admin-questions" class="hover:bg-skin-border/50 group flex items-center px-2 rounded-lg">
+  - Questions & Answers
+</a>
+<a href="{{ site.baseurl }}/admin-tests" class="hover:bg-skin-border/50 group flex items-center px-2 rounded-lg">
+  - Tests, Panels & Bundles
+</a>
+<a href="{{ site.baseurl }}/admin-system-data" class="hover:bg-skin-border/50 group flex items-center px-2 rounded-lg">
+  - System Data
 </a>
 {% endif %}

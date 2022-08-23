@@ -1,0 +1,88 @@
+---
+layout: default
+nav: admin
+nav-style: system-admin
+title: "System Data: Tests, Panels & Bundles"
+---
+<div class="mb-2 flex justify-between">
+  <h1 class="mt-1 md:mt-2 text-2xl leading-8 font-display font-bold tracking-tight text-skin-header sm:text-3xl">Admin: {{ page.title }}</h1>
+</div>
+<div class="bg-skin-page shadow rounded-lg mb-5 px-4 py-5">
+
+  <div class="text-xl font-bold text-skin-header mr-2">Bundles</div>
+  {% assign items_grouped = site.data.tests | group_by: 'BundleName' %}
+  <ol class="list-decimal list-outside ml-6 max-w-md">
+  {% for group in items_grouped %}
+    {% assign name = group.name %}
+    {% assign items_grouped = group.items | group_by: 'PanelName' %}
+    {% capture itemlist %}
+    {% for item in items_grouped %}
+    <div class="flex justify-between ml-4">
+      <div>{{item.name}}</div>
+      <div class="font-mono text-xs">{{item.PanelCode}}</div>
+    </div>
+    {% endfor %}
+    {% endcapture %}
+    <li>
+      <hr class="mt-4">
+      <div class="flex justify-between font-bold">
+        <div>{{name}}</div>
+      </div>
+      {{ itemlist }}
+    </li>
+  {% endfor %}
+  </ol>
+
+  <hr class="mt-6">
+  <div class="text-xl font-bold text-skin-header mr-2">Panels</div>
+  {% assign items_grouped = site.data.tests | group_by: 'PanelName' %}
+  <ol class="list-decimal list-outside ml-6 max-w-md">
+  {% for group in items_grouped %}
+    {% assign name = group.name %}
+    {% capture itemlist %}
+    {% for item in group.items %}
+    {% assign code = item.PanelCode %}
+    <div class="flex justify-between ml-4">
+      <div>{{item.TestName}}</div>
+      <div class="font-mono text-xs">{{item.TestCode}}</div>
+    </div>
+    {% endfor %}
+    {% endcapture %}
+    <li>
+      <hr class="mt-4">
+      <div class="flex justify-between font-bold">
+        <div>{{name}}</div>
+        <div class="font-mono text-xs">{{code}}</div>
+      </div>
+      {{ itemlist }}
+    </li>
+  {% endfor %}
+  </ol>
+
+  <hr class="mt-6">
+  <div class="text-xl font-bold text-skin-header mr-2">Tests</div>
+  {% assign items_grouped = site.data.tests | group_by: 'TestName' %}
+  <ol class="list-decimal list-outside ml-6 max-w-md">
+  {% for group in items_grouped %}
+    {% assign name = group.name %}
+    {% capture itemlist %}
+    {% for item in group.items %}
+    {% assign code = item.TestCode %}
+    <div class="flex justify-between ml-4">
+      <div>{{item.PanelName}}</div>
+      <div class="font-mono text-xs">{{item.PanelCode}}</div>
+    </div>
+    {% endfor %}
+    {% endcapture %}
+    <li>
+      <hr class="mt-4">
+      <div class="flex justify-between font-bold">
+        <div>{{name}}</div>
+        <div class="font-mono text-xs">{{code}}</div>
+      </div>
+      {{ itemlist }}
+    </li>
+  {% endfor %}
+  </ol>
+
+</div>
