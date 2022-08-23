@@ -18,7 +18,7 @@ title: "Welcome, Firstname!"
         {% include field-text.html name="Full Name" value="First Lastenamerson" %}
         {% include field-text.html name="Email Address" value="firstlastenamerson@gmail.com" %}
         {% include field-text.html name="Password" type="password" %}
-        {% include field-special.html name="Gender" type="gender" %}
+        {% include field-single-select.html name="Gender" layout="simple" options="Male,Female" %}
         {% include field-special.html name="Birthdate" type="birthdate" %}
         {% include field-special.html name="Address" type="address" %}
       </div>
