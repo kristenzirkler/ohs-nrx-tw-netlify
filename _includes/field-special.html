@@ -20,19 +20,19 @@
         <div class="sm:grid sm:grid-cols-3 sm:gap-4 sm:items-start">
           <div class="block text-sm font-bold  sm:mt-px sm:pt-2"> Address </div>
           <div class="mt-1 sm:mt-0 sm:col-span-2">
-            <div class="mt-1 bg-skin-page rounded-lg shadow-sm -space-y-px">
+            <div class="bg-skin-page rounded-lg -space-y-px">
               <div>
                 <label for="card-number" class="sr-only">Street Address</label>
-                <input type="text" name="card-number" id="card-number" class="text-skin-primary focus:ring-skin-button-primary focus:border-skin-button-primary relative block w-full rounded-none rounded-t-md bg-transparent focus:z-10 sm:text-sm border-skin-primary placeholder-gray-500" placeholder="Street Address">
+                <input type="text" name="card-number" id="card-number" class="text-skin-primary focus:ring-skin-button-primary focus:border-skin-button-primary relative block w-full rounded-none rounded-t-md bg-transparent focus:z-10 sm:text-sm border-skin-primary placeholder-gray-400" placeholder="Street Address" value="{{ include.value }}">
               </div>
               <div class="flex -space-x-px">
                 <div class="w-3/5 flex min-w-0">
                   <label for="card-expiration-date" class="sr-only">City</label>
-                  <input type="text" name="card-expiration-date" id="card-expiration-date" class="text-skin-primary focus:ring-skin-button-primary focus:border-skin-button-primary relative block w-full rounded-none rounded-bl-md bg-transparent focus:z-10 sm:text-sm border-skin-primary placeholder-gray-500" placeholder="City">
+                  <input type="text" name="card-expiration-date" id="card-expiration-date" class="text-skin-primary focus:ring-skin-button-primary focus:border-skin-button-primary relative block w-full rounded-none rounded-bl-md bg-transparent focus:z-10 sm:text-sm border-skin-primary placeholder-gray-400" placeholder="City" {% if include.value %}value="Cityname"{% endif %}>
                 </div>
                 <div class="flex-1 min-w-0">
                   <label for="card-cvc" class="sr-only">Zip</label>
-                  <input type="number" name="card-cvc" id="card-cvc" class="text-skin-primary focus:ring-skin-button-primary focus:border-skin-button-primary relative block w-full rounded-none rounded-br-md bg-transparent focus:z-10 sm:text-sm border-skin-primary placeholder-gray-500" placeholder="Zip Code" maxlength="5">
+                  <input type="number" name="card-cvc" id="card-cvc" class="text-skin-primary focus:ring-skin-button-primary focus:border-skin-button-primary relative block w-full rounded-none rounded-br-md bg-transparent focus:z-10 sm:text-sm border-skin-primary placeholder-gray-400" placeholder="Zip Code" maxlength="5" {% if include.value %}value="00000"{% endif %}>
                 </div>
               </div>
             </div>
@@ -48,15 +48,15 @@
               <div class="flex -space-x-px">
                 <div class="flex min-w-0">
                   <label for="bdaymonth" class="sr-only">Month</label>
-                  <input type="number" maxlength="2" name="bdaymonth" id="bdaymonth" class="text-skin-primary focus:ring-skin-button-primary focus:border-skin-button-primary relative block w-full rounded-none rounded-l-md bg-transparent focus:z-10 sm:text-sm border-skin-primary placeholder-gray-500" placeholder="MM">
+                  <input type="number" maxlength="2" name="bdaymonth" id="bdaymonth" class="text-skin-primary focus:ring-skin-button-primary focus:border-skin-button-primary relative block w-full rounded-none rounded-l-md bg-transparent focus:z-10 sm:text-sm border-skin-primary placeholder-gray-400" placeholder="MM" {% if include.value %}value="03"{% endif %}>
                 </div>
                 <div class="flex min-w-0">
                   <label for="bdayday" class="sr-only">Day</label>
-                  <input type="number" maxlength="2" name="bdayday" id="bdayday" class="text-skin-primary focus:ring-skin-button-primary focus:border-skin-button-primary relative block w-full rounded-none bg-transparent focus:z-10 sm:text-sm border-skin-primary placeholder-gray-500" placeholder="DD">
+                  <input type="number" maxlength="2" name="bdayday" id="bdayday" class="text-skin-primary focus:ring-skin-button-primary focus:border-skin-button-primary relative block w-full rounded-none bg-transparent focus:z-10 sm:text-sm border-skin-primary placeholder-gray-400" placeholder="DD" {% if include.value %}value="28"{% endif %}>
                 </div>
                 <div class="flex min-w-0">
                   <label for="bdaymonth" class="sr-only">Year</label>
-                  <input type="number" maxlength="2" name="bdaymonth" id="bdaymonth" class="text-skin-primary focus:ring-skin-button-primary focus:border-skin-button-primary relative block w-full rounded-none rounded-r-md bg-transparent focus:z-10 sm:text-sm border-skin-primary placeholder-gray-500" placeholder="YYYY">
+                  <input type="number" maxlength="2" name="bdaymonth" id="bdaymonth" class="text-skin-primary focus:ring-skin-button-primary focus:border-skin-button-primary relative block w-full rounded-none rounded-r-md bg-transparent focus:z-10 sm:text-sm border-skin-primary placeholder-gray-400" placeholder="YYYY" {% if include.value %}value="2001"{% endif %}>
                 </div>
               </div>
           </div>

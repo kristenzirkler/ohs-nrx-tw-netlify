@@ -173,7 +173,7 @@
               <option>Select...</option>
       {% assign options = include.options | split: "," %}
       {% for option in options %}
-      <option>{{ option }}</option>
+      <option value="{{ option | slugify }}" {% if include.selecteditem == forloop.index %}selected{% endif %}>{{ option }}</option>
       {% endfor %}
             </select>
           </div>

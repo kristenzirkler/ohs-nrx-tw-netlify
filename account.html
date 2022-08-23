@@ -8,12 +8,23 @@ title: "Account & Profile Information"
 <div class="mt-5 bg-skin-page shadow rounded-lg mb-5">
   <div class="px-4 py-5 sm:p-6">
     <div class="space-y-4 sm:space-y-3">
-      {% include field-text.html name="Full Name" value="First Lastenamerson" %}
-      {% include field-text.html name="Email Address" value="firstlastenamerson@gmail.com" %}
+      {% include field-text.html name="First Name" value="Firsta" %}
+      {% include field-text.html name="Middle Name" value="" %}
+      {% include field-text.html name="Last Name" value="Lastnamerson" %}
+      {% include field-text.html name="Email Address" value="firsta.lastenamerson@gmail.com" %}
+      
+      {% include field-special.html name="Birthdate" type="birthdate" value="on" %}
+      {% include field-special.html name="Address" type="address" value="123 W 2nd St" %}
+
+      {% include field-single-select.html name="Gender" layout="simple" options="Male,Female" selecteditem=2 %}
+      <hr>
+      <div>
+        <div class="text-xl font-bold text-skin-header">Change Password</div>
+        <p>Leave blank to keep your existing password.</p>
+      </div>
       {% include field-text.html name="Password" type="password" %}
-      {% include field-special.html name="Gender" type="gender" %}
-      {% include field-special.html name="Birthdate" type="birthdate" %}
-      {% include field-special.html name="Address" type="address" %}
+      {% include field-text.html name="New Password" type="password" %}
+      {% include field-text.html name="Confirm New Password" type="password" %}
     </div>
     <div class="mt-6">
       {% include button.html text="Save" classes="w-full" %}
