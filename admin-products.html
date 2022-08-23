@@ -1,0 +1,30 @@
+---
+layout: default
+nav: admin
+nav-style: system-admin
+title: "System Data: Products"
+---
+<div class="mb-2 flex justify-between">
+  <h1 class="mt-1 md:mt-2 text-2xl leading-8 font-display font-bold tracking-tight text-skin-header sm:text-3xl">Admin: {{ page.title }}</h1>
+</div>
+<div class="bg-skin-page shadow rounded-lg mb-5 px-4 py-5">
+  <div class="ml-6 max-w-xl">
+    <div class="grid grid-cols-3 gap-4 text-gray-500 font-bold">
+      <div>Name</div>
+      <div>Code</div>
+      <div>Sort</div>
+    </div>
+  </div>
+  <ol class="list-decimal list-outside ml-6 max-w-xl">
+  {% assign items_grouped = site.data.products | sort: 'sort' %}
+  {% for product in items_grouped %}
+  <li>
+    <div class="grid grid-cols-3 gap-4">
+      <div>{{ product.itemName }}</div>
+      <div>{{ product.itemNr }}</div>
+      <div>{{ product.sort }}</div>
+    </div>
+  </li>
+  {% endfor %}
+  </ol>
+</div>
