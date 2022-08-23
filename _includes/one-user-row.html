@@ -22,26 +22,31 @@
       <div>{{ include.name }}<span class="block font-normal text-xs opacity-60">namehere@yourlongdomainname.com</span></div>
     </a>
   </td>
+  <td class="hidden md:table-cell border-b py-2 text-center border-skin-primary border-r">
+    <a href="{{ site.baseurl }}/hp-adminbar" title="View As User" class="font-bold text-skin-link hover:text-skin-link/80">
+      {% include icon.html name="eye" classes="h-6 w-6 hidden sm:inline" %}
+    </a>
+  </td>
   <td class="hidden md:table-cell border-b px-2 sm:px-4 py-2 whitespace-nowrap border-skin-primary border-r">{{ statuspill }}</td>
-  <td class="hidden md:table-cell border-b px-2 sm:px-4 py-2 whitespace-nowrap text-center border-skin-primary border-r">
+  <td class="hidden md:table-cell border-b py-2 text-center border-skin-primary border-r">
   {% if include.patient != 0 %}
-    {% include icon.html name="check" classes="h-6 w-6 ml-1 hidden sm:inline text-green-600" %}
+    {% include icon.html name="check" classes="h-6 w-6 hidden sm:inline text-green-600" %}
   {% else %}
-    {% include icon.html name="times" classes="h-6 w-6 ml-1 hidden sm:inline text-gray-300" %}
+    {% include icon.html name="times" classes="h-6 w-6 hidden sm:inline text-gray-300" %}
   {% endif %}
   </td>
-  <td class="hidden md:table-cell border-b px-2 sm:px-4 py-2 whitespace-nowrap text-center border-skin-primary border-r">
+  <td class="hidden md:table-cell border-b py-2 text-center border-skin-primary border-r">
   {% if include.prac == 1 %}
-    {% include icon.html name="check" classes="h-6 w-6 ml-1 hidden sm:inline text-green-600" %}
+    {% include icon.html name="check" classes="h-6 w-6 hidden sm:inline text-green-600" %}
   {% else %}
-    {% include icon.html name="times" classes="h-6 w-6 ml-1 hidden sm:inline text-gray-300" %}
+    {% include icon.html name="times" classes="h-6 w-6 hidden sm:inline text-gray-300" %}
   {% endif %}
   </td>
-  <td class="hidden md:table-cell border-b px-2 sm:px-4 py-2 whitespace-nowrap text-center border-skin-primary border-r">
+  <td class="hidden md:table-cell border-b py-2 text-center border-skin-primary border-r">
   {% if include.admin == 1 %}
-    {% include icon.html name="check" classes="h-6 w-6 ml-1 hidden sm:inline text-green-600" %}
+    {% include icon.html name="check" classes="h-6 w-6 hidden sm:inline text-green-600" %}
   {% else %}
-    {% include icon.html name="times" classes="h-6 w-6 ml-1 hidden sm:inline text-gray-300" %}
+    {% include icon.html name="times" classes="h-6 w-6 hidden sm:inline text-gray-300" %}
   {% endif %}
   </td>
   <td class="border-b px-2 sm:px-4 py-2 whitespace-nowrap text-xs text-center border-skin-primary border-r leading-tight"><span class="text-lg">{{ include.createddate }}</span><br><span class="opacity-60">Name Here</span></td>

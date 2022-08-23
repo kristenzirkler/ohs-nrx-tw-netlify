@@ -58,9 +58,18 @@ title: "Theme Examples"
     <div class="space-y-4 sm:space-y-3 max-w-3xl m-auto">
       {% include field-text.html name="Text Field" %}
       {% include field-text.html name="Text: Password" type="password" %}
+
+      {% include field-text.html name="Disabled" value="firstlastenamerson@gmail.com" disabled=true %}
+
+
       {% include field-special.html name="Special: Gender" type="gender" %}
       {% include field-special.html name="Special: Birthdate" type="birthdate" %}
       {% include field-special.html name="Special: Address" type="address" %}
+
+
+      {% include field-single-select.html name="Normal Dropdown" layout="simple" options="Chiropractor,Trainer,Medical Doctor" %}
+      {% include field-single-select.html name="Type-In Select" options="1: 'Brett Doctorson (OHSBRETT)',2: 'Doug Grant (OHSDGRANT)', 3: 'Hanson B. Doctor (GRTDOCB)'" %}
+
     </div>
     <h1 class="border-t mt-4 pt-4 text-xl font-bold font-display text-skin-header">Questionnaire Fields</h1>
     <div class="px-4 py-5 sm:p-6 divide-y divide-skin-primary max-w-3xl m-auto">
