@@ -25,17 +25,16 @@ title: "System Data: Tests, Panels & Bundles"
     {% endfor %}
     {% endcapture %}
     <li>
-      <hr class="mt-4">
       <div class="flex justify-between font-bold">
         <div>{{name}}</div>
       </div>
+      <div class="text-gray-400 text-xs">Panels</div>
       {{ itemlist }}
     </li>
   {% endfor %}
   </ol>
 
-  <hr class="mt-6">
-  <div class="text-xl font-bold text-skin-header mr-2">Panels</div>
+  <div class="mt-24 border-t-8 border-red-600 text-xl font-bold text-skin-header mr-2">Panels</div>
   {% assign items_grouped = site.data.tests | group_by: 'PanelName' %}
   <ol class="list-decimal list-outside ml-6 max-w-md">
   {% for group in items_grouped %}
@@ -55,13 +54,13 @@ title: "System Data: Tests, Panels & Bundles"
         <div>{{name}}</div>
         <div class="font-mono text-xs">{{code}}</div>
       </div>
+      <div class="text-gray-400 text-xs">Tests</div>
       {{ itemlist }}
     </li>
   {% endfor %}
   </ol>
 
-  <hr class="mt-6">
-  <div class="text-xl font-bold text-skin-header mr-2">Tests</div>
+  <div class="mt-24 border-t-8 border-red-600 text-xl font-bold text-skin-header mr-2">Tests</div>
   {% assign items_grouped = site.data.tests | group_by: 'TestName' %}
   <ol class="list-decimal list-outside ml-6 max-w-md">
   {% for group in items_grouped %}
@@ -76,11 +75,11 @@ title: "System Data: Tests, Panels & Bundles"
     {% endfor %}
     {% endcapture %}
     <li>
-      <hr class="mt-4">
       <div class="flex justify-between font-bold">
         <div>{{name}}</div>
         <div class="font-mono text-xs">{{code}}</div>
       </div>
+      <div class="text-gray-400 text-xs">Panels</div>
       {{ itemlist }}
     </li>
   {% endfor %}
