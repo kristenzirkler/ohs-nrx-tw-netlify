@@ -1,0 +1,35 @@
+Name,Answers,Sort,Type
+Why are you interested in knowing your exact nutrient needs?,"I want to improve my general health and wellness.,I’m concerned about my immune health.,I’m an athlete or competitor looking to improve my fitness.,I’ve had weight loss surgery.,I want to lose weight and feel energized.,I want to slow down the aging process.,I have a condition I’d like to improve.",1,Select Multiple
+Do you follow any of the following eating plans?,"High Protein,Gluten Free,Intermittent Fasting,Ketogenic,Plant Based,Vegetarian,Vegan,Count Macronutrients,None",2,Select Multiple
+"Are you pregnant, trying, or currently breastfeeding?","No,Yes",3,Toggle
+Do you have any allergies or do you try to avoid any of the following?,"Fish,Shellfish,Tree Nuts,Nightshades,Latex,Milk,Gluten,Mushrooms,Soy,Bee Products,Ragweed,Peanuts",4,Select Multiple
+How’s your fruit and vegetable daily intake (fist-size servings)?,"0-2 servings,3-6 servings,More than 7 servings",5,Select One
+How many (fist-size) servings of calcium-rich foods do you typically eat in a day?,"0-2 servings,More than 3 servings",6,Select One
+How many servings (approximately 3oz) of lean protein do you usually eat daily?,"0-2 servings,More than 3 servings",7,Select One
+"On average, how many alcoholic beverages do you have in a week?","0-1 servings,2-5 servings,More than 6 servings",8,Select One
+Do you smoke or encounter second-hand smoke weekly?,"No,Yes",9,Toggle
+Do you get less than 20 minutes of daily sun exposure?,"No,Yes",10,Toggle
+"How are your hair, skin, and nails?","Could use some help,Great",11,Select One
+How much time do you spend looking at screens?,"Not often,A few hours a day,I’m always on the computer/phone",12,Select One
+Do you have any of the following skin issues?,"None,Eczema,Acne,Psoriasis",13,Select Multiple
+Do you experience any of the following?,"None,Chronic aches and pains,Fluctuating energy levels throughout the day",14,Select Multiple
+"On average, how are your energy levels?","I’m always exhausted,I usually have an energy slump,Pretty good,No complaints",15,Select One
+How’s your mood?,"I’m hardly ever happy,A bit down sometimes,Not too bad,Great",16,Select One
+Are you experiencing a lot of stress?,"No,Yes",17,Toggle
+How do you sleep?,"I sleep well,I don’t get enough sleep,My mind races when I’m trying to sleep,I have problems staying asleep,I don’t sleep well for another reason",18,Select Multiple
+Do you suffer from PMS?,"No,Yes",19,Toggle
+Has anyone in your immediate family had any of these conditions?,"Colon Cancer,Prostate Cancer,Neither of these,Does not apply to my gender",20,Select Multiple
+Have you taken antibiotics within the last year?,"No,Yes",21,Toggle
+Do you have any digestive issues?,"SIBO,Heartburn or Indigestion,Gas or Bloating,IBS,Diarrhea,I have other digestive problems,None",22,Select Multiple
+Do you struggle with any of these?,"Asthma,Frequent Viral Infections,Seasonal Allergies,Migraines,Persistent Cold Sores,None",23,Select Multiple
+Which best describes your fitness or activity level?,"I rarely/never workout,I work out often,I sometimes workout,I’m an athlete or competitor",24,Select One
+How often do you do cardio each week?,"Less than 2 hours,2-3 hours,3-4 hours,More than 4 hours",25,Select One
+Are you trying to increase strength & muscle size?,"No,Yes",26,Toggle
+Do you experience joint or tendon pain?,"I have tendonitis,Only after hard exercise,My joints hurt all the time,No complaints",27,Select One
+Do you have uterine fibroids or endometriosis?,"I have neither,I have endometriosis,I have uterine fibroids,I have both",28,Select One
+"Do you have any of the following conditions related to your eye, nose, and gum health?","None,Gingivitis,Sinusitis",29,Select Multiple
+How often do you feel sick?,"2-3 times per year,Hardly ever",30,Select One
+Do you have any of the following conditions related to heart health?,"None,High Blood Pressure,Congestive Heart Failure,High Cholesterol and I am taking statins,High Cholesterol and I am not taking statins,Angina,Atherosclerosis,High Triglycerides",31,Select Multiple
+Do you have any conditions related to your kidney and bladder health?,"None,History of Kidney Stones,Frequent Bladder Infections",32,Select Multiple
+Do you have any conditions related to blood sugar and endocrine health?,"None,Diabetic Retinopathy,High HbA1c/Prediabetes,Hypothyroidism,Generally high blood sugar levels,Type I Diabetes,Type II Diabetes",33,Select Multiple
+Do you have any of these conditions?,"None,Celiac Disease,Hashimoto’s Thyroiditis,I have had or currently have cancer,Chronic Fatigue Syndrome,Lupus,Fibromyalgia",34,Select Multiple

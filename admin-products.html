@@ -8,12 +8,48 @@ title: "System Data: Products"
   <h1 class="mt-1 md:mt-2 text-2xl leading-8 font-display font-bold tracking-tight text-skin-header sm:text-3xl">Admin: {{ page.title }}</h1>
   <p>Data will be displayed from SYSTEM DATA for review purposes. Administration for these items will be added after launch.</p>
 </div>
+
+<div class="bg-skin-page shadow rounded-lg mb-5 px-4 py-5">
+  <div class="text-xl font-bold text-skin-header mr-2">Recommendation Priority</div>
+
+  <div class="mt-4 flex flex-col">
+    <div class="-my-2 -mx-4 overflow-x-auto sm:-mx-6 lg:-mx-8">
+      <div class="inline-block min-w-full py-2 align-middle md:px-6 lg:px-8">
+        <div class="overflow-hidden">
+          <table class="min-w-full divide-y divide-gray-300">
+            <thead class="bg-gray-50">
+              <tr>
+                <th scope="col" class="px-1 py-2 text-left">Sort</th>
+                <th scope="col" class="px-1 py-2 text-left">Name</th>
+                <th scope="col" class="px-1 py-2 text-left">Code</th>
+                <th scope="col" class="px-1 py-2 text-left">Cap Max</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-gray-200 bg-white">
+              {% assign items_grouped = site.data.products | sort: 'sort' %}
+              {% for product in items_grouped %}
+              <tr class="{% cycle '', 'bg-gray-50' %}">
+                <td class="whitespace-nowrap px-1 py-1">{{ product.sort }}</td>
+                <td class="whitespace-nowrap px-1 py-1">{{ product.itemName }}</td>
+                <td class="whitespace-nowrap px-1 py-1">{{ product.itemNr }}</td>
+                <td class="whitespace-nowrap px-1 py-1">{{ product.capmax }}</td>
+              </tr>
+              {% endfor %}
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
 <div class="bg-skin-page shadow rounded-lg mb-5 px-4 py-5">
   <div class="ml-6 max-w-xl">
     <div class="grid grid-cols-3 gap-4 text-gray-500 font-bold">
+      <div>Sort</div>
       <div>Name</div>
       <div>Code</div>
-      <div>Sort</div>
+      <div>Cap Max</div>
     </div>
   </div>
   <ol class="list-decimal list-outside ml-6 max-w-xl">
@@ -21,9 +57,10 @@ title: "System Data: Products"
   {% for product in items_grouped %}
   <li>
     <div class="grid grid-cols-3 gap-4">
+      <div>{{ product.sort }}</div>
       <div>{{ product.itemName }}</div>
       <div>{{ product.itemNr }}</div>
-      <div>{{ product.sort }}</div>
+      <div>{{ product.capmax }}</div>
     </div>
   </li>
   {% endfor %}
