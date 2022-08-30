@@ -1,7 +1,4 @@
 {% if include.status == "partial" %}{% assign isSelected = true %}{% else %}{% assign isSelected = false %}{% endif %}
-
-
-{% include field-special.html name="Height" type="height-fields" %}
 {% include field-checkboxes.html selected=isSelected name="Why are you interested in knowing your exact nutrient needs?" options="I want to improve my general health and wellness.,I’m concerned about my immune health.,I’m an athlete or competitor looking to improve my fitness.,I’ve had weight loss surgery.,I want to lose weight and feel energized.,I want to slow down the aging process.,I have a condition I’d like to improve." %}
 {% include field-checkboxes.html error=isSelected name="Do you follow any of the following eating plans?" options="High Protein,Gluten Free,Intermittent Fasting,Ketogenic,Plant Based,Vegetarian,Vegan,Count Macronutrients,None" columns="3"  %}
 {% include field-toggle.html name="Are you pregnant, trying, or currently breastfeeding?" offLabel="No" onLabel="Yes" %}
