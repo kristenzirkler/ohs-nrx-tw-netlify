@@ -1,0 +1,11 @@
+<li>
+  {{ include.name }}
+  {% assign options = include.options | split: "," %}
+  <ol class="list-decimal list-inside ml-6">
+      {% for option in options %}
+      <li>{{ option }}</li>
+      {% endfor %}
+      {% if include.offLabel %}<li>{{ include.offLabel }}</li>{% endif %}
+      {% if include.onLabel %}<li>{{ include.onLabel }}</li>{% endif %}
+  </ol>
+</li>
