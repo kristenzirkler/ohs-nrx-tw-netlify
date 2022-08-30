@@ -29,7 +29,9 @@ title: "System Data: Questions & Answers"
             <tbody class="divide-y divide-gray-200 bg-white">
               {% for question in items_sorted %}
                 <tr>
-                  <td colspan="2" id="r-{{ name | slugify }}" class="border-t-4 font-bold text-lg py-2 px-3">{{ question.Sort }}. {{ question.Name }}</td>
+                  <td colspan="2" id="r-{{ name | slugify }}" class="border-t-4 font-bold text-lg py-2 px-3">{{ question.Sort }}. {{ question.Name }}{% if question.Subtext %}
+                    <div class="text-gray-400 text-xs font-normal">{{ question.Subtext }}</div>
+                  {% endif %}</td>
                   <td class="border-t-4 px-3 py-2 text-gray-400 text-right">{{ question.Type }}</td>
                 </tr>
                 {% assign items_grouped = question.Answers | split: ',' %}
