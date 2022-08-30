@@ -26,6 +26,8 @@ title: "User"
         {% include field-text.html name="Last Name" value="" %}
         {% include field-single-select.html name="Gender" layout="simple" options="Male,Female" %}
         {% include field-special.html name="Birthdate" type="birthdate" %}
+        {% include field-special.html name="Height" type="height-fields" %}
+        {% include field-special.html name="Weight" type="weight" %}
         {% include field-special.html name="Address" type="address" %}
         {% include field-single-select.html name="Referring Practitioner" options="1: 'Brett Doctorson (OHSBRETT)',2: 'Doug Grant (OHSDGRANT)', 3: 'Hanson B. Doctor (GRTDOCB)'" %}
         {% include field-single-select.html name="State Director" options="1: 'Dr. Name Onerson',2:'Sampleperson Namerson',3:'Dr. Person Name'" %}
