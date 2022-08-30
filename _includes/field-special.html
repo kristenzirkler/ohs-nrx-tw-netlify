@@ -62,4 +62,62 @@
           </div>
         </div>
       </div>
+{% elsif include.type == 'height-fields' %}
+      <div class="mt-3 space-y-6 sm:space-y-5">
+        <div class="sm:grid sm:grid-cols-3 sm:gap-4 sm:items-start">
+          <label for="gender" class="block text-sm font-bold  sm:mt-px sm:pt-2"> Height </label>
+          <div class="mt-1 sm:mt-0 sm:col-span-2">
+
+              <div class="flex -space-x-px">
+                <div class="flex min-w-0">
+                  <label for="{{ include.name | slugify }}ft" class="sr-only">Feet</label>
+                  <input type="number" maxlength="2" name="heightft" id="heightft" class="text-skin-primary focus:ring-skin-button-primary focus:border-skin-button-primary relative block w-24 rounded-none rounded-l-md bg-transparent focus:z-10 sm:text-sm border-skin-primary placeholder-gray-400" placeholder="Feet" {% if include.value %}value="5"{% endif %} min="3" max="9">
+                </div>
+                <div class="flex min-w-0">
+                  <label for="heightin" class="sr-only">Inches</label>
+                  <input type="number" maxlength="2" name="heightin" id="heightin" class="text-skin-primary focus:ring-skin-button-primary focus:border-skin-button-primary relative block w-24 rounded-none rounded-r-md bg-transparent focus:z-10 sm:text-sm border-skin-primary placeholder-gray-400" placeholder="Inches" {% if include.value %}value="6"{% endif %} min="0" max="9">
+                </div>
+              </div>
+          </div>
+        </div>
+      </div>
+{% elsif include.type == 'height-dropdowns' %}
+      <div class="mt-3 space-y-6 sm:space-y-5">
+        <div class="sm:grid sm:grid-cols-3 sm:gap-4 sm:items-start">
+          <label for="gender" class="block text-sm font-bold  sm:mt-px sm:pt-2"> Height </label>
+          <div class="mt-1 sm:mt-0 sm:col-span-2">
+
+              <div class="flex -space-x-px">
+                <div class="flex min-w-0">
+                  <label for="{{ include.name | slugify }}ft" class="sr-only">Feet</label>
+                  <select id="{{ include.name | slugify }}ft" name="{{ include.name | slugify }}ft" class="block w-full pl-3 pr-10 py-2 text-skin-primary focus:ring-skin-button-primary focus:border-skin-button-primary relative block w-full  rounded-none rounded-l-lg bg-transparent focus:z-10 sm:text-sm border-skin-primary placeholder-gray-500">
+                  <option>Select Feet...</option>
+                  <option>3</option>
+                  <option>4</option>
+                  <option>5</option>
+                  <option>6</option>
+                  <option>7</option>
+                  <option>8</option>
+                  </select>
+                </div>
+                <div class="flex min-w-0">
+                  <label for="heightin" class="sr-only">Inches</label>
+                  <select id="{{ include.name | slugify }}ft" name="{{ include.name | slugify }}ft" class="block w-full pl-3 pr-10 py-2 text-skin-primary focus:ring-skin-button-primary focus:border-skin-button-primary relative block w-full  rounded-none rounded-r-lg bg-transparent focus:z-10 sm:text-sm border-skin-primary placeholder-gray-500">
+                  <option>Select Inches...</option>
+                  <option>0</option>
+                  <option>1</option>
+                  <option>2</option>
+                  <option>3</option>
+                  <option>4</option>
+                  <option>5</option>
+                  <option>6</option>
+                  <option>7</option>
+                  <option>8</option>
+                  <option>9</option>
+                  </select>
+                </div>
+              </div>
+          </div>
+        </div>
+      </div>
 {% endif %}

@@ -12,7 +12,11 @@ title: "System Data: Questions & Answers"
 <div class="bg-skin-page shadow rounded-lg mb-5 px-4 py-5">
   <ol class="list-decimal list-inside space-y-2">
 
+{% include field-view.html selected=isSelected name="Height Ft+Inches" options="" %}
+{% include field-view.html selected=isSelected name="Weight (in Lbs)" options="" %}
+
 {% include field-view.html selected=isSelected name="Why are you interested in knowing your exact nutrient needs?" options="I want to improve my general health and wellness.,I’m concerned about my immune health.,I’m an athlete or competitor looking to improve my fitness.,I’ve had weight loss surgery.,I want to lose weight and feel energized.,I want to slow down the aging process.,I have a condition I’d like to improve." %}
+
 {% include field-view.html error=isSelected name="Do you follow any of the following eating plans?" options="High Protein,Gluten Free,Intermittent Fasting,Ketogenic,Plant Based,Vegetarian,Vegan,Count Macronutrients,None" columns="3"  %}
 {% include field-view.html name="Are you pregnant, trying, or currently breastfeeding?" offLabel="No" onLabel="Yes" %}
 {% include field-view.html selected=isSelected name="Do you have any allergies or do you try to avoid any of the following?" options="Fish,Shellfish,Tree Nuts,Nightshades,Latex,Milk,Gluten,Mushrooms,Soy,Bee Products,Ragweed,Peanuts" columns="4" %}
