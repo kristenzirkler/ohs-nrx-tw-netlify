@@ -78,15 +78,16 @@ title: "System Data: Recommedation Rules"
         <div class="overflow-hidden">
           <table class="min-w-full divide-y divide-gray-300">
             <thead class="bg-gray-50">
-              <tr><td colspan="7" class="font-bold text-lg py-2 pb-0">Recommendation Test Name</td></tr>
+              <tr><td colspan="8" class="font-bold text-lg py-2 pb-0">Recommendation Test Name</td></tr>
               <tr>
-                <th scope="col" class="px-3 py-1 font-normal text-left pl-10">RangeName</th>
-                <th scope="col" class="px-3 py-1 font-normal text-left">Gender</th>
-                <th scope="col" class="px-3 py-1 font-normal text-right">RLow</th>
-                <th scope="col" class="px-3 py-1 font-normal text-right">RHigh</th>
-                <th scope="col" class="px-3 py-1 font-normal text-right">ALow</th>
-                <th scope="col" class="px-3 py-1 font-normal text-right">AHigh</th>
-                <th scope="col" class="px-3 py-1 font-normal text-left">Product</th>
+                <th scope="col" class="px-1 py-1 pl-6 font-normal text-left">RangeName</th>
+                <th scope="col" class="px-1 py-1 font-normal text-left">Gender</th>
+                <th scope="col" class="px-1 py-1 font-normal text-right">RLow</th>
+                <th scope="col" class="px-1 py-1 font-normal text-right">RHigh</th>
+                <th scope="col" class="px-1 py-1 font-normal text-right">ALow</th>
+                <th scope="col" class="px-1 py-1 font-normal text-right">AHigh</th>
+                <th scope="col" class="px-1 py-1 font-normal text-left">Product</th>
+                <th scope="col" class="px-1 py-1 font-normal text-left">Explaination</th>
               </tr>
             </thead>
             <tbody class="divide-y divide-gray-200 bg-white">
@@ -97,17 +98,18 @@ title: "System Data: Recommedation Rules"
                 {% capture itemlist %}
                 {% for item in items_grouped %}
                 <tr class="{% cycle '', 'bg-gray-50' %}">
-                  <td class="whitespace-nowrap px-3 py-1 pl-10">{{ item.RecRangeName }}</td>
-                  <td class="whitespace-nowrap px-3 py-1">{{ item.Gender }}</td>
-                  <td class="whitespace-nowrap px-3 py-1 text-right">{{ item.RLow }}</td>
-                  <td class="whitespace-nowrap px-3 py-1 text-right">{{ item.RHigh }}</td>
-                  <td class="whitespace-nowrap px-3 py-1 text-right">{{ item.AgeLow }}</td>
-                  <td class="whitespace-nowrap px-3 py-1 text-right">{{ item.AgeHigh }}</td>
-                  <td class="whitespace-nowrap px-3 py-1">{{ item.RecProduct }}</td>
+                  <td class="whitespace-nowrap px-1 py-1 pl-6">{{ item.RecRangeName }}</td>
+                  <td class="whitespace-nowrap px-1 py-1">{{ item.Gender }}</td>
+                  <td class="whitespace-nowrap px-1 py-1 text-right">{{ item.RLow }}</td>
+                  <td class="whitespace-nowrap px-1 py-1 text-right">{{ item.RHigh }}</td>
+                  <td class="whitespace-nowrap px-1 py-1 text-right">{{ item.AgeLow }}</td>
+                  <td class="whitespace-nowrap px-1 py-1 text-right">{{ item.AgeHigh }}</td>
+                  <td class="whitespace-nowrap px-1 py-1">{{ item.RecProduct }}</td>
+                  <td class="whitespace-nowrap px-1 py-1">{{ item.Explaination | truncate: 25 }}</td>
                 </tr>
                 {% endfor %}
                 {% endcapture %}
-                <tr><td id="r-{{ name | slugify }}" colspan="7" class="border-t-4 font-bold text-lg py-2 pt-4">{{name}}</td></tr>
+                <tr><td id="r-{{ name | slugify }}" colspan="8" class="border-t-4 font-bold text-lg py-2 pt-4">{{name}}</td></tr>
                 {{ itemlist }}
               {% endfor %}
             </tbody>
