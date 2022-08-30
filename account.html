@@ -12,13 +12,12 @@ title: "Account & Profile Information"
       {% include field-text.html name="Middle Name" value="" %}
       {% include field-text.html name="Last Name" value="Lastnamerson" %}
       {% include field-text.html name="Email Address" value="firsta.lastenamerson@gmail.com" %}
-      
+      {% include field-special.html name="Address" type="address" value="123 W 2nd St" %}
+      <hr>
       {% include field-special.html name="Birthdate" type="birthdate" value="on" %}
+      {% include field-single-select.html name="Gender" layout="simple" options="Male,Female" selecteditem=2 %}
       {% include field-special.html name="Height" type="height-fields" value="x" %}
       {% include field-special.html name="Weight" type="weight" value="160" %}
-      {% include field-special.html name="Address" type="address" value="123 W 2nd St" %}
-
-      {% include field-single-select.html name="Gender" layout="simple" options="Male,Female" selecteditem=2 %}
       <hr>
       <div>
         <div class="text-xl font-bold text-skin-header">Change Password</div>

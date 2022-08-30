@@ -1,3 +1,8 @@
+{% if include.disabled %}
+{% assign bgClasses = "text-gray-500 bg-gray-100 hover:bg-gray-100 focus:ring-gray-200 cursor-not-allowed" %}
+{% else %}
+{% assign bgClasses = "bg-skin-page text-skin-primary focus:ring-skin-button-primary focus:border-skin-button-primary" %}
+{% endif %}
 {% if include.layout == "patient-switch" %}
 <div>
   <div
@@ -10,7 +15,12 @@
     <span class="inline-block w-full rounded-lg shadow-sm">
       <button
         x-ref="button"
-        @click="toggleListboxVisibility()"
+        @click="toggleListboxVisi{% if include.disabled %}
+{% assign bgClasses = "text-gray-500 bg-gray-100 hover:bg-gray-100 focus:ring-gray-200 cursor-not-allowed" %}
+{% else %}
+{% assign bgClasses = "bg-skin-page text-skin-primary focus:ring-skin-button-primary focus:border-skin-button-primary" %}
+{% endif %}
+bility()"
         :aria-expanded="open"
         aria-haspopup="listbox"
         class="relative z-0 w-full py-2 pl-3 pr-10 text-left transition duration-150 ease-in-out bg-skin-page border border-gray-300 rounded-lg cursor-default focus:outline-none focus:shadow-outline-blue focus:border-blue-300 sm:text-sm sm:leading-5 h-10"
@@ -169,7 +179,7 @@
         <div class="sm:grid sm:grid-cols-3 sm:gap-4 sm:items-start">
           <label for="{{ include.name | slugify }}" class="block text-sm font-bold  sm:mt-px sm:pt-2">{{ include.name }}</label>
           <div class="mt-1 sm:mt-0 sm:col-span-2">
-            <select id="{{ include.name | slugify }}" name="{{ include.name | slugify }}" class="block w-full pl-3 pr-10 py-2 text-skin-primary focus:ring-skin-button-primary focus:border-skin-button-primary relative block w-full rounded-lg bg-transparent focus:z-10 sm:text-sm border-skin-primary placeholder-gray-500">
+            <select id="{{ include.name | slugify }}" name="{{ include.name | slugify }}" class="block w-full pl-3 pr-10 py-2 focus:ring-skin-button-primary focus:border-skin-button-primary relative block w-full rounded-lg focus:z-10 sm:text-sm border-skin-primary placeholder-gray-500 {{ bgClasses }}" {% if include.disabled %} disabled{% endif %}>
               <option>Select...</option>
       {% assign options = include.options | split: "," %}
       {% for option in options %}
