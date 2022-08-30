@@ -1,0 +1,22 @@
+RecTestName,RecRangeName,Gender,RLow,RHigh,AgeLow,AgeHigh,RecProduct
+ExampleTest,Clinical Low,Female,1,1.2,10,12,ExampleP1
+ExampleTest,Clinical Low,Female,0.8,1,13,25,ExampleP1
+ExampleTest,Functional Low,Female,1.21,1.4,,,ExampleP1
+ExampleTest,Optimal,Female,1.41,1.6,,,
+ExampleTest,Functional Low,Female,1.61,1.8,,,
+ExampleTest,Clinical Low,Female,1.81,,,,
+ExampleTest,Clinical High,Male,0.8,1,,,ExampleP1
+ExampleTest,Functional High,Male,1.21,1.4,,,ExampleP1
+ExampleTest,Optimal,Male,1.41,1.6,,,
+ExampleTest,Functional Low,Male,1.61,1.8,,,
+ExampleTest,Clinical Low,Male,1.81,,,,
+Cholesterol/HDL Ratio,Clinical High,Both,5,-,,,Fat Sugar Trim
+Cholesterol/HDL Ratio,Functional High,Both,2.6,4.99,,,Fat Sugar Trim
+Cholesterol/HDL Ratio,Optimal,Both,,,,,
+Cholesterol/HDL Ratio,Functional Low,Both,,,,,
+Cholesterol/HDL Ratio,Clinical Low,Both,,,,,
+"Cholesterol, Total",Clinical High,Both,200,-,,,Fat Sugar Trim
+"Cholesterol, Total",Functional High,Both,170,199,,,Fat Sugar Trim
+"Cholesterol, Total",Optimal,Both,155,169,,,
+"Cholesterol, Total",Functional Low,Both,100,154,,,
+"Cholesterol, Total",Clinical Low,Both,0,99,,,Liver-Kidney

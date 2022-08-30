@@ -1,0 +1,9 @@
+Priority,RecName,RecRange,RecProduct,RecType
+1,Congestive Heart Failure,...related to heart health?,Fat Sugar Trim,answer
+2,High Cholesterol and I am taking statins,...heart health?,Fat Sugar Trim,answer
+3,Type I Diabetes,...blood sugar and endocrine health?,Fat Sugar Trim,answer
+4,Had or currently have cancer,...any of these conditions?,Phytonutrients,answer
+5,Atherosclerosis,...heart health?,Fat Sugar Trim,answer
+6,High Blood Pressure,...heart health?,Crea-Nitric,answer
+7,"Cholesterol/HDL Ratio",Clinical High,Fat Sugar Trim,bloodwork
+8,"Cholesterol, Total",Clinical High,Fat Sugar Trim,bloodwork

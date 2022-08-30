@@ -1,0 +1,103 @@
+---
+layout: default
+nav: admin
+nav-style: system-admin
+title: "System Data: Recommedation Rules"
+---
+<div class="mb-2">
+  <h1 class="mt-1 md:mt-2 text-2xl leading-8 font-display font-bold tracking-tight text-skin-header sm:text-3xl">Admin: {{ page.title }}</h1>
+  <p>Data will be displayed from SYSTEM DATA for review purposes. Administration for these items will be added after launch.</p>
+</div>
+
+<div class="bg-skin-page shadow rounded-lg mb-5 px-4 py-5">
+  <div class="text-xl font-bold text-skin-header mr-2">Recommendation Priority</div>
+
+  <div class="mt-4 flex flex-col">
+    <div class="-my-2 -mx-4 overflow-x-auto sm:-mx-6 lg:-mx-8">
+      <div class="inline-block min-w-full py-2 align-middle md:px-6 lg:px-8">
+        <div class="overflow-hidden">
+          <table class="min-w-full divide-y divide-gray-300">
+            <thead class="bg-gray-50">
+              <tr>
+                <th scope="col" class="px-1 py-2 text-left">&nbsp;</th>
+                <th scope="col" class="px-1 py-2 text-left">Type</th>
+                <th scope="col" class="px-1 py-2 text-left">Name</th>
+                <th scope="col" class="px-1 py-2 text-left">Range/Question</th>
+                <th scope="col" class="px-1 py-2 text-left">Product</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-gray-200 bg-white">
+              {% for p in site.data.rec-priority %}
+              <tr>
+                <td class="whitespace-nowrap px-1 py-1">{{ p.Priority }}</td>
+                <td class="whitespace-nowrap px-1 py-1 text-gray-400">{% if p.RecType == 'bloodwork' %}BW{% else %}QA{% endif %}</td>
+                <td class="whitespace-nowrap px-1 py-1">
+                  {% if p.RecType == 'bloodwork' %}
+                  <a href="#r-{{ p.RecName | slugify }}" class="text-skin-link hover:text-skin-link/80 hover:underline">{{ p.RecName }}</a>
+                  {% else %}
+                  {{ p.RecName }}
+                  {% endif %}
+                </td>
+                <td class="whitespace-nowrap px-1 py-1">{{ p.RecRange }}</td>
+                <td class="whitespace-nowrap px-1 py-1">{{ p.RecProduct }}</td>
+              </tr>
+              {% endfor %}
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+
+<div class="bg-skin-page shadow rounded-lg border-t-8 border-red-600 mb-5 px-4 py-5">
+
+  <div class="text-xl font-bold text-skin-header mr-2">Test Recommendations</div>
+
+  <div class="mt-4 flex flex-col mb-96">
+    <div class="-my-2 -mx-4 overflow-x-auto sm:-mx-6 lg:-mx-8  mb-96">
+      <div class="inline-block min-w-full py-2 align-middle md:px-6 lg:px-8">
+        <div class="overflow-hidden">
+          <table class="min-w-full divide-y divide-gray-300">
+            <thead class="bg-gray-50">
+              <tr><td colspan="7" class="font-bold text-lg py-2 pb-0">Recommendation Test Name</td></tr>
+              <tr>
+                <th scope="col" class="px-3 py-1 font-normal text-left pl-10">RangeName</th>
+                <th scope="col" class="px-3 py-1 font-normal text-left">Gender</th>
+                <th scope="col" class="px-3 py-1 font-normal text-right">RLow</th>
+                <th scope="col" class="px-3 py-1 font-normal text-right">RHigh</th>
+                <th scope="col" class="px-3 py-1 font-normal text-right">ALow</th>
+                <th scope="col" class="px-3 py-1 font-normal text-right">AHigh</th>
+                <th scope="col" class="px-3 py-1 font-normal text-left">Product</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-gray-200 bg-white">
+              {% assign items_grouped = site.data.rec-details | group_by: 'RecTestName' %}
+              {% for group in items_grouped %}
+                {% assign name = group.name %}
+                {% assign items_grouped = group.items %}
+                {% capture itemlist %}
+                {% for item in items_grouped %}
+                <tr>
+                  <td class="whitespace-nowrap px-3 py-1 pl-10">{{ item.RecRangeName }}</td>
+                  <td class="whitespace-nowrap px-3 py-1">{{ item.Gender }}</td>
+                  <td class="whitespace-nowrap px-3 py-1 text-right">{{ item.RLow }}</td>
+                  <td class="whitespace-nowrap px-3 py-1 text-right">{{ item.RHigh }}</td>
+                  <td class="whitespace-nowrap px-3 py-1 text-right">{{ item.AgeLow }}</td>
+                  <td class="whitespace-nowrap px-3 py-1 text-right">{{ item.AgeHigh }}</td>
+                  <td class="whitespace-nowrap px-3 py-1">{{ item.RecProduct }}</td>
+                </tr>
+                {% endfor %}
+                {% endcapture %}
+                <tr><td id="r-{{ name | slugify }}" colspan="7" class="border-t-4 font-bold text-lg py-2 pt-4">{{name}}</td></tr>
+                {{ itemlist }}
+              {% endfor %}
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
