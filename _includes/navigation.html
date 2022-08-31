@@ -14,7 +14,6 @@
   Patient List
 </a>
 <div class="mt-4 pt-4 border-t">Your Results</div>
-{% else %}
 {% endif %}
 {% if page.nav-style == 'admin' %}
 <a href="{{ site.baseurl }}/" class="{% if page.nav == "" %}bg-skin-border/50{% else %} hover:bg-skin-border/50{% endif %} group flex items-center px-2 py-2 rounded-lg">
@@ -32,9 +31,8 @@
   Theme
 </a>
 {% else %}
-{% if page.nav-style != 'limited' %}
 <!-- Current: "bg-gray-100 text-skin-header", Default: " hover:bg-gray-50 hover:text-skin-header" -->
-<a href="{{ site.baseurl }}/{% if page.nav-style == 'no-results' %}dashboard-new{% else %}dashboard-new-results{% endif %}" class="{% if page.nav == "dashboard" %}bg-skin-border/50{% else %} hover:bg-skin-border/50{% endif %} group flex items-center px-2 py-2 rounded-lg">
+<a href="{{ site.baseurl }}/dashboard-pieces" class="{% if page.nav == "dashboard" %}bg-skin-border/50{% else %} hover:bg-skin-border/50{% endif %} group flex items-center px-2 py-2 rounded-lg">
   <!--
     Heroicon name: outline/home
 
@@ -45,7 +43,7 @@
   </svg>
   Dashboard
 </a>
-{% if page.nav-style != 'no-results' %}
+
 <a href="{{ site.baseurl }}/results" class="{% if page.nav == "results" %}bg-skin-border/50{% else %} hover:bg-skin-border/50{% endif %} group flex items-center px-2 py-2 rounded-lg">
   <!-- Heroicon name: outline/chart-bar -->
   <svg class="{% if page.nav == "results" %}text-skin-primary opacity-80{% else %}text-gray-400 group-hover:text-skin-primary opacity-80{% endif %} mr-4 flex-shrink-0 h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
@@ -54,7 +52,6 @@
   Results
 </a>
 
-{% if page.nav-style != 'no-history' %}
 <a href="{{ site.baseurl }}/history" class="{% if page.nav == "history" %}bg-skin-border/50{% else %} hover:bg-skin-border/50{% endif %} group flex items-center px-2 py-2 rounded-lg">
   <!-- Heroicon name: outline/archive -->
   <svg xmlns="http://www.w3.org/2000/svg" class="{% if page.nav == "history" %}text-skin-primary opacity-80{% else %}text-gray-400 group-hover:text-skin-primary opacity-80{% endif %} mr-4 flex-shrink-0 h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
@@ -62,7 +59,6 @@
 </svg>
   History
 </a>
-{% endif %}
 
 <a href="{{ site.baseurl }}/custompak" class="{% if page.nav == "custompak" %}bg-skin-border/50{% else %} hover:bg-skin-border/50{% endif %} group flex items-center px-2 py-2 rounded-lg">
   <!-- Heroicon name: outline/clipboard-check -->
@@ -71,8 +67,7 @@
   </svg>
   Custom Pak
 </a>
-{% endif %}
-{% endif %}
+{% comment %}
 <a href="{{ site.baseurl }}/questionnaire" class="{% if page.nav == "questionnaire" %}bg-skin-border/50{% else %} hover:bg-skin-border/50{% endif %} group flex items-center px-2 py-2 rounded-lg">
   <!-- Heroicon name: outline/question-mark-circle -->
   <svg class="{% if page.nav == "questionnaire" %}text-skin-primary opacity-80{% else %}text-gray-400 group-hover:text-skin-primary opacity-80{% endif %} mr-4 flex-shrink-0 h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" aria-hidden="true">
@@ -80,8 +75,8 @@
   </svg>
   Questionnaire
 </a>
+{% endcomment %}
 {% endif %}
-
 {% if page.nav-style == 'system-admin' %}
 <div class="mt-4 pt-4 border-t">System Admin</div>
 <a href="{{ site.baseurl }}/admin-users" class="hover:bg-skin-border/50 group flex items-center px-2 rounded-lg">
