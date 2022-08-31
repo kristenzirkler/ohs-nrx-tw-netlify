@@ -1,0 +1,100 @@
+{% assign filled = include.filled | plus: 0 %}
+<div class="bg-skin-page shadow rounded-lg mt-5 mb-5">
+  <div class="px-4 py-5 sm:p-6">
+
+    <div class="text-xl font-bold font-display text-skin-header mr-2">{% if include.title %}{{ include.title }}{% else %}Action Required{% endif %}</div>
+
+{% if include.status == "new-qn" or include.status == "new-qn-bw" %}
+    <div class="py-2 sm:py-4">
+      <a class="flex justify-between items-start w-full" href="{{ site.baseurl }}/questionnaire">
+        <span class="mr-4 inline-flex items-center justify-center h-12 w-12 rounded-full bg-skin-accent-primary shrink-0">
+          <span class="text-2xl font-bold leading-none text-white">
+            1
+          </span>
+        </span>
+        <span class="grow">
+          <span class="text-xl font-normal text-skin-header">Finish Questionnaire</span>
+          {% if include.status == "new-qn" %}<span class="block text-sm font-normal leading-snug mb-4">NOTE: Your Custom Pak will not be updated until your Questionnaire is complete.</span>{% endif %}
+          {% if include.status == "new-qn-bw" %}<span class="block text-sm font-normal leading-snug mb-4">NOTE: You will not be able to get your PSC Hold paperwork until your Questionnaire is complete.</span>{% endif %}
+          <span class="block rounded-xl overflow-hidden mb-4">
+            <span class="flex">
+              <span class="text-xs bg-green-600 text-white px-2" style="width: {{ include.filled }}%;">{{ include.filled }}% Complete</span>
+              <span class="text-xs bg-gray-200" style="width: {{ include.filled | minus: 100 | abs }}%;">&nbsp;</span>
+            </span>
+          </span>
+          {% if filled < 100 %}
+          <span class="inline-flex items-center h-12 px-8 border border-transparent text-lg font-bold rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-offset-2 bg-skin-button-primary hover:bg-skin-button-primary-hover focus:ring-skin-button-primary shadow-sm">Complete Questionnaire</span>
+          {% endif %}
+        </span>
+      </a>
+    </div>
+{% elsif include.status == "existing-qn-bw" %}
+    <div class="py-2 sm:py-4">
+      <div class="flex justify-between items-start w-full">
+        <div class="mr-4 inline-flex items-center justify-center h-12 w-12 rounded-full bg-skin-accent-primary shrink-0">
+          <span class="text-2xl font-bold leading-none text-white">
+            1
+          </span>
+        </div>
+        <div class="grow">
+          <div class="text-xl font-normal text-skin-header">Review Questionnaire</div>
+          <p class="text-sm font-normal leading-snug mb-4">If your answers have not changed you may skip.</p>
+          <div class="flex items-center">
+            {% include button.html text="View Answers" classes="inline-block" %}
+            <a class="ml-4 inline-block p-2 align-middle" href="#">Skip</a>
+          </div>
+        </div>
+      </div>
+    </div>
+{% endif %}
+{% if include.status == "existing-qn" %}
+    <div class="py-2 sm:py-4">
+      <div class="flex justify-between items-start w-full">
+        <div class="grow">
+          <div class="text-xl font-normal text-skin-header">Review Questionnaire</div>
+          <p class="text-sm font-normal leading-snug mb-4">If your answers have not changed you may skip.</p>
+          <div class="flex items-center">
+            {% include button.html text="View Answers" classes="inline-block" %}
+            <a class="ml-4 inline-block p-2 align-middle " href="#">Skip</a>
+          </div>
+        </div>
+      </div>
+    </div>
+{% endif %}
+
+{% if include.status == "new-qn-bw" and filled < 100 %}
+    <div class="py-2 sm:py-4">
+      <div class="flex justify-between items-start w-full">
+        <div class="mr-4 inline-flex items-center justify-center h-12 w-12 rounded-full bg-gray-300 shrink-0">
+          <span class="text-2xl font-bold leading-none text-white">
+            2
+          </span>
+        </div>
+        <div class="grow">
+          <div class="text-xl font-normal text-gray-400">Schedule Blood Work Appointment</div>
+          <p class="text-sm font-normal leading-snug text-gray-400 mb-4"><a href="">Find a testing location</a>, setup an appointment, download your PSC Hold, print it out, and bring it to your appointment.<!-- PSC Hold is the form needed to process your blood work. Save this document and bring it to your appointment.--></p>
+          {% include button.html text="Download PSC Hold" classes="inline-block w-full md:w-1/2" disabled=true %}
+        </div>
+      </div>
+    </div>
+{% endif %}
+
+{% if include.status == "existing-qn-bw" or include.filled == "100" %}
+    <div class="py-2 sm:py-4">
+      <div class="flex justify-between items-start w-full">
+        <div class="mr-4 inline-flex items-center justify-center h-12 w-12 rounded-full bg-skin-accent-primary shrink-0">
+          <span class="text-2xl font-bold leading-none text-white">
+            2
+          </span>
+        </div>
+        <div class="grow">
+          <div class="text-xl font-normal text-skin-header">Schedule Blood Work Appointment</div>
+          <p class="text-sm font-normal leading-snug mb-4"><a href="" class="text-underline">Find a testing location</a>, setup an appointment, download your PSC Hold, print it out, and bring it to your appointment.</p>
+          {% include button.html text="Download PSC Hold" classes="inline-block w-full md:w-1/2" %}
+        </div>
+      </div>
+    </div>
+{% endif %}
+
+  </div>
+</div>

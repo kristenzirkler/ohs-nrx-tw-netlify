@@ -1,0 +1,33 @@
+---
+layout: default
+nav: dashboard
+title: "Welcome, Firstname!"
+---
+<div class="mt-10 text-xl">Page Header - Always the same</div>
+{% include page-header.html navname="Dashboard" title=page.title desc="Your personalized portal for optimal health based on your body's unique needs." %}
+
+<div class="mt-10 text-xl">Dash: Action Required - new-qn</div>
+<p>Patient has no previous completed Order AND needs QN Only.</p>
+{% include dash-action-required.html status="new-qn" filled="35" %}
+
+<div class="mt-10 text-xl">Dash: Action Required - new-qn-bw</div>
+<p>Patient has no previous completed Order AND needs QN&BW. Patient cannot download PSC Hold for BW until QN is complete.</p>
+{% include dash-action-required.html status="new-qn-bw" filled="65" %}
+
+<div class="mt-10 text-xl">Dash: Action Required - new-qn-bw-filled</div>
+<p>Patient has no previous completed Order AND needs QN&BW. Patient completed QN.</p>
+{% include dash-action-required.html status="new-qn-bw" filled="100" %}
+
+<div class="mt-10 text-xl">Dash: Action Required - existing-qn</div>
+<p>Patient has previous completed Order AND needs QN Only. Can skip or edit answers.</p>
+{% include dash-action-required.html status="existing-qn" title="Renewal is Coming - 7 days to update" %}
+
+<div class="mt-10 text-xl">Dash: Action Required - existing-qn-bw</div>
+<p>Patient has previous completed Order AND needs QN&BW. Can skip or edit answers and PSC Hold is available.</p>
+{% include dash-action-required.html title="Action Required - It's Renewal Time" status="existing-qn-bw" %}
+
+<div class="mt-10 text-xl">Dash: Result</div>
+{% include dash-result.html %}
+
+<div class="mt-10 text-xl">Dash: History</div>
+{% include dash-history.html %}
