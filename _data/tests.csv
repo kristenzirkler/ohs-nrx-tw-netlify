@@ -1,65 +1,65 @@
-PanelName,PanelCode,TestName,TestCode,BundleName
-Cbc (Includes Diff/Plt),6399,Absolute Basophils,30003000,Nutrient Specific
-Cbc (Includes Diff/Plt),6399,Absolute Eosinophils,30002700,Nutrient Specific
-Cbc (Includes Diff/Plt),6399,Absolute Lymphocytes,30002110,Nutrient Specific
-Cbc (Includes Diff/Plt),6399,Absolute Monocytes,30002400,Nutrient Specific
-Cbc (Includes Diff/Plt),6399,Absolute Neutrophils,30001700,Nutrient Specific
-Cbc (Includes Diff/Plt),6399,Absolute Nucleated Rbc,30003610,Nutrient Specific
-Cbc (Includes Diff/Plt),6399,Basophils,30002800,Nutrient Specific
-Cbc (Includes Diff/Plt),6399,Eosinophils,30002500,Nutrient Specific
-Cbc (Includes Diff/Plt),6399,Hematocrit,30000300,Nutrient Specific
-Cbc (Includes Diff/Plt),6399,Hemoglobin,30000200,Nutrient Specific
-Cbc (Includes Diff/Plt),6399,Lymphocytes,30001800,Nutrient Specific
-Cbc (Includes Diff/Plt),6399,Mch,30000500,Nutrient Specific
-Cbc (Includes Diff/Plt),6399,Mchc,30000600,Nutrient Specific
-Cbc (Includes Diff/Plt),6399,Mcv,30000400,Nutrient Specific
-Cbc (Includes Diff/Plt),6399,Monocytes,30002200,Nutrient Specific
-Cbc (Includes Diff/Plt),6399,Mpv,30004600,Nutrient Specific
-Cbc (Includes Diff/Plt),6399,Neutrophils,30000900,Nutrient Specific
-Cbc (Includes Diff/Plt),6399,Platelet Count,30000800,Nutrient Specific
-Cbc (Includes Diff/Plt),6399,Rdw,30000700,Nutrient Specific
-Cbc (Includes Diff/Plt),6399,Red Blood Cell Count,30000100,Nutrient Specific
-Cbc (Includes Diff/Plt),6399,White Blood Cell Count,30000000,Nutrient Specific
+PanelName,PanelCode,TestName,TestCode,Bundle
+CBC (Includes Diff/PLT),6399,Absolute Basophils,30003000,Nutrient Specific
+CBC (Includes Diff/PLT),6399,Absolute Eosinophils,30002700,Nutrient Specific
+CBC (Includes Diff/PLT),6399,Absolute Lymphocytes,30002110,Nutrient Specific
+CBC (Includes Diff/PLT),6399,Absolute Monocytes,30002400,Nutrient Specific
+CBC (Includes Diff/PLT),6399,Absolute Neutrophils,30001700,Nutrient Specific
+CBC (Includes Diff/PLT),6399,Absolute Nucleated Rbc,30003610,Nutrient Specific
+CBC (Includes Diff/PLT),6399,Basophils,30002800,Nutrient Specific
+CBC (Includes Diff/PLT),6399,Eosinophils,30002500,Nutrient Specific
+CBC (Includes Diff/PLT),6399,Hematocrit,30000300,Nutrient Specific
+CBC (Includes Diff/PLT),6399,Hemoglobin,30000200,Nutrient Specific
+CBC (Includes Diff/PLT),6399,Lymphocytes,30001800,Nutrient Specific
+CBC (Includes Diff/PLT),6399,MCH,30000500,Nutrient Specific
+CBC (Includes Diff/PLT),6399,MCHC,30000600,Nutrient Specific
+CBC (Includes Diff/PLT),6399,MCV,30000400,Nutrient Specific
+CBC (Includes Diff/PLT),6399,Monocytes,30002200,Nutrient Specific
+CBC (Includes Diff/PLT),6399,MPV,30004600,Nutrient Specific
+CBC (Includes Diff/PLT),6399,Neutrophils,30000900,Nutrient Specific
+CBC (Includes Diff/PLT),6399,Platelet Count,30000800,Nutrient Specific
+CBC (Includes Diff/PLT),6399,RDW,30000700,Nutrient Specific
+CBC (Includes Diff/PLT),6399,Red Blood Cell Count,30000100,Nutrient Specific
+CBC (Includes Diff/PLT),6399,White Blood Cell Count,30000000,Nutrient Specific
 Comprehensive Metabolic Panel,10231,Albumin,25001400,Nutrient Specific
 Comprehensive Metabolic Panel,10231,Albumin/Globulin Ratio,25001600,Nutrient Specific
 Comprehensive Metabolic Panel,10231,Alkaline Phosphatase,25002000,Nutrient Specific
-Comprehensive Metabolic Panel,10231,Alt,25002400,Nutrient Specific
-Comprehensive Metabolic Panel,10231,Ast,25002300,Nutrient Specific
+Comprehensive Metabolic Panel,10231,ALT,25002400,Nutrient Specific
+Comprehensive Metabolic Panel,10231,AST,25002300,Nutrient Specific
 Comprehensive Metabolic Panel,10231,"Bilirubin, Total",25001700,Nutrient Specific
-Comprehensive Metabolic Panel,10231,Bun/Creatinine Ratio,25000300,Nutrient Specific
+Comprehensive Metabolic Panel,10231,BUN/Creatinine Ratio,25000300,Nutrient Specific
 Comprehensive Metabolic Panel,10231,Calcium,25001000,Nutrient Specific
 Comprehensive Metabolic Panel,10231,Carbon Dioxide (CO2),25000700,Nutrient Specific
 Comprehensive Metabolic Panel,10231,Chloride,25000600,Nutrient Specific
 Comprehensive Metabolic Panel,10231,Creatinine,25000200,Nutrient Specific
-Comprehensive Metabolic Panel,10231,Egfr,86031867,Nutrient Specific
-Comprehensive Metabolic Panel,10231,Egfr African American,25000220,Nutrient Specific
-Comprehensive Metabolic Panel,10231,Egfr Non-Afr. American,25000210,Nutrient Specific
+Comprehensive Metabolic Panel,10231,eGFR,86031867,Nutrient Specific
+Comprehensive Metabolic Panel,10231,eGFR African American,25000220,Nutrient Specific
+Comprehensive Metabolic Panel,10231,eGFR Non-Afr. American,25000210,Nutrient Specific
 Comprehensive Metabolic Panel,10231,Globulin,25001500,Nutrient Specific
 Comprehensive Metabolic Panel,10231,Glucose,25000000,Nutrient Specific
 Comprehensive Metabolic Panel,10231,Potassium,25000500,Nutrient Specific
 Comprehensive Metabolic Panel,10231,"Protein, Total",25001300,Nutrient Specific
 Comprehensive Metabolic Panel,10231,Sodium,25000400,Nutrient Specific
-Comprehensive Metabolic Panel,10231,Urea Nitrogen (Bun),25000100,Nutrient Specific
+Comprehensive Metabolic Panel,10231,Urea Nitrogen (BUN),25000100,Nutrient Specific
 Glucose,483,Glucose,25000000,Nutrient Specific
-Hemoglobin A1c,496,Hemoglobin A1c,50026400,Nutrient Specific
-Hs Crp,10124,C - Reactive Protein Hs,45203715,Nutrient Specific
+Hemoglobin A1C,496,Hemoglobin A1C,50026400,Nutrient Specific
+hs-CRP,10124,C - Reactive Protein HS,45203715,Nutrient Specific
 Iron And Total Iron Binding Capacity,7573,% Saturation,25002800,Nutrient Specific
 Iron And Total Iron Binding Capacity,7573,Iron Binding Capacity,25002700,Nutrient Specific
 Iron And Total Iron Binding Capacity,7573,"Iron, Total",25002600,Nutrient Specific
-"Lipid Panel, Standard",7600,Chol/Hdlc Ratio,25017000,Nutrient Specific
+"Lipid Panel, Standard",7600,CHOL/HDLC Ratio,25017000,Nutrient Specific
 "Lipid Panel, Standard",7600,"Cholesterol, Total",25003000,Nutrient Specific
-"Lipid Panel, Standard",7600,Hdl Cholesterol,25015900,Nutrient Specific
-"Lipid Panel, Standard",7600,Ldl-Cholesterol,25016900,Nutrient Specific
-"Lipid Panel, Standard",7600,Non Hdl Cholesterol,25017210,Nutrient Specific
+"Lipid Panel, Standard",7600,HDL Cholesterol,25015900,Nutrient Specific
+"Lipid Panel, Standard",7600,LDL Cholesterol,25016900,Nutrient Specific
+"Lipid Panel, Standard",7600,Non HDL Cholesterol,25017210,Nutrient Specific
 "Lipid Panel, Standard",7600,Triglycerides,25002900,Nutrient Specific
 Magnesium,622,Magnesium,25000900,Nutrient Specific
 Sex Hormone Binding Globulin,30740,Sex Hormone Binding Globulin,55188600,Nutrient Specific
 "Testosterone, Free, Bio And Total, Ms",14966,Albumin,25001400,Nutrient Specific
 "Testosterone, Free, Bio And Total, Ms",14966,Sex Hormone Binding Globulin,55188600,Nutrient Specific
-"Testosterone, Free, Bio And Total, Ms",14966,"Testosterone , Total , Ms",85996653,Nutrient Specific
+"Testosterone, Free, Bio And Total, Ms",14966,"Testosterone, Total, Ms",85996653,Nutrient Specific
 "Testosterone, Free, Bio And Total, Ms",14966,"Testosterone, Free",85990231,Nutrient Specific
-"Testosterone, Free, Bio And Total, Ms",14966,"Testosterone,Bioavailable",85990232,Nutrient Specific
-Tsh,899,Tsh,55080400,Nutrient Specific
+"Testosterone, Free, Bio And Total, Ms",14966,"Testosterone, Bioavailable",85990232,Nutrient Specific
+TSH,899,TSH,55080400,Nutrient Specific
 Uric Acid,905,Uric Acid,25002500,Nutrient Specific
 "Urinalysis, Complete",5463,Amorphous Sediment,30007300,Nutrient Specific
 "Urinalysis, Complete",5463,Appearance,30005600,Nutrient Specific
@@ -76,7 +76,7 @@ Uric Acid,905,Uric Acid,25002500,Nutrient Specific
 "Urinalysis, Complete",5463,Occult Blood,30006100,Nutrient Specific
 "Urinalysis, Complete",5463,Ph,30006200,Nutrient Specific
 "Urinalysis, Complete",5463,Protein,30006300,Nutrient Specific
-"Urinalysis, Complete",5463,Rbc - Urinalysis,30006800,Nutrient Specific
+"Urinalysis, Complete",5463,RBC - Urinalysis,30006800,Nutrient Specific
 "Urinalysis, Complete",5463,Reducing Substances,30071900,Nutrient Specific
 "Urinalysis, Complete",5463,Renal Epithelial Cells,30007000,Nutrient Specific
 "Urinalysis, Complete",5463,Specific Gravity,30006000,Nutrient Specific
@@ -86,7 +86,7 @@ Uric Acid,905,Uric Acid,25002500,Nutrient Specific
 "Urinalysis, Complete",5463,Uric Acid Crystals,30010200,Nutrient Specific
 "Urinalysis, Complete",5463,Urine - Glucose,30071800,Nutrient Specific
 "Urinalysis, Complete",5463,Urine - Ketones,30005900,Nutrient Specific
-"Urinalysis, Complete",5463,Wbc - Urinalysis,30006700,Nutrient Specific
+"Urinalysis, Complete",5463,WBC - Urinalysis,30006700,Nutrient Specific
 "Urinalysis, Complete",5463,Yeast,30007900,Nutrient Specific
 Vitamin B12,927,Vitamin B12,55057200,Nutrient Specific
-"Vitamin D,25-Oh,Total,Ia",17306,Vitamin D,55182715,Nutrient Specific
+"Vitamin D, 25-OH, Total, LA",17306,Vitamin D,55182715,Nutrient Specific

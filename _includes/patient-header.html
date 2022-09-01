@@ -1,0 +1,20 @@
+<table class="min-w-full border-separate mb-3" style="border-spacing: 0">
+  <thead class="bg-skin-border/50">
+    <tr>
+      {% include table-head-th.html name="Email" classes="text-left border-r-2" hidemobile="true" %}
+      {% include table-head-th.html name="View As Patient" classes="" hidemobile="true" %}
+      {% include table-head-th.html name="Status" classes="text-left" hidemobile="true" %}
+      {% include table-head-th.html name="Patient" hidemobile="true" %}
+      {% include table-head-th.html name="Prac." hidemobile="true" %}
+      {% include table-head-th.html name="Admin" hidemobile="true" %}
+      {% include table-head-th.html name="Created" classes="" %}
+      {% include table-head-th.html name="Updated" classes="" %}
+    </tr>
+  </thead>
+  <tbody class="bg-skin-page">
+      {% include one-user-row.html name="Abel Mac Alastair<br>Dr. Namerson Name" status="1" createddate="3/3/2022" updateddate="3/3/2022" prac=1 %}
+  </tbody>
+</table>
+
+Referring Prac: Dr MacAlastair (OHSALISTAIR)<br>
+State Director: AZ (William Drsonster)

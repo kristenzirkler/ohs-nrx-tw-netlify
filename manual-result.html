@@ -1,0 +1,44 @@
+---
+layout: default
+nav: account
+title: "Add Result"
+---
+{% include page-header.html navname="Add Result" title=page.title desc="" %}
+
+<div class="mt-5 bg-skin-page shadow rounded-lg mb-5">
+  <div class="px-4 py-5 sm:p-6">
+    <div class="space-y-4 sm:space-y-3">
+
+      <hr class="mt-6">
+      <div class="text-xl font-bold text-skin-header mr-2">Panels</div>
+      {% assign items_grouped = site.data.tests | group_by: 'PanelName' %}
+      <ol class="list-decimal list-outside ml-6 max-w-md">
+      {% for group in items_grouped %}
+        {% assign name = group.name %}
+        {% capture itemlist %}
+        {% for item in group.items %}
+        {% assign code = item.PanelCode %}
+        <div class="flex justify-between ml-4">
+          {% include field-text.html name=item.TestName placeholder="" %}
+          <!--div>{{item.TestName}}</div-->
+          <div class="font-mono text-xs">{{item.TestCode}}</div>
+        </div>
+        {% endfor %}
+        {% endcapture %}
+        <li>
+          <hr class="mt-4">
+          <div class="flex justify-between font-bold">
+            <div>{{name}}</div>
+            <div class="font-mono text-xs">{{code}}</div>
+          </div>
+          {{ itemlist }}
+        </li>
+      {% endfor %}
+      </ol>
+
+    </div>
+    <div class="mt-6">
+      {% include button.html text="Save" classes="w-full" %}
+    </div>
+  </div>
+</div>
