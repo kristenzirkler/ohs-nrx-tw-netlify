@@ -135,13 +135,8 @@ title: "System Data: Tests, Panels & Bundles"
           <table class="min-w-full divide-y divide-gray-300">
             <thead class="bg-gray-50">
               <tr>
-                <td colspan="2" class="font-bold text-lg px-3 py-2 pb-0">Test Name</td>
+                <td colspan="2" class="font-bold text-lg px-3 py-2 pb-0">Test Name, Panels</td>
                 <td colspan="2" class="font-bold text-lg px-3 py-2 text-right">Test Code</td>
-              </tr>
-              <tr>
-                <th scope="col" class="px-3 py-1 font-normal text-left w-4">&nbsp;</th>
-                <th scope="col" class="px-3 py-1 font-normal text-left">Panel Name</th>
-                <th scope="col" class="px-3 py-1 font-normal text-right">Panel Code</th>
               </tr>
             </thead>
             <tbody class="divide-y divide-gray-200 bg-white">
@@ -150,18 +145,13 @@ title: "System Data: Tests, Panels & Bundles"
                 {% capture itemlist %}
                 {% for item in group.items %}
                 {% assign code = item.TestCode %}
-                <tr class="{% cycle '', 'bg-gray-50' %}">
-                  <td class="whitespace-nowrap px-3 py-1 w-4">&nbsp;</td>
-                  <td class="whitespace-nowrap px-3 py-1">{{ item.PanelName }}</td>
-                  <td class="whitespace-nowrap px-3 py-1 font-mono text-xs text-right">{{ item.PanelCode }}</td>
-                </tr>
+                {{ item.PanelName }} ({{ item.PanelCode }}), 
                 {% endfor %}
                 {% endcapture %}
                 <tr>
-                  <td colspan="2" id="r-{{ name | slugify }}" class="border-t-4 font-bold text-lg px-3 py-2">{{ name }}</td>
+                  <td colspan="2" id="r-{{ name | slugify }}" class="border-t-4 font-bold text-lg px-3 py-2">{{ name }} <span class="text-xs text-gray-400 font-normal">{{ itemlist }}</span></td>
                   <td class="border-t-4 font-bold px-3 py-2 font-mono text-xs text-right">{{ code }}</td>
                 </tr>
-                {{ itemlist }}
               {% endfor %}
             </tbody>
           </table>
