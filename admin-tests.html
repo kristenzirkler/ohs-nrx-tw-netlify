@@ -31,7 +31,7 @@ title: "System Data: Tests, Panels & Bundles"
 
 
 <div class="bg-skin-page shadow rounded-lg mb-5 px-4 py-5" id="Bundles">
-  {% assign items_grouped = site.data.tests | group_by: 'BundleName' %}
+  {% assign items_grouped = site.data.tests-csv | group_by: 'Bundle' %}
   <div class="text-xl font-bold text-skin-header mr-2">Bundles ({{ items_grouped.size }})</div>
 
   <div class="mt-4 flex flex-col">
@@ -54,12 +54,16 @@ title: "System Data: Tests, Panels & Bundles"
               {% for group in items_grouped %}
                 {% assign name = group.name %}
                 {% assign items_grouped = group.items | group_by: 'PanelName' %}
+
                 {% capture itemlist %}
                 {% for item in items_grouped %}
+                {% for i in item.items %}
+                {% assign code = i.PanelCode %}
+                {% endfor %}
                 <tr class="{% cycle '', 'bg-gray-50' %}">
                   <td class="whitespace-nowrap px-3 py-1 w-4">&nbsp;</td>
                   <td class="whitespace-nowrap px-3 py-1">{{ item.name }}</td>
-                  <td class="whitespace-nowrap px-3 py-1 font-mono text-xs text-right">{{ item.PanelCode }}</td>
+                  <td class="whitespace-nowrap px-3 py-1 font-mono text-xs text-right">{{ code }}</td>
                 </tr>
                 {% endfor %}
                 {% endcapture %}

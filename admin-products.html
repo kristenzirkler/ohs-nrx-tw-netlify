@@ -4,6 +4,25 @@ nav: admin
 nav-style: system-admin
 title: "System Data: Products"
 ---
+<pre>
+[
+{% assign items_grouped = site.data.products | sort: 'sort' %}
+{% for product in items_grouped %}
+{
+  "name":"{{ product.itemName }}",
+  "code":"{{ product.itemNr }}",
+  "sort":"{{ product.sort }}",
+  "capmax":"{{ product.capmax }}"
+},
+{% endfor %}
+]
+</pre>
+
+
+
+
+
+
 <div class="mb-2">
   <h1 class="mt-1 md:mt-2 text-2xl leading-8 font-display font-bold tracking-tight text-skin-header sm:text-3xl">Admin: {{ page.title }}</h1>
   <p>Data will be displayed from SYSTEM DATA for review purposes. Administration for these items will be added after launch.</p>

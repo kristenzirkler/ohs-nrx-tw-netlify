@@ -87,11 +87,11 @@
               <div class="flex -space-x-px">
                 <div class="flex min-w-0">
                   <label for="{{ include.name | slugify }}ft" class="sr-only">Feet</label>
-                  <input type="number" maxlength="2" name="heightft" id="heightft" class="text-skin-primary focus:ring-skin-button-primary focus:border-skin-button-primary relative block w-24 rounded-none rounded-l-lg bg-transparent focus:z-10 sm:text-sm border-skin-primary placeholder-gray-400" placeholder="Feet" {% if include.value %}value="5"{% endif %} min="3" max="9">
+                  <input type="number" maxlength="1" name="heightft" id="heightft" class="text-skin-primary focus:ring-skin-button-primary focus:border-skin-button-primary relative block w-24 rounded-none rounded-l-lg bg-transparent focus:z-10 sm:text-sm border-skin-primary placeholder-gray-400" placeholder="Feet" {% if include.value %}value="5"{% endif %} min="3" max="9">
                 </div>
                 <div class="flex min-w-0">
                   <label for="heightin" class="sr-only">Inches</label>
-                  <input type="number" maxlength="2" name="heightin" id="heightin" class="text-skin-primary focus:ring-skin-button-primary focus:border-skin-button-primary relative block w-24 rounded-none rounded-r-lg bg-transparent focus:z-10 sm:text-sm border-skin-primary placeholder-gray-400" placeholder="Inches" {% if include.value %}value="6"{% endif %} min="0" max="9">
+                  <input type="number" maxlength="2" name="heightin" id="heightin" class="text-skin-primary focus:ring-skin-button-primary focus:border-skin-button-primary relative block w-24 rounded-none rounded-r-lg bg-transparent focus:z-10 sm:text-sm border-skin-primary placeholder-gray-400" placeholder="Inches" {% if include.value %}value="6"{% endif %} min="0" max="11">
                 </div>
               </div>
           </div>

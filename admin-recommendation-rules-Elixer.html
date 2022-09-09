@@ -1,0 +1,182 @@
+---
+layout: default
+nav: admin
+nav-style: system-admin
+title: "System Data: Recommedation Rules"
+---
+<div class="mb-2">
+  <h1 class="mt-1 md:mt-2 text-2xl leading-8 font-display font-bold tracking-tight text-skin-header sm:text-3xl">Admin: {{ page.title }}</h1>
+  <p>Data will be displayed from SYSTEM DATA for review purposes. Administration for these items will be added after launch.</p>
+</div>
+
+
+<div class="bg-skin-page shadow rounded-lg mb-5">
+  <nav class="relative z-0 flex divide-x divide-gray-200" aria-label="Tabs">
+    <a href="#Priority" class="text-gray-500 rounded-l-lg hover:text-gray-700 group relative min-w-0 flex-1 overflow-hidden bg-white py-4 px-4 text-sm font-medium text-center hover:bg-gray-50 focus:z-10">
+      <span>Priority</span>
+      <span aria-hidden="true" class="bg-transparent absolute inset-x-0 bottom-0 h-0.5"></span>
+    </a>
+
+    <a href="#Tests" class="text-gray-500 hover:text-gray-700 rounded-r-lg group relative min-w-0 flex-1 overflow-hidden bg-white py-4 px-4 text-sm font-medium text-center hover:bg-gray-50 focus:z-10">
+      <span>Test Recommendations</span>
+      <span aria-hidden="true" class="bg-transparent absolute inset-x-0 bottom-0 h-0.5"></span>
+    </a>
+  </nav>
+</div>
+
+{% comment %}
+<div class="bg-skin-page shadow rounded-lg mb-5 px-4 py-5" id="Priority">
+  <div class="text-xl font-bold text-skin-header mr-2">Recommendation Priority</div>
+
+  <div class="mt-4 flex flex-col">
+    <div class="-my-2 -mx-4 overflow-x-auto sm:-mx-6 lg:-mx-8">
+      <div class="inline-block min-w-full py-2 align-middle md:px-6 lg:px-8">
+        <div class="overflow-hidden">
+          <table class="min-w-full divide-y divide-gray-300">
+            <thead class="bg-gray-50">
+              <tr>
+                <th scope="col" class="px-1 py-2 text-left">&nbsp;</th>
+                <th scope="col" class="px-1 py-2 text-left">Type</th>
+                <th scope="col" class="px-1 py-2 text-left">Name</th>
+                <th scope="col" class="px-1 py-2 text-left">Range/Question</th>
+                <th scope="col" class="px-1 py-2 text-left">Product</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-gray-200 bg-white">
+              {% for p in site.data.rec-priority %}
+              <tr class="{% cycle '', 'bg-gray-50' %}">
+                <td class="whitespace-nowrap px-1 py-1">{{ p.Priority }}</td>
+                <td class="whitespace-nowrap px-1 py-1 text-gray-400">{% if p.RecType == 'bloodwork' %}BW{% else %}QA{% endif %}</td>
+                <td class="whitespace-nowrap px-1 py-1">
+                  {% if p.RecType == 'bloodwork' %}
+                  <a href="#r-{{ p.RecName | slugify }}" class="text-skin-link hover:text-skin-link/80 hover:underline">{{ p.RecName }}</a>
+                  {% else %}
+                  {{ p.RecName }}
+                  {% endif %}
+                </td>
+                <td class="whitespace-nowrap px-1 py-1">{{ p.RecRange }}</td>
+                <td class="whitespace-nowrap px-1 py-1">{{ p.RecProduct }}</td>
+              </tr>
+              {% endfor %}
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<ol class="list-decimal list-outside ml-8">
+{% assign items_grouped = site.data.rec-details %}
+{% for group in items_grouped %}
+  {% if thisGroup != group.test_slug %}
+  <li>{{ group.test_slug }}</li>
+  {% endif %}
+
+  {% assign thisGroup = group.test_slug %}
+{% endfor %}
+</ol>
+
+<ol class="list-decimal list-outside ml-8">
+{% assign items_grouped = site.data.rec-details | group_by: 'priority' | sort: 'priority' %}
+{% assign itemsSorted = items_grouped | sort: "name" %}
+
+{% for group in itemsSorted %}
+{% assign priority = group.name %}
+{% assign items_grouped = group.items %}
+
+{% capture itemlist %}
+{% for item in items_grouped %}
+  {% assign name = item.test_slug %}
+{% endfor %}
+{% endcapture %}
+<li>{{ priority }}<br>
+  {{ name }}<br>
+{{ itemlist }}</li>
+{% endfor %}
+</ol>
+
+
+
+
+
+
+<ol class=" list-outside ml-8">
+{% assign items = site.data.tests %}
+{% for item in items %}
+  <li>{{ item.lab_code }},{{ item.loinc }},{{ item.test_slug }}</li>
+{% endfor %}
+{% endcomment %}
+
+
+<div class="bg-skin-page shadow rounded-lg border-t-8 border-red-600 mb-5 px-4 py-5" id="Tests">
+
+  <div class="text-xl font-bold text-skin-header mr-2">Test Recommendations</div>
+
+  <div class="mt-4 flex flex-col mb-96">
+    <div class="-my-2 -mx-4 overflow-x-auto sm:-mx-6 lg:-mx-8  mb-96">
+      <div class="inline-block min-w-full py-2 align-middle md:px-6 lg:px-8">
+        <div class="overflow-hidden">
+          <table class="min-w-full divide-y divide-gray-300">
+            <thead class="bg-gray-50">
+              <tr><td colspan="9" class="font-bold text-lg py-2 pb-0">Recommendation Test Name</td></tr>
+              <tr>
+                <th scope="col" class="px-1 py-1 pl-6 font-normal text-left">RangeName</th>
+                <th scope="col" class="px-1 py-1 font-normal text-left">Gender</th>
+                <th scope="col" class="px-1 py-1 font-normal text-right">RLow</th>
+                <th scope="col" class="px-1 py-1 font-normal text-right">RHigh</th>
+                <th scope="col" class="px-1 py-1 font-normal text-right">ALow</th>
+                <th scope="col" class="px-1 py-1 font-normal text-right">AHigh</th>
+                <th scope="col" class="px-1 py-1 font-normal text-left">Product</th>
+                <th scope="col" class="px-1 py-1 font-normal text-left">Explaination</th>
+                <th scope="col" class="px-1 py-1 font-normal text-left">Priority</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-gray-200 bg-white">
+              {% assign items_grouped = site.data.rec-details | sort: 'test_slug' %}
+              {% for range in items_grouped %}
+                {% if thisGroup != range.test_slug %}
+                <tr><td id="r-{{ range.test_slug | slugify }}" colspan="9" class="border-t-4 font-bold text-lg py-2 pt-4">{{ range.test_slug }}</td></tr>
+                {% endif %}
+                <tr class="{% cycle '', 'bg-gray-50' %}">
+                  <td class="whitespace-nowrap px-1 py-1 pl-6">{{ range.range_name }}</td>
+                  <td class="whitespace-nowrap px-1 py-1">
+                    {% if range.is_male == null %}
+                    Both
+                    {% else %}
+                      {% if range.is_male %}
+                      Male
+                      {% else %}
+                      Female
+                      {% endif %}
+                    {% endif %}
+                  </td>
+                  {% if range.string_value %}
+                  <td class="whitespace-nowrap px-1 py-1 text-center" colspan="2">{{ range.string_value }}</td>
+                  {% else %}
+                  <td class="whitespace-nowrap px-1 py-1 text-right">{{ range.min_numeric_value }}</td>
+                  <td class="whitespace-nowrap px-1 py-1 text-right">{{ range.max_numeric_value }}</td>
+                  {% endif %}
+                  <td class="whitespace-nowrap px-1 py-1 text-right">{{ range.min_age }}</td>
+                  <td class="whitespace-nowrap px-1 py-1 text-right">{{ range.max_age }}</td>
+                  <td class="whitespace-nowrap px-1 py-1">
+                    {% if range.product_id == null %}
+                    {% else %}
+                    {{ range.product_id }}
+                    {% endif %}
+                  </td>
+                  <td class="whitespace-nowrap px-1 py-1">{{ range.description | truncate: 50 }}</td>
+                  <td class="whitespace-nowrap px-1 py-1 pl-6">{{ range.priority }}</td>
+                </tr>
+              {% assign thisGroup = range.test_slug %}
+            {% endfor %}
+
+
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
