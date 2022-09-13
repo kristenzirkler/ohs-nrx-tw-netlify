@@ -175,8 +175,10 @@ title: "System Data: Recommedation Rules"
                 <th scope="col" class="px-1 py-1 font-normal text-left">Gender</th>
                 <th scope="col" class="px-1 py-1 font-normal text-right">RLow</th>
                 <th scope="col" class="px-1 py-1 font-normal text-right">RHigh</th>
+                  {% comment %}
                 <th scope="col" class="px-1 py-1 font-normal text-right">ALow</th>
                 <th scope="col" class="px-1 py-1 font-normal text-right">AHigh</th>
+                  {% endcomment %}
                 <th scope="col" class="px-1 py-1 font-normal text-left">Product</th>
                 <th scope="col" class="px-1 py-1 font-normal text-left">Explaination</th>
                 <th scope="col" class="px-1 py-1 font-normal text-left">Priority</th>
@@ -209,18 +211,21 @@ title: "System Data: Recommedation Rules"
                       {% endif %}
                     {% endif %}
                   </td>
-                  {% if range.string_value %}
+                  {% if range.string_value != '' %}
                   <td class="whitespace-nowrap px-1 py-1 text-center" colspan="2">{{ range.string_value }}</td>
                   {% else %}
                   <td class="whitespace-nowrap px-1 py-1 text-right">{{ range.min_numeric_value }}</td>
                   <td class="whitespace-nowrap px-1 py-1 text-right">{{ range.max_numeric_value }}</td>
                   {% endif %}
+                  {% comment %}
                   <td class="whitespace-nowrap px-1 py-1 text-right">{{ range.min_age }}</td>
                   <td class="whitespace-nowrap px-1 py-1 text-right">{{ range.max_age }}</td>
+                  {% endcomment %}
                   <td class="whitespace-nowrap px-1 py-1">
-                    {% if range.product_id == null %}
-                    {% else %}
+                    {% if range.product_id != '' and range.product_id != 'null' and range.product_id != null %}
                     {{ range.product_id }} ({{ range.product_code }})
+                    {% else %}
+                    &nbsp;
                     {% endif %}
                   </td>
                   <td class="whitespace-nowrap px-1 py-1">{{ range.description | truncate: 25 }}</td>
