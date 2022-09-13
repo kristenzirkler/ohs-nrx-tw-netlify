@@ -9,8 +9,7 @@ title: "System Data: Questions & Answers"
   <p>Data will be displayed from SYSTEM DATA for review purposes. Administration for these items will be added after launch.</p>
 </div>
 
-<div class="bg-skin-page shadow rounded-lg mb-5 px-4 py-5" id="Bundles">
-  {% assign items_sorted = site.data.questions | sort_by: 'Name' %}
+<div class="bg-skin-page shadow rounded-lg mb-5 px-4 py-5">
   <div class="mt-4 flex flex-col">
     <div class="-my-2 -mx-4 overflow-x-auto sm:-mx-6 lg:-mx-8">
       <div class="inline-block min-w-full py-2 align-middle md:px-6 lg:px-8">
@@ -27,18 +26,20 @@ title: "System Data: Questions & Answers"
               </tr>
             </thead>
             <tbody class="divide-y divide-gray-200 bg-white">
+              {% assign items_sorted = site.data.questions | sort_by: 'sort' %}
               {% for question in items_sorted %}
                 <tr>
-                  <td colspan="2" id="r-{{ name | slugify }}" class="border-t-4 font-bold text-lg py-2 px-3">{{ question.Sort }}. {{ question.Name }}{% if question.Subtext %}
-                    <div class="text-gray-400 text-xs font-normal">{{ question.Subtext }}</div>
+                  <td colspan="2" id="r-{{ name | slugify }}" class="border-t-4 font-bold text-lg py-2 px-3">{{ question.sort }}. {{ question.name }}{% if question.subtext %}
+                    <div class="text-gray-400 text-xs font-normal">{{ question.subtext }}</div>
                   {% endif %}</td>
-                  <td class="border-t-4 px-3 py-2 text-gray-400 text-right">{{ question.Type }}</td>
+                  <td class="border-t-4 px-3 py-2 text-gray-400 text-right">{{ question.type }}</td>
                 </tr>
-                {% assign items_grouped = question.Answers | split: ',' %}
-                {% for item in items_grouped %}
+
+                {% assign items = site.data.answers | where: 'question_id', question.id | sort_by: 'sort' %}
+                {% for item in items %}
                 <tr class="{% cycle '', 'bg-gray-50' %}">
                   <td class="whitespace-nowrap px-3 py-1 w-4">&nbsp;</td>
-                  <td class="whitespace-nowrap px-3 py-1" colspan="2">{{ item }}</td>
+                  <td class="whitespace-nowrap px-3 py-1" colspan="2">{{ item.name }}</td>
                 </tr>
                 {% endfor %}
               {% endfor %}

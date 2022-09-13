@@ -1,0 +1,308 @@
+[
+ {
+   "id": 1,
+   "name": "Why are you interested in knowing your exact nutrient needs?",
+   "gender": "B",
+   "type": "Select Multiple",
+   "columns": 1,
+   "subtext": "",
+   "sort": 1
+ },
+ {
+   "id": 2,
+   "name": "Do you follow any of the following eating plans?",
+   "gender": "B",
+   "type": "Select Multiple",
+   "columns": 3,
+   "subtext": "",
+   "sort": 2
+ },
+ {
+   "id": 3,
+   "name": "Are you pregnant, trying, or currently breastfeeding?",
+   "gender": "F",
+   "type": "Select Single",
+   "columns": 2,
+   "subtext": "",
+   "sort": 3
+ },
+ {
+   "id": 4,
+   "name": "Do you have any allergies or do you try to avoid any of the following?",
+   "gender": "B",
+   "type": "Select Multiple",
+   "columns": 4,
+   "subtext": "",
+   "sort": 4
+ },
+ {
+   "id": 5,
+   "name": "How’s your fruit and vegetable daily intake (fist-size servings)?",
+   "gender": "B",
+   "type": "Select Single",
+   "columns": 3,
+   "subtext": "",
+   "sort": 5
+ },
+ {
+   "id": 6,
+   "name": "How many (fist-size) servings of calcium-rich foods do you typically eat in a day?",
+   "gender": "B",
+   "type": "Select Single",
+   "columns": 2,
+   "subtext": "eg. dairy products, beans, green leafy vegetables, broccoli, almonds, etc.",
+   "sort": 6
+ },
+ {
+   "id": 7,
+   "name": "How many servings (approximately 3oz) of lean protein do you usually eat daily?",
+   "gender": "B",
+   "type": "Select Single",
+   "columns": 2,
+   "subtext": "eg. fish, chicken, turkey, plant-based protein, etc.",
+   "sort": 7
+ },
+ {
+   "id": 8,
+   "name": "On average, how many alcoholic beverages do you have in a week?",
+   "gender": "B",
+   "type": "Select Single",
+   "columns": 3,
+   "subtext": "",
+   "sort": 8
+ },
+ {
+   "id": 9,
+   "name": "Do you smoke or encounter second-hand smoke weekly?",
+   "gender": "B",
+   "type": "Select Single",
+   "columns": 2,
+   "subtext": "",
+   "sort": 9
+ },
+ {
+   "id": 10,
+   "name": "Do you get less than 20 minutes of daily sun exposure?",
+   "gender": "B",
+   "type": "Select Single",
+   "columns": 2,
+   "subtext": "",
+   "sort": 10
+ },
+ {
+   "id": 11,
+   "name": "How are your hair, skin, and nails?",
+   "gender": "B",
+   "type": "Select Single",
+   "columns": 2,
+   "subtext": "",
+   "sort": 11
+ },
+ {
+   "id": 12,
+   "name": "How much time do you spend looking at screens?",
+   "gender": "B",
+   "type": "Select Single",
+   "columns": 3,
+   "subtext": "",
+   "sort": 12
+ },
+ {
+   "id": 13,
+   "name": "Do you have any of the following skin issues?",
+   "gender": "B",
+   "type": "Select Multiple",
+   "columns": 4,
+   "subtext": "",
+   "sort": 13
+ },
+ {
+   "id": 14,
+   "name": "Do you experience any of the following?",
+   "gender": "B",
+   "type": "Select Multiple",
+   "columns": 1,
+   "subtext": "",
+   "sort": 14
+ },
+ {
+   "id": 15,
+   "name": "On average, how are your energy levels?",
+   "gender": "B",
+   "type": "Select Single",
+   "columns": 1,
+   "subtext": "",
+   "sort": 15
+ },
+ {
+   "id": 16,
+   "name": "How’s your mood?",
+   "gender": "B",
+   "type": "Select Single",
+   "columns": 1,
+   "subtext": "",
+   "sort": 16
+ },
+ {
+   "id": 17,
+   "name": "Are you experiencing a lot of stress?",
+   "gender": "B",
+   "type": "Select Single",
+   "columns": 2,
+   "subtext": "",
+   "sort": 17
+ },
+ {
+   "id": 18,
+   "name": "How do you sleep?",
+   "gender": "B",
+   "type": "Select Multiple",
+   "columns": 1,
+   "subtext": "",
+   "sort": 18
+ },
+ {
+   "id": 19,
+   "name": "Do you suffer from PMS?",
+   "gender": "F",
+   "type": "Select Single",
+   "columns": 2,
+   "subtext": "eg. bloating, breast tenderness, irritability",
+   "sort": 19
+ },
+ {
+   "id": 20,
+   "name": "Has anyone in your immediate family had any of these conditions?",
+   "gender": "B",
+   "type": "Select Multiple",
+   "columns": 4,
+   "subtext": "",
+   "sort": 20
+ },
+ {
+   "id": 21,
+   "name": "Have you taken antibiotics within the last year?",
+   "gender": "B",
+   "type": "Select Single",
+   "columns": 2,
+   "subtext": "",
+   "sort": 21
+ },
+ {
+   "id": 22,
+   "name": "Do you have any digestive issues?",
+   "gender": "B",
+   "type": "Select Multiple",
+   "columns": 3,
+   "subtext": "",
+   "sort": 22
+ },
+ {
+   "id": 23,
+   "name": "Do you struggle with any of these?",
+   "gender": "B",
+   "type": "Select Multiple",
+   "columns": 3,
+   "subtext": "",
+   "sort": 23
+ },
+ {
+   "id": 24,
+   "name": "Which best describes your fitness or activity level?",
+   "gender": "B",
+   "type": "Select Single",
+   "columns": 1,
+   "subtext": "",
+   "sort": 24
+ },
+ {
+   "id": 25,
+   "name": "How often do you do cardio each week?",
+   "gender": "B",
+   "type": "Select Single",
+   "columns": 3,
+   "subtext": "",
+   "sort": 25
+ },
+ {
+   "id": 26,
+   "name": "Are you trying to increase strength & muscle size?",
+   "gender": "B",
+   "type": "Select Single",
+   "columns": 2,
+   "subtext": "",
+   "sort": 26
+ },
+ {
+   "id": 27,
+   "name": "Do you experience joint or tendon pain?",
+   "gender": "B",
+   "type": "Select Single",
+   "columns": 1,
+   "subtext": "",
+   "sort": 27
+ },
+ {
+   "id": 28,
+   "name": "Do you have uterine fibroids or endometriosis?",
+   "gender": "F",
+   "type": "Select Single",
+   "columns": 1,
+   "subtext": "",
+   "sort": 28
+ },
+ {
+   "id": 29,
+   "name": "Do you have any of the following conditions related to your eye, nose, and gum health?",
+   "gender": "B",
+   "type": "Select Multiple",
+   "columns": 3,
+   "subtext": "",
+   "sort": 29
+ },
+ {
+   "id": 30,
+   "name": "How often do you feel sick?",
+   "gender": "B",
+   "type": "Select Single",
+   "columns": 2,
+   "subtext": "",
+   "sort": 30
+ },
+ {
+   "id": 31,
+   "name": "Do you have any of the following conditions related to heart health?",
+   "gender": "B",
+   "type": "Select Multiple",
+   "columns": 2,
+   "subtext": "",
+   "sort": 31
+ },
+ {
+   "id": 32,
+   "name": "Do you have any conditions related to your kidney and bladder health?",
+   "gender": "B",
+   "type": "Select Multiple",
+   "columns": 2,
+   "subtext": "",
+   "sort": 32
+ },
+ {
+   "id": 33,
+   "name": "Do you have any conditions related to blood sugar and endocrine health?",
+   "gender": "B",
+   "type": "Select Multiple",
+   "columns": 2,
+   "subtext": "",
+   "sort": 33
+ },
+ {
+   "id": 34,
+   "name": "Do you have any of these conditions?",
+   "gender": "B",
+   "type": "Select Multiple",
+   "columns": 2,
+   "subtext": "",
+   "sort": 34
+ }
+]

@@ -71,7 +71,7 @@ title: "System Data: Recommedation Rules"
 {% assign items = site.data.tests %}
 {% for item in items %}
   <li>{{ item.quest_lab_code }},{{ item.name }},{{ item.loinc }},{{ item.test_slug }}</li>
-  {% assign items = site.data.rec-rules-new | where: 'test_slug', item.test_slug %}
+  {% assign items = site.data.recommendation-rules | where: 'test_slug', item.test_slug %}
   {% for item in items %}
   <li>{{ item.range_name }}</li>
   {% endfor %}
@@ -118,7 +118,7 @@ title: "System Data: Recommedation Rules"
               {% endif %}
               {% endif %}
               {% endfor %}
-              {% assign priorities = site.data.rec-rules-new | sort: 'priority' %}
+              {% assign priorities = site.data.recommendation-rules | sort: 'priority' %}
 
               {% for p in priorities %}
               {% if p.priority != '' and p.priority != 'null' and p.priority != null %}
@@ -196,7 +196,7 @@ title: "System Data: Recommedation Rules"
                   </div>
                 </td>
               </tr>
-              {% assign items = site.data.rec-rules-new | where: 'test_slug', item.test_slug %}
+              {% assign items = site.data.recommendation-rules | where: 'test_slug', item.test_slug %}
               {% for range in items %}
               <tr class="{% cycle '', 'bg-gray-50' %}">
                   <td class="whitespace-nowrap px-1 py-1 pl-6">{{ range.range_name }}</td>
