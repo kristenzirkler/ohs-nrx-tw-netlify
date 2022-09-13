@@ -12,153 +12,18 @@ title: "System Data: Recommedation Rules"
 
 <div class="bg-skin-page shadow rounded-lg mb-5">
   <nav class="relative z-0 flex divide-x divide-gray-200" aria-label="Tabs">
-    <a href="#Priority" class="text-gray-500 rounded-l-lg hover:text-gray-700 group relative min-w-0 flex-1 overflow-hidden bg-white py-4 px-4 text-sm font-medium text-center hover:bg-gray-50 focus:z-10">
-      <span>Priority</span>
+
+    <a href="#Tests" class="text-gray-500 hover:text-gray-700 rounded-l-lg group relative min-w-0 flex-1 overflow-hidden bg-white py-4 px-4 text-sm font-medium text-center hover:bg-gray-50 focus:z-10">
+      <span>Test Recommendations</span>
       <span aria-hidden="true" class="bg-transparent absolute inset-x-0 bottom-0 h-0.5"></span>
     </a>
-
-    <a href="#Tests" class="text-gray-500 hover:text-gray-700 rounded-r-lg group relative min-w-0 flex-1 overflow-hidden bg-white py-4 px-4 text-sm font-medium text-center hover:bg-gray-50 focus:z-10">
-      <span>Test Recommendations</span>
+    <a href="#Priority" class="text-gray-500 rounded-r-lg hover:text-gray-700 group relative min-w-0 flex-1 overflow-hidden bg-white py-4 px-4 text-sm font-medium text-center hover:bg-gray-50 focus:z-10">
+      <span>Priority</span>
       <span aria-hidden="true" class="bg-transparent absolute inset-x-0 bottom-0 h-0.5"></span>
     </a>
   </nav>
 </div>
 
-{% comment %}
-<ol class="list-decimal list-outside ml-8">
-{% assign items_grouped = site.data.rec-details %}
-{% for group in items_grouped %}
-  {% if thisGroup != group.test_slug %}
-  <li>{{ group.test_slug }}</li>
-  {% endif %}
-
-  {% assign thisGroup = group.test_slug %}
-{% endfor %}
-</ol>
-
-<ol class="list-decimal list-outside ml-8">
-{% assign items_grouped = site.data.rec-details | group_by: 'priority' | sort: 'priority' %}
-{% assign itemsSorted = items_grouped | sort: "name" %}
-
-{% for group in itemsSorted %}
-{% assign priority = group.name %}
-{% assign items_grouped = group.items %}
-
-{% capture itemlist %}
-{% for item in items_grouped %}
-  {% assign name = item.test_slug %}
-{% endfor %}
-{% endcapture %}
-<li>{{ priority }}<br>
-  {{ name }}<br>
-{{ itemlist }}</li>
-{% endfor %}
-</ol>
-
-
-
-
-
-
-<ol class=" list-outside ml-8">
-{% assign items = site.data.tests %}
-{% for item in items %}
-  <li>{{ item.quest_lab_code }},{{ item.loinc }},{{ item.test_slug }}</li>
-{% endfor %}
-
-
-<ol class=" list-outside ml-8">
-{% assign items = site.data.tests %}
-{% for item in items %}
-  <li>{{ item.quest_lab_code }},{{ item.name }},{{ item.loinc }},{{ item.test_slug }}</li>
-  {% assign items = site.data.recommendation-rules | where: 'test_slug', item.test_slug %}
-  {% for item in items %}
-  <li>{{ item.range_name }}</li>
-  {% endfor %}
-{% endfor %}
-</ol>
-
-
-{% endcomment %}
-
-<div class="bg-skin-page shadow rounded-lg mb-5 px-4 py-5" id="Priority">
-  <div class="text-xl font-bold text-skin-header mr-2">Recommendation Priority</div>
-
-  <div class="mt-4 flex flex-col">
-    <div class="-my-2 -mx-4 overflow-x-auto sm:-mx-6 lg:-mx-8">
-      <div class="inline-block min-w-full py-2 align-middle md:px-6 lg:px-8">
-        <div class="overflow-hidden">
-          <table class="min-w-full divide-y divide-gray-300">
-            <thead class="bg-gray-50">
-              <tr>
-                <th scope="col" class="px-1 py-2 text-left">&nbsp;</th>
-                <th scope="col" class="px-1 py-2 text-left">Type</th>
-                <th scope="col" class="px-1 py-2 text-left">Name</th>
-                <th scope="col" class="px-1 py-2 text-left">Range/Question</th>
-                <th scope="col" class="px-1 py-2 text-left">Gender</th>
-                <th scope="col" class="px-1 py-2 text-left">Product</th>
-              </tr>
-            </thead>
-            <tbody class="divide-y divide-gray-200 bg-white">
-              {% assign priorities = site.data.answers | sort: 'priority' %}
-
-              {% for p in priorities %}
-              {% if p.priority != '' and p.priority != 'null' and p.priority != null %}
-              {% if p.product_id != '' and p.product_id != 'null' and p.product_id != null %}
-              <tr class="{% cycle '', 'bg-gray-50' %}">
-                <td class="px-1 py-1">{{ p.priority }}</td>
-                <td class="px-1 py-1 text-gray-400">Answer</td>
-                <td class="px-1 py-1">
-                  {{ p.name }}
-                </td>
-                <td class="px-1 py-1">{{ p.question_id }}</td>
-                <td class="px-1 py-1">&nbsp;</td>
-                <td class="px-1 py-1">{{ p.product_id }} ({{ p.product_code }})</td>
-              </tr>
-              {% endif %}
-              {% endif %}
-              {% endfor %}
-              {% assign priorities = site.data.recommendation-rules | sort: 'priority' %}
-
-              {% for p in priorities %}
-              {% if p.priority != '' and p.priority != 'null' and p.priority != null %}
-              {% if p.product_id != '' and p.product_id != 'null' and p.product_id != null %}
-              <tr class="{% cycle '', 'bg-gray-50' %}">
-                <td class="px-1 py-1">{{ p.priority }}</td>
-                <td class="px-1 py-1 text-gray-400">BW</td>
-                <td class="px-1 py-1">
-                  {{ p.test_slug }}
-                  {% if p.RecType == 'bloodwork' %}
-                  <a href="#r-{{ p.RecName | slugify }}" class="text-skin-link hover:text-skin-link/80 hover:underline">{{ p.RecName }}</a>
-                  {% else %}
-                  {{ p.RecName }}
-                  {% endif %}
-                </td>
-                <td class="px-1 py-1">{{ p.range_name }}</td>
-                <td class="px-1 py-1">
-                  {% if p.is_male == null %}
-                  &nbsp;
-                  {% else %}
-                    {% if p.is_male %}
-                    Male
-                    {% else %}
-                    Female
-                    {% endif %}
-                  {% endif %}
-                </td>
-                <td class="px-1 py-1">{{ p.product_id }} ({{ p.product_code }})</td>
-              </tr>
-              {% endif %}
-              {% endif %}
-              {% endfor %}
-            </tbody>
-          </table>
-        </div>
-      </div>
-    </div>
-  </div>
-
-</div>
 <div class="bg-skin-page shadow rounded-lg border-t-8 border-red-600 mb-5 px-4 py-5" id="Tests">
 
   <div class="text-xl font-bold text-skin-header mr-2">Test Recommendations</div>
@@ -241,3 +106,139 @@ title: "System Data: Recommedation Rules"
     </div>
   </div>
 </div>
+
+
+<div class="bg-skin-page shadow rounded-lg mb-5 px-4 py-5" id="Priority">
+  <div class="text-xl font-bold text-skin-header mr-2">Recommendation Priority</div>
+
+  <div class="mt-4 flex flex-col">
+    <div class="-my-2 -mx-4 overflow-x-auto sm:-mx-6 lg:-mx-8">
+      <div class="inline-block min-w-full py-2 align-middle md:px-6 lg:px-8">
+        <div class="overflow-hidden">
+          <table class="min-w-full divide-y divide-gray-300">
+            <thead class="bg-gray-50">
+              <tr>
+                <th scope="col" class="px-1 py-2 text-left">&nbsp;</th>
+                <th scope="col" class="px-1 py-2 text-left">Type</th>
+                <th scope="col" class="px-1 py-2 text-left">Name</th>
+                <th scope="col" class="px-1 py-2 text-left">Range/Question</th>
+                <th scope="col" class="px-1 py-2 text-left">Gender</th>
+                <th scope="col" class="px-1 py-2 text-left">Product</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-gray-200 bg-white">
+              {% assign priorities = site.data.answers | sort: 'priority' %}
+
+              {% for p in priorities %}
+              {% if p.priority != '' and p.priority != 'null' and p.priority != null %}
+              {% if p.product_id != '' and p.product_id != 'null' and p.product_id != null %}
+              <tr class="{% cycle '', 'bg-gray-50' %}">
+                <td class="px-1 py-1">{{ p.priority }}</td>
+                <td class="px-1 py-1 text-gray-400">Answer</td>
+                <td class="px-1 py-1">
+                  {{ p.name }}
+                </td>
+                <td class="px-1 py-1">{{ p.question_id }}</td>
+                <td class="px-1 py-1">&nbsp;</td>
+                <td class="px-1 py-1">{{ p.product_id }} ({{ p.product_code }})</td>
+              </tr>
+              {% endif %}
+              {% endif %}
+              {% endfor %}
+              {% assign priorities = site.data.recommendation-rules | sort: 'priority' %}
+
+              {% for p in priorities %}
+              {% if p.priority != '' and p.priority != 'null' and p.priority != null %}
+              {% if p.product_id != '' and p.product_id != 'null' and p.product_id != null %}
+              <tr class="{% cycle '', 'bg-gray-50' %}">
+                <td class="px-1 py-1">{{ p.priority }}</td>
+                <td class="px-1 py-1 text-gray-400">BW</td>
+                <td class="px-1 py-1">
+                  {{ p.test_slug }}
+                  {% if p.RecType == 'bloodwork' %}
+                  <a href="#r-{{ p.RecName | slugify }}" class="text-skin-link hover:text-skin-link/80 hover:underline">{{ p.RecName }}</a>
+                  {% else %}
+                  {{ p.RecName }}
+                  {% endif %}
+                </td>
+                <td class="px-1 py-1">{{ p.range_name }}</td>
+                <td class="px-1 py-1">
+                  {% if p.is_male == null %}
+                  &nbsp;
+                  {% else %}
+                    {% if p.is_male %}
+                    Male
+                    {% else %}
+                    Female
+                    {% endif %}
+                  {% endif %}
+                </td>
+                <td class="px-1 py-1">{{ p.product_id }} ({{ p.product_code }})</td>
+              </tr>
+              {% endif %}
+              {% endif %}
+              {% endfor %}
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+{% comment %}
+<ol class="list-decimal list-outside ml-8">
+{% assign items_grouped = site.data.rec-details %}
+{% for group in items_grouped %}
+  {% if thisGroup != group.test_slug %}
+  <li>{{ group.test_slug }}</li>
+  {% endif %}
+
+  {% assign thisGroup = group.test_slug %}
+{% endfor %}
+</ol>
+
+<ol class="list-decimal list-outside ml-8">
+{% assign items_grouped = site.data.rec-details | group_by: 'priority' | sort: 'priority' %}
+{% assign itemsSorted = items_grouped | sort: "name" %}
+
+{% for group in itemsSorted %}
+{% assign priority = group.name %}
+{% assign items_grouped = group.items %}
+
+{% capture itemlist %}
+{% for item in items_grouped %}
+  {% assign name = item.test_slug %}
+{% endfor %}
+{% endcapture %}
+<li>{{ priority }}<br>
+  {{ name }}<br>
+{{ itemlist }}</li>
+{% endfor %}
+</ol>
+
+
+
+
+
+
+<ol class=" list-outside ml-8">
+{% assign items = site.data.tests %}
+{% for item in items %}
+  <li>{{ item.quest_lab_code }},{{ item.loinc }},{{ item.test_slug }}</li>
+{% endfor %}
+
+
+<ol class=" list-outside ml-8">
+{% assign items = site.data.tests %}
+{% for item in items %}
+  <li>{{ item.quest_lab_code }},{{ item.name }},{{ item.loinc }},{{ item.test_slug }}</li>
+  {% assign items = site.data.recommendation-rules | where: 'test_slug', item.test_slug %}
+  {% for item in items %}
+  <li>{{ item.range_name }}</li>
+  {% endfor %}
+{% endfor %}
+</ol>
+
+
+{% endcomment %}
