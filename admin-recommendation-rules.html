@@ -24,6 +24,62 @@ title: "System Data: Recommedation Rules"
   </nav>
 </div>
 
+{% comment %}
+<ol class="list-decimal list-outside ml-8">
+{% assign items_grouped = site.data.rec-details %}
+{% for group in items_grouped %}
+  {% if thisGroup != group.test_slug %}
+  <li>{{ group.test_slug }}</li>
+  {% endif %}
+
+  {% assign thisGroup = group.test_slug %}
+{% endfor %}
+</ol>
+
+<ol class="list-decimal list-outside ml-8">
+{% assign items_grouped = site.data.rec-details | group_by: 'priority' | sort: 'priority' %}
+{% assign itemsSorted = items_grouped | sort: "name" %}
+
+{% for group in itemsSorted %}
+{% assign priority = group.name %}
+{% assign items_grouped = group.items %}
+
+{% capture itemlist %}
+{% for item in items_grouped %}
+  {% assign name = item.test_slug %}
+{% endfor %}
+{% endcapture %}
+<li>{{ priority }}<br>
+  {{ name }}<br>
+{{ itemlist }}</li>
+{% endfor %}
+</ol>
+
+
+
+
+
+
+<ol class=" list-outside ml-8">
+{% assign items = site.data.tests %}
+{% for item in items %}
+  <li>{{ item.quest_lab_code }},{{ item.loinc }},{{ item.test_slug }}</li>
+{% endfor %}
+
+
+<ol class=" list-outside ml-8">
+{% assign items = site.data.tests %}
+{% for item in items %}
+  <li>{{ item.quest_lab_code }},{{ item.name }},{{ item.loinc }},{{ item.test_slug }}</li>
+  {% assign items = site.data.rec-rules-new | where: 'test_slug', item.test_slug %}
+  {% for item in items %}
+  <li>{{ item.range_name }}</li>
+  {% endfor %}
+{% endfor %}
+</ol>
+
+
+{% endcomment %}
 
 <div class="bg-skin-page shadow rounded-lg mb-5 px-4 py-5" id="Priority">
   <div class="text-xl font-bold text-skin-header mr-2">Recommendation Priority</div>
@@ -39,24 +95,61 @@ title: "System Data: Recommedation Rules"
                 <th scope="col" class="px-1 py-2 text-left">Type</th>
                 <th scope="col" class="px-1 py-2 text-left">Name</th>
                 <th scope="col" class="px-1 py-2 text-left">Range/Question</th>
+                <th scope="col" class="px-1 py-2 text-left">Gender</th>
                 <th scope="col" class="px-1 py-2 text-left">Product</th>
               </tr>
             </thead>
             <tbody class="divide-y divide-gray-200 bg-white">
-              {% for p in site.data.rec-priority %}
+              {% assign priorities = site.data.answers | sort: 'priority' %}
+
+              {% for p in priorities %}
+              {% if p.priority != '' and p.priority != 'null' and p.priority != null %}
+              {% if p.product_id != '' and p.product_id != 'null' and p.product_id != null %}
               <tr class="{% cycle '', 'bg-gray-50' %}">
-                <td class="whitespace-nowrap px-1 py-1">{{ p.Priority }}</td>
-                <td class="whitespace-nowrap px-1 py-1 text-gray-400">{% if p.RecType == 'bloodwork' %}BW{% else %}QA{% endif %}</td>
-                <td class="whitespace-nowrap px-1 py-1">
+                <td class="px-1 py-1">{{ p.priority }}</td>
+                <td class="px-1 py-1 text-gray-400">Answer</td>
+                <td class="px-1 py-1">
+                  {{ p.name }}
+                </td>
+                <td class="px-1 py-1">{{ p.question_id }}</td>
+                <td class="px-1 py-1">&nbsp;</td>
+                <td class="px-1 py-1">{{ p.product_id }} ({{ p.product_code }})</td>
+              </tr>
+              {% endif %}
+              {% endif %}
+              {% endfor %}
+              {% assign priorities = site.data.rec-rules-new | sort: 'priority' %}
+
+              {% for p in priorities %}
+              {% if p.priority != '' and p.priority != 'null' and p.priority != null %}
+              {% if p.product_id != '' and p.product_id != 'null' and p.product_id != null %}
+              <tr class="{% cycle '', 'bg-gray-50' %}">
+                <td class="px-1 py-1">{{ p.priority }}</td>
+                <td class="px-1 py-1 text-gray-400">BW</td>
+                <td class="px-1 py-1">
+                  {{ p.test_slug }}
                   {% if p.RecType == 'bloodwork' %}
                   <a href="#r-{{ p.RecName | slugify }}" class="text-skin-link hover:text-skin-link/80 hover:underline">{{ p.RecName }}</a>
                   {% else %}
                   {{ p.RecName }}
                   {% endif %}
                 </td>
-                <td class="whitespace-nowrap px-1 py-1">{{ p.RecRange }}</td>
-                <td class="whitespace-nowrap px-1 py-1">{{ p.RecProduct }}</td>
+                <td class="px-1 py-1">{{ p.range_name }}</td>
+                <td class="px-1 py-1">
+                  {% if p.is_male == null %}
+                  &nbsp;
+                  {% else %}
+                    {% if p.is_male %}
+                    Male
+                    {% else %}
+                    Female
+                    {% endif %}
+                  {% endif %}
+                </td>
+                <td class="px-1 py-1">{{ p.product_id }} ({{ p.product_code }})</td>
               </tr>
+              {% endif %}
+              {% endif %}
               {% endfor %}
             </tbody>
           </table>
@@ -66,8 +159,6 @@ title: "System Data: Recommedation Rules"
   </div>
 
 </div>
-
-
 <div class="bg-skin-page shadow rounded-lg border-t-8 border-red-600 mb-5 px-4 py-5" id="Tests">
 
   <div class="text-xl font-bold text-skin-header mr-2">Test Recommendations</div>
@@ -78,7 +169,7 @@ title: "System Data: Recommedation Rules"
         <div class="overflow-hidden">
           <table class="min-w-full divide-y divide-gray-300">
             <thead class="bg-gray-50">
-              <tr><td colspan="8" class="font-bold text-lg py-2 pb-0">Recommendation Test Name</td></tr>
+              <tr><td colspan="9" class="font-bold text-lg py-2 pb-0">Recommendation Test Name</td></tr>
               <tr>
                 <th scope="col" class="px-1 py-1 pl-6 font-normal text-left">RangeName</th>
                 <th scope="col" class="px-1 py-1 font-normal text-left">Gender</th>
@@ -88,29 +179,55 @@ title: "System Data: Recommedation Rules"
                 <th scope="col" class="px-1 py-1 font-normal text-right">AHigh</th>
                 <th scope="col" class="px-1 py-1 font-normal text-left">Product</th>
                 <th scope="col" class="px-1 py-1 font-normal text-left">Explaination</th>
+                <th scope="col" class="px-1 py-1 font-normal text-left">Priority</th>
               </tr>
             </thead>
             <tbody class="divide-y divide-gray-200 bg-white">
-              {% assign items_grouped = site.data.rec-details | group_by: 'RecTestName' %}
-              {% for group in items_grouped %}
-                {% assign name = group.name %}
-                {% assign items_grouped = group.items %}
-                {% capture itemlist %}
-                {% for item in items_grouped %}
-                <tr class="{% cycle '', 'bg-gray-50' %}">
-                  <td class="whitespace-nowrap px-1 py-1 pl-6">{{ item.RecRangeName }}</td>
-                  <td class="whitespace-nowrap px-1 py-1">{{ item.Gender }}</td>
-                  <td class="whitespace-nowrap px-1 py-1 text-right">{{ item.RLow }}</td>
-                  <td class="whitespace-nowrap px-1 py-1 text-right">{{ item.RHigh }}</td>
-                  <td class="whitespace-nowrap px-1 py-1 text-right">{{ item.AgeLow }}</td>
-                  <td class="whitespace-nowrap px-1 py-1 text-right">{{ item.AgeHigh }}</td>
-                  <td class="whitespace-nowrap px-1 py-1">{{ item.RecProduct }}</td>
-                  <td class="whitespace-nowrap px-1 py-1">{{ item.Explaination | truncate: 25 }}</td>
+              {% assign items = site.data.tests %}
+              {% for item in items %}
+              {% if item.test_slug != '' %}
+              <tr>
+                <td colspan="9" class="border-t-4 font-bold text-lg py-2 pt-4">
+                  <div class="flex justify-between">
+                    <div class="">{{ item.name }} <span class="text-xs font-normal text-gray-400">{{ item.panel_name }}</span></div>
+                    <div class="">{{ item.loinc }} / {{ item.quest_test_code }}</div>
+                  </div>
+                </td>
+              </tr>
+              {% assign items = site.data.rec-rules-new | where: 'test_slug', item.test_slug %}
+              {% for range in items %}
+              <tr class="{% cycle '', 'bg-gray-50' %}">
+                  <td class="whitespace-nowrap px-1 py-1 pl-6">{{ range.range_name }}</td>
+                  <td class="whitespace-nowrap px-1 py-1">
+                    {% if range.is_male == null %}
+                    Both
+                    {% else %}
+                      {% if range.is_male %}
+                      Male
+                      {% else %}
+                      Female
+                      {% endif %}
+                    {% endif %}
+                  </td>
+                  {% if range.string_value %}
+                  <td class="whitespace-nowrap px-1 py-1 text-center" colspan="2">{{ range.string_value }}</td>
+                  {% else %}
+                  <td class="whitespace-nowrap px-1 py-1 text-right">{{ range.min_numeric_value }}</td>
+                  <td class="whitespace-nowrap px-1 py-1 text-right">{{ range.max_numeric_value }}</td>
+                  {% endif %}
+                  <td class="whitespace-nowrap px-1 py-1 text-right">{{ range.min_age }}</td>
+                  <td class="whitespace-nowrap px-1 py-1 text-right">{{ range.max_age }}</td>
+                  <td class="whitespace-nowrap px-1 py-1">
+                    {% if range.product_id == null %}
+                    {% else %}
+                    {{ range.product_id }} ({{ range.product_code }})
+                    {% endif %}
+                  </td>
+                  <td class="whitespace-nowrap px-1 py-1">{{ range.description | truncate: 25 }}</td>
+                  <td class="whitespace-nowrap px-1 py-1 pl-6">{{ range.priority }}</td>
                 </tr>
-                {% endfor %}
-                {% endcapture %}
-                <tr><td id="r-{{ name | slugify }}" colspan="8" class="border-t-4 font-bold text-lg py-2 pt-4">{{name}}</td></tr>
-                {{ itemlist }}
+              {% endfor %}
+              {% endif %}
               {% endfor %}
             </tbody>
           </table>

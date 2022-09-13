@@ -1,4 +1,4 @@
-Name,Answers,Sort,Type,Subtext
+name,answers,sort,type,subtext
 Why are you interested in knowing your exact nutrient needs?,"I want to improve my general health and wellness.,I’m concerned about my immune health.,I’m an athlete or competitor looking to improve my fitness.,I’ve had weight loss surgery.,I want to lose weight and feel energized.,I want to slow down the aging process.,I have a condition I’d like to improve.",1,Select Multiple,
 Do you follow any of the following eating plans?,"High Protein,Gluten Free,Intermittent Fasting,Ketogenic,Plant Based,Vegetarian,Vegan,Count Macronutrients,None",2,Select Multiple,
 "Are you pregnant, trying, or currently breastfeeding?","No,Yes",3,Toggle,

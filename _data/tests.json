@@ -1,464 +1,1070 @@
 [
-   {
-      "test_slug":"sex_hormone_binding_globulin",
-      "lab_code":"55188600",
-      "loinc":"13967-5",
-      "name":"SEX HORMONE BINDING GLOBULIN"
-   },
-   {
-      "test_slug":"testosterone_free",
-      "lab_code":"85990231",
-      "loinc":"2991-8",
-      "name":"TESTOSTERONE, FREE"
-   },
-   {
-      "test_slug":"testosterone_bioavailable",
-      "lab_code":"85990232",
-      "loinc":"2990-0",
-      "name":"TESTOSTERONE, BIOAVAILABLE"
-   },
-   {
-      "test_slug":"testosterone_total_ms",
-      "lab_code":"85996653",
-      "loinc":"2986-8",
-      "name":"TESTOSTERONE, TOTAL"
-   },
-   {
-      "test_slug":"cholesterol_total",
-      "lab_code":"25003000",
-      "loinc":"2093-3",
-      "name":"CHOLESTEROL, TOTAL"
-   },
-   {
-      "test_slug":"hdl_cholesterol",
-      "lab_code":"85996653",
-      "loinc":"2986-8",
-      "name":"TESTOSTERONE, TOTAL"
-   },
-   {
-      "test_slug":"triglycerides",
-      "lab_code":"25002900",
-      "loinc":"2571-8",
-      "name":"TRIGLYCERIDES"
-   },
-   {
-      "test_slug":"ldl_cholesterol",
-      "lab_code":"25016900",
-      "loinc":"13457-7",
-      "name":"LDL-CHOLESTEROL"
-   },
-   {
-      "test_slug":"chol_hdlc_ratio",
-      "lab_code":"25017000",
-      "loinc":"9830-1",
-      "name":"CHOL/HDLC RATIO"
-   },
-   {
-      "test_slug":"non_hdl_cholesterol",
-      "lab_code":"25017210",
-      "loinc":"43396-1",
-      "name":"NON HDL CHOLESTEROL"
-   },
-   {
-      "test_slug":"c_reactive_protein_hs",
-      "lab_code":"45203715",
-      "loinc":"30522-7",
-      "name":"C - REACTIVE PROTEIN HS"
-   },
-   {
-      "test_slug":"glucose",
-      "lab_code":"25000000",
-      "loinc":"2345-7",
-      "name":"GLUCOSE"
-   },
-   {
-      "test_slug":"bun",
-      "lab_code":"25000100",
-      "loinc":"3094-0",
-      "name":"UREA NITROGEN (BUN)"
-   },
-   {
-      "test_slug":"creatinine",
-      "lab_code":"25000200",
-      "loinc":"2160-0",
-      "name":"CREATININE"
-   },
-   {
-      "test_slug":"egfr",
-      "lab_code":"86031867",
-      "loinc":"98979-8",
-      "name":"EGFR"
-   },
-   {
-      "test_slug":"bun_creatinine_ratio",
-      "lab_code":"25000300",
-      "loinc":"3097-3",
-      "name":"BUN/CREATININE RATIO"
-   },
-   {
-      "test_slug":"sodium",
-      "lab_code":"25000400",
-      "loinc":"2951-2",
-      "name":"SODIUM"
-   },
-   {
-      "test_slug":"potassium",
-      "lab_code":"25000500",
-      "loinc":"2823-3",
-      "name":"POTASSIUM"
-   },
-   {
-      "test_slug":"chloride",
-      "lab_code":"25000600",
-      "loinc":"2075-0",
-      "name":"CHLORIDE"
-   },
-   {
-      "test_slug":"carbon_dioxide",
-      "lab_code":"25000700",
-      "loinc":"2028-9",
-      "name":"CARBON DIOXIDE"
-   },
-   {
-      "test_slug":"calcium",
-      "lab_code":"25001000",
-      "loinc":"17861-6",
-      "name":"CALCIUM"
-   },
-   {
-      "test_slug":"protein_total",
-      "lab_code":"25001300",
-      "loinc":"2885-2",
-      "name":"PROTEIN, TOTAL"
-   },
-   {
-      "test_slug":"albumin",
-      "lab_code":"25001400",
-      "loinc":"1751-7",
-      "name":"ALBUMIN"
-   },
-   {
-      "test_slug":"globulin",
-      "lab_code":"25001500",
-      "loinc":"10834-0",
-      "name":"GLOBULIN"
-   },
-   {
-      "test_slug":"albumin_globulin_ratio",
-      "lab_code":"25001600",
-      "loinc":"1759-0",
-      "name":"ALBUMIN/GLOBULIN RATIO"
-   },
-   {
-      "test_slug":"bilirubin_total",
-      "lab_code":"50026400",
-      "loinc":"4548-4",
-      "name":"BILIRUBIN, TOTAL"
-   },
-   {
-      "test_slug":"alkaline_phosphatase",
-      "lab_code":"25002000",
-      "loinc":"6768-6",
-      "name":"ALKALINE PHOSPHATASE"
-   },
-   {
-      "test_slug":"ast",
-      "lab_code":"25002300",
-      "loinc":"1920-8",
-      "name":"AST"
-   },
-   {
-      "test_slug":"alt",
-      "lab_code":"25002400",
-      "loinc":"1742-6",
-      "name":"ALT"
-   },
-   {
-      "test_slug":"hemoglobin_a1c",
-      "lab_code":"50026400",
-      "loinc":"4548-4",
-      "name":"HEMOGLOBIN A1c"
-   },
-   {
-      "test_slug":"vitamin_d",
-      "lab_code":"55182715",
-      "loinc":"1989-3",
-      "name":"VITAMIN D,25-OH,TOTAL"
-   },
-   {
-      "test_slug":"magnesium_blood",
-      "lab_code":"25000900",
-      "loinc":"19123-9",
-      "name":"MAGNESIUM"
-   },
-   {
-      "test_slug":"uric_acid",
-      "lab_code":"25002500",
-      "loinc":"3084-1",
-      "name":"URIC ACID"
-   },
-   {
-      "test_slug":"tsh",
-      "lab_code":"55080400",
-      "loinc":"3016-3",
-      "name":"TSH"
-   },
-   {
-      "test_slug":"white_blood_cell_count",
-      "lab_code":"30000000",
-      "loinc":"6690-2",
-      "name":"WHITE BLOOD CELL COUNT"
-   },
-   {
-      "test_slug":"red_blood_cell_count",
-      "lab_code":"30000100",
-      "loinc":"789-8",
-      "name":"RED BLOOD CELL COUNT"
-   },
-   {
-      "test_slug":"hemoglobin",
-      "lab_code":"30000200",
-      "loinc":"718-7",
-      "name":"HEMOGLOBIN"
-   },
-   {
-      "test_slug":"hematocrit",
-      "lab_code":"30000300",
-      "loinc":"4544-3",
-      "name":"HEMATOCRIT"
-   },
-   {
-      "test_slug":"mcv",
-      "lab_code":"30000400",
-      "loinc":"787-2",
-      "name":"MCV"
-   },
-   {
-      "test_slug":"mch",
-      "lab_code":"30000500",
-      "loinc":"785-6",
-      "name":"MCH"
-   },
-   {
-      "test_slug":"mchc",
-      "lab_code":"30000600",
-      "loinc":"786-4",
-      "name":"MCHC"
-   },
-   {
-      "test_slug":"rdw",
-      "lab_code":"30000700",
-      "loinc":"788-0",
-      "name":"RDW"
-   },
-   {
-      "test_slug":"platelet_count",
-      "lab_code":"30000800",
-      "loinc":"777-3",
-      "name":"PLATELET COUNT"
-   },
-   {
-      "test_slug":"mpv",
-      "lab_code":"30004600",
-      "loinc":"776-5",
-      "name":"MPV"
-   },
-   {
-      "test_slug":"absolute_neutrophils",
-      "lab_code":"30001700",
-      "loinc":"751-8",
-      "name":"MPV"
-   },
-   {
-      "test_slug":"absolute_lymphocytes",
-      "lab_code":"30002110",
-      "loinc":"731-0",
-      "name":"ABSOLUTE LYMPHOCYTES"
-   },
-   {
-      "test_slug":"absolute_monocytes",
-      "lab_code":"30002400",
-      "loinc":"742-7",
-      "name":"ABSOLUTE MONOCYTES"
-   },
-   {
-      "test_slug":"absolute_eosinophils",
-      "lab_code":"30002700",
-      "loinc":"711-2",
-      "name":"ABSOLUTE EOSINOPHILS"
-   },
-   {
-      "test_slug":"absolute_basophils",
-      "lab_code":"30003000",
-      "loinc":"704-7",
-      "name":"ABSOLUTE BASOPHILS"
-   },
-   {
-      "test_slug":"absolute_nucleated_rbc",
-      "lab_code":"30003610",
-      "loinc":"30392-5",
-      "name":"ABSOLUTE NUCLEATED RBC"
-   },
-   {
-      "test_slug":"neutrophils",
-      "lab_code":"30000900",
-      "loinc":"770-8",
-      "name":"NEUTROPHILS"
-   },
-   {
-      "test_slug":"lymphocytes",
-      "lab_code":"30001800",
-      "loinc":"736-9",
-      "name":"LYMPHOCYTES"
-   },
-   {
-      "test_slug":"monocytes",
-      "lab_code":"30002200",
-      "loinc":"5905-5",
-      "name":"MONOCYTES"
-   },
-   {
-      "test_slug":"eosinophils",
-      "lab_code":"30002500",
-      "loinc":"713-8",
-      "name":"EOSINOPHILS"
-   },
-   {
-      "test_slug":"basophils",
-      "lab_code":"30002800",
-      "loinc":"706-2",
-      "name":"BASOPHILS"
-   },
-   {
-      "test_slug":"color",
-      "lab_code":"30005500",
-      "loinc":"5778-6",
-      "name":"COLOR"
-   },
-   {
-      "test_slug":"appearance",
-      "lab_code":"30005600",
-      "loinc":"5767-9",
-      "name":"APPEARANCE"
-   },
-   {
-      "test_slug":"specific_gravity",
-      "lab_code":"30006000",
-      "loinc":"5811-5",
-      "name":"SPECIFIC GRAVITY"
-   },
-   {
-      "test_slug":"ph",
-      "lab_code":"30006200",
-      "loinc":"5803-2",
-      "name":"PH"
-   },
-   {
-      "test_slug":"glucose_urinalysis",
-      "lab_code":"30071800",
-      "loinc":"25428-4",
-      "name":"URINE - GLUCOSE"
-   },
-   {
-      "test_slug":"bilirubin_urinalysis",
-      "lab_code":"30005800",
-      "loinc":"5770-3",
-      "name":"BILIRUBIN"
-   },
-   {
-      "test_slug":"ketones_urinalysis",
-      "lab_code":"30005900",
-      "loinc":"2514-8",
-      "name":"URINE - KETONES"
-   },
-   {
-      "test_slug":"occult_blood",
-      "lab_code":"30006100",
-      "loinc":"5794-3",
-      "name":"OCCULT BLOOD"
-   },
-   {
-      "test_slug":"urinalysis_protein",
-      "lab_code":"30006300",
-      "loinc":"20454-5",
-      "name":"PROTEIN"
-   },
-   {
-      "test_slug":"nitrite",
-      "lab_code":"30006400",
-      "loinc":"5802-4",
-      "name":"NITRITE"
-   },
-   {
-      "test_slug":"leukocyte_esterase",
-      "lab_code":"30006500",
-      "loinc":"5799-2",
-      "name":"LEUKOCYTE ESTERASE"
-   },
-   {
-      "test_slug":"wbc",
-      "lab_code":"30006700",
-      "loinc":"5821-4",
-      "name":"URINE - WBC"
-   },
-   {
-      "test_slug":"squamous_epithelial_cells",
-      "lab_code":"30006900",
-      "loinc":"11277-1",
-      "name":"SQUAMOUS EPITHELIAL CELLS"
-   },
-   {
-      "test_slug":"bacteria",
-      "lab_code":"30008900",
-      "loinc":"5769-5",
-      "name":"BACTERIA"
-   },
-   {
-      "test_slug":"calcium_oxalate_crystals",
-      "lab_code":"30010000",
-      "loinc":"25148-8",
-      "name":"CALCIUM OXALATE CRYSTALS"
-   },
-   {
-      "test_slug":"hyaline_cast",
-      "lab_code":"30010400",
-      "loinc":"5796-8",
-      "name":"HYALINE CAST"
-   },
-   {
-      "test_slug":"iron_total",
-      "lab_code":"25002600",
-      "loinc":"2498-4",
-      "name":"IRON, TOTAL"
-   },
-   {
-      "test_slug":"iron_binding_capacity",
-      "lab_code":"25002700",
-      "loinc":"2500-7",
-      "name":"IRON BINDING CAPACITY"
-   },
-   {
-      "test_slug":"percent_saturation",
-      "lab_code":"25002800",
-      "loinc":"2502-3",
-      "name":"% SATURATION"
-   },
-   {
-      "test_slug":"vitamin_b12",
-      "lab_code":"25002800",
-      "loinc":"2502-3",
-      "name":"% SATURATION"
-   },
-   {
-      "test_slug":"chol_hdlc_ratio",
-      "lab_code":"25017000",
-      "loinc":"9830-1",
-      "name":"CHOL/HDLC RATIO"
-   },
-   {
-      "test_slug":"glucose",
-      "lab_code":"25000000",
-      "loinc":"2345-7",
-      "name":"GLUCOSE"
-   }
+ {
+   "panel_name": "CBC (Includes Diff/PLT)",
+   "name": "Absolute Basophils",
+   "bundle": "Nutrient Specific",
+   "loinc": "704-7",
+   "test_slug": "absolute_basophils",
+   "quest_panel_code": 6399,
+   "quest_test_code": 30003000,
+   "labcorp_panel_code": "",
+   "labcorp_test_code": "",
+   "sort": 1
+ },
+ {
+   "panel_name": "CBC (Includes Diff/PLT)",
+   "name": "Absolute Eosinophils",
+   "bundle": "Nutrient Specific",
+   "loinc": "711-2",
+   "test_slug": "absolute_eosinophils",
+   "quest_panel_code": 6399,
+   "quest_test_code": 30002700,
+   "labcorp_panel_code": "",
+   "labcorp_test_code": "",
+   "sort": 2
+ },
+ {
+   "panel_name": "CBC (Includes Diff/PLT)",
+   "name": "Absolute Lymphocytes",
+   "bundle": "Nutrient Specific",
+   "loinc": "731-0",
+   "test_slug": "absolute_lymphocytes",
+   "quest_panel_code": 6399,
+   "quest_test_code": 30002110,
+   "labcorp_panel_code": "",
+   "labcorp_test_code": "",
+   "sort": 3
+ },
+ {
+   "panel_name": "CBC (Includes Diff/PLT)",
+   "name": "Absolute Monocytes",
+   "bundle": "Nutrient Specific",
+   "loinc": "742-7",
+   "test_slug": "absolute_monocytes",
+   "quest_panel_code": 6399,
+   "quest_test_code": 30002400,
+   "labcorp_panel_code": "",
+   "labcorp_test_code": "",
+   "sort": 4
+ },
+ {
+   "panel_name": "CBC (Includes Diff/PLT)",
+   "name": "Absolute Neutrophils",
+   "bundle": "Nutrient Specific",
+   "loinc": "751-8",
+   "test_slug": "absolute_neutrophils",
+   "quest_panel_code": 6399,
+   "quest_test_code": 30001700,
+   "labcorp_panel_code": "",
+   "labcorp_test_code": "",
+   "sort": 5
+ },
+ {
+   "panel_name": "CBC (Includes Diff/PLT)",
+   "name": "Absolute Nucleated RBC",
+   "bundle": "Nutrient Specific",
+   "loinc": "30392-5",
+   "test_slug": "absolute_nucleated_rbc",
+   "quest_panel_code": 6399,
+   "quest_test_code": 30003610,
+   "labcorp_panel_code": "",
+   "labcorp_test_code": "",
+   "sort": 6
+ },
+ {
+   "panel_name": "CBC (Includes Diff/PLT)",
+   "name": "Basophils",
+   "bundle": "Nutrient Specific",
+   "loinc": "706-2",
+   "test_slug": "basophils",
+   "quest_panel_code": 6399,
+   "quest_test_code": 30002800,
+   "labcorp_panel_code": "",
+   "labcorp_test_code": "",
+   "sort": 7
+ },
+ {
+   "panel_name": "CBC (Includes Diff/PLT)",
+   "name": "Eosinophils",
+   "bundle": "Nutrient Specific",
+   "loinc": "713-8",
+   "test_slug": "eosinophils",
+   "quest_panel_code": 6399,
+   "quest_test_code": 30002500,
+   "labcorp_panel_code": "",
+   "labcorp_test_code": "",
+   "sort": 8
+ },
+ {
+   "panel_name": "CBC (Includes Diff/PLT)",
+   "name": "Hematocrit",
+   "bundle": "Nutrient Specific",
+   "loinc": "4544-3",
+   "test_slug": "hematocrit",
+   "quest_panel_code": 6399,
+   "quest_test_code": 30000300,
+   "labcorp_panel_code": "",
+   "labcorp_test_code": "",
+   "sort": 9
+ },
+ {
+   "panel_name": "CBC (Includes Diff/PLT)",
+   "name": "Hemoglobin",
+   "bundle": "Nutrient Specific",
+   "loinc": "718-7",
+   "test_slug": "hemoglobin",
+   "quest_panel_code": 6399,
+   "quest_test_code": 30000200,
+   "labcorp_panel_code": "",
+   "labcorp_test_code": "",
+   "sort": 10
+ },
+ {
+   "panel_name": "CBC (Includes Diff/PLT)",
+   "name": "Lymphocytes",
+   "bundle": "Nutrient Specific",
+   "loinc": "736-9",
+   "test_slug": "lymphocytes",
+   "quest_panel_code": 6399,
+   "quest_test_code": 30001800,
+   "labcorp_panel_code": "",
+   "labcorp_test_code": "",
+   "sort": 11
+ },
+ {
+   "panel_name": "CBC (Includes Diff/PLT)",
+   "name": "MCH",
+   "bundle": "Nutrient Specific",
+   "loinc": "785-6",
+   "test_slug": "mch",
+   "quest_panel_code": 6399,
+   "quest_test_code": 30000500,
+   "labcorp_panel_code": "",
+   "labcorp_test_code": "",
+   "sort": 12
+ },
+ {
+   "panel_name": "Urinalysis, Complete",
+   "name": "Amorphous Sediment",
+   "bundle": "Nutrient Specific",
+   "loinc": "",
+   "test_slug": "",
+   "quest_panel_code": 5463,
+   "quest_test_code": 30007300,
+   "labcorp_panel_code": "",
+   "labcorp_test_code": "",
+   "sort": 61
+ },
+ {
+   "panel_name": "CBC (Includes Diff/PLT)",
+   "name": "MCHC",
+   "bundle": "Nutrient Specific",
+   "loinc": "786-4",
+   "test_slug": "mchc",
+   "quest_panel_code": 6399,
+   "quest_test_code": 30000600,
+   "labcorp_panel_code": "",
+   "labcorp_test_code": "",
+   "sort": 13
+ },
+ {
+   "panel_name": "CBC (Includes Diff/PLT)",
+   "name": "MCV",
+   "bundle": "Nutrient Specific",
+   "loinc": "787-2",
+   "test_slug": "mcv",
+   "quest_panel_code": 6399,
+   "quest_test_code": 30000400,
+   "labcorp_panel_code": "",
+   "labcorp_test_code": "",
+   "sort": 14
+ },
+ {
+   "panel_name": "CBC (Includes Diff/PLT)",
+   "name": "Monocytes",
+   "bundle": "Nutrient Specific",
+   "loinc": "5905-5",
+   "test_slug": "monocytes",
+   "quest_panel_code": 6399,
+   "quest_test_code": 30002200,
+   "labcorp_panel_code": "",
+   "labcorp_test_code": "",
+   "sort": 15
+ },
+ {
+   "panel_name": "CBC (Includes Diff/PLT)",
+   "name": "MPV",
+   "bundle": "Nutrient Specific",
+   "loinc": "776-5",
+   "test_slug": "mpv",
+   "quest_panel_code": 6399,
+   "quest_test_code": 30004600,
+   "labcorp_panel_code": "",
+   "labcorp_test_code": "",
+   "sort": 16
+ },
+ {
+   "panel_name": "CBC (Includes Diff/PLT)",
+   "name": "Neutrophils",
+   "bundle": "Nutrient Specific",
+   "loinc": "770-8",
+   "test_slug": "neutrophils",
+   "quest_panel_code": 6399,
+   "quest_test_code": 30000900,
+   "labcorp_panel_code": "",
+   "labcorp_test_code": "",
+   "sort": 17
+ },
+ {
+   "panel_name": "Comprehensive Metabolic Panel",
+   "name": "Bilirubin, Total",
+   "bundle": "Nutrient Specific",
+   "loinc": "",
+   "test_slug": "",
+   "quest_panel_code": 10231,
+   "quest_test_code": 25001700,
+   "labcorp_panel_code": "",
+   "labcorp_test_code": "",
+   "sort": 27
+ },
+ {
+   "panel_name": "CBC (Includes Diff/PLT)",
+   "name": "Platelet Count",
+   "bundle": "Nutrient Specific",
+   "loinc": "777-3",
+   "test_slug": "platelet_count",
+   "quest_panel_code": 6399,
+   "quest_test_code": 30000800,
+   "labcorp_panel_code": "",
+   "labcorp_test_code": "",
+   "sort": 18
+ },
+ {
+   "panel_name": "CBC (Includes Diff/PLT)",
+   "name": "RDW",
+   "bundle": "Nutrient Specific",
+   "loinc": "788-0",
+   "test_slug": "rdw",
+   "quest_panel_code": 6399,
+   "quest_test_code": 30000700,
+   "labcorp_panel_code": "",
+   "labcorp_test_code": "",
+   "sort": 19
+ },
+ {
+   "panel_name": "CBC (Includes Diff/PLT)",
+   "name": "Red Blood Cell Count",
+   "bundle": "Nutrient Specific",
+   "loinc": "789-8",
+   "test_slug": "red_blood_cell_count",
+   "quest_panel_code": 6399,
+   "quest_test_code": 30000100,
+   "labcorp_panel_code": "",
+   "labcorp_test_code": "",
+   "sort": 20
+ },
+ {
+   "panel_name": "CBC (Includes Diff/PLT)",
+   "name": "White Blood Cell Count",
+   "bundle": "Nutrient Specific",
+   "loinc": "6690-2",
+   "test_slug": "white_blood_cell_count",
+   "quest_panel_code": 6399,
+   "quest_test_code": 30000000,
+   "labcorp_panel_code": "",
+   "labcorp_test_code": "",
+   "sort": 21
+ },
+ {
+   "panel_name": "Comprehensive Metabolic Panel",
+   "name": "Albumin",
+   "bundle": "Nutrient Specific",
+   "loinc": "1751-7",
+   "test_slug": "albumin",
+   "quest_panel_code": 10231,
+   "quest_test_code": 25001400,
+   "labcorp_panel_code": "",
+   "labcorp_test_code": "",
+   "sort": 22
+ },
+ {
+   "panel_name": "Urinalysis, Complete",
+   "name": "Casts",
+   "bundle": "Nutrient Specific",
+   "loinc": "",
+   "test_slug": "",
+   "quest_panel_code": 5463,
+   "quest_test_code": 30011200,
+   "labcorp_panel_code": "",
+   "labcorp_test_code": "",
+   "sort": 66
+ },
+ {
+   "panel_name": "Comprehensive Metabolic Panel",
+   "name": "Albumin/Globulin Ratio",
+   "bundle": "Nutrient Specific",
+   "loinc": "1759-0",
+   "test_slug": "albumin_globulin_ratio",
+   "quest_panel_code": 10231,
+   "quest_test_code": 25001600,
+   "labcorp_panel_code": "",
+   "labcorp_test_code": "",
+   "sort": 23
+ },
+ {
+   "panel_name": "Comprehensive Metabolic Panel",
+   "name": "Alkaline Phosphatase",
+   "bundle": "Nutrient Specific",
+   "loinc": "6768-6",
+   "test_slug": "alkaline_phosphatase",
+   "quest_panel_code": 10231,
+   "quest_test_code": 25002000,
+   "labcorp_panel_code": "",
+   "labcorp_test_code": "",
+   "sort": 24
+ },
+ {
+   "panel_name": "Comprehensive Metabolic Panel",
+   "name": "ALT",
+   "bundle": "Nutrient Specific",
+   "loinc": "1742-6",
+   "test_slug": "alt",
+   "quest_panel_code": 10231,
+   "quest_test_code": 25002400,
+   "labcorp_panel_code": "",
+   "labcorp_test_code": "",
+   "sort": 25
+ },
+ {
+   "panel_name": "Comprehensive Metabolic Panel",
+   "name": "AST",
+   "bundle": "Nutrient Specific",
+   "loinc": "1920-8",
+   "test_slug": "ast",
+   "quest_panel_code": 10231,
+   "quest_test_code": 25002300,
+   "labcorp_panel_code": "",
+   "labcorp_test_code": "",
+   "sort": 26
+ },
+ {
+   "panel_name": "Comprehensive Metabolic Panel",
+   "name": "BUN/Creatinine Ratio",
+   "bundle": "Nutrient Specific",
+   "loinc": "3097-3",
+   "test_slug": "bun_creatinine_ratio",
+   "quest_panel_code": 10231,
+   "quest_test_code": 25000300,
+   "labcorp_panel_code": "",
+   "labcorp_test_code": "",
+   "sort": 28
+ },
+ {
+   "panel_name": "Urinalysis, Complete",
+   "name": "Crystals",
+   "bundle": "Nutrient Specific",
+   "loinc": "",
+   "test_slug": "",
+   "quest_panel_code": 5463,
+   "quest_test_code": 30009600,
+   "labcorp_panel_code": "",
+   "labcorp_test_code": "",
+   "sort": 68
+ },
+ {
+   "panel_name": "Comprehensive Metabolic Panel",
+   "name": "Calcium",
+   "bundle": "Nutrient Specific",
+   "loinc": "17861-6",
+   "test_slug": "calcium",
+   "quest_panel_code": 10231,
+   "quest_test_code": 25001000,
+   "labcorp_panel_code": "",
+   "labcorp_test_code": "",
+   "sort": 29
+ },
+ {
+   "panel_name": "Comprehensive Metabolic Panel",
+   "name": "Carbon Dioxide (CO2)",
+   "bundle": "Nutrient Specific",
+   "loinc": "2028-9",
+   "test_slug": "carbon_dioxide",
+   "quest_panel_code": 10231,
+   "quest_test_code": 25000700,
+   "labcorp_panel_code": "",
+   "labcorp_test_code": "",
+   "sort": 30
+ },
+ {
+   "panel_name": "Comprehensive Metabolic Panel",
+   "name": "Chloride",
+   "bundle": "Nutrient Specific",
+   "loinc": "2075-0",
+   "test_slug": "chloride",
+   "quest_panel_code": 10231,
+   "quest_test_code": 25000600,
+   "labcorp_panel_code": "",
+   "labcorp_test_code": "",
+   "sort": 31
+ },
+ {
+   "panel_name": "Comprehensive Metabolic Panel",
+   "name": "Creatinine",
+   "bundle": "Nutrient Specific",
+   "loinc": "2160-0",
+   "test_slug": "creatinine",
+   "quest_panel_code": 10231,
+   "quest_test_code": 25000200,
+   "labcorp_panel_code": "",
+   "labcorp_test_code": "",
+   "sort": 32
+ },
+ {
+   "panel_name": "Comprehensive Metabolic Panel",
+   "name": "eGFR",
+   "bundle": "Nutrient Specific",
+   "loinc": "98979-8",
+   "test_slug": "egfr",
+   "quest_panel_code": 10231,
+   "quest_test_code": 86031867,
+   "labcorp_panel_code": "",
+   "labcorp_test_code": "",
+   "sort": 33
+ },
+ {
+   "panel_name": "Urinalysis, Complete",
+   "name": "Granular Cast",
+   "bundle": "Nutrient Specific",
+   "loinc": "",
+   "test_slug": "",
+   "quest_panel_code": 5463,
+   "quest_test_code": 30010500,
+   "labcorp_panel_code": "",
+   "labcorp_test_code": "",
+   "sort": 69
+ },
+ {
+   "panel_name": "Lipid Panel, Standard",
+   "name": "HDL Cholesterol",
+   "bundle": "Nutrient Specific",
+   "loinc": "",
+   "test_slug": "",
+   "quest_panel_code": 7600,
+   "quest_test_code": 25015900,
+   "labcorp_panel_code": "",
+   "labcorp_test_code": "",
+   "sort": 48
+ },
+ {
+   "panel_name": "Comprehensive Metabolic Panel",
+   "name": "Globulin",
+   "bundle": "Nutrient Specific",
+   "loinc": "10834-0",
+   "test_slug": "globulin",
+   "quest_panel_code": 10231,
+   "quest_test_code": 25001500,
+   "labcorp_panel_code": "",
+   "labcorp_test_code": "",
+   "sort": 34
+ },
+ {
+   "panel_name": "Comprehensive Metabolic Panel",
+   "name": "Glucose",
+   "bundle": "Nutrient Specific",
+   "loinc": "2345-7",
+   "test_slug": "glucose",
+   "quest_panel_code": 10231,
+   "quest_test_code": 25000000,
+   "labcorp_panel_code": "",
+   "labcorp_test_code": "",
+   "sort": 35
+ },
+ {
+   "panel_name": "Comprehensive Metabolic Panel",
+   "name": "Potassium",
+   "bundle": "Nutrient Specific",
+   "loinc": "2823-3",
+   "test_slug": "potassium",
+   "quest_panel_code": 10231,
+   "quest_test_code": 25000500,
+   "labcorp_panel_code": "",
+   "labcorp_test_code": "",
+   "sort": 36
+ },
+ {
+   "panel_name": "Comprehensive Metabolic Panel",
+   "name": "Protein, Total",
+   "bundle": "Nutrient Specific",
+   "loinc": "2885-2",
+   "test_slug": "protein_total",
+   "quest_panel_code": 10231,
+   "quest_test_code": 25001300,
+   "labcorp_panel_code": "",
+   "labcorp_test_code": "",
+   "sort": 37
+ },
+ {
+   "panel_name": "Comprehensive Metabolic Panel",
+   "name": "Sodium",
+   "bundle": "Nutrient Specific",
+   "loinc": "2951-2",
+   "test_slug": "sodium",
+   "quest_panel_code": 10231,
+   "quest_test_code": 25000400,
+   "labcorp_panel_code": "",
+   "labcorp_test_code": "",
+   "sort": 38
+ },
+ {
+   "panel_name": "Comprehensive Metabolic Panel",
+   "name": "Urea Nitrogen (BUN)",
+   "bundle": "Nutrient Specific",
+   "loinc": "3094-0",
+   "test_slug": "bun",
+   "quest_panel_code": 10231,
+   "quest_test_code": 25000100,
+   "labcorp_panel_code": "",
+   "labcorp_test_code": "",
+   "sort": 39
+ },
+ {
+   "panel_name": "Glucose",
+   "name": "Glucose",
+   "bundle": "Nutrient Specific",
+   "loinc": "2345-7",
+   "test_slug": "glucose",
+   "quest_panel_code": 483,
+   "quest_test_code": 25000000,
+   "labcorp_panel_code": "",
+   "labcorp_test_code": "",
+   "sort": 40
+ },
+ {
+   "panel_name": "Hemoglobin A1c",
+   "name": "Hemoglobin A1c",
+   "bundle": "Nutrient Specific",
+   "loinc": "4548-4",
+   "test_slug": "bilirubin_total",
+   "quest_panel_code": 496,
+   "quest_test_code": 50026400,
+   "labcorp_panel_code": "",
+   "labcorp_test_code": "",
+   "sort": 41
+ },
+ {
+   "panel_name": "hs-CRP",
+   "name": "C - Reactive Protein HS",
+   "bundle": "Nutrient Specific",
+   "loinc": "30522-7",
+   "test_slug": "c_reactive_protein_hs",
+   "quest_panel_code": 10124,
+   "quest_test_code": 45203715,
+   "labcorp_panel_code": "",
+   "labcorp_test_code": "",
+   "sort": 42
+ },
+ {
+   "panel_name": "Iron And Total Iron Binding Capacity",
+   "name": "% Saturation",
+   "bundle": "Nutrient Specific",
+   "loinc": "2502-3",
+   "test_slug": "percent_saturation",
+   "quest_panel_code": 7573,
+   "quest_test_code": 25002800,
+   "labcorp_panel_code": "",
+   "labcorp_test_code": "",
+   "sort": 43
+ },
+ {
+   "panel_name": "Iron And Total Iron Binding Capacity",
+   "name": "Iron Binding Capacity",
+   "bundle": "Nutrient Specific",
+   "loinc": "2500-7",
+   "test_slug": "iron_binding_capacity",
+   "quest_panel_code": 7573,
+   "quest_test_code": 25002700,
+   "labcorp_panel_code": "",
+   "labcorp_test_code": "",
+   "sort": 44
+ },
+ {
+   "panel_name": "Iron And Total Iron Binding Capacity",
+   "name": "Iron, Total",
+   "bundle": "Nutrient Specific",
+   "loinc": "2498-4",
+   "test_slug": "iron_total",
+   "quest_panel_code": 7573,
+   "quest_test_code": 25002600,
+   "labcorp_panel_code": "",
+   "labcorp_test_code": "",
+   "sort": 45
+ },
+ {
+   "panel_name": "Lipid Panel, Standard",
+   "name": "CHOL/HDLC Ratio",
+   "bundle": "Nutrient Specific",
+   "loinc": "9830-1",
+   "test_slug": "chol_hdlc_ratio",
+   "quest_panel_code": 7600,
+   "quest_test_code": 25017000,
+   "labcorp_panel_code": "",
+   "labcorp_test_code": "",
+   "sort": 46
+ },
+ {
+   "panel_name": "Lipid Panel, Standard",
+   "name": "Cholesterol, Total",
+   "bundle": "Nutrient Specific",
+   "loinc": "2093-3",
+   "test_slug": "cholesterol_total",
+   "quest_panel_code": 7600,
+   "quest_test_code": 25003000,
+   "labcorp_panel_code": "",
+   "labcorp_test_code": "",
+   "sort": 47
+ },
+ {
+   "panel_name": "Lipid Panel, Standard",
+   "name": "LDL Cholesterol",
+   "bundle": "Nutrient Specific",
+   "loinc": "13457-7",
+   "test_slug": "ldl_cholesterol",
+   "quest_panel_code": 7600,
+   "quest_test_code": 25016900,
+   "labcorp_panel_code": "",
+   "labcorp_test_code": "",
+   "sort": 49
+ },
+ {
+   "panel_name": "Lipid Panel, Standard",
+   "name": "Non HDL Cholesterol",
+   "bundle": "Nutrient Specific",
+   "loinc": "43396-1",
+   "test_slug": "non_hdl_cholesterol",
+   "quest_panel_code": 7600,
+   "quest_test_code": 25017210,
+   "labcorp_panel_code": "",
+   "labcorp_test_code": "",
+   "sort": 50
+ },
+ {
+   "panel_name": "Lipid Panel, Standard",
+   "name": "Triglycerides",
+   "bundle": "Nutrient Specific",
+   "loinc": "2571-8",
+   "test_slug": "triglycerides",
+   "quest_panel_code": 7600,
+   "quest_test_code": 25002900,
+   "labcorp_panel_code": "",
+   "labcorp_test_code": "",
+   "sort": 51
+ },
+ {
+   "panel_name": "Magnesium",
+   "name": "Magnesium",
+   "bundle": "Nutrient Specific",
+   "loinc": "19123-9",
+   "test_slug": "magnesium_blood",
+   "quest_panel_code": 622,
+   "quest_test_code": 25000900,
+   "labcorp_panel_code": "",
+   "labcorp_test_code": "",
+   "sort": 52
+ },
+ {
+   "panel_name": "Sex Hormone Binding Globulin",
+   "name": "Sex Hormone Binding Globulin",
+   "bundle": "Nutrient Specific",
+   "loinc": "13967-5",
+   "test_slug": "sex_hormone_binding_globulin",
+   "quest_panel_code": 30740,
+   "quest_test_code": 55188600,
+   "labcorp_panel_code": "",
+   "labcorp_test_code": "",
+   "sort": 53
+ },
+ {
+   "panel_name": "Testosterone, Free, Bio And Total, Ms",
+   "name": "Albumin",
+   "bundle": "Nutrient Specific",
+   "loinc": "1751-7",
+   "test_slug": "albumin",
+   "quest_panel_code": 14966,
+   "quest_test_code": 25001400,
+   "labcorp_panel_code": "",
+   "labcorp_test_code": "",
+   "sort": 54
+ },
+ {
+   "panel_name": "Testosterone, Free, Bio And Total, Ms",
+   "name": "Sex Hormone Binding Globulin",
+   "bundle": "Nutrient Specific",
+   "loinc": "13967-5",
+   "test_slug": "sex_hormone_binding_globulin",
+   "quest_panel_code": 14966,
+   "quest_test_code": 55188600,
+   "labcorp_panel_code": "",
+   "labcorp_test_code": "",
+   "sort": 55
+ },
+ {
+   "panel_name": "Testosterone, Free, Bio And Total, Ms",
+   "name": "Testosterone, Total, Ms",
+   "bundle": "Nutrient Specific",
+   "loinc": "2986-8",
+   "test_slug": "testosterone_total_ms",
+   "quest_panel_code": 14966,
+   "quest_test_code": 85996653,
+   "labcorp_panel_code": "",
+   "labcorp_test_code": "",
+   "sort": 56
+ },
+ {
+   "panel_name": "Testosterone, Free, Bio And Total, Ms",
+   "name": "Testosterone, Free",
+   "bundle": "Nutrient Specific",
+   "loinc": "2991-8",
+   "test_slug": "testosterone_free",
+   "quest_panel_code": 14966,
+   "quest_test_code": 85990231,
+   "labcorp_panel_code": "",
+   "labcorp_test_code": "",
+   "sort": 57
+ },
+ {
+   "panel_name": "Testosterone, Free, Bio And Total, Ms",
+   "name": "Testosterone, Bioavailable",
+   "bundle": "Nutrient Specific",
+   "loinc": "2990-0",
+   "test_slug": "testosterone_bioavailable",
+   "quest_panel_code": 14966,
+   "quest_test_code": 85990232,
+   "labcorp_panel_code": "",
+   "labcorp_test_code": "",
+   "sort": 58
+ },
+ {
+   "panel_name": "Urinalysis, Complete",
+   "name": "RBC - Urinalysis",
+   "bundle": "Nutrient Specific",
+   "loinc": "",
+   "test_slug": "",
+   "quest_panel_code": 5463,
+   "quest_test_code": 30006800,
+   "labcorp_panel_code": "",
+   "labcorp_test_code": "",
+   "sort": 76
+ },
+ {
+   "panel_name": "TSH",
+   "name": "TSH",
+   "bundle": "Nutrient Specific",
+   "loinc": "3016-3",
+   "test_slug": "tsh",
+   "quest_panel_code": 899,
+   "quest_test_code": 55080400,
+   "labcorp_panel_code": "",
+   "labcorp_test_code": "",
+   "sort": 59
+ },
+ {
+   "panel_name": "Uric Acid",
+   "name": "Uric Acid",
+   "bundle": "Nutrient Specific",
+   "loinc": "3084-1",
+   "test_slug": "uric_acid",
+   "quest_panel_code": 905,
+   "quest_test_code": 25002500,
+   "labcorp_panel_code": "",
+   "labcorp_test_code": "",
+   "sort": 60
+ },
+ {
+   "panel_name": "Urinalysis, Complete",
+   "name": "Reducing Substances",
+   "bundle": "Nutrient Specific",
+   "loinc": "",
+   "test_slug": "",
+   "quest_panel_code": 5463,
+   "quest_test_code": 30071900,
+   "labcorp_panel_code": "",
+   "labcorp_test_code": "",
+   "sort": 77
+ },
+ {
+   "panel_name": "Urinalysis, Complete",
+   "name": "Renal Epithelial Cells",
+   "bundle": "Nutrient Specific",
+   "loinc": "",
+   "test_slug": "",
+   "quest_panel_code": 5463,
+   "quest_test_code": 30007000,
+   "labcorp_panel_code": "",
+   "labcorp_test_code": "",
+   "sort": 78
+ },
+ {
+   "panel_name": "Urinalysis, Complete",
+   "name": "Appearance",
+   "bundle": "Nutrient Specific",
+   "loinc": "5767-9",
+   "test_slug": "appearance",
+   "quest_panel_code": 5463,
+   "quest_test_code": 30005600,
+   "labcorp_panel_code": "",
+   "labcorp_test_code": "",
+   "sort": 62
+ },
+ {
+   "panel_name": "Urinalysis, Complete",
+   "name": "Bacteria",
+   "bundle": "Nutrient Specific",
+   "loinc": "5769-5",
+   "test_slug": "bacteria",
+   "quest_panel_code": 5463,
+   "quest_test_code": 30008900,
+   "labcorp_panel_code": "",
+   "labcorp_test_code": "",
+   "sort": 63
+ },
+ {
+   "panel_name": "Urinalysis, Complete",
+   "name": "Bilirubin",
+   "bundle": "Nutrient Specific",
+   "loinc": "5770-3",
+   "test_slug": "bilirubin_urinalysis",
+   "quest_panel_code": 5463,
+   "quest_test_code": 30005800,
+   "labcorp_panel_code": "",
+   "labcorp_test_code": "",
+   "sort": 64
+ },
+ {
+   "panel_name": "Urinalysis, Complete",
+   "name": "Calcium Oxalate Crystals",
+   "bundle": "Nutrient Specific",
+   "loinc": "25148-8",
+   "test_slug": "calcium_oxalate_crystals",
+   "quest_panel_code": 5463,
+   "quest_test_code": 30010000,
+   "labcorp_panel_code": "",
+   "labcorp_test_code": "",
+   "sort": 65
+ },
+ {
+   "panel_name": "Urinalysis, Complete",
+   "name": "Color",
+   "bundle": "Nutrient Specific",
+   "loinc": "5778-6",
+   "test_slug": "color",
+   "quest_panel_code": 5463,
+   "quest_test_code": 30005500,
+   "labcorp_panel_code": "",
+   "labcorp_test_code": "",
+   "sort": 67
+ },
+ {
+   "panel_name": "Urinalysis, Complete",
+   "name": "Hyaline Cast",
+   "bundle": "Nutrient Specific",
+   "loinc": "5796-8",
+   "test_slug": "hyaline_cast",
+   "quest_panel_code": 5463,
+   "quest_test_code": 30010400,
+   "labcorp_panel_code": "",
+   "labcorp_test_code": "",
+   "sort": 70
+ },
+ {
+   "panel_name": "Urinalysis, Complete",
+   "name": "Leukocyte Esterase",
+   "bundle": "Nutrient Specific",
+   "loinc": "5799-2",
+   "test_slug": "leukocyte_esterase",
+   "quest_panel_code": 5463,
+   "quest_test_code": 30006500,
+   "labcorp_panel_code": "",
+   "labcorp_test_code": "",
+   "sort": 71
+ },
+ {
+   "panel_name": "Urinalysis, Complete",
+   "name": "Nitrite",
+   "bundle": "Nutrient Specific",
+   "loinc": "5802-4",
+   "test_slug": "nitrite",
+   "quest_panel_code": 5463,
+   "quest_test_code": 30006400,
+   "labcorp_panel_code": "",
+   "labcorp_test_code": "",
+   "sort": 72
+ },
+ {
+   "panel_name": "Urinalysis, Complete",
+   "name": "Transitional Epithelial Cells",
+   "bundle": "Nutrient Specific",
+   "loinc": "",
+   "test_slug": "",
+   "quest_panel_code": 5463,
+   "quest_test_code": 30006910,
+   "labcorp_panel_code": "",
+   "labcorp_test_code": "",
+   "sort": 81
+ },
+ {
+   "panel_name": "Urinalysis, Complete",
+   "name": "Occult Blood",
+   "bundle": "Nutrient Specific",
+   "loinc": "5794-3",
+   "test_slug": "occult_blood",
+   "quest_panel_code": 5463,
+   "quest_test_code": 30006100,
+   "labcorp_panel_code": "",
+   "labcorp_test_code": "",
+   "sort": 73
+ },
+ {
+   "panel_name": "Urinalysis, Complete",
+   "name": "Triple Phosphate Crystals",
+   "bundle": "Nutrient Specific",
+   "loinc": "",
+   "test_slug": "",
+   "quest_panel_code": 5463,
+   "quest_test_code": 30010100,
+   "labcorp_panel_code": "",
+   "labcorp_test_code": "",
+   "sort": 82
+ },
+ {
+   "panel_name": "Urinalysis, Complete",
+   "name": "Ph",
+   "bundle": "Nutrient Specific",
+   "loinc": "5803-2",
+   "test_slug": "ph",
+   "quest_panel_code": 5463,
+   "quest_test_code": 30006200,
+   "labcorp_panel_code": "",
+   "labcorp_test_code": "",
+   "sort": 74
+ },
+ {
+   "panel_name": "Urinalysis, Complete",
+   "name": "Protein",
+   "bundle": "Nutrient Specific",
+   "loinc": "20454-5",
+   "test_slug": "urinalysis_protein",
+   "quest_panel_code": 5463,
+   "quest_test_code": 30006300,
+   "labcorp_panel_code": "",
+   "labcorp_test_code": "",
+   "sort": 75
+ },
+ {
+   "panel_name": "Urinalysis, Complete",
+   "name": "Specific Gravity",
+   "bundle": "Nutrient Specific",
+   "loinc": "5811-5",
+   "test_slug": "specific_gravity",
+   "quest_panel_code": 5463,
+   "quest_test_code": 30006000,
+   "labcorp_panel_code": "",
+   "labcorp_test_code": "",
+   "sort": 79
+ },
+ {
+   "panel_name": "Urinalysis, Complete",
+   "name": "Uric Acid Crystals",
+   "bundle": "Nutrient Specific",
+   "loinc": "",
+   "test_slug": "",
+   "quest_panel_code": 5463,
+   "quest_test_code": 30010200,
+   "labcorp_panel_code": "",
+   "labcorp_test_code": "",
+   "sort": 83
+ },
+ {
+   "panel_name": "Urinalysis, Complete",
+   "name": "Squamous Epithelial Cells",
+   "bundle": "Nutrient Specific",
+   "loinc": "11277-1",
+   "test_slug": "squamous_epithelial_cells",
+   "quest_panel_code": 5463,
+   "quest_test_code": 30006900,
+   "labcorp_panel_code": "",
+   "labcorp_test_code": "",
+   "sort": 80
+ },
+ {
+   "panel_name": "Urinalysis, Complete",
+   "name": "Urine - Glucose",
+   "bundle": "Nutrient Specific",
+   "loinc": "25428-4",
+   "test_slug": "glucose_urinalysis",
+   "quest_panel_code": 5463,
+   "quest_test_code": 30071800,
+   "labcorp_panel_code": "",
+   "labcorp_test_code": "",
+   "sort": 84
+ },
+ {
+   "panel_name": "Vitamin B12",
+   "name": "Vitamin B12",
+   "bundle": "Nutrient Specific",
+   "loinc": "",
+   "test_slug": "",
+   "quest_panel_code": 927,
+   "quest_test_code": 55057200,
+   "labcorp_panel_code": "",
+   "labcorp_test_code": "",
+   "sort": 88
+ },
+ {
+   "panel_name": "Urinalysis, Complete",
+   "name": "Urine - Ketones",
+   "bundle": "Nutrient Specific",
+   "loinc": "2514-8",
+   "test_slug": "ketones_urinalysis",
+   "quest_panel_code": 5463,
+   "quest_test_code": 30005900,
+   "labcorp_panel_code": "",
+   "labcorp_test_code": "",
+   "sort": 85
+ },
+ {
+   "panel_name": "Urinalysis, Complete",
+   "name": "WBC - Urinalysis",
+   "bundle": "Nutrient Specific",
+   "loinc": "5821-4",
+   "test_slug": "wbc",
+   "quest_panel_code": 5463,
+   "quest_test_code": 30006700,
+   "labcorp_panel_code": "",
+   "labcorp_test_code": "",
+   "sort": 86
+ },
+ {
+   "panel_name": "Vitamin D, 25-OH, Total, LA",
+   "name": "Vitamin D",
+   "bundle": "Nutrient Specific",
+   "loinc": "1989-3",
+   "test_slug": "vitamin_d",
+   "quest_panel_code": 17306,
+   "quest_test_code": 55182715,
+   "labcorp_panel_code": "",
+   "labcorp_test_code": "",
+   "sort": 89
+ },
+ {
+   "panel_name": "Urinalysis, Complete",
+   "name": "Yeast",
+   "bundle": "Nutrient Specific",
+   "loinc": "",
+   "test_slug": "",
+   "quest_panel_code": 5463,
+   "quest_test_code": 30007900,
+   "labcorp_panel_code": "",
+   "labcorp_test_code": "",
+   "sort": 87
+ }
 ]
