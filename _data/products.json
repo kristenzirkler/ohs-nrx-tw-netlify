@@ -1,284 +1,362 @@
 [
-   {
-      "name":"Digestion",
-      "code":"54",
-      "sort":"-1001",
-      "capmax":"2"
-   },
-   {
-      "name":"Vitamin-Mineral",
-      "code":"72",
-      "sort":"-1000",
-      "capmax":"2"
-   },
-   {
-      "name":"DAK1K2",
-      "code":"619587048116_bulk",
-      "sort":"-502",
-      "capmax":"1"
-   },
-   {
-      "name":"Protease Anti-Inflam",
-      "code":"55",
-      "sort":"-501",
-      "capmax":"2"
-   },
-   {
-      "name":"Flora+",
-      "code":"62",
-      "sort":"-500",
-      "capmax":"2"
-   },
-   {
-      "name":"Adrenal",
-      "code":"116",
-      "sort":"-141",
-      "capmax":"1"
-   },
-   {
-      "name":"Methyl-B",
-      "code":"305",
-      "sort":"-140",
-      "capmax":"1"
-   },
-   {
-      "name":"Bone+Calcium",
-      "code":"85",
-      "sort":"-139",
-      "capmax":"2"
-   },
-   {
-      "name":"Brain Nutrients",
-      "code":"325",
-      "sort":"-138",
-      "capmax":"1"
-   },
-   {
-      "name":"Caffeine Anhydrous Cap",
-      "code":"82",
-      "sort":"-137",
-      "capmax":"1"
-   },
-   {
-      "name":"Joint Nutrients",
-      "code":"57",
-      "sort":"-136",
-      "capmax":"2"
-   },
-   {
-      "name":"Cort Adrena",
-      "code":"56",
-      "sort":"-135",
-      "capmax":"1"
-   },
-   {
-      "name":"Crea-Nitric",
-      "code":"8012",
-      "sort":"-134",
-      "capmax":"1"
-   },
-   {
-      "name":"Vitamin D3",
-      "code":"575",
-      "sort":"-133",
-      "capmax":"1"
-   },
-   {
-      "name":"Immune Defense",
-      "code":"59",
-      "sort":"-132",
-      "capmax":"1"
-   },
-   {
-      "name":"EFA",
-      "code":"60",
-      "sort":"-131",
-      "capmax":"2"
-   },
-   {
-      "name":"Fat Sugar Trim",
-      "code":"61",
-      "sort":"-130",
-      "capmax":"2"
-   },
-   {
-      "name":"Female +B",
-      "code":"65",
-      "sort":"-129",
-      "capmax":"1"
-   },
-   {
-      "name":"Opti-Female",
-      "code":"850019587265_bulk",
-      "sort":"-128",
-      "capmax":"1"
-   },
-   {
-      "name":"GI",
-      "code":"64",
-      "sort":"-127",
-      "capmax":"1"
-   },
-   {
-      "name":"Heart",
-      "code":"619587047928_bulk",
-      "sort":"-126",
-      "capmax":"1"
-   },
-   {
-      "name":"Immune VRL",
-      "code":"331",
-      "sort":"-125",
-      "capmax":"1"
-   },
-   {
-      "name":"Iodine",
-      "code":"327",
-      "sort":"-124",
-      "capmax":"1"
-   },
-   {
-      "name":"Organic Iron",
-      "code":"66",
-      "sort":"-123",
-      "capmax":"1"
-   },
-   {
-      "name":"Liver-Kidney",
-      "code":"67",
-      "sort":"-122",
-      "capmax":"1"
-   },
-   {
-      "name":"Longevi-D K2",
-      "code":"58",
-      "sort":"-121",
-      "capmax":"2"
-   },
-   {
-      "name":"Lung",
-      "code":"619587047935_bulk",
-      "sort":"-120",
-      "capmax":"1"
-   },
-   {
-      "name":"MagnaSTEM",
-      "code":"334",
-      "sort":"-119",
-      "capmax":"1"
-   },
-   {
-      "name":"Magnesium",
-      "code":"8005",
-      "sort":"-118",
-      "capmax":"2"
-   },
-   {
-      "name":"Mito-Force",
-      "code":"326",
-      "sort":"-117",
-      "capmax":"1"
-   },
-   {
-      "name":"Mitragyna Speciosa Cap",
-      "code":"86",
-      "sort":"-116",
-      "capmax":"1"
-   },
-   {
-      "name":"Muscle RX",
-      "code":"69",
-      "sort":"-115",
-      "capmax":"1"
-   },
-   {
-      "name":"NADH",
-      "code":"619587048154_bulk",
-      "sort":"-114",
-      "capmax":"1"
-   },
-   {
-      "name":"Nag Redux",
-      "code":"850019587234_bulk",
-      "sort":"-113",
-      "capmax":"1"
-   },
-   {
-      "name":"Natural Vitality",
-      "code":"70",
-      "sort":"-112",
-      "capmax":"1"
-   },
-   {
-      "name":"Arginine N.O.",
-      "code":"270",
-      "sort":"-111",
-      "capmax":"3"
-   },
-   {
-      "name":"P-5-P",
-      "code":"619587048086_bulk",
-      "sort":"-110",
-      "capmax":"1"
-   },
-   {
-      "name":"Para Cap",
-      "code":"619587048093_bulk",
-      "sort":"-109",
-      "capmax":"1"
-   },
-   {
-      "name":"High CFU Probiotic",
-      "code":"328",
-      "sort":"-108",
-      "capmax":"2"
-   },
-   {
-      "name":"Phytonutrients",
-      "code":"850019587111_bulk",
-      "sort":"-107",
-      "capmax":"1"
-   },
-   {
-      "name":"Calm Nutrients",
-      "code":"71",
-      "sort":"-106",
-      "capmax":"1"
-   },
-   {
-      "name":"Resveratrol",
-      "code":"8006",
-      "sort":"-105",
-      "capmax":"1"
-   },
-   {
-      "name":"Shrooms",
-      "code":"850019587081_bulk",
-      "sort":"-104",
-      "capmax":"1"
-   },
-   {
-      "name":"Opti-T",
-      "code":"68",
-      "sort":"-103",
-      "capmax":"2"
-   },
-   {
-      "name":"Thyroid",
-      "code":"302",
-      "sort":"-102",
-      "capmax":"2"
-   },
-   {
-      "name":"Ubiquinol",
-      "code":"619587048147_bulk",
-      "sort":"-101",
-      "capmax":"1"
-   },
-   {
-      "name":"Zinc",
-      "code":"619587048109_bulk",
-      "sort":"-100",
-      "capmax":"1"
-   }
+ {
+   "name": "Adrenal",
+   "code": "116",
+   "sort": -141,
+   "capmax": 1,
+   "image": "https://www.optimalhealthsystems.com/resize/Shared/Images/Product/Opti-Adrenal/Opti-Adrenal-for-web.jpg?bw=600&w=600",
+   "description": "Synergistic blend of whole food nutrients and bioavailable glandulars provide the adrenal boost and support to have a healthy response to stress."
+ },
+ {
+   "name": "Arginine N.O.",
+   "code": "270",
+   "sort": -111,
+   "capmax": 3,
+   "image": "https://www.optimalhealthsystems.com/resize/Shared/Images/Product/Optimal-Opti-Nitric/Opti-Nitric-for-web.jpg?bw=600&w=600",
+   "description": "Combines L-arginine, ornithine and citrulline to boost nitric oxide levels. The nutrients are proven to reverse deficiencies and improve overall health."
+ },
+ {
+   "name": "Thyroid",
+   "code": "302",
+   "sort": -102,
+   "capmax": 2,
+   "image": "https://www.optimalhealthsystems.com/resize/Shared/Images/Product/Opti-Thyroid/Opti-Thyroid-for-web.jpg?bw=600&w=600",
+   "description": "Provides whole food micronutrients that are essential for the production of thyroid hormones, providing a foundation that best supports the thyroid gland."
+ },
+ {
+   "name": "Methyl-B",
+   "code": "305",
+   "sort": -140,
+   "capmax": 1,
+   "image": "https://www.optimalhealthsystems.com/resize/Shared/Images/Product/Opti-Methyl-B/Opti-Methyl-B-for-web.jpg?bw=600&w=600",
+   "description": "A high potency whole food complex B-vitamin formula."
+ },
+ {
+   "name": "Brain Nutrients",
+   "code": "325",
+   "sort": -138,
+   "capmax": 1,
+   "image": "",
+   "description": "Break free of cognitive limits with the most potent nootropic ingredients and enhance your focus, concentration, memory, learning, and focus."
+ },
+ {
+   "name": "Mito-Force",
+   "code": "326",
+   "sort": -117,
+   "capmax": 1,
+   "image": "https://www.optimalhealthsystems.com/resize/Shared/Images/Product/Opti-Mito-Force/Opti-Mito-Force-for-web.jpg?bw=600&w=600",
+   "description": "Organic whole food vitamins, minerals, and herbs that promote optimal mitochondrial function."
+ },
+ {
+   "name": "Iodine",
+   "code": "327",
+   "sort": -124,
+   "capmax": 1,
+   "image": "https://www.optimalhealthsystems.com/resize/Shared/Images/Product/Opti-Iodine/Opti-Iodine-for-web.jpg?bw=600&w=600",
+   "description": "Provides whole food iodine support for thyroid hormone synthesis, helping maintain metabolism."
+ },
+ {
+   "name": "High CFU Probiotic",
+   "code": "328",
+   "sort": -108,
+   "capmax": 2,
+   "image": "",
+   "description": "Nutritionally supports the immune system and improves digestion."
+ },
+ {
+   "name": "Immune VRL",
+   "code": "331",
+   "sort": -125,
+   "capmax": 1,
+   "image": "",
+   "description": "A blend of nutrients, herbs, and glandular aids that research shows support the reduction of viruses and boosts your immune system."
+ },
+ {
+   "name": "MagnaSTEM",
+   "code": "334",
+   "sort": -119,
+   "capmax": 1,
+   "image": "",
+   "description": "All natural synergistic herbs, vitamins, minerals and plant extracts assist the natural release of stem cells AND help them remain healthy and active."
+ },
+ {
+   "name": "Digestion",
+   "code": "54",
+   "sort": -1001,
+   "capmax": 2,
+   "image": "https://www.optimalhealthsystems.com/resize/Shared/Images/Product/Optimal-1-Digestion/optimal-1-Digestion-for-web.jpg?bw=600&w=600",
+   "description": "Helps break down all nutrients, helps eliminate gas, bloat, acid reflux and more"
+ },
+ {
+   "name": "Protease Anti-Inflam",
+   "code": "55",
+   "sort": -501,
+   "capmax": 2,
+   "image": "https://www.optimalhealthsystems.com/resize/Shared/Images/Product/Optimal-Acute/Acute-for-web.jpg?bw=600&w=600",
+   "description": "Optimal Acute’s protease enzymes have been proven to be a safe, natural approach to inflammation reduction."
+ },
+ {
+   "name": "Cort Adrena",
+   "code": "56",
+   "sort": -135,
+   "capmax": 1,
+   "image": "https://www.optimalhealthsystems.com/resize/Shared/Images/Product/Optimal-Cort-Adrena/Cort-Adrena-for-web.jpg?bw=600&w=600",
+   "description": "Ingredients like ashwagandha, panax ginseng, and more, help lower cortisol levels, reset your adrenal glands, and maintain energy."
+ },
+ {
+   "name": "Joint Nutrients",
+   "code": "57",
+   "sort": -136,
+   "capmax": 2,
+   "image": "",
+   "description": "Take advantage of what we believe is the best rebuilding and strengthening cartilage/tendon/ligament formula on the market."
+ },
+ {
+   "name": "Vitamin D3",
+   "code": "575",
+   "sort": -133,
+   "capmax": 1,
+   "image": "",
+   "description": "The most potent, effective form of vitamin D to support cardiovascular health and immune disorders."
+ },
+ {
+   "name": "Longevi-D K2",
+   "code": "58",
+   "sort": -121,
+   "capmax": 2,
+   "image": "https://www.optimalhealthsystems.com/resize/Shared/Images/Product/Optimal-Longevi-D-K2/Longevi-D-K2-for-web.jpg?bw=600&w=600",
+   "description": "Incorporates three fat-soluble nutrients, CoQ10, vitamin D and vitamin K2, proven to increase longevity and lower the risk of many diseases."
+ },
+ {
+   "name": "Immune Defense",
+   "code": "59",
+   "sort": -132,
+   "capmax": 1,
+   "image": "https://www.optimalhealthsystems.com/resize/Shared/Images/Product/Optimal-Defense/Defense-for-web.jpg?bw=600&w=600",
+   "description": "The most powerful and effective immune-supporting ingredients including colostrum, echinacea, beta glucan, and DDS-1 lactobacillus acidophilus."
+ },
+ {
+   "name": "EFA",
+   "code": "60",
+   "sort": -131,
+   "capmax": 2,
+   "image": "https://www.optimalhealthsystems.com/resize/Shared/Images/Product/Optimal-Cort-Adrena/Cort-Adrena-for-web.jpg?bw=600&w=600",
+   "description": "An essential fatty acid formula geared towards cardiovascular, brain and eye health."
+ },
+ {
+   "name": "Fat Sugar Trim",
+   "code": "61",
+   "sort": -130,
+   "capmax": 2,
+   "image": "https://www.optimalhealthsystems.com/resize/Shared/Images/Product/Optimal-Fat-Sugar-Trim/fat-sugar-trim-with-ingredients.png?bw=600&w=600",
+   "description": "Effectively digest fats and sugars, and gives your body the nutrients it needs to metabolize them as energy, instead of being stored as fat."
+ },
+ {
+   "name": "Heart",
+   "code": "619587047928_bulk",
+   "sort": -126,
+   "capmax": 1,
+   "image": "",
+   "description": "Provides micronutrients, antioxidants, amino acids, herbs, and glandulars to help support heart health."
+ },
+ {
+   "name": "Lung",
+   "code": "619587047935_bulk",
+   "sort": -120,
+   "capmax": 1,
+   "image": "",
+   "description": "A therapeutic dose of beta-carotene and B6, and a combination of herbs and nutrients work cooperatively in the respiratory system and associated organs."
+ },
+ {
+   "name": "P-5-P",
+   "code": "619587048086_bulk",
+   "sort": -110,
+   "capmax": 1,
+   "image": "",
+   "description": "A biologically active form of vitamin B6 that helps metabolize lipids, carbohydrates, and proteins into energy."
+ },
+ {
+   "name": "Para Cap",
+   "code": "619587048093_bulk",
+   "sort": -109,
+   "capmax": 1,
+   "image": "",
+   "description": "Formulated to address the health and microbial balance of the GI tract."
+ },
+ {
+   "name": "Zinc",
+   "code": "619587048109_bulk",
+   "sort": -100,
+   "capmax": 1,
+   "image": "",
+   "description": "Organic chelated zinc has been proven to provide nutrition for proper growth, maintenance, and repair of the human body."
+ },
+ {
+   "name": "DAK1K2",
+   "code": "619587048116_bulk",
+   "sort": -502,
+   "capmax": 1,
+   "image": "https://www.optimalhealthsystems.com/resize/Shared/Images/Product/Essential-DAK1K2/Essential-DAK1K2-for-web.jpg?bw=600&w=600",
+   "description": "Correct related nutrient deficiencies, improve overall health and strengthen your immune system."
+ },
+ {
+   "name": "Ubiquinol",
+   "code": "619587048147_bulk",
+   "sort": -101,
+   "capmax": 1,
+   "image": "",
+   "description": "A highly bioavailable form of Ubiquinol is paired with an active form of CoQ10 for proper cardiovascular support."
+ },
+ {
+   "name": "NADH",
+   "code": "619587048154_bulk",
+   "sort": -114,
+   "capmax": 1,
+   "image": "",
+   "description": "A stable and bioavailable coenzyme that helps promote cellular energy production, and provides nutritional neurotransmitter support."
+ },
+ {
+   "name": "Flora+",
+   "code": "62",
+   "sort": -500,
+   "capmax": 2,
+   "image": "https://www.optimalhealthsystems.com/resize/Shared/Images/Product/Optimal-Flora-Plus/Flora-Plus-for-web.jpg?bw=600&w=600",
+   "description": "Provides 9 patented, heat-stabilized and acid-resistant probiotics the body uses for immune function and health."
+ },
+ {
+   "name": "GI",
+   "code": "64",
+   "sort": -127,
+   "capmax": 1,
+   "image": "",
+   "description": "Our most powerful bowel balancing formula available."
+ },
+ {
+   "name": "Female +B",
+   "code": "65",
+   "sort": -129,
+   "capmax": 1,
+   "image": "https://www.optimalhealthsystems.com/resize/Shared/Images/Product/Optimal-Female-B/Female-B-for-web.jpg?bw=600&w=600",
+   "description": "All the known research-backed nutrients that support hormonal balance."
+ },
+ {
+   "name": "Organic Iron",
+   "code": "66",
+   "sort": -123,
+   "capmax": 1,
+   "image": "https://www.optimalhealthsystems.com/resize/Shared/Images/Product/Optimal-Iron/Iron-for-web.jpg?bw=600&w=600",
+   "description": "The only patented form of iron, Ferrochel, in a blend proven to be assimilated 400% more than other iron supplements."
+ },
+ {
+   "name": "Liver-Kidney",
+   "code": "67",
+   "sort": -122,
+   "capmax": 1,
+   "image": "https://www.optimalhealthsystems.com/resize/Shared/Images/Product/Optimal-Liver-Kidney/Liver-Kidney-for-web.jpg?bw=600&w=600",
+   "description": "Support detoxification with nutrients like milk thistle, dandelion and barberry, proven to ensure normal clearance of toxins, as well as protect the liver."
+ },
+ {
+   "name": "Opti-T",
+   "code": "68",
+   "sort": -103,
+   "capmax": 2,
+   "image": "https://www.optimalhealthsystems.com/resize/Shared/Images/Product/Optimal-Opti-T/o-t-update.png?bw=600&w=600",
+   "description": "Contains a blend of specific herbs and nutrients that naturally support higher testosterone levels, reproductive health, and aid circulation."
+ },
+ {
+   "name": "Muscle RX",
+   "code": "69",
+   "sort": -115,
+   "capmax": 1,
+   "image": "",
+   "description": "Helps sustain and build lean muscle for anyone from professional athletes to people recovering from injuries."
+ },
+ {
+   "name": "Natural Vitality",
+   "code": "70",
+   "sort": -112,
+   "capmax": 1,
+   "image": "",
+   "description": "An organic nutrient blend shown to help you gain immediate energy."
+ },
+ {
+   "name": "Calm Nutrients",
+   "code": "71",
+   "sort": -106,
+   "capmax": 1,
+   "image": "https://www.optimalhealthsystems.com/resize/Shared/Images/Product/Optimal-REM-Sleep/REM-Sleep-for-web.jpg?bw=600&w=600",
+   "description": "Get deep restorative sleep with whole food ingredients that are proven to gently and naturally support deep, restful sleep."
+ },
+ {
+   "name": "Vitamin-Mineral",
+   "code": "72",
+   "sort": -1000,
+   "capmax": 2,
+   "image": "https://www.optimalhealthsystems.com/resize/Shared/Images/Product/Optimal-2-Whole-Food-Vitamin-Mineral/Vitamin-Mineral-for-web.jpg?bw=600&w=600",
+   "description": "Mineral contains 24 potent whole food vitamins and patented organic minerals. There are no synthetics present."
+ },
+ {
+   "name": "Magnesium",
+   "code": "8005",
+   "sort": -118,
+   "capmax": 2,
+   "image": "https://www.optimalhealthsystems.com/resize/Shared/Images/Product/Essential-Magnesium/Essential-Magnesium-for-web.jpg?bw=600&w=600",
+   "description": "Organic chelated magnesium that provides nutrition your body needs to maintain optimal muscle and bone health."
+ },
+ {
+   "name": "Resveratrol",
+   "code": "8006",
+   "sort": -105,
+   "capmax": 1,
+   "image": "https://www.optimalhealthsystems.com/resize/Shared/Images/Product/Essential-Resveratrol/Essential-Resveratrol-for-web.jpg?bw=600&w=600",
+   "description": "A whole food form of resveratrol provides cardiovascular support and acts as a free radical scavenger."
+ },
+ {
+   "name": "Crea-Nitric",
+   "code": "8012",
+   "sort": -134,
+   "capmax": 1,
+   "image": "",
+   "description": "Bolsters the immune system and boosts energy in the most effective way."
+ },
+ {
+   "name": "Bone+Calcium",
+   "code": "85",
+   "sort": -139,
+   "capmax": 2,
+   "image": "https://www.optimalhealthsystems.com/resize/Shared/Images/Product/Optimal-BonePlus-Calcium/BonePlus-Calcium-for-web.jpg?bw=600&w=600",
+   "description": "A bone-healthy blend of the most absorbable form of calcium, along with an all-natural ingredient called ipriflavone (Ostivone™)."
+ },
+ {
+   "name": "Shrooms",
+   "code": "850019587081_bulk",
+   "sort": -104,
+   "capmax": 1,
+   "image": "https://www.optimalhealthsystems.com/resize/Shared/Images/Product/Essential-Shrooms/Essential-Shrooms-for-web.jpg?bw=600&w=600",
+   "description": "Predigested blend of medicinal mushrooms proven to nutritionally support the strengthening of the immune system's most complex needs."
+ },
+ {
+   "name": "Phytonutrients",
+   "code": "850019587111_bulk",
+   "sort": -107,
+   "capmax": 1,
+   "image": "https://www.optimalhealthsystems.com/resize/Shared/Images/Product/Essential-Protect/Essential-Protect-for-web.jpg?bw=600&w=600",
+   "description": "Reduce inflammation while bolstering eye tissue nutrients with research-proven phytonutrients for the eyes, zeaxanthin and lutein."
+ },
+ {
+   "name": "Nag Redux",
+   "code": "850019587234_bulk",
+   "sort": -113,
+   "capmax": 1,
+   "image": "",
+   "description": "Essential Nag Redux reduces nagalase in the body. This is important to help nutritionally support the body’s protection and fight against diseases."
+ },
+ {
+   "name": "Opti-Female",
+   "code": "850019587265_bulk",
+   "sort": -128,
+   "capmax": 1,
+   "image": "",
+   "description": "Opti-Female is our female hormone balancing formula with herbs and powerful organic glandulars."
+ }
 ]

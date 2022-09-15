@@ -24,6 +24,8 @@ title: "System Data: Products"
                 <th scope="col" class="px-1 py-2 text-left">Name</th>
                 <th scope="col" class="px-1 py-2 text-left">Code</th>
                 <th scope="col" class="px-1 py-2 text-left">Cap Max</th>
+                <th scope="col" class="px-1 py-2 text-center">IMG</th>
+                <th scope="col" class="px-1 py-2 text-left">Desc</th>
               </tr>
             </thead>
             <tbody class="divide-y divide-gray-200 bg-white">
@@ -33,6 +35,8 @@ title: "System Data: Products"
                 <td class="whitespace-nowrap px-1 py-1">{{ product.name }}</td>
                 <td class="whitespace-nowrap px-1 py-1">{{ product.code }}</td>
                 <td class="whitespace-nowrap px-1 py-1">{{ product.capmax }}</td>
+                <td class="px-1 py-1 text-center"><img src="{{ product.image }}" class="m-auto h-10" /></td>
+                <td class="px-1 py-1">{{ product.description | truncate: 90 }}</td>
               </tr>
               {% endfor %}
             </tbody>

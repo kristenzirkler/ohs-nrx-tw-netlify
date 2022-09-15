@@ -9,42 +9,18 @@ title: "My Custom Nutrient Pak"
   <div class="px-4 py-5 sm:p-0">
     <h2 class="px-5 py-4 sm:py-5 text-xl font-bold font-display">Formula Includes:</h2>
     <dl class="sm:grid sm:grid-cols-2">
-      <div class="py-4 sm:py-5 sm:grid sm:grid-cols-4 sm:gap-4 sm:px-6">
+      {% assign items_grouped = site.data.products | sort: 'sort' %}
+      {% for product in items_grouped %}
+      <div class="py-4 sm:py-5 sm:grid sm:grid-cols-5 sm:gap-4 sm:px-6">
         <dt class="text-center">
-          <img class="w-28 m-auto" src="https://www.optimalhealthsystems.com/resize/Shared/Images/Product/Optimal-1-Digestion/home-product-digestion-4x.jpg?bw=200&amp;bh=200" alt="">
+          {% if product.image != '' %}<img class="h-24 m-auto" src="{{ product.image }}" alt="{{ product.name }}">{% else %}&nbsp;{% endif %}
         </dt>
-        <dd class="mt-1 text-sm sm:mt-0 sm:col-span-3">
-          <div class="text-lg font-bold font-display text-skin-header">Optimal 1 Digestion</div>
-          <div class="leading-5 text-skin-primary/90">Helps break down all nutrients, Contains crucial digestive plant enzymes</div>
+        <dd class="mt-1 text-sm sm:mt-0 sm:col-span-4">
+          <div class="text-lg font-bold font-display text-skin-header">{{ product.name }}</div>
+          <div class="leading-5 text-skin-primary/90">{{ product.description }}</div>
         </dd>
       </div>
-      <div class="py-4 sm:py-5 sm:grid sm:grid-cols-4 sm:gap-4 sm:px-6">
-        <dt class="text-center">
-          <img class="w-28 m-auto" src="https://www.optimalhealthsystems.com/resize/Shared/Images/Product/Optimal-2-Whole-Food-Vitamin-Mineral/vit-min.png?bw=200&bh=200" alt="">
-        </dt>
-        <dd class="mt-1 text-sm sm:mt-0 sm:col-span-3">
-          <div class="text-lg font-bold font-display text-skin-header">Optimal 2 Whole Food Vitamin Mineral</div>
-          <div class="leading-5 text-skin-primary/90">Each dose contains 100% daily value of 24 essential vitamins and minerals, Minerals are retained at the highest levels and are at the lowest toxicity</div>
-        </dd>
-      </div>
-      <div class="py-4 sm:py-5 sm:grid sm:grid-cols-4 sm:gap-4 sm:px-6">
-        <dt class="text-center">
-          <img class="w-28 m-auto" src="https://www.optimalhealthsystems.com/resize/Shared/Images/Product/Opti-Adrenal/Opti-Adrenal.png?bw=200&bh=200" alt="">
-        </dt>
-        <dd class="mt-1 text-sm sm:mt-0 sm:col-span-3">
-          <div class="text-lg font-bold font-display text-skin-header">Opti-Adrenal</div>
-          <div class="leading-5 text-skin-primary/90">Nutritionally supports healthy adrenal glands, Key ingredients help to promote the body’s ability to increase energy levels</div>
-        </dd>
-      </div>
-      <div class="py-4 sm:py-5 sm:grid sm:grid-cols-4 sm:gap-4 sm:px-6">
-        <dt class="text-center">
-          <img class="w-28 m-auto" src="https://www.optimalhealthsystems.com/resize/Shared/Images/Product/Optimal-Whole-C/Whole-C.png?bw=200&bh=200" alt="">
-        </dt>
-        <dd class="mt-1 text-sm sm:mt-0 sm:col-span-3">
-          <div class="text-lg font-bold font-display text-skin-header">Optimal Whole C</div>
-          <div class="leading-5 text-skin-primary/90">Potent, chewable vitamin C sourced from whole foods, Natural antioxidant to neutralize damaging free radicals</div>
-        </dd>
-      </div>
+      {% endfor %}
     </dl>
   </div>
 </div>
