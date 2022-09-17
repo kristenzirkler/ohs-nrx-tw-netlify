@@ -1026,9 +1026,9 @@ nrx = %Program{
     #OBX|1|NM|2085-9^HDLc SerPl-mCnc^LN^25015900^HDL CHOLESTEROL^QDIMET||61|mg/dL|> OR = 50|N|||F|||20220721121700|EN^^L
 
     hdl_cholesterol = %Analyte{
-      lab_code: "85996653",
-      loinc: "2986-8",
-      name: "TESTOSTERONE, TOTAL"
+      lab_code: "25015900",
+      loinc: "2085-9",
+      name: "HDL Cholesterol"
     }
 
     %Range{
@@ -2817,8 +2817,8 @@ nrx = %Program{
     #OBX|15|NM|1975-2^Bilirub SerPl-mCnc^LN^25001700^BILIRUBIN, TOTAL^QDIMET||0.4|mg/dL|0.2-1.2|N|||F|||20220721121700|EN^^L
 
     bilirubin_total = %Analyte{
-      lab_code: "50026400",
-      loinc: "4548-4",
+      lab_code: "25001700",
+      loinc: "1975-2",
       name: "BILIRUBIN, TOTAL"
     }
 
@@ -3411,7 +3411,7 @@ nrx = %Program{
       # For text results
       string_value: nil,
       priority: nil,
-      product_id: methyl_b.id,
+      product_id: nil,
       program_id: nrx.id,
       description: "Your result for this test is in the Clinical Low range. Uric Acid is created in the body as a by- product of protein metabolism, or increased destruction of cells within your body. Uric Acid is removed from the body mostly by your kidneys, and this makes Uric Acid an indicator of how your kidneys are functioning. High Uric Acid can also be a strong indicator of possible inflammation within your body. Some common reasons for increased Uric Acid are: 1) blood sugar issues and consuming too much sugar and highly processed carbohydrates, 2) overconsumption of meats, organ meats, shellfish and legumes, 3) overconsumption of alcohol, 4) overconsumption of fried, fatty, processed and hydrogenated foods and 5) certain drugs or medications can result in high Uric Acid. A final consideration is when Uric Acid levels are high along with other abnormal kidney function lab tests . . . you may then want to consult with a specialist to rule out kidney disease. Dietary changes can be an important part of reducing high Uric Acid levels for some people."
     }
@@ -7375,9 +7375,9 @@ percent_saturation = %Analyte{
 #OBX|1|NM|2132-9^Vit B12 SerPl-mCnc^LN^55057200^VITAMIN B12^QDIMET||429|pg/mL|200-1100|N|||F|||20220721121700|EN^^L
 
 vitamin_b12 = %Analyte{
-  lab_code: "25002800",
-  loinc: "2502-3",
-  name: "% SATURATION"
+  lab_code: "55057200",
+  loinc: "2132-9",
+  name: "Vitamin B12"
 }
 
 %Range{
@@ -7426,7 +7426,7 @@ vitamin_b12 = %Analyte{
   # For text results
   string_value: nil,
   priority: nil,
-  product_id: methyl_b.id,
+  product_id: nil,
   program_id: nrx.id,
   description: "Your result for this lab test is in the OPTIMAL range. Vitamin B12 is needed to form blood and immune cells, and support a healthy nervous system. A series of closely-related compounds known collectively as cobalamins or vitamin B12 are converted into active forms methylcobalamin or 5-deoxyadenosylcobalamin. Methylcobalamin interacts with folate metabolism, preventing folate derivatives from being trapped in unusable states. Adenosylcobalamin is involved in the metabolism of odd-chain fatty acids and branched-chain amino acids."
 }
