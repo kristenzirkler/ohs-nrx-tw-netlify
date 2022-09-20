@@ -6685,6 +6685,99 @@ wbc = %Analyte{
   description: ""
 }
 
+#OBX|13|ST|13945-1^RBC #/area UrnS HPF^LN^30006800^RBC^QDIMET||NONE SEEN|/HPF|< OR = 2|N|||F|||20220721121700|EN^^L
+
+rbc = %Analyte{
+  lab_code: "30006800",
+  loinc: "13945-1",
+  name: "URINE - RBC"
+}
+
+%Range{
+  analyte_id: rbc.id,
+  range_name: :clinical_low,
+  is_male: nil,
+  min_age: nil,
+  max_age: nil,
+  # For numeric results
+  min_numeric_value: nil,
+  max_numeric_value: nil,
+  # For text results
+  string_value: FEW,
+  priority: nil,
+  product_id: nil,
+  program_id: nrx.id,
+  description: ""
+}
+
+%Range{
+  analyte_id: rbc.id,
+  range_name: :functional_low,
+  is_male: nil,
+  min_age: nil,
+  max_age: nil,
+  # For numeric results
+  min_numeric_value: nil,
+  max_numeric_value: nil,
+  # For text results
+  string_value: TRACE,
+  priority: nil,
+  product_id: nil,
+  program_id: nrx.id,
+  description: ""
+}
+
+%Range{
+  analyte_id: rbc.id,
+  range_name: :optimal,
+  is_male: nil,
+  min_age: nil,
+  max_age: nil,
+  # For numeric results
+  min_numeric_value: 0.00,
+  max_numeric_value: 2.00,
+  # For text results
+  string_value: NONE SEEN,
+  priority: nil,
+  product_id: nil,
+  program_id: nrx.id,
+  description: ""
+}
+
+%Range{
+  analyte_id: rbc.id,
+  range_name: :functional_high,
+  is_male: nil,
+  min_age: nil,
+  max_age: nil,
+  # For numeric results
+  min_numeric_value: 2.01,
+  max_numeric_value: 4.00,
+  # For text results
+  string_value: MODERATE,
+  priority: nil,
+  product_id: nil,
+  program_id: nrx.id,
+  description: ""
+}
+
+%Range{
+  analyte_id: rbc.id,
+  range_name: :clinical_high,
+  is_male: nil,
+  min_age: nil,
+  max_age: nil,
+  # For numeric results
+  min_numeric_value: 4.01,
+  max_numeric_value: nil,
+  # For text results
+  string_value: MANY,
+  priority: nil,
+  product_id: nil,
+  program_id: nrx.id,
+  description: ""
+}
+
 #OBX|14|ST|11277-1^Squamous #/area UrnS HPF^LN^30006900^SQUAMOUS EPITHELIAL CELLS^QDIMET||10-20|/HPF|< OR = 5|A|||F|||20220721121700|EN^^L
 
 squamous_epithelial_cells = %Analyte{
